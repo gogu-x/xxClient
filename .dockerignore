@@ -1,6 +1,15 @@
 **
-!build/
-!build/**
+!Assets/
+!Assets/**
+!Packages/
+!Packages/**
+!ProjectSettings/
+!ProjectSettings/**
 !docker/
 !docker/nginx.conf
 !Dockerfile
+**/.git
+**/node_modules
+**/bin
+**/obj
+**/__pycache__
