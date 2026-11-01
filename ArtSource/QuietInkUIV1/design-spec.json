@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "name": "仙途·清墨",
+  "reference": {
+    "url": "https://xian.leiting.com/",
+    "role": "水墨仙侠主题参考，独立原创构图与资源"
+  },
+  "stage": "concept-and-asset-production",
+  "canvas": {
+    "referenceWidth": 941,
+    "referenceHeight": 1672,
+    "target": "portrait",
+    "safeArea": true
+  },
+  "palette": {
+    "paper": "#F3F0E8",
+    "ink": "#303832",
+    "secondaryInk": "#737B73",
+    "jade": "#63877B",
+    "jadeDark": "#48685D",
+    "mist": "#C8CFCA",
+    "line": "#CBC5B6",
+    "cinnabar": "#A75D4F"
+  },
+  "typography": {
+    "title": "少量书法标题，36–52设计像素",
+    "body": "清晰中文正文，26–32设计像素",
+    "minimum": "非辅助正文不小于26设计像素",
+    "dynamicText": "所有按钮、数值、状态、物品名由Unity TMP独立绘制"
+  },
+  "composition": {
+    "background": "70%以上低细节区域；功能页上85%接近纯纸色",
+    "icons": "统一深墨/灰青，透明底，不带厚边框",
+    "buttons": "同一套哑光青绿主按钮、纸色次按钮",
+    "battle": "保持飞行单位战斗，背景中心留白；不改战斗机制、角色朝向和动画速度"
+  },
+  "delivery": {
+    "concepts": [
+      "Concepts/02-core-pages-v2.png",
+      "Concepts/03-growth-pages.png",
+      "Concepts/04-service-pages.png"
+    ],
+    "sourceOnlyReferences": "References/，不可导入为游戏成品素材",
+    "prompts": "Prompts/",
+    "runtimeIntegration": "待按本资源包逐页接入；本目录效果图不作为整页贴图使用"
+  }
+}

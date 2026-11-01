@@ -1,0 +1,19 @@
+{
+  "unityWebGL": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "result": "Succeeded",
+        "errors": 0,
+        "warnings": 31,
+        "seconds": 69.4954511,
+        "path": "D:/gosrc/gotree/g1Client/Builds/BrowserPreview/WebGL",
+        "playing": false
+      },
+      "compiler": "codedom"
+    }
+  },
+  "previewVersion": "639291236578774016",
+  "finalChange": "Explicit creation failures clear non-existent battle sessions; late-response timeout and existing-battle disconnect handling remain unchanged."
+}

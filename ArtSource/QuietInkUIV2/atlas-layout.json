@@ -1,0 +1,2206 @@
+{
+  "schema_version": 1,
+  "title": "QuietInk UI V2 color atlas actual sprite bounds",
+  "coordinate_origin": "top-left",
+  "rect_units": "pixels",
+  "atlas_root": "Assets",
+  "generated_with": "built-in image_gen; transparent_background=true",
+  "status": "alpha_measured_and_source_visually_reviewed",
+  "original_prompt_files": [
+    "Prompts/icons-navigation.txt",
+    "Prompts/icons-items.txt",
+    "Prompts/ui-controls.txt",
+    "Prompts/ui-controls-cleanup.txt",
+    "Prompts/icons-extra.txt",
+    "Prompts/illustrations.txt",
+    "Prompts/illustrations-final-assembly.txt",
+    "Prompts/icons-settings.txt",
+    "Prompts/fx-slash.txt",
+    "Prompts/fx-impact.txt",
+    "Prompts/fx-ring.txt"
+  ],
+  "generation_notes": [
+    "The three V1 atlases were recolored via independent built-in image_gen edits, retaining each original semantic layout.",
+    "UI controls received one tool-only alpha-edge cleanup pass. Extra skills/currency indicators were generated from the colored core-page concept.",
+    "All final PNGs are byte-for-byte copies of built-in generated files. No Python or other raster-library pixel editing was performed.",
+    "Illustrations and settings icons were reconstructed from the approved growth/services concepts; the illustration ring refinement was performed with image_gen only.",
+    "Source-level visual review confirms semantic count/order, restrained differentiated color, and genuine transparent gaps. Pixel-exact geometry and Unity nine-slice rendering are not claimed.",
+    "Illustration ink rings retain a broader brush band than the thin reference gesture and need runtime opacity/composition review; this is explicitly not a pixel-exact extraction."
+  ],
+  "audit_method": {
+    "decoder": "Python standard library struct/zlib read-only PNG decoder",
+    "rect_detection": "Actual alpha >= 16 connected components, excluding isolated components below 20 pixels; grouped to original semantic sprite center, padded by 4 pixels. No equal-grid slicing.",
+    "pixel_changes": false,
+    "alpha_threshold": 16,
+    "minimum_component_pixels": 20,
+    "padding": 4,
+    "unity_conversion": "unityY = atlasHeight - y - height",
+    "caveat": "Transparent/fringe alpha below 16 and isolated <20 pixel specks are excluded from measured content, but unchanged in original PNG."
+  },
+  "atlases": [
+    {
+      "file": "icons-navigation.png",
+      "width": 1254,
+      "height": 1254,
+      "format": "RGBA8",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_percent": 74.529,
+      "components_alpha_ge16": 48,
+      "components_at_least20_pixels": 17,
+      "isolated_small_component_pixels": 48,
+      "sha256": "cb264fe3e6a635e1f10acfd6989eaa557f2558542009715e26154a3ad22e310c",
+      "source": "C:/Users/25348/.codex/generated_images/01a194cd-6af1-7241-8c1c-471cbb59493e/exec-b1ccfdcc-ac24-4b9f-a756-602a7fe227ca.png",
+      "slice_policy": "Use the measured individual sprite rectangles; never equal-grid slicing"
+    },
+    {
+      "file": "icons-items.png",
+      "width": 1254,
+      "height": 1254,
+      "format": "RGBA8",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_percent": 62.128,
+      "components_alpha_ge16": 44,
+      "components_at_least20_pixels": 17,
+      "isolated_small_component_pixels": 30,
+      "sha256": "8d653dda7494616f286b8f1ee34027b65dd1fd18f24019cb1dfe223399db459c",
+      "source": "C:/Users/25348/.codex/generated_images/01a194cd-6af1-7241-8c1c-471cbb59493e/exec-08b7c154-9b2d-494a-a9c8-f17fddfa6446.png",
+      "slice_policy": "Use the measured individual sprite rectangles; never equal-grid slicing"
+    },
+    {
+      "file": "ui-controls.png",
+      "width": 1254,
+      "height": 1254,
+      "format": "RGBA8",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_percent": 76.475,
+      "components_alpha_ge16": 16,
+      "components_at_least20_pixels": 16,
+      "isolated_small_component_pixels": 0,
+      "sha256": "42135c83ea1a8f1ae9205377c922924dbd6404b2cbed8048edb2495d29af1031",
+      "source": "C:/Users/25348/.codex/generated_images/01a194cd-6af1-7241-8c1c-471cbb59493e/exec-0fe69ad4-2384-4a9a-96d6-b492ea308991.png",
+      "slice_policy": "Use the measured individual sprite rectangles; never equal-grid slicing"
+    },
+    {
+      "file": "icons-extra.png",
+      "width": 1774,
+      "height": 887,
+      "format": "RGBA8",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_percent": 60.446,
+      "components_alpha_ge16": 12,
+      "components_at_least20_pixels": 11,
+      "isolated_small_component_pixels": 1,
+      "sha256": "ad0c8931b53b577757ffdc583b7560ed7aaf87c200424035a50e763c0468af7a",
+      "source": "C:/Users/25348/.codex/generated_images/01a194cd-6af1-7241-8c1c-471cbb59493e/exec-cdc43364-9775-4279-aa4b-b81dff238240.png",
+      "slice_policy": "Use the measured individual sprite rectangles; never equal-grid slicing"
+    },
+    {
+      "file": "illustrations.png",
+      "width": 1774,
+      "height": 887,
+      "format": "RGBA8",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_percent": 62.835,
+      "components_alpha_ge16": 168,
+      "components_at_least20_pixels": 13,
+      "isolated_small_component_pixels": 281,
+      "sha256": "4356bcb2d68f828e2bc112827fc582231a77f1b271af0244cba18c33c93d43f2",
+      "source": "C:/Users/25348/.codex/generated_images/01a194cd-6af1-7241-8c1c-471cbb59493e/exec-c9fcc04c-da95-4b78-a6a8-3d1dc414e605.png",
+      "slice_policy": "Use the measured individual sprite rectangles; never equal-grid slicing"
+    },
+    {
+      "file": "icons-settings.png",
+      "width": 1254,
+      "height": 1254,
+      "format": "RGBA8",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_percent": 82.07,
+      "components_alpha_ge16": 12,
+      "components_at_least20_pixels": 9,
+      "isolated_small_component_pixels": 4,
+      "sha256": "227048ac55cf0e0796165f338f90ef756319aa3b64f834c4bec9e7a2764390ce",
+      "source": "C:/Users/25348/.codex/generated_images/01a194cd-6af1-7241-8c1c-471cbb59493e/exec-e5c58a7f-9d20-42d2-91bb-dfc5ab137685.png",
+      "slice_policy": "Use the measured individual sprite rectangles; never equal-grid slicing"
+    }
+  ],
+  "sprites": [
+    {
+      "atlas": "icons-navigation.png",
+      "name": "character",
+      "row": 1,
+      "column": 1,
+      "x": 68,
+      "y": 95,
+      "width": 213,
+      "height": 230,
+      "contentRect": {
+        "x": 72,
+        "y": 99,
+        "width": 205,
+        "height": 222
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "修士半身像",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-navigation.png",
+      "name": "cultivation",
+      "row": 1,
+      "column": 2,
+      "x": 388,
+      "y": 118,
+      "width": 186,
+      "height": 191,
+      "contentRect": {
+        "x": 392,
+        "y": 122,
+        "width": 178,
+        "height": 183
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "阴阳修炼",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-navigation.png",
+      "name": "equipment",
+      "row": 1,
+      "column": 3,
+      "x": 690,
+      "y": 112,
+      "width": 178,
+      "height": 198,
+      "contentRect": {
+        "x": 694,
+        "y": 116,
+        "width": 170,
+        "height": 190
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "斜向灵剑",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-navigation.png",
+      "name": "inventory",
+      "row": 1,
+      "column": 4,
+      "x": 994,
+      "y": 116,
+      "width": 196,
+      "height": 193,
+      "contentRect": {
+        "x": 998,
+        "y": 120,
+        "width": 188,
+        "height": 185
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "布袋背包",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-navigation.png",
+      "name": "souljade",
+      "row": 2,
+      "column": 1,
+      "x": 95,
+      "y": 410,
+      "width": 154,
+      "height": 191,
+      "contentRect": {
+        "x": 99,
+        "y": 414,
+        "width": 146,
+        "height": 183
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "卷曲魂玉",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-navigation.png",
+      "name": "sect",
+      "row": 2,
+      "column": 2,
+      "x": 370,
+      "y": 395,
+      "width": 211,
+      "height": 212,
+      "contentRect": {
+        "x": 374,
+        "y": 399,
+        "width": 203,
+        "height": 204
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "宗门亭阁",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-navigation.png",
+      "name": "activity",
+      "row": 2,
+      "column": 3,
+      "x": 678,
+      "y": 411,
+      "width": 224,
+      "height": 198,
+      "contentRect": {
+        "x": 682,
+        "y": 415,
+        "width": 216,
+        "height": 190
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "展开活动卷轴",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-navigation.png",
+      "name": "welfare",
+      "row": 2,
+      "column": 4,
+      "x": 998,
+      "y": 419,
+      "width": 186,
+      "height": 187,
+      "contentRect": {
+        "x": 1002,
+        "y": 423,
+        "width": 178,
+        "height": 179
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "福利礼盒",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-navigation.png",
+      "name": "quest",
+      "row": 3,
+      "column": 1,
+      "x": 74,
+      "y": 694,
+      "width": 202,
+      "height": 204,
+      "contentRect": {
+        "x": 78,
+        "y": 698,
+        "width": 194,
+        "height": 196
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "任务清单",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-navigation.png",
+      "name": "talent",
+      "row": 3,
+      "column": 2,
+      "x": 383,
+      "y": 703,
+      "width": 190,
+      "height": 170,
+      "contentRect": {
+        "x": 387,
+        "y": 707,
+        "width": 182,
+        "height": 162
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "三节点天赋",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-navigation.png",
+      "name": "settings",
+      "row": 3,
+      "column": 3,
+      "x": 695,
+      "y": 706,
+      "width": 177,
+      "height": 174,
+      "contentRect": {
+        "x": 699,
+        "y": 710,
+        "width": 169,
+        "height": 166
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "设置齿轮",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-navigation.png",
+      "name": "rank",
+      "row": 3,
+      "column": 4,
+      "x": 976,
+      "y": 677,
+      "width": 229,
+      "height": 228,
+      "contentRect": {
+        "x": 980,
+        "y": 681,
+        "width": 221,
+        "height": 220
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "山上排行旗",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-navigation.png",
+      "name": "attack_aoe",
+      "row": 4,
+      "column": 1,
+      "x": 59,
+      "y": 991,
+      "width": 223,
+      "height": 188,
+      "contentRect": {
+        "x": 63,
+        "y": 995,
+        "width": 215,
+        "height": 180
+      },
+      "components": 2,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "三道范围剑气",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-navigation.png",
+      "name": "flame",
+      "row": 4,
+      "column": 2,
+      "x": 403,
+      "y": 977,
+      "width": 148,
+      "height": 211,
+      "contentRect": {
+        "x": 407,
+        "y": 981,
+        "width": 140,
+        "height": 203
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "火焰",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-navigation.png",
+      "name": "shield",
+      "row": 4,
+      "column": 3,
+      "x": 700,
+      "y": 982,
+      "width": 166,
+      "height": 202,
+      "contentRect": {
+        "x": 704,
+        "y": 986,
+        "width": 158,
+        "height": 194
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "盾牌",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-navigation.png",
+      "name": "healing",
+      "row": 4,
+      "column": 4,
+      "x": 979,
+      "y": 997,
+      "width": 225,
+      "height": 184,
+      "contentRect": {
+        "x": 983,
+        "y": 1001,
+        "width": 217,
+        "height": 176
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "治疗莲花",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-items.png",
+      "name": "sword",
+      "row": 1,
+      "column": 1,
+      "x": 37,
+      "y": 35,
+      "width": 277,
+      "height": 288,
+      "contentRect": {
+        "x": 41,
+        "y": 39,
+        "width": 269,
+        "height": 280
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-items.png",
+      "name": "crown",
+      "row": 1,
+      "column": 2,
+      "x": 332,
+      "y": 53,
+      "width": 279,
+      "height": 271,
+      "contentRect": {
+        "x": 336,
+        "y": 57,
+        "width": 271,
+        "height": 263
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-items.png",
+      "name": "robe",
+      "row": 1,
+      "column": 3,
+      "x": 619,
+      "y": 36,
+      "width": 323,
+      "height": 323,
+      "contentRect": {
+        "x": 623,
+        "y": 40,
+        "width": 315,
+        "height": 315
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-items.png",
+      "name": "bracers",
+      "row": 1,
+      "column": 4,
+      "x": 954,
+      "y": 72,
+      "width": 275,
+      "height": 255,
+      "contentRect": {
+        "x": 958,
+        "y": 76,
+        "width": 267,
+        "height": 247
+      },
+      "components": 2,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-items.png",
+      "name": "jade_pendant",
+      "row": 2,
+      "column": 1,
+      "x": 48,
+      "y": 336,
+      "width": 270,
+      "height": 331,
+      "contentRect": {
+        "x": 52,
+        "y": 340,
+        "width": 262,
+        "height": 323
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-items.png",
+      "name": "boots",
+      "row": 2,
+      "column": 2,
+      "x": 340,
+      "y": 371,
+      "width": 273,
+      "height": 260,
+      "contentRect": {
+        "x": 344,
+        "y": 375,
+        "width": 265,
+        "height": 252
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-items.png",
+      "name": "jade_comma",
+      "row": 2,
+      "column": 3,
+      "x": 703,
+      "y": 390,
+      "width": 177,
+      "height": 250,
+      "contentRect": {
+        "x": 707,
+        "y": 394,
+        "width": 169,
+        "height": 242
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-items.png",
+      "name": "jade_disk",
+      "row": 2,
+      "column": 4,
+      "x": 976,
+      "y": 385,
+      "width": 239,
+      "height": 237,
+      "contentRect": {
+        "x": 980,
+        "y": 389,
+        "width": 231,
+        "height": 229
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-items.png",
+      "name": "jade_flame",
+      "row": 3,
+      "column": 1,
+      "x": 78,
+      "y": 673,
+      "width": 183,
+      "height": 270,
+      "contentRect": {
+        "x": 82,
+        "y": 677,
+        "width": 175,
+        "height": 262
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-items.png",
+      "name": "jade_cloud",
+      "row": 3,
+      "column": 2,
+      "x": 361,
+      "y": 694,
+      "width": 244,
+      "height": 224,
+      "contentRect": {
+        "x": 365,
+        "y": 698,
+        "width": 236,
+        "height": 216
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-items.png",
+      "name": "jade_spiral",
+      "row": 3,
+      "column": 3,
+      "x": 671,
+      "y": 704,
+      "width": 232,
+      "height": 232,
+      "contentRect": {
+        "x": 675,
+        "y": 708,
+        "width": 224,
+        "height": 224
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-items.png",
+      "name": "jade_leaf",
+      "row": 3,
+      "column": 4,
+      "x": 963,
+      "y": 667,
+      "width": 234,
+      "height": 279,
+      "contentRect": {
+        "x": 967,
+        "y": 671,
+        "width": 226,
+        "height": 271
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-items.png",
+      "name": "health",
+      "row": 4,
+      "column": 1,
+      "x": 41,
+      "y": 985,
+      "width": 256,
+      "height": 230,
+      "contentRect": {
+        "x": 45,
+        "y": 989,
+        "width": 248,
+        "height": 222
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-items.png",
+      "name": "attack",
+      "row": 4,
+      "column": 2,
+      "x": 363,
+      "y": 949,
+      "width": 235,
+      "height": 281,
+      "contentRect": {
+        "x": 367,
+        "y": 953,
+        "width": 227,
+        "height": 273
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-items.png",
+      "name": "defense",
+      "row": 4,
+      "column": 3,
+      "x": 684,
+      "y": 956,
+      "width": 218,
+      "height": 259,
+      "contentRect": {
+        "x": 688,
+        "y": 960,
+        "width": 210,
+        "height": 251
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-items.png",
+      "name": "speed",
+      "row": 4,
+      "column": 4,
+      "x": 960,
+      "y": 964,
+      "width": 274,
+      "height": 256,
+      "contentRect": {
+        "x": 964,
+        "y": 968,
+        "width": 266,
+        "height": 248
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "ui-controls.png",
+      "name": "button_primary",
+      "row": 1,
+      "column": 1,
+      "x": 50,
+      "y": 154,
+      "width": 262,
+      "height": 81,
+      "contentRect": {
+        "x": 54,
+        "y": 158,
+        "width": 254,
+        "height": 73
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "青玉主按钮",
+      "proposed_border_lbrt": [
+        26,
+        25,
+        25,
+        25
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 21,
+          "last_straight": 59,
+          "middle_outer_low": 5,
+          "middle_outer_high": 255
+        },
+        "column_geometry": {
+          "first_straight": 22,
+          "last_straight": 240,
+          "middle_outer_low": 6,
+          "middle_outer_high": 75
+        },
+        "stretchable_center": {
+          "width": 211,
+          "height": 31
+        }
+      }
+    },
+    {
+      "atlas": "ui-controls.png",
+      "name": "button_secondary",
+      "row": 1,
+      "column": 2,
+      "x": 355,
+      "y": 154,
+      "width": 257,
+      "height": 81,
+      "contentRect": {
+        "x": 359,
+        "y": 158,
+        "width": 249,
+        "height": 73
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "米白次按钮",
+      "proposed_border_lbrt": [
+        25,
+        25,
+        26,
+        25
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 21,
+          "last_straight": 59,
+          "middle_outer_low": 5,
+          "middle_outer_high": 250
+        },
+        "column_geometry": {
+          "first_straight": 21,
+          "last_straight": 234,
+          "middle_outer_low": 6.0,
+          "middle_outer_high": 75.0
+        },
+        "stretchable_center": {
+          "width": 206,
+          "height": 31
+        }
+      }
+    },
+    {
+      "atlas": "ui-controls.png",
+      "name": "button_disabled",
+      "row": 1,
+      "column": 3,
+      "x": 656,
+      "y": 155,
+      "width": 253,
+      "height": 80,
+      "contentRect": {
+        "x": 660,
+        "y": 159,
+        "width": 245,
+        "height": 72
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "灰色禁用按钮",
+      "proposed_border_lbrt": [
+        25,
+        24,
+        24,
+        24
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 20,
+          "last_straight": 59,
+          "middle_outer_low": 5,
+          "middle_outer_high": 247
+        },
+        "column_geometry": {
+          "first_straight": 21,
+          "last_straight": 232,
+          "middle_outer_low": 5.0,
+          "middle_outer_high": 74.0
+        },
+        "stretchable_center": {
+          "width": 204,
+          "height": 32
+        }
+      }
+    },
+    {
+      "atlas": "ui-controls.png",
+      "name": "selector_row",
+      "row": 1,
+      "column": 4,
+      "x": 953,
+      "y": 154,
+      "width": 255,
+      "height": 81,
+      "contentRect": {
+        "x": 957,
+        "y": 158,
+        "width": 247,
+        "height": 73
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "米白选择行",
+      "proposed_border_lbrt": [
+        25,
+        25,
+        26,
+        25
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 21,
+          "last_straight": 59,
+          "middle_outer_low": 5,
+          "middle_outer_high": 248
+        },
+        "column_geometry": {
+          "first_straight": 21,
+          "last_straight": 232,
+          "middle_outer_low": 6,
+          "middle_outer_high": 75
+        },
+        "stretchable_center": {
+          "width": 204,
+          "height": 31
+        }
+      }
+    },
+    {
+      "atlas": "ui-controls.png",
+      "name": "dialog_panel",
+      "row": 2,
+      "column": 1,
+      "x": 89,
+      "y": 384,
+      "width": 183,
+      "height": 182,
+      "contentRect": {
+        "x": 93,
+        "y": 388,
+        "width": 175,
+        "height": 174
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "方形对话框",
+      "proposed_border_lbrt": [
+        26,
+        25,
+        25,
+        27
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 23,
+          "last_straight": 160,
+          "middle_outer_low": 5,
+          "middle_outer_high": 176
+        },
+        "column_geometry": {
+          "first_straight": 22,
+          "last_straight": 161,
+          "middle_outer_low": 7,
+          "middle_outer_high": 176
+        },
+        "stretchable_center": {
+          "width": 132,
+          "height": 130
+        }
+      }
+    },
+    {
+      "atlas": "ui-controls.png",
+      "name": "info_card",
+      "row": 2,
+      "column": 2,
+      "x": 365,
+      "y": 401,
+      "width": 238,
+      "height": 147,
+      "contentRect": {
+        "x": 369,
+        "y": 405,
+        "width": 230,
+        "height": 139
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "信息卡",
+      "proposed_border_lbrt": [
+        24,
+        24,
+        24,
+        25
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 21,
+          "last_straight": 126,
+          "middle_outer_low": 6,
+          "middle_outer_high": 232
+        },
+        "column_geometry": {
+          "first_straight": 20,
+          "last_straight": 217,
+          "middle_outer_low": 6,
+          "middle_outer_high": 141
+        },
+        "stretchable_center": {
+          "width": 190,
+          "height": 98
+        }
+      }
+    },
+    {
+      "atlas": "ui-controls.png",
+      "name": "equipment_slot",
+      "row": 2,
+      "column": 3,
+      "x": 703,
+      "y": 396,
+      "width": 162,
+      "height": 159,
+      "contentRect": {
+        "x": 707,
+        "y": 400,
+        "width": 154,
+        "height": 151
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "装备空槽",
+      "proposed_border_lbrt": [
+        24,
+        23,
+        24,
+        24
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 20,
+          "last_straight": 139,
+          "middle_outer_low": 5,
+          "middle_outer_high": 155
+        },
+        "column_geometry": {
+          "first_straight": 20,
+          "last_straight": 141,
+          "middle_outer_low": 5.0,
+          "middle_outer_high": 153.0
+        },
+        "stretchable_center": {
+          "width": 114,
+          "height": 112
+        }
+      }
+    },
+    {
+      "atlas": "ui-controls.png",
+      "name": "equipment_slot_selected",
+      "row": 2,
+      "column": 4,
+      "x": 1002,
+      "y": 396,
+      "width": 162,
+      "height": 160,
+      "contentRect": {
+        "x": 1006,
+        "y": 400,
+        "width": 154,
+        "height": 152
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "选中装备槽",
+      "proposed_border_lbrt": [
+        25,
+        24,
+        24,
+        24
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 20,
+          "last_straight": 139,
+          "middle_outer_low": 6,
+          "middle_outer_high": 155
+        },
+        "column_geometry": {
+          "first_straight": 21,
+          "last_straight": 141,
+          "middle_outer_low": 5.0,
+          "middle_outer_high": 153.0
+        },
+        "stretchable_center": {
+          "width": 113,
+          "height": 112
+        }
+      }
+    },
+    {
+      "atlas": "ui-controls.png",
+      "name": "avatar_frame",
+      "row": 3,
+      "column": 1,
+      "x": 76,
+      "y": 688,
+      "width": 213,
+      "height": 212,
+      "contentRect": {
+        "x": 80,
+        "y": 692,
+        "width": 205,
+        "height": 204
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "透明中心头像框",
+      "center_alpha": 0,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "border_validation": {
+        "status": "not_applicable",
+        "reason": "Circular geometry or center diamond; preserve aspect instead of nine-slice stretching."
+      }
+    },
+    {
+      "atlas": "ui-controls.png",
+      "name": "souljade_socket",
+      "row": 3,
+      "column": 2,
+      "x": 393,
+      "y": 705,
+      "width": 182,
+      "height": 183,
+      "contentRect": {
+        "x": 397,
+        "y": 709,
+        "width": 174,
+        "height": 175
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "米白魂玉插槽",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "border_validation": {
+        "status": "not_applicable",
+        "reason": "Circular geometry or center diamond; preserve aspect instead of nine-slice stretching."
+      }
+    },
+    {
+      "atlas": "ui-controls.png",
+      "name": "skill_frame",
+      "row": 3,
+      "column": 3,
+      "x": 681,
+      "y": 694,
+      "width": 198,
+      "height": 200,
+      "contentRect": {
+        "x": 685,
+        "y": 698,
+        "width": 190,
+        "height": 192
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "透明中心技能框",
+      "center_alpha": 0,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "border_validation": {
+        "status": "not_applicable",
+        "reason": "Circular geometry or center diamond; preserve aspect instead of nine-slice stretching."
+      }
+    },
+    {
+      "atlas": "ui-controls.png",
+      "name": "tooltip_panel",
+      "row": 3,
+      "column": 4,
+      "x": 968,
+      "y": 712,
+      "width": 228,
+      "height": 163,
+      "contentRect": {
+        "x": 972,
+        "y": 716,
+        "width": 220,
+        "height": 155
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "提示面板",
+      "proposed_border_lbrt": [
+        25,
+        24,
+        24,
+        24
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 20,
+          "last_straight": 142,
+          "middle_outer_low": 5.0,
+          "middle_outer_high": 222.0
+        },
+        "column_geometry": {
+          "first_straight": 21,
+          "last_straight": 207,
+          "middle_outer_low": 5.0,
+          "middle_outer_high": 157.0
+        },
+        "stretchable_center": {
+          "width": 179,
+          "height": 115
+        }
+      }
+    },
+    {
+      "atlas": "ui-controls.png",
+      "name": "health_track",
+      "row": 4,
+      "column": 1,
+      "x": 62,
+      "y": 1061,
+      "width": 239,
+      "height": 42,
+      "contentRect": {
+        "x": 66,
+        "y": 1065,
+        "width": 231,
+        "height": 34
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "灰色血条轨道",
+      "proposed_border_lbrt": [
+        20,
+        18,
+        19,
+        19
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 15,
+          "last_straight": 27,
+          "middle_outer_low": 6.0,
+          "middle_outer_high": 233.0
+        },
+        "column_geometry": {
+          "first_straight": 16,
+          "last_straight": 223,
+          "middle_outer_low": 5.0,
+          "middle_outer_high": 35.0
+        },
+        "stretchable_center": {
+          "width": 200,
+          "height": 5
+        }
+      }
+    },
+    {
+      "atlas": "ui-controls.png",
+      "name": "health_fill",
+      "row": 4,
+      "column": 2,
+      "x": 363,
+      "y": 1059,
+      "width": 244,
+      "height": 45,
+      "contentRect": {
+        "x": 367,
+        "y": 1063,
+        "width": 236,
+        "height": 37
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "青玉血条填充",
+      "proposed_border_lbrt": [
+        19,
+        19,
+        19,
+        21
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 17,
+          "last_straight": 29,
+          "middle_outer_low": 5,
+          "middle_outer_high": 238
+        },
+        "column_geometry": {
+          "first_straight": 15,
+          "last_straight": 228,
+          "middle_outer_low": 5,
+          "middle_outer_high": 38
+        },
+        "stretchable_center": {
+          "width": 206,
+          "height": 5
+        }
+      }
+    },
+    {
+      "atlas": "ui-controls.png",
+      "name": "divider",
+      "row": 4,
+      "column": 3,
+      "x": 677,
+      "y": 1063,
+      "width": 218,
+      "height": 39,
+      "contentRect": {
+        "x": 681,
+        "y": 1067,
+        "width": 210,
+        "height": 31
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "灰色中菱形分隔线",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "border_validation": {
+        "status": "not_applicable",
+        "reason": "Circular geometry or center diamond; preserve aspect instead of nine-slice stretching."
+      }
+    },
+    {
+      "atlas": "ui-controls.png",
+      "name": "tab_underline",
+      "row": 4,
+      "column": 4,
+      "x": 974,
+      "y": 1064,
+      "width": 219,
+      "height": 38,
+      "contentRect": {
+        "x": 978,
+        "y": 1068,
+        "width": 211,
+        "height": 30
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "青玉中菱形页签下划线",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "border_validation": {
+        "status": "not_applicable",
+        "reason": "Circular geometry or center diamond; preserve aspect instead of nine-slice stretching."
+      }
+    },
+    {
+      "atlas": "icons-extra.png",
+      "name": "skill_jade",
+      "row": 1,
+      "column": 1,
+      "x": 61,
+      "y": 68,
+      "width": 368,
+      "height": 362,
+      "contentRect": {
+        "x": 65,
+        "y": 72,
+        "width": 360,
+        "height": 354
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-extra.png",
+      "name": "skill_blue",
+      "row": 1,
+      "column": 2,
+      "x": 485,
+      "y": 68,
+      "width": 369,
+      "height": 363,
+      "contentRect": {
+        "x": 489,
+        "y": 72,
+        "width": 361,
+        "height": 355
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-extra.png",
+      "name": "skill_wind",
+      "row": 1,
+      "column": 3,
+      "x": 917,
+      "y": 69,
+      "width": 372,
+      "height": 364,
+      "contentRect": {
+        "x": 921,
+        "y": 73,
+        "width": 364,
+        "height": 356
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-extra.png",
+      "name": "skill_fire",
+      "row": 1,
+      "column": 4,
+      "x": 1348,
+      "y": 69,
+      "width": 367,
+      "height": 363,
+      "contentRect": {
+        "x": 1352,
+        "y": 73,
+        "width": 359,
+        "height": 355
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-extra.png",
+      "name": "currency_crystal",
+      "row": 2,
+      "column": 1,
+      "x": 99,
+      "y": 495,
+      "width": 306,
+      "height": 318,
+      "contentRect": {
+        "x": 103,
+        "y": 499,
+        "width": 298,
+        "height": 310
+      },
+      "components": 4,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-extra.png",
+      "name": "currency_coin",
+      "row": 2,
+      "column": 2,
+      "x": 520,
+      "y": 506,
+      "width": 302,
+      "height": 304,
+      "contentRect": {
+        "x": 524,
+        "y": 510,
+        "width": 294,
+        "height": 296
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "center_alpha": 0,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-extra.png",
+      "name": "talent_node",
+      "row": 2,
+      "column": 3,
+      "x": 984,
+      "y": 530,
+      "width": 258,
+      "height": 259,
+      "contentRect": {
+        "x": 988,
+        "y": 534,
+        "width": 250,
+        "height": 251
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-extra.png",
+      "name": "notification_dot",
+      "row": 2,
+      "column": 4,
+      "x": 1440,
+      "y": 565,
+      "width": 186,
+      "height": 186,
+      "contentRect": {
+        "x": 1444,
+        "y": 569,
+        "width": 178,
+        "height": 178
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "illustrations.png",
+      "name": "soul_ring",
+      "row": 1,
+      "column": 1,
+      "x": 39,
+      "y": 52,
+      "width": 407,
+      "height": 410,
+      "contentRect": {
+        "x": 43,
+        "y": 56,
+        "width": 399,
+        "height": 402
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "center_alpha": 0,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "illustrations.png",
+      "name": "result_emblem",
+      "row": 1,
+      "column": 2,
+      "x": 449,
+      "y": 67,
+      "width": 509,
+      "height": 433,
+      "contentRect": {
+        "x": 453,
+        "y": 71,
+        "width": 501,
+        "height": 425
+      },
+      "components": 3,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "center_alpha": 0,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "illustrations.png",
+      "name": "task_gate",
+      "row": 1,
+      "column": 3,
+      "x": 997,
+      "y": 145,
+      "width": 365,
+      "height": 347,
+      "contentRect": {
+        "x": 1001,
+        "y": 149,
+        "width": 357,
+        "height": 339
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "illustrations.png",
+      "name": "task_furnace",
+      "row": 1,
+      "column": 4,
+      "x": 1432,
+      "y": 97,
+      "width": 282,
+      "height": 386,
+      "contentRect": {
+        "x": 1436,
+        "y": 101,
+        "width": 274,
+        "height": 378
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "illustrations.png",
+      "name": "task_scripture",
+      "row": 2,
+      "column": 1,
+      "x": 48,
+      "y": 561,
+      "width": 345,
+      "height": 295,
+      "contentRect": {
+        "x": 52,
+        "y": 565,
+        "width": 337,
+        "height": 287
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "illustrations.png",
+      "name": "inventory_empty",
+      "row": 2,
+      "column": 2,
+      "x": 449,
+      "y": 543,
+      "width": 538,
+      "height": 301,
+      "contentRect": {
+        "x": 453,
+        "y": 547,
+        "width": 530,
+        "height": 293
+      },
+      "components": 3,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "illustrations.png",
+      "name": "talent_mountain",
+      "row": 2,
+      "column": 3,
+      "x": 1036,
+      "y": 582,
+      "width": 322,
+      "height": 215,
+      "contentRect": {
+        "x": 1040,
+        "y": 586,
+        "width": 314,
+        "height": 207
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "illustrations.png",
+      "name": "cultivation_seal",
+      "row": 2,
+      "column": 4,
+      "x": 1425,
+      "y": 521,
+      "width": 313,
+      "height": 303,
+      "contentRect": {
+        "x": 1429,
+        "y": 525,
+        "width": 305,
+        "height": 295
+      },
+      "components": 2,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "center_alpha": 0,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-settings.png",
+      "name": "audio_volume",
+      "row": 1,
+      "column": 1,
+      "x": 172,
+      "y": 244,
+      "width": 354,
+      "height": 348,
+      "contentRect": {
+        "x": 176,
+        "y": 248,
+        "width": 346,
+        "height": 340
+      },
+      "components": 3,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-settings.png",
+      "name": "audio_mute",
+      "row": 1,
+      "column": 2,
+      "x": 752,
+      "y": 244,
+      "width": 382,
+      "height": 348,
+      "contentRect": {
+        "x": 756,
+        "y": 248,
+        "width": 374,
+        "height": 340
+      },
+      "components": 2,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-settings.png",
+      "name": "quality_landscape",
+      "row": 2,
+      "column": 1,
+      "x": 108,
+      "y": 806,
+      "width": 478,
+      "height": 279,
+      "contentRect": {
+        "x": 112,
+        "y": 810,
+        "width": 470,
+        "height": 271
+      },
+      "components": 3,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "icons-settings.png",
+      "name": "control_gamepad",
+      "row": 2,
+      "column": 2,
+      "x": 728,
+      "y": 809,
+      "width": 446,
+      "height": 288,
+      "contentRect": {
+        "x": 732,
+        "y": 813,
+        "width": 438,
+        "height": 280
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "single_assets": [
+    {
+      "file": "fx-slash.png",
+      "resource_key": "fx-slash",
+      "width": 1774,
+      "height": 887,
+      "format": "RGBA8",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_percent": 83.151,
+      "contentRect": {
+        "x": 107,
+        "y": 43,
+        "width": 1588,
+        "height": 746
+      },
+      "source": "C:/Users/25348/.codex/generated_images/01a194cd-6af1-7241-8c1c-471cbb59493e/exec-a9486934-209a-4f85-a97f-1987caaa86ed.png",
+      "sha256": "d5719c3f85a5e1906a2944043e9c21db6e2841d90f2fb037b25e8dae8d4f0669",
+      "import_mode": "Single sprite; preserve full canvas and true alpha",
+      "pixel_changes": false
+    },
+    {
+      "file": "fx-impact.png",
+      "resource_key": "fx-impact",
+      "width": 1254,
+      "height": 1254,
+      "format": "RGBA8",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_percent": 91.84,
+      "contentRect": {
+        "x": 302,
+        "y": 252,
+        "width": 692,
+        "height": 717
+      },
+      "source": "C:/Users/25348/.codex/generated_images/01a194cd-6af1-7241-8c1c-471cbb59493e/exec-15fb18eb-f056-4f9c-9c12-8d6f77e3505d.png",
+      "sha256": "f5b22747cc2eaebfd51ae08abfe143ce100054bd396dc35ed06dd46b95dc30b0",
+      "import_mode": "Single sprite; preserve full canvas and true alpha",
+      "pixel_changes": false
+    },
+    {
+      "file": "fx-ring.png",
+      "resource_key": "fx-ring",
+      "width": 1254,
+      "height": 1254,
+      "format": "RGBA8",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_percent": 82.506,
+      "contentRect": {
+        "x": 75,
+        "y": 83,
+        "width": 1113,
+        "height": 1073
+      },
+      "source": "C:/Users/25348/.codex/generated_images/01a194cd-6af1-7241-8c1c-471cbb59493e/exec-8d031ae4-15a9-41c8-8ea7-bc5c072971d6.png",
+      "sha256": "ff47b866eaac5c71c7fab3db78e77c7631325fccde55016f4fd79fcdc6f72475",
+      "import_mode": "Single sprite; preserve full canvas and true alpha",
+      "pixel_changes": false,
+      "center_alpha": 0
+    }
+  ],
+  "border_audit": {
+    "source": "Assets/ui-controls.png",
+    "source_sha256": "42135c83ea1a8f1ae9205377c922924dbd6404b2cbed8048edb2495d29af1031",
+    "method": "Actual V2 alpha silhouettes; not copied from V1 borders. Four-pixel inset safety after measured corner-to-straight transitions.",
+    "rectangular_controls": 11,
+    "border_order": "left,bottom,right,top",
+    "runtime_nine_slice_review": "pending",
+    "pixel_changes": false
+  }
+}

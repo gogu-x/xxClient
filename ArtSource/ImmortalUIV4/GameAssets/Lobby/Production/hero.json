@@ -1,0 +1,6 @@
+{
+  "id": "hero",
+  "title": "人物立绘",
+  "prompt": "Produce ONE standalone game-ready PNG asset extracted/reconstructed from this precise lobby design. Match source shape, colors, proportions and illustration exactly, do not invent a new UI design. Transparent background outside the requested object, no scene backdrop, no mockup, no sheet. Preserve full silhouette with small transparent margin. No text or numbers except an explicitly requested symbol. Only the central white-haired immortal hero. Preserve EXACT face, pose, costume and flowing silhouette from this lobby, not another character. Remove all scenery, text and UI; reconstruct only tiny occluded costume parts. Entire character on zero-alpha transparency with 4% padding, no halo backdrop.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-0e48118f-3fe1-43ba-8e6f-1a5409ea647d.png"
+}

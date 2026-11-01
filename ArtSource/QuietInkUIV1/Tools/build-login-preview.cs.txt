@@ -1,0 +1,38 @@
+var previous=GameObject.Find("QuietInk_Login_DesignPreview");if(previous!=null)UnityEngine.Object.DestroyImmediate(previous);
+var root=new GameObject("QuietInk_Login_DesignPreview",typeof(RectTransform),typeof(Canvas),typeof(UnityEngine.UI.GraphicRaycaster));
+var canvas=root.GetComponent<Canvas>();canvas.renderMode=RenderMode.ScreenSpaceOverlay;canvas.sortingOrder=32000;
+var backdrop=root.AddComponent<UnityEngine.UI.Image>();backdrop.color=new Color(.953f,.941f,.91f,1f);
+System.Func<Transform,string,float,float,float,float,RectTransform> rect=(p,n,x,y,w,h)=>{
+ var r=new GameObject(n,typeof(RectTransform)).GetComponent<RectTransform>();r.SetParent(p,false);r.anchorMin=r.anchorMax=new Vector2(0,1);r.pivot=new Vector2(0,1);r.anchoredPosition=new Vector2(x,-y);r.sizeDelta=new Vector2(w,h);return r;};
+var design=rect(root.transform,"Design",0,0,941,1672);design.anchorMin=design.anchorMax=design.pivot=new Vector2(.5f,.5f);design.anchoredPosition=Vector2.zero;design.localScale=Vector3.one*Mathf.Min(Screen.width/941f,Screen.height/1672f);design.gameObject.AddComponent<XiuXian.Core.LobbyPortraitLayout>();
+System.Func<string,Sprite> sprite=(id)=>Resources.Load<Sprite>("UI/QuietInkV1/"+id);
+var controls=Resources.LoadAll<Sprite>("UI/QuietInkV1/ui-controls");
+System.Func<string,Sprite> control=(n)=>{foreach(var s in controls)if(s.name==n)return s;throw new System.Exception("Missing control "+n);};
+System.Func<Transform,string,Sprite,float,float,float,float,bool,UnityEngine.UI.Image> art=(p,n,s,x,y,w,h,fit)=>{
+ var im=rect(p,n,x,y,w,h).gameObject.AddComponent<UnityEngine.UI.Image>();im.sprite=s;im.preserveAspect=fit;im.raycastTarget=false;return im;};
+var display=Resources.Load<TMPro.TMP_FontAsset>("Fonts/LobbyDisplay")??TMPro.TMP_Settings.defaultFontAsset;
+var body=Resources.Load<TMPro.TMP_FontAsset>("Fonts/MSYaHei SDF")??display;
+System.Func<Transform,string,string,float,float,float,float,int,Color,TMPro.TMP_Text> text=(p,n,value,x,y,w,h,size,color)=>{
+ var t=rect(p,n,x,y,w,h).gameObject.AddComponent<TMPro.TextMeshProUGUI>();t.font=size>=34?display:body;t.text=value;t.fontSize=size;t.color=color;t.alignment=TMPro.TextAlignmentOptions.Center;t.raycastTarget=false;t.enableWordWrapping=false;return t;};
+var ink=new Color(.188f,.22f,.196f,1f);var muted=new Color(.45f,.48f,.45f,1f);
+art(design,"Background",sprite("bg-login"),0,0,941,1672,false);
+art(design,"TitleLogo",sprite("logo"),145,108,651,326,true);
+text(design,"Tagline","三千大道 · 自在修仙",170,440,601,48,28,ink);
+art(design,"Cultivator",sprite("hero-login"),170,735,350,350,true);
+var server=art(design,"ServerSelector",control("selector_row"),220,1280,501,82,false);server.type=UnityEngine.UI.Image.Type.Sliced;server.raycastTarget=true;server.gameObject.AddComponent<UnityEngine.UI.Button>().targetGraphic=server;
+text(server.transform,"ServerName","青云山 · 一区",25,10,411,62,30,ink);
+for(int i=0;i<2;i++){
+ var stroke=rect(server.transform,"ChevronStroke"+i,452+(i==0?-5:5),42,3,17);stroke.pivot=new Vector2(.5f,.5f);stroke.localEulerAngles=new Vector3(0,0,i==0?45:-45);
+ var line=stroke.gameObject.AddComponent<UnityEngine.UI.Image>();line.color=ink;line.raycastTarget=false;
+}
+var enter=art(design,"EnterButton",control("button_primary"),170,1390,601,118,false);enter.type=UnityEngine.UI.Image.Type.Sliced;enter.raycastTarget=true;enter.gameObject.AddComponent<UnityEngine.UI.Button>().targetGraphic=enter;
+text(enter.transform,"Label","进入仙途",20,12,561,94,43,new Color(.96f,.95f,.91f,1f));
+text(design,"AccountHint","本机游客账号 · 自动登录",170,1525,601,40,24,muted);
+text(design,"More","更多  ›",695,1590,150,48,26,ink);
+Canvas.ForceUpdateCanvases();
+System.IO.Directory.CreateDirectory("Assets/Prefabs/UI/QuietInkV1");AssetDatabase.Refresh();
+bool saved=false;PrefabUtility.SaveAsPrefabAsset(root,"Assets/Prefabs/UI/QuietInkV1/LoginConcept.prefab",out saved);
+// 暂停中的 Game View 需先推进一帧；随后单独调用截图，避免截到旧画面。
+if(EditorApplication.isPaused)EditorApplication.Step();
+// 预览结束后由调用方显式销毁 QuietInk_Login_DesignPreview，不保存到正式场景。
+return new{saved=saved,layers=design.childCount,sprites=controls.Length,note="Layered design prototype only; login network actions are not wired."};

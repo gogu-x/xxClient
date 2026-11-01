@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "coordinate_origin": "top-left",
+  "rect_units": "pixels",
+  "atlas_root": "Assets",
+  "suggested_world_reference_size": [
+    3840,
+    2560
+  ],
+  "generation": "built-in image_gen, true transparent_background; one cleanup edit for spacing",
+  "rect_method": "alpha>=16 connected components of at least20 pixels, assigned by visual semantic cell, bounds padded4px; no equal-grid cropping",
+  "pixel_edits": false,
+  "atlases": [
+    {
+      "file": "realm-entrances.png",
+      "width": 1086,
+      "height": 1448,
+      "format": "RGBA8",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_percent": 47.727,
+      "alpha_below16_percent": 53.297,
+      "outer_content_margin_ltrb": [
+        25,
+        39,
+        15,
+        61
+      ],
+      "components_alpha_ge16": 24,
+      "significant_components": 12,
+      "excluded_tiny_component_pixels": 12,
+      "rect_overlaps": [],
+      "source": "C:\\Users\\25348\\.codex\\generated_images\\01a195ed-e4a1-7100-bd11-05e3e51fd61a\\exec-49bc252d-8c94-4681-a2c0-ac2c22f89f4f.png",
+      "sha256": "5919558fc0b16b5b3cb283080100a3f2e953d7d978d0e29c17d0b16b5e450c94",
+      "source_identical": true,
+      "pixel_edits": false,
+      "validation_scope": "Source pixels, alpha and sprite metadata only; Unity composition requires separate visual review."
+    }
+  ],
+  "sprites": [
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-qingyun-gate",
+      "display_name": "青云古门",
+      "size_tier": "large",
+      "x": 34,
+      "y": 35,
+      "width": 332,
+      "height": 327,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        325,
+        320
+      ],
+      "row": 1,
+      "column": 1,
+      "component_count": 1,
+      "solid_pixels": 69888
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-cloud-palace",
+      "display_name": "浮空仙宫",
+      "size_tier": "large",
+      "x": 398,
+      "y": 41,
+      "width": 318,
+      "height": 345,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        313,
+        340
+      ],
+      "row": 1,
+      "column": 2,
+      "component_count": 1,
+      "solid_pixels": 69507
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-ice-cave",
+      "display_name": "冰雪洞天",
+      "size_tier": "large",
+      "x": 752,
+      "y": 60,
+      "width": 323,
+      "height": 313,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        341,
+        330
+      ],
+      "row": 1,
+      "column": 3,
+      "component_count": 1,
+      "solid_pixels": 63255
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-sword-ruins",
+      "display_name": "巨剑遗墟",
+      "size_tier": "large",
+      "x": 24,
+      "y": 384,
+      "width": 350,
+      "height": 360,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        331,
+        340
+      ],
+      "row": 2,
+      "column": 1,
+      "component_count": 1,
+      "solid_pixels": 63636
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-autumn-gate",
+      "display_name": "秋林山门",
+      "size_tier": "medium",
+      "x": 403,
+      "y": 431,
+      "width": 314,
+      "height": 301,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        240,
+        230
+      ],
+      "row": 2,
+      "column": 2,
+      "component_count": 1,
+      "solid_pixels": 60018
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-bamboo-grotto",
+      "display_name": "竹林洞府",
+      "size_tier": "medium",
+      "x": 754,
+      "y": 440,
+      "width": 307,
+      "height": 287,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        235,
+        220
+      ],
+      "row": 2,
+      "column": 3,
+      "component_count": 1,
+      "solid_pixels": 61848
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-lake-pavilion",
+      "display_name": "湖心仙阁",
+      "size_tier": "medium",
+      "x": 34,
+      "y": 754,
+      "width": 353,
+      "height": 317,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        245,
+        220
+      ],
+      "row": 3,
+      "column": 1,
+      "component_count": 1,
+      "solid_pixels": 57430
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-cliff-grotto",
+      "display_name": "悬崖石窟",
+      "size_tier": "medium",
+      "x": 393,
+      "y": 769,
+      "width": 334,
+      "height": 294,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        261,
+        230
+      ],
+      "row": 3,
+      "column": 2,
+      "component_count": 1,
+      "solid_pixels": 67758
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-ancient-well",
+      "display_name": "古井阵眼",
+      "size_tier": "small",
+      "x": 757,
+      "y": 832,
+      "width": 312,
+      "height": 238,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        170,
+        130
+      ],
+      "row": 3,
+      "column": 3,
+      "component_count": 1,
+      "solid_pixels": 44056
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-stone-door",
+      "display_name": "小型石门",
+      "size_tier": "small",
+      "x": 21,
+      "y": 1114,
+      "width": 339,
+      "height": 269,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        176,
+        140
+      ],
+      "row": 4,
+      "column": 1,
+      "component_count": 1,
+      "solid_pixels": 52718
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-tree-shrine",
+      "display_name": "树下小祠",
+      "size_tier": "small",
+      "x": 397,
+      "y": 1078,
+      "width": 338,
+      "height": 313,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        167,
+        155
+      ],
+      "row": 4,
+      "column": 2,
+      "component_count": 1,
+      "solid_pixels": 71656
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-small-cave",
+      "display_name": "小型洞口",
+      "size_tier": "small",
+      "x": 754,
+      "y": 1127,
+      "width": 318,
+      "height": 251,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        177,
+        140
+      ],
+      "row": 4,
+      "column": 3,
+      "component_count": 1,
+      "solid_pixels": 52638
+    }
+  ]
+}

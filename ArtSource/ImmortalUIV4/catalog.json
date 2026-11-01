@@ -1,0 +1,233 @@
+[
+  {
+    "id": "login",
+    "title": "登录",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Ivory, sunrise gold and teal. Fullscreen cinematic login, magnificent floating cloud palace, elegant white-haired male immortal midframe, prominent calligraphic title 仙途 at upper quarter with small subtitle 三千大道 自在修仙. Lower third compact jade login form: 账号, 密码, selected server 青云山·一区, large gold 进入仙途 button and secondary 创建角色 / 游客登录. Keep fields spacious and text readable. No navigation bar.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-d80b53f2-5f9d-4f75-949a-872b9067c7e7.png",
+    "path": "Concepts/login.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "a13e15cc4b4b61ed3b4a4d245d3c89c6d591ee58d59f774fdde1a3b1aab72f6e",
+    "status": "draft-review"
+  },
+  {
+    "id": "lobby",
+    "prompt": "Create a finished premium Chinese xianxia mobile game UI ART DESIGN, portrait canvas exactly 9:16, target design 1080x1920. Full bleed game screen, no device mockup, no black bars, no desktop sidebar. Reference image supplies exquisite manhua illustration, sculpted jade/gold cloud trim and character identity ONLY; recompose everything for PORTRAIT MOBILE. Professional authored game art, coherent fine detailing, restrained gold borders with natural proportions (never stretched). Clear legible Chinese typography, strong hierarchy, generous touch targets, reserve top/bottom safe margins. All critical controls inside screen. This is a full composed visual mockup, sample values allowed. LOBBY. Palette ivory daylight, celadon, warmgold, accents rose and vermilion. Top 12% compact player portrait/name 清风道人 / 筑基初期 at left and two currency capsules 灵石 12800, 仙玉 680 at right. Center 15%-70% a beautiful full-length white-haired male immortal in flowing navy/ivory/celadon silk, standing on cloud terrace, floating palaces and peach blossoms behind. Hero dominates without covering controls. Three small ornate shortcut icons vertically on right 宗门 活动 福利. Left middle a restrained mission scroll 仙途指引 / 完成青云试炼 / 前往. Bottom 70%-85% beautiful jade gateway action 进入秘境 and subtle current location 云海仙门. Bottom fixed five beautifully illustrated navigation icons with labels 角色 修炼 装备 背包 魂玉, each equal accessible width. NO giant empty frames or dashboard card grids. Immersive mobile game lobby, generous scenery.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-93fad7ad-8e95-4d80-b255-04b95ae5afee.png",
+    "title": "大厅",
+    "path": "Concepts/lobby.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "add15c6abad21c4bf22fa1b9f14ea270585fec335ef4384c8f6a69bd65541e4c",
+    "status": "draft-review"
+  },
+  {
+    "id": "character",
+    "title": "角色",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Ivory/celadon and pale pink. Upper10% title 角色 and back/resources. Center12%-62% beautiful full-length white-haired male immortal, fine navy/ivory flowing robes, no equipment slots. Small two portrait selector medallions at left (male and dark-haired female). Under hero name 清风道人 / 剑修·御剑乘风. Lower65%-88% compact jade plaque with 生命 12600 / 攻击 1280 / 防御 680 / 速度 125 and small two skill icons. Large 选定角色 action. Bottom tabs 角色 装备 天赋, 角色 selected.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-8b0ce737-677a-4542-9cc1-6dbf767a7e7a.png",
+    "path": "Concepts/character.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "730a013aa52a521841cd43f56f46b67b9ab00f0a15f84abcca9dc95644bc51f3",
+    "status": "draft-review"
+  },
+  {
+    "id": "cultivation",
+    "title": "修炼",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Amber gold sunrise, warm ivory, jade. Title 修炼 top10%. Center15%-58% white-haired immortal seated crosslegged meditating on an exquisite golden lotus mandala over clouds; beautiful layered garments and serene face. Above him 筑基·初期. Under him slender jade/gold progress gauge 灵气 6800/10000. Lower65%-87% elegant panel 境界突破 with concise three requirements and two material icons, achieved green checks and one unmet requirement muted. Bottom two large actions 凝神修炼 / 境界突破. Spacious mystical atmosphere.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-ce4f5acc-bbaf-48ee-b049-b979d522786a.png",
+    "path": "Concepts/cultivation.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "5286bd3a81d98bb8847ae5959ad01c4ec462aacd1a8a5970cc9c40f36152bca8",
+    "status": "draft-review"
+  },
+  {
+    "id": "equipment",
+    "prompt": "Create a finished premium Chinese xianxia mobile game UI ART DESIGN, portrait canvas exactly 9:16, target design 1080x1920. Full bleed game screen, no device mockup, no black bars, no desktop sidebar. Reference image supplies exquisite manhua illustration, sculpted jade/gold cloud trim and character identity ONLY; recompose everything for PORTRAIT MOBILE. Professional authored game art, coherent fine detailing, restrained gold borders with natural proportions (never stretched). Clear legible Chinese typography, strong hierarchy, generous touch targets, reserve top/bottom safe margins. All critical controls inside screen. This is a full composed visual mockup, sample values allowed. EQUIPMENT PAGE. Palette amber autumn sun, ivory, deep jade and antique gold. Top 10% elegant small title 灵器 with back arrow and currency. Upper 12%-59% full-body white-haired male immortal centered, with EXACTLY SIX small ornate octagonal equipment sockets flanking him: left three 灵剑 法袍 玉佩; right three 仙冠 护腕 云履. Every socket clear icon and short label, first sword slot glowing selected, no overlaps with face. Slim combat power plaque below character 战力 128430. Lower 63%-89% ONE horizontally composed restrained deep-jade detail panel, small sword illustration at upperleft, title 落霞灵剑 / 极品 · Lv.30 · 精炼+3, three aligned stat rows 攻击 +280 / 生命 +1200 / 防御 +96. Two touch-friendly bottom actions 更换 and 精炼. Bottom 91%-98% three tabs 角色 装备 天赋, 装备 selected gold. Character and equipment are centerpiece, detail panel compact yet legible. No right sidebar and no horizontal desktop compression.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-cc38648e-7235-4ba0-b4f4-d48943f6f65f.png",
+    "title": "装备",
+    "path": "Concepts/equipment.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "290679cae2779772151c24eb05868e9217b7f7c7c1b80a4c9e108c223d19d8d5",
+    "status": "draft-review"
+  },
+  {
+    "id": "inventory",
+    "title": "背包",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Warm ivory parchment, darkjade, amber. Title 背包 top8% and resources. Tabs 全部 装备 材料 消耗品 at10%-16%. Middle18%-61% beautiful framed inventory grid exactly4 columns x4 rows, distinct illustrated swords robes pills crystals lotus and scrolls, small quantity badges, selected sword goldglow. No character. Below64%-87% compact selected-item detail panel: sword icon, 落霞灵剑, 极品·绑定, two concise attribute rows and description. Bottom buttons 查看来源 / 使用. Capacity 64/120 near grid footer. Readable phone interface.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-88db0134-0a39-4e03-8ba7-59bf48bb204a.png",
+    "path": "Concepts/inventory.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "d62839830ca15dfd528fde3f4451d5ebc7be7d804be008dd7b53a776c0cd06c9",
+    "status": "draft-review"
+  },
+  {
+    "id": "souljade",
+    "prompt": "Create a finished premium Chinese xianxia mobile game UI ART DESIGN, portrait canvas exactly 9:16, target design 1080x1920. Full bleed game screen, no device mockup, no black bars, no desktop sidebar. Reference image supplies exquisite manhua illustration, sculpted jade/gold cloud trim and character identity ONLY; recompose everything for PORTRAIT MOBILE. Professional authored game art, coherent fine detailing, restrained gold borders with natural proportions (never stretched). Clear legible Chinese typography, strong hierarchy, generous touch targets, reserve top/bottom safe margins. All critical controls inside screen. This is a full composed visual mockup, sample values allowed. SOUL JADE PAGE. Palette violet moonlight, silver, palegold and deep plum, jade accents. Top10% small title 魂玉, back arrow and resource capsules. Under title three horizontal tabs 镶嵌 淬炼 升阶 with 镶嵌 selected. Upper-middle 18%-56% large beautiful face-on celestial astrolabe with exactly six distinct gem sockets surrounding central ethereal violet pearl: red flame at12, green arrow at2, amber tortoise at4, blue wolf at6, violet lightning at8, white dragon at10. Clear empty gaps between sockets, all contained screenwidth. Deep moonlit mountains behind. Lower 59%-81% ONE elegant plum/silver detail plaque with selected ruby portrait and title 烈阳·破阵 / 神品魂玉, three readable rows 近战伤害 +8% / 攻击 +120 / 暴击率 +3%. Below 82%-89% a narrow horizontal row of four owned gem inventory icons with subtle header 魂玉背包. Bottom90%-97% two large clear actions 替换魂玉 and 查看背包. Beautiful airy constellation composition, no character, no desktop sidebar.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-51e86bbf-336f-44fa-81be-f61b89eba803.png",
+    "title": "魂玉",
+    "path": "Concepts/souljade.png",
+    "width": 940,
+    "height": 1672,
+    "sha256": "6b0d47c8dcc9dd623d954aac58a6b5cee214d01c03c070ec13fb599926a2c9a9",
+    "status": "draft-review"
+  },
+  {
+    "id": "talent",
+    "title": "天赋",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Indigo night, violet, gold celestial lines. Title 天赋 and available points 天赋点 8 at top10%. Branch tabs 破军 御灵 守御 身法 at11%-17%, 破军 selected. Center20%-65% skill tree visually connected 12 nodes with branching golden lines over misty star-map mountains, active nodes gold, available emerald, locked muted. Clearly ordered paths, no overlapping labels. Lower68%-88% jadeplum selected-node plaque 剑意凝心 / 攻击提升 3% / 修习消耗 1 点 with icon. Bottom 修习 / 重置 buttons. No giant character.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-cbaf074c-87d3-486d-9690-2076998fd17f.png",
+    "path": "Concepts/talent.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "3cb9fe616432f7a5a08c38c2ccd4c8af6475cc3c701ed3ea2f7083c7fba69c5e",
+    "status": "draft-review"
+  },
+  {
+    "id": "battle",
+    "title": "战斗",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Mobile portrait combat scene, jade stone floating arena in cloud mountains, warm dawn, accents azure and vermilion. Top small 青云秘境·第一重 and 回合 3/20, back icon. Top enemy party three elegant distinct monster silhouettes with readable small healthbars, center large dramatic swordmagic arc, bottom-mid friendly three immortal combatants with healthbars, clear separation and open arena. Gameplay environment occupies15%-70%, NO giant decorative cards over fight. Lower72%-86% four round illustrated skills (sword lotus shield thunder) with cooldown numbers, selected skill gold. Bottom compact 自动战斗 / 速度×2 controls and small two-line battle log. Polished finished xianxia HUD.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-2b9ab708-52cf-4d53-a76c-61777929297b.png",
+    "path": "Concepts/battle.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "39a28d17e4b12b59562ab36a99e2a9fda1b6dad8c21421a913ae67119e81d05b",
+    "status": "draft-review"
+  },
+  {
+    "id": "task",
+    "title": "任务",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Ivory scrolls, jade, warmgold, plum blossom. Title 任务 top10%, tabs 主线 每日 成就 next. Upper20%-58% four stacked elegant parchment task strips, each small illustrated icon, title, short goal and progress, selected 初入仙途 goldborder, completed 灵根初醒 green check, other rows muted. Lower62%-87% illustrated scroll detail 初入仙途, two short narrative lines, objective 完成青云秘境 1/1 and three reward icons. Bottom large 领取奖励 gold action, no character. Mobile readable generous line spacing.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-67a2f2e5-970c-4ef9-a17c-aee5d0e23262.png",
+    "path": "Concepts/task.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "cfbc6ccbaf262f4b36da5fc6ea2c0de00a98e981bf4b7f97e73e9450ed068ae6",
+    "status": "draft-review"
+  },
+  {
+    "id": "sect",
+    "title": "宗门",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Rich emerald jade mountains, ivory clouds, gold architecture. Title 宗门 top10%. Upper15%-47% majestic illustrated Chinese sect palace overlooking waterfall, title 青云仙宗 / Lv.5 / 成员38/50 within understated plaques. Middle50%-65% warm parchment announcement with three readable lines. Lower68%-86% four beautiful illustrated building shortcuts in2x2 arrangement: 宗门试炼 藏经阁 贡献商店 成员名册. Bottom two large actions 宗门捐献 / 宗门事务. Keep scenery visible, no dashboard sidebar.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-21fa2660-f26b-4726-a53a-6a4433657c1e.png",
+    "path": "Concepts/sect.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "8bc0819f431b6cb11ede7a91c73843f6da40ec5abfb8e879494703b2ae158ed6",
+    "status": "draft-review"
+  },
+  {
+    "id": "activity",
+    "title": "活动",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Vermilion lantern celebration, palegold and deepjade, restrained festive peach. Title 活动 top10%; filter tabs 限时 日常 全部. Three stacked wide illustrated event cards at20%-83%, each unique cinematic artwork, short title 云海问剑 / 七日登仙 / 灵玉寻踪, concise time label and small 前往 button. First card swordcliff, second lantern celebration, third emerald cavern. Cards richly painted, consistent small cloudcorners and readable lower text strips. Bottom 活动说明 jade button. No irrelevant inventory.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-c0b527ea-3717-4476-b0c4-0a1b49a0b15b.png",
+    "path": "Concepts/activity.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "8879a6d289e56c7d49e9a07fe3337185733f70d8294c1af6eedaeeb0551c257e",
+    "status": "draft-review"
+  },
+  {
+    "id": "welfare",
+    "title": "福利",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Crimson lacquer gold and ivory festive clouds. Title 福利 top10%, headline 七日修行 每日有礼. Upper20%-40% sumptuous golden red gift chest with lotus and silk ribbons. Middle43%-77% seven daily reward tiles: first row3, second row3, seventh special wide featured tile. Labels 第一天 through 第七天, completed check firsttwo, third selected glow, remaining lockedsubtle. Clear illustrated reward icons and quantities. Bottom80%-95% 大奖预览 short strip and large 领取今日奖励 button. Refined celebration, not overcrowded.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-b5eb93c3-7921-4069-b1d1-8befdf35da1b.png",
+    "path": "Concepts/welfare.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "fd3623f1a84ad0f3c0aa5b564a2d620d5f9c6ba774673e8a39d768cde1e92ef6",
+    "status": "draft-review"
+  },
+  {
+    "id": "partner",
+    "title": "仙侣",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Soft rose, ivory, mint jade and gold. Title 道侣 top10%. Center12%-61% beautiful full-length adult black-haired female immortal in flowing white/celadon silk with pinklotus hairpin and delicate fan, peachblossom garden, elegant nonsexual outfit. Name 云梦仙子 / 灵法·辅助 near figure base. Lower65%-85% restrained jade profile plaque with 羁绊 青云同道 and three skill icons, a few concise lines. Small horizontal row of3 selectable portraitmedallions. Bottom 查看羁绊 / 上阵. Fine expressive manhua face.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-b6f29030-25a2-4ee3-ad75-1c9d89c46d5b.png",
+    "path": "Concepts/partner.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "566197aa904961add34b1f82dbc333245a9da141d9330ffe34317983b7990915",
+    "status": "draft-review"
+  },
+  {
+    "id": "rank",
+    "title": "排行榜",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Midnight navy, gold and ivory celestial mountain. Title 排行 top10%; tabs 战力榜 秘境榜 宗门榜 at12%-18%. Upper20%-43% dramatic champion portrait white-haired immortal with gold laurelbadge 第一名 / 清虚真人 / 战力128600, contained balanced. Below46%-85% five distinct elegant ranking rows with rank2-6, portrait, name and rightaligned score, ownrow highlighted teal. Bottom pinned 我的排名 128 / 战力68200 plus 刷新 control. Lists readable, no giant empty panel.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-b0d0c579-f5bb-4096-8ee4-3ec8cc6032e2.png",
+    "path": "Concepts/rank.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "dfa8ef58407378bec3d4c736702eae5e165ec71e6fd5d91c98b77775cf3e9c13",
+    "status": "draft-review"
+  },
+  {
+    "id": "estate",
+    "title": "洞府",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Emerald spring mountains, jade roofs, warm ivorygold and pink blossoms. Title 洞府 top10%, 云栖洞府·Lv.3. Center15%-72% beautiful isometric painted floating estate with four distinct buildings positioned vertically on connected terraces: medicinal 灵田, bronze-furnace 炼丹房, towering 藏经阁, quiet 静修室. Each small readable jade nameplate and status badge. Waterfalls and winding paths, no generic grid cards. Lower76%-88% compact production bar 灵气+120/时 / 灵田产量+8%. Bottom 一键收取 and 升级洞府 buttons.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-92ad6056-af37-4b51-81ea-5c7c8710fbee.png",
+    "path": "Concepts/estate.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "c088595557c88866d2ff1d361136024827460b09660ab5c23a9c19388c58ca37",
+    "status": "draft-review"
+  },
+  {
+    "id": "settings",
+    "title": "设置",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Quiet warm ivory study, celadon jade and subtle gold. Title 设置 top10%. Tabs 声音 画面 操作 at12%-18%, 声音 selected. Central22%-78% ONE beautifully crafted deepjade panel with four generously spaced settings rows: 主音量70%, 音乐80%, 音效60% each real illustrated jade slider; 静音 off toggle. Bottom panel two concise help lines. Bottom82%-95% 恢复默认 / 保存设置 touch-friendly buttons. Calm, legible, restrained ornaments, no characters.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-6f5d6d5d-b2d4-4bb4-8b7e-e06e3b5dce66.png",
+    "path": "Concepts/settings.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "d7e4c3958bb664dfcb4943a0b6e1f0b39fc309453bb9f6fd6de5770a059d97a6",
+    "status": "draft-review"
+  },
+  {
+    "id": "server",
+    "title": "服务器选择",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Fullportrait login scene dimmed behind a centered modal occupying x8%-92%,y25%-78%. Modal ornate jadegold frame with title 选择仙域, closeX, tabs 我的角色 / 全部区服. Four roomy server rows 青云山·一区 / 天启峰·二区 / 紫霄宗·三区 / 蓬莱岛·四区 with green 流畅 and amber 繁忙 markers, selectedfirst golden border. Bottom 确认选择 goldbutton. Background recognizably matching immortal login art but strongly subdued. Clear modal focus.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-5306fd1a-cd3d-4d51-a202-d049d5209e25.png",
+    "path": "Concepts/server.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "40f20e1a457e2c89ef3e12579424b762f0009fab07a01f95a549e82f9e6843a7",
+    "status": "draft-review"
+  },
+  {
+    "id": "register",
+    "title": "注册",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Fullportrait login scene dimmed behind centered jadegold modal x8%-92% y22%-81%. Title 创建角色, closeX, four clear aligned form rows: 道号 input, 密码 masked input, 确认密码 masked input, 选择区服 青云山·一区. Small unchecked agreement box with 阅读并同意用户协议. Bottom large 确认创建 and secondary 返回登录. Spacious mobile touch targets, ornate but restrained cloudcorners, whitegold text on jade. No desktop form sidebar.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-1e66447b-a579-431e-a59a-004695f560af.png",
+    "path": "Concepts/register.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "8450d294dd605744e1a7712f978b95b3400712272e28d9cf2ea4f4981b220f1b",
+    "status": "draft-review"
+  },
+  {
+    "id": "result",
+    "title": "战斗结算",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Fullportrait cloudarena dimmed behind central celebratory victory panel. Upper20%-35% brilliant gold calligraphic 试炼胜利 with elegant winglike cloud crest and subtle stars, NO English. Center38%-60% concise statistics 用时01:28 / 回合8 / 最高伤害1280, three beautiful reward icons 灵石680 玄铁12 聚灵丹2 with numbers. Lower63%-80% two wide buttons 再次挑战 / 返回大厅. Panel width84%, background arena remains visible at topbottom. Clear reward hierarchy, rich goldjade and amber, not overfilled.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-4f6d3b7f-3196-45f2-aaba-2582f6a1c7d0.png",
+    "path": "Concepts/result.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "e9419a192ff2db36d02e371ce8db78b7ea681664a77fb796fc64f5b2f7dafd4d",
+    "status": "draft-review"
+  },
+  {
+    "id": "confirm",
+    "title": "确认弹窗",
+    "prompt": "Finished premium Chinese xianxia mobile game UI ART DESIGN. Exactly PORTRAIT 9:16 fullbleed canvas; target1080x1920. Reference supplies coherent manhua drawing quality, detailed jade/gold trim, character identity, Chinese typography. Design a NEW PAGE in this same game, not the equipment page. No desktop sidebar, device mockup or blackbars. Large readable phone typography and touch targets, safe margins. All ornaments keep natural proportions. Finished hand-authored game art, not programmer dashboard. Sample values are visual design placeholders. Fullportrait equipment page dimmed behind compact center jadegold dialog x9%-91%,y35%-66%. Title 重置天赋, short centered readable body 确认重置当前天赋？ / 已分配的天赋点将返还。, small gold warning seal. Two equally prominent bottombuttons 取消 deepjade, 确认 gold, top-right closeX. Crisp generous spacing, elegant natural cloudcorners, subtle shadow. Background character and six equipment slots faintly visible, modal clear dominant.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-ffd70716-9718-475b-9d08-29304f755cd8.png",
+    "path": "Concepts/confirm.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "c7f4c9b7701d0204a5597275f64a1f08c86946035b9744a12e31fa9a90379b05",
+    "status": "draft-review"
+  }
+]

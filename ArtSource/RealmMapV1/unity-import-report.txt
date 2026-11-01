@@ -1,0 +1,15 @@
+RealmMapV1 import verified: 12 PNG, 37 Sprite.
+Source pixel bytes preserved; no upscale or raster editing. Runtime visual review is separate.
+lobby-avatar-female.png | 1254x1254 | sprites 1 | PNG SHA256 unchanged
+lobby-avatar-male.png | 1254x1254 | sprites 1 | PNG SHA256 unchanged
+lobby-background.png | 940x1672 | sprites 1 | PNG SHA256 unchanged
+lobby-controls.png | 1254x1254 | sprites 4 | PNG SHA256 unchanged
+lobby-hero-female.png | 1254x1254 | sprites 1 | PNG SHA256 unchanged
+lobby-hero-male.png | 1254x1254 | sprites 1 | PNG SHA256 unchanged
+lobby-hero-seated.png | 1254x1254 | sprites 1 | PNG SHA256 unchanged
+lobby-icons.png | 1254x1254 | sprites 2 | PNG SHA256 unchanged
+map-overlays.png | 1536x1024 | sprites 6 | PNG SHA256 unchanged
+nav-six.png | 1254x1254 | sprites 6 | PNG SHA256 unchanged
+realm-entrances.png | 1086x1448 | sprites 12 | PNG SHA256 unchanged
+world-map-base.png | 1536x1024 | sprites 1 | PNG SHA256 unchanged
+Composition prefabs: Assets/RealmMapV1/Prefabs/RealmMapPreview.prefab, LobbyComposition.prefab

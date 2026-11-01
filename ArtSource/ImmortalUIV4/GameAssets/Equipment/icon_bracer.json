@@ -1,0 +1,6 @@
+{
+  "id": "icon_bracer",
+  "alpha": true,
+  "prompt": "Create an actual standalone production game sprite by editing the supplied design reference. Match the reference asset geometry, palette, materials and details very closely. Do not redesign or show a UI screenshot or sprite sheet. Extract only gold-and-navy bracer with blue gem from middle-right equipment slot. Preserve exact diagonal angle and details. Transparent background, no frame, slot, label or scene.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-63d778b9-6c7b-42ee-b71c-033bc66af95b.png"
+}

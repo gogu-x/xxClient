@@ -1,0 +1,125 @@
+{
+  "date": "2026-11-01",
+  "project": "g1Client",
+  "validation": "Unity MCP, actual Play Mode with local WebSocket backend; 1080x1920 GameView frame captures; no browser inspection",
+  "activeBattleBefore": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "id": "f2fbd1b4-faa8-4d98-8a45-3697e52e6033",
+        "requests": 2,
+        "finished": false,
+        "minimized": true,
+        "root": true,
+        "alpha": 0,
+        "time": 132.023026,
+        "events": 0,
+        "animations": 4
+      },
+      "compiler": "codedom"
+    }
+  },
+  "activeBattleAfter": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "id": "f2fbd1b4-faa8-4d98-8a45-3697e52e6033",
+        "requests": 2,
+        "finished": false,
+        "minimized": false,
+        "root": true,
+        "alpha": 1,
+        "time": 136.22702,
+        "events": 37,
+        "animations": 6
+      },
+      "compiler": "codedom"
+    }
+  },
+  "backgroundCompleted": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "id": "5d35b256-d76a-4ef1-b50f-93893773ba9e",
+        "requests": 1,
+        "finished": true,
+        "minimized": true,
+        "root": true,
+        "alpha": 0,
+        "time": 60.0064926,
+        "events": 0,
+        "animations": 0
+      },
+      "compiler": "codedom"
+    }
+  },
+  "resultRaycastResume": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "hit": "BattleResumeBubble",
+        "id": "5d35b256-d76a-4ef1-b50f-93893773ba9e",
+        "requests": 1,
+        "minimized": false,
+        "finished": true
+      },
+      "compiler": "codedom"
+    }
+  },
+  "resultDismiss": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "session": false,
+        "id": "",
+        "rootActive": false,
+        "bubbleActive": false,
+        "mainActive": true
+      },
+      "compiler": "codedom"
+    }
+  },
+  "soulFourAffixes": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "text": "闪避距离  +46.6%\n技能冷却  +28%\n暴击伤害  +21.8%\n治疗效果  +8.6%",
+        "height": 128.15,
+        "available": 140,
+        "overflow": false,
+        "lines": 4
+      },
+      "compiler": "codedom"
+    }
+  },
+  "runtimeErrors": {
+    "success": true,
+    "message": "Retrieved 0 log entries.",
+    "data": []
+  },
+  "screenshots": [
+    "01-lobby-battle-bubble.png",
+    "01b-resumed-battle.png",
+    "01c-background-result-bubble.png",
+    "01d-background-result-opened.png",
+    "02-equipment-compact.png",
+    "02b-equipment-picker.png",
+    "03-soul-jade-compact.png",
+    "03b-soul-jade-four-affixes.png",
+    "04-soul-jade-details.png",
+    "05-character-compact.png",
+    "06-talent-compact.png",
+    "07-sect-compact.png",
+    "08-settings-compact.png"
+  ],
+  "limitations": [
+    "Soul jade and talents retain existing local-only behavior; no new backend integration was introduced.",
+    "No physical phone acceptance test was performed."
+  ]
+}

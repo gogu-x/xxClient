@@ -1,0 +1,6 @@
+{
+  "id": "icon_sword",
+  "alpha": true,
+  "prompt": "Create an actual standalone production game sprite by editing the supplied design reference. Match the reference asset geometry, palette, materials and details very closely. Do not redesign or show a UI screenshot or sprite sheet. Extract only the blue-white glowing sword shown in left top equipment slot. Preserve exact blade, silver/gold hilt, diagonal lowerleft-to-upperright orientation. Transparent background, no slot, frame, labels, character or scenery. Fine modest magical glow attached to blade, full sword visible with padding.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-02ab4382-a09b-47e3-bc96-7d39c8907415.png"
+}

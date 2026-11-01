@@ -1,0 +1,691 @@
+{
+  "schema_version": 1,
+  "name": "仙途·清墨 UI V1",
+  "date": "2026-11-01",
+  "path_base": "g1Client 项目根目录；各文件路径均相对此根目录",
+  "stage": "效果图与可组合资源已导入；登录与图集指定尺寸样例视觉检查通过，正式页面替换未开始",
+  "counts": {
+    "source_png": 10,
+    "unity_sprites": 55,
+    "concept_sheets": 3,
+    "represented_pages": 12,
+    "layered_login_preview_prefabs": 1
+  },
+  "delivery_scope": {
+    "included_source_assets": "ArtSource/QuietInkUIV1/Assets/",
+    "imported_unity_assets": "Assets/Art/Resources/UI/QuietInkV1/",
+    "prompt_directory": "ArtSource/QuietInkUIV1/Prompts/",
+    "page_map": "ArtSource/QuietInkUIV1/page-map.json",
+    "design_spec": "ArtSource/QuietInkUIV1/design-spec.json",
+    "delivery_note": "ArtSource/QuietInkUIV1/delivery-note.md",
+    "formal_game_pages_replaced": false,
+    "network_or_gameplay_changes_in_preview": false,
+    "limits": [
+      "本包是设计与资源基础，不是12个已完成运行页面。",
+      "效果图用于对照，不作为整页贴图导入游戏。",
+      "宗门、道侣、洞府、活动、福利与排行仍按page-map记录真实未开放边界；本包不新增业务。",
+      "Unity登录合成与3张图集指定尺寸样例已通过视觉检查；仍不等于12个正式页面、多分辨率或任意底色均通过验收。"
+    ]
+  },
+  "concepts": [
+    {
+      "path": "ArtSource/QuietInkUIV1/Concepts/02-core-pages-v2.png",
+      "width": 1672,
+      "height": 941,
+      "pages": [
+        "登录",
+        "大厅",
+        "角色",
+        "战斗"
+      ],
+      "prompt_path": "ArtSource/QuietInkUIV1/Prompts/02-core-pages-v2.txt",
+      "purpose": "四个手机竖屏页面的风格与布局效果图",
+      "runtime_asset": false,
+      "content_note": "效果图中的区服名称、选中状态、战斗摘要等仅为构图示意；运行时数据与可用操作以page-map和服务器/本地真实状态为准。"
+    },
+    {
+      "path": "ArtSource/QuietInkUIV1/Concepts/03-growth-pages.png",
+      "width": 1671,
+      "height": 941,
+      "pages": [
+        "装备",
+        "魂玉",
+        "天赋",
+        "结算"
+      ],
+      "prompt_path": "ArtSource/QuietInkUIV1/Prompts/03-growth-pages.txt",
+      "purpose": "四个手机竖屏页面的风格与布局效果图",
+      "runtime_asset": false,
+      "content_note": "效果图中的区服名称、选中状态、战斗摘要等仅为构图示意；运行时数据与可用操作以page-map和服务器/本地真实状态为准。"
+    },
+    {
+      "path": "ArtSource/QuietInkUIV1/Concepts/04-service-pages.png",
+      "width": 1672,
+      "height": 941,
+      "pages": [
+        "选服",
+        "背包",
+        "任务",
+        "设置"
+      ],
+      "prompt_path": "ArtSource/QuietInkUIV1/Prompts/04-service-pages.txt",
+      "purpose": "四个手机竖屏页面的风格与布局效果图",
+      "runtime_asset": false,
+      "content_note": "效果图中的区服名称、选中状态、战斗摘要等仅为构图示意；运行时数据与可用操作以page-map和服务器/本地真实状态为准。"
+    }
+  ],
+  "assets": [
+    {
+      "id": "bg-battle",
+      "source_path": "ArtSource/QuietInkUIV1/Assets/bg-battle.png",
+      "unity_path": "Assets/Art/Resources/UI/QuietInkV1/bg-battle.png",
+      "resource_key": "UI/QuietInkV1/bg-battle",
+      "purpose": "战斗留白环境背景候选，不改变战报、单位或动画逻辑",
+      "page_family_ids": [
+        "battle_result"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 1744237,
+      "sha256": "441a96a44be12a0f074e6713c575b1be5b136b463da7056747482bff552c1fc9",
+      "source_matches_unity_copy": true,
+      "background_type": "opaque_background",
+      "prompt_path": "ArtSource/QuietInkUIV1/Prompts/bg-battle.txt",
+      "sprite_import_mode": "Single",
+      "imported_sprite_count": 1,
+      "sprite_names": [
+        "bg-battle"
+      ],
+      "atlas_metadata_path": null,
+      "status": "imported_not_covered_by_current_runtime_review_screenshots"
+    },
+    {
+      "id": "bg-lobby",
+      "source_path": "ArtSource/QuietInkUIV1/Assets/bg-lobby.png",
+      "unity_path": "Assets/Art/Resources/UI/QuietInkV1/bg-lobby.png",
+      "resource_key": "UI/QuietInkV1/bg-lobby",
+      "purpose": "大厅独立背景；与打坐人物和导航分层组合",
+      "page_family_ids": [
+        "lobby"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 1889349,
+      "sha256": "bc79cbe5f55a544c3603c7170fbb5e17b6bacca002d7d8e78151be7b1d66812b",
+      "source_matches_unity_copy": true,
+      "background_type": "opaque_background",
+      "prompt_path": "ArtSource/QuietInkUIV1/Prompts/bg-lobby.txt",
+      "sprite_import_mode": "Single",
+      "imported_sprite_count": 1,
+      "sprite_names": [
+        "bg-lobby"
+      ],
+      "atlas_metadata_path": null,
+      "status": "imported_not_covered_by_current_runtime_review_screenshots"
+    },
+    {
+      "id": "bg-login",
+      "source_path": "ArtSource/QuietInkUIV1/Assets/bg-login.png",
+      "unity_path": "Assets/Art/Resources/UI/QuietInkV1/bg-login.png",
+      "resource_key": "UI/QuietInkV1/bg-login",
+      "purpose": "登录独立背景；为标识、站立人物和登录控件留出空间",
+      "page_family_ids": [
+        "login"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 1910245,
+      "sha256": "f13d48e064618414f48ff08e88fa443a9ad5904703be31a43677f9d5667780d0",
+      "source_matches_unity_copy": true,
+      "background_type": "opaque_background",
+      "prompt_path": "ArtSource/QuietInkUIV1/Prompts/bg-login.txt",
+      "sprite_import_mode": "Single",
+      "imported_sprite_count": 1,
+      "sprite_names": [
+        "bg-login"
+      ],
+      "atlas_metadata_path": null,
+      "status": "unity_login_composite_visual_review_passed"
+    },
+    {
+      "id": "bg-paper",
+      "source_path": "ArtSource/QuietInkUIV1/Assets/bg-paper.png",
+      "unity_path": "Assets/Art/Resources/UI/QuietInkV1/bg-paper.png",
+      "resource_key": "UI/QuietInkV1/bg-paper",
+      "purpose": "装备、魂玉、天赋、背包、任务、设置等内容页共用纸色底",
+      "page_family_ids": [
+        "character_equipment",
+        "souljade_talent_cultivation",
+        "inventory_shop",
+        "rank_task",
+        "activity_welfare_settings"
+      ],
+      "width": 941,
+      "height": 1672,
+      "bytes": 1679018,
+      "sha256": "fa91765c81d2c9a622485e57dfa85d39fd013926024f692dc3988c5be136ceae",
+      "source_matches_unity_copy": true,
+      "background_type": "opaque_background",
+      "prompt_path": "ArtSource/QuietInkUIV1/Prompts/bg-paper.txt",
+      "sprite_import_mode": "Single",
+      "imported_sprite_count": 1,
+      "sprite_names": [
+        "bg-paper"
+      ],
+      "atlas_metadata_path": null,
+      "status": "imported_not_covered_by_current_runtime_review_screenshots"
+    },
+    {
+      "id": "hero-lobby",
+      "source_path": "ArtSource/QuietInkUIV1/Assets/hero-lobby.png",
+      "unity_path": "Assets/Art/Resources/UI/QuietInkV1/hero-lobby.png",
+      "resource_key": "UI/QuietInkV1/hero-lobby",
+      "purpose": "大厅背向打坐修士独立前景",
+      "page_family_ids": [
+        "lobby"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1348918,
+      "sha256": "68feb67ffbf51b35574172709481cc1f4693e0a8367127854a7a24979d4f748e",
+      "source_matches_unity_copy": true,
+      "background_type": "transparent_foreground",
+      "prompt_path": "ArtSource/QuietInkUIV1/Prompts/hero-lobby.txt",
+      "sprite_import_mode": "Single",
+      "imported_sprite_count": 1,
+      "sprite_names": [
+        "hero-lobby"
+      ],
+      "atlas_metadata_path": null,
+      "status": "imported_not_covered_by_current_runtime_review_screenshots"
+    },
+    {
+      "id": "hero-login",
+      "source_path": "ArtSource/QuietInkUIV1/Assets/hero-login.png",
+      "unity_path": "Assets/Art/Resources/UI/QuietInkV1/hero-login.png",
+      "resource_key": "UI/QuietInkV1/hero-login",
+      "purpose": "登录站立修士独立前景",
+      "page_family_ids": [
+        "login"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1368517,
+      "sha256": "3e2756ba32b244f85e2295b7f8f9d9717c44e3520a82441915a5150f546258eb",
+      "source_matches_unity_copy": true,
+      "background_type": "transparent_foreground",
+      "prompt_path": "ArtSource/QuietInkUIV1/Prompts/hero-login.txt",
+      "sprite_import_mode": "Single",
+      "imported_sprite_count": 1,
+      "sprite_names": [
+        "hero-login"
+      ],
+      "atlas_metadata_path": null,
+      "status": "unity_login_composite_visual_review_passed"
+    },
+    {
+      "id": "icons-items",
+      "source_path": "ArtSource/QuietInkUIV1/Assets/icons-items.png",
+      "unity_path": "Assets/Art/Resources/UI/QuietInkV1/icons-items.png",
+      "resource_key": "UI/QuietInkV1/icons-items",
+      "purpose": "六类装备、六枚魂玉及气血/攻击/防御/速度属性图标",
+      "page_family_ids": [
+        "character_equipment",
+        "souljade_talent_cultivation",
+        "inventory_shop"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1842457,
+      "sha256": "51704c34e98b1c284ece4e598b4ed12de1b54d639ece150319e1751b34f9dd84",
+      "source_matches_unity_copy": true,
+      "background_type": "transparent_atlas",
+      "prompt_path": "ArtSource/QuietInkUIV1/Prompts/icons-items.txt",
+      "sprite_import_mode": "Multiple",
+      "imported_sprite_count": 16,
+      "sprite_names": [
+        "sword",
+        "crown",
+        "robe",
+        "bracers",
+        "jade_pendant",
+        "boots",
+        "jade_comma",
+        "jade_disk",
+        "jade_flame",
+        "jade_cloud",
+        "jade_spiral",
+        "jade_leaf",
+        "health",
+        "attack",
+        "defense",
+        "speed"
+      ],
+      "atlas_metadata_path": "ArtSource/QuietInkUIV1/item-atlas-layout.json",
+      "status": "unity_dual_background_contact_sheet_visual_review_passed"
+    },
+    {
+      "id": "icons-navigation",
+      "source_path": "ArtSource/QuietInkUIV1/Assets/icons-navigation.png",
+      "unity_path": "Assets/Art/Resources/UI/QuietInkV1/icons-navigation.png",
+      "resource_key": "UI/QuietInkV1/icons-navigation",
+      "purpose": "12个功能导航与4个战斗语义图标",
+      "page_family_ids": [
+        "lobby",
+        "battle_result"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1138714,
+      "sha256": "bb51b497abafe9e88b1ce82518c5ac9ef3acfdb7b24ffba2ced0a3c25c5dcfcd",
+      "source_matches_unity_copy": true,
+      "background_type": "transparent_atlas",
+      "prompt_path": "ArtSource/QuietInkUIV1/Prompts/icons-navigation.txt",
+      "sprite_import_mode": "Multiple",
+      "imported_sprite_count": 16,
+      "sprite_names": [
+        "character",
+        "cultivation",
+        "equipment",
+        "inventory",
+        "souljade",
+        "sect",
+        "activity",
+        "welfare",
+        "quest",
+        "talent",
+        "settings",
+        "rank",
+        "attack_aoe",
+        "flame",
+        "shield",
+        "healing"
+      ],
+      "atlas_metadata_path": "ArtSource/QuietInkUIV1/atlas-layout.json",
+      "status": "unity_dual_background_contact_sheet_visual_review_passed"
+    },
+    {
+      "id": "logo",
+      "source_path": "ArtSource/QuietInkUIV1/Assets/logo.png",
+      "unity_path": "Assets/Art/Resources/UI/QuietInkV1/logo.png",
+      "resource_key": "UI/QuietInkV1/logo",
+      "purpose": "仙途标识独立前景；按钮和正文仍由TMP绘制",
+      "page_family_ids": [
+        "login"
+      ],
+      "width": 1774,
+      "height": 887,
+      "bytes": 877582,
+      "sha256": "826f2637743d6e5df4928f6862bd5014656160bd8b20b59aaf1eba15bba7b922",
+      "source_matches_unity_copy": true,
+      "background_type": "transparent_foreground",
+      "prompt_path": "ArtSource/QuietInkUIV1/Prompts/logo.txt",
+      "sprite_import_mode": "Single",
+      "imported_sprite_count": 1,
+      "sprite_names": [
+        "logo"
+      ],
+      "atlas_metadata_path": null,
+      "status": "unity_login_composite_visual_review_passed"
+    },
+    {
+      "id": "ui-controls",
+      "source_path": "ArtSource/QuietInkUIV1/Assets/ui-controls.png",
+      "unity_path": "Assets/Art/Resources/UI/QuietInkV1/ui-controls.png",
+      "resource_key": "UI/QuietInkV1/ui-controls",
+      "purpose": "按钮、选择行、面板、槽位、圆框、血条和分隔线",
+      "page_family_ids": [
+        "all"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "bytes": 521472,
+      "sha256": "087b64817190cd0c22ec72ac8d3e13961cc090924524e4f2a79543ac6409231c",
+      "source_matches_unity_copy": true,
+      "background_type": "transparent_atlas",
+      "prompt_path": "ArtSource/QuietInkUIV1/Prompts/ui-controls.txt",
+      "sprite_import_mode": "Multiple",
+      "imported_sprite_count": 16,
+      "sprite_names": [
+        "button_primary",
+        "button_secondary",
+        "button_disabled",
+        "selector_row",
+        "dialog_panel",
+        "info_card",
+        "equipment_slot",
+        "equipment_slot_selected",
+        "avatar_frame",
+        "souljade_socket",
+        "skill_frame",
+        "tooltip_panel",
+        "health_track",
+        "health_fill",
+        "divider",
+        "tab_underline"
+      ],
+      "atlas_metadata_path": "ArtSource/QuietInkUIV1/atlas-layout.json",
+      "status": "unity_sample_sizes_visual_review_passed"
+    }
+  ],
+  "unity_import": {
+    "report_path": "ArtSource/QuietInkUIV1/unity-import-report.txt",
+    "reproduction_tool_source": "ArtSource/QuietInkUIV1/Tools/import-to-unity.cs.txt",
+    "confirmed_by": [
+      "现有Unity导入报告：10个PNG合计55个Sprite",
+      "磁盘.meta：3个Multiple图集各16个命名切片，其余7个Single纹理",
+      "10个源PNG与Unity目录副本的SHA256完全相同"
+    ],
+    "settings": {
+      "texture_type": "Sprite",
+      "pixels_per_unit": 100,
+      "alpha_is_transparency": true,
+      "mipmaps": false,
+      "npot_scale": "None",
+      "wrap": "Clamp",
+      "filter": "Bilinear",
+      "max_texture_size": 2048,
+      "compression": "Uncompressed",
+      "mesh_type": "FullRect"
+    },
+    "atlas_metadata": [
+      {
+        "path": "ArtSource/QuietInkUIV1/atlas-layout.json",
+        "atlases": [
+          "icons-navigation.png",
+          "ui-controls.png"
+        ],
+        "sprites": 32,
+        "status": "review",
+        "note": "源atlas-layout.json保留历史review与generation_notes不变；最新Unity样例视觉检查结果记录在本manifest，九切片只认可已测尺寸。",
+        "current_unity_sample_visual_review": "passed_for_documented_sizes"
+      },
+      {
+        "path": "ArtSource/QuietInkUIV1/item-atlas-layout.json",
+        "atlases": [
+          "icons-items.png"
+        ],
+        "sprites": 16,
+        "status": "alpha_components_measured_and_visually_checked",
+        "note": "已测量独立图标包围盒，16个Sprite在浅纸/深绿双背景样例中检查通过；深墨细节在深底对比较低。",
+        "current_unity_sample_visual_review": "passed_for_documented_contact_sheet"
+      }
+    ],
+    "coordinate_origin_in_metadata": "top-left",
+    "unity_y_conversion": "texture.height - y - height",
+    "slice_policy": "使用实际像素Rect，不按固定4×4等格切片",
+    "sprite_rect_or_pixel_changes_by_manifest_task": false
+  },
+  "login_preview": {
+    "prefab_path": "Assets/Prefabs/UI/QuietInkV1/LoginConcept.prefab",
+    "screenshot_path": "ArtSource/QuietInkUIV1/Concepts/05-login-unity-composite.png",
+    "screenshot_width": 1080,
+    "screenshot_height": 1920,
+    "builder_source": "ArtSource/QuietInkUIV1/Tools/build-login-preview.cs.txt",
+    "authored_design": {
+      "width": 941,
+      "height": 1672
+    },
+    "layers": [
+      "Background",
+      "TitleLogo",
+      "Tagline",
+      "Cultivator",
+      "ServerSelector",
+      "EnterButton",
+      "AccountHint",
+      "More"
+    ],
+    "implementation": "背景、标识、人物、选服框、按钮为独立Sprite；标语、区服名、按钮字样及账号提示为独立TMP文字",
+    "preview_only": true,
+    "network_actions_wired": false,
+    "persistent_button_callbacks": 0,
+    "callback_evidence": "LoginConcept.prefab的ServerSelector与EnterButton均为m_OnClick.m_PersistentCalls.m_Calls: []；构建脚本未注册网络或玩家数据动作。",
+    "sample_server_name": "青云山 · 一区",
+    "sample_server_note": "静态预览文字，不表示已从服务器获取该名称。",
+    "replaces_home_panel": false,
+    "visual_review": "passed_at_1080x1920",
+    "chevron": "已用两条独立线段构成，避免字体箭头缺字；Prefab节点ChevronStroke0/ChevronStroke1",
+    "missing_scripts_in_all_layers": 0,
+    "compile_cs_error_count": 0,
+    "design_top_level_layers": 8,
+    "contains_atlas_review_overlay": false,
+    "temporary_preview_overlay_destroyed": true,
+    "original_game_pause_state_preserved": true
+  },
+  "actual_feature_mapping": {
+    "authoritative_file": "ArtSource/QuietInkUIV1/page-map.json",
+    "summarized_from": "已核验当前竖版主路径，不使用横版备用预览的业务状态代替",
+    "pages": [
+      {
+        "page": "登录 / 选服",
+        "scripts": [
+          "Assets/Scripts/UI/HomePanel.cs",
+          "Assets/Scripts/UI/ServerPickerPopup.cs"
+        ],
+        "current_usable": "游客自动登录、选服、创建角色与重连",
+        "boundary": "新LoginConcept仅展示；无选服、登录或创建角色网络回调。"
+      },
+      {
+        "page": "大厅",
+        "scripts": [
+          "Assets/Scripts/UI/MainPanel.cs",
+          "Assets/Scripts/UI/LobbyReferenceView.cs"
+        ],
+        "current_usable": "已有功能导航与进入秘境",
+        "boundary": "境界、等级及货币未同步的值继续显示待同步或—。"
+      },
+      {
+        "page": "角色 / 装备",
+        "scripts": [
+          "Assets/Scripts/UI/CharacterPanel.cs",
+          "Assets/Scripts/UI/RoleEquipmentPanel.cs"
+        ],
+        "current_usable": "本地角色展示选择；服务器装备属性、穿戴及卸下",
+        "boundary": "本地立绘选择不等于服务器职业变更；精炼未开放。"
+      },
+      {
+        "page": "魂玉",
+        "scripts": [
+          "Assets/Scripts/UI/RoleSoulJadePanel.cs",
+          "Assets/Scripts/UI/RoleSoulJadePanel.V4.cs"
+        ],
+        "current_usable": "本地魂玉库、镶嵌、替换、卸下与词条查看",
+        "boundary": "服务器同步、升级和洗练执行操作未接入。"
+      },
+      {
+        "page": "天赋",
+        "scripts": [
+          "Assets/Scripts/UI/RoleTalentPanel.cs"
+        ],
+        "current_usable": "破军、御灵、守御、身法四分支的本地修习与重置",
+        "boundary": "不表示服务器天赋已同步或已影响真实战斗。"
+      },
+      {
+        "page": "背包",
+        "scripts": [
+          "Assets/Scripts/UI/LobbyFeaturePanel.cs"
+        ],
+        "current_usable": "分类展示及前往真实灵器仓库",
+        "boundary": "普通道具背包数据未同步；没有可用独立商店购买流程。"
+      },
+      {
+        "page": "任务",
+        "scripts": [
+          "Assets/Scripts/UI/LobbyFeaturePanel.cs"
+        ],
+        "current_usable": "分类与部分前往战斗、天赋的引导",
+        "boundary": "进度、完成状态、奖励未同步；不补造任务收益。"
+      },
+      {
+        "page": "设置",
+        "scripts": [
+          "Assets/Scripts/UI/LobbyFeaturePanel.cs"
+        ],
+        "current_usable": "本地音量、静音和项目实际画质档位",
+        "boundary": "效果图的高/中/低只是布局示意，运行时沿用QualitySettings实际档位；操作自定义未开放。"
+      },
+      {
+        "page": "战斗 / 结算",
+        "scripts": [
+          "Assets/Scripts/UI/BattleView.ReferencePresentation.cs",
+          "Assets/Scripts/UI/BattleResultPage.cs"
+        ],
+        "current_usable": "真实战报播放、血量/状态、胜负与双方存活、再次挑战和返回大厅",
+        "boundary": "本包不改播放速度、朝向、战斗逻辑或单位模型；结算奖励尚未提供，不把技能展示画成已支持手动施法。"
+      }
+    ]
+  },
+  "review_status": {
+    "inventory_and_file_integrity": "passed",
+    "source_png_to_unity_hashes": "passed_10_of_10",
+    "imported_sprite_count": "passed_55",
+    "layered_login_prefab_structure": "passed_missing_scripts_0",
+    "csharp_compile_errors": 0,
+    "login_preview_network_side_effects": "none_wired",
+    "login_composite_visual_acceptance": "passed_at_1080x1920",
+    "resource_contact_sheet_visual_acceptance": "passed_for_3_atlases_16_sprites_each",
+    "nine_slice_stretch_acceptance": "passed_for_documented_sample_sizes",
+    "all_12_pages_runtime_visual_acceptance": "not_performed",
+    "multi_screen_adaptation_acceptance": "not_performed",
+    "official_page_integration": "not_started",
+    "review_source": "根代理通过Unity MCP实渲染、截图和检查完成；本任务只更新交付文档",
+    "alpha_note": "Unity像素检查发现高饱和绿/黄边点alpha最高3/255；实际浅纸/深绿背景样例未见明显彩边或串图。",
+    "contrast_limitation": "深绿色背景上的深墨细节对比较低。正式设计主题为浅纸色，不声明图标适用于任意底色。",
+    "scope_note": "导入、截图和指定尺寸样例检查通过，不等于正式游戏页面、全部交互、所有屏幕尺寸或全部拉伸比例已通过验收。",
+    "visual_review_record": "ArtSource/QuietInkUIV1/unity-visual-review.json",
+    "package_export": "passed_archive_verified",
+    "console_scope_note": "新LoginConcept全层MissingScript=0且C#编译错误为0；现有游戏Console另有一条既存Missing Script记录，不把新预览检查描述为全游戏Console零问题。"
+  },
+  "excluded_from_runtime_delivery": [
+    {
+      "path": "ArtSource/QuietInkUIV1/References/",
+      "reason": "官网风格研究参考，不能作为本包原创游戏成品资源导入。"
+    },
+    {
+      "path": "ArtSource/QuietInkUIV1/Candidates/",
+      "reason": "生成过程候选与被替换版本，不属于最终素材集。"
+    },
+    {
+      "path": "ArtSource/QuietInkUIV1/Concepts/01-core-pages-v1.png",
+      "reason": "被02版本替代的历史方案。"
+    },
+    {
+      "path": "ArtSource/QuietInkUIV1/Concepts/",
+      "reason": "效果图和Unity合成截图仅供设计审阅，不能裁成扁平整页替代可交互UI。"
+    }
+  ],
+  "prompt_traceability": "Prompts/保存各素材与效果图的基础提示词；迭代过程另有定向编辑，不能将基础提示词当作每个最终像素的完整重放脚本。",
+  "visual_review_evidence": {
+    "screenshot_resolution": {
+      "width": 1080,
+      "height": 1920
+    },
+    "screenshots": [
+      {
+        "path": "ArtSource/QuietInkUIV1/Concepts/05-login-unity-composite.png",
+        "subject": "正确的新清墨登录页，图层独立，选服箭头为线条",
+        "status": "passed"
+      },
+      {
+        "path": "ArtSource/QuietInkUIV1/Concepts/06-navigation-unity-review.png",
+        "subject": "导航图集16个Sprite，浅纸/深绿双背景，无明显彩边串图",
+        "status": "passed_with_dark_background_contrast_limit"
+      },
+      {
+        "path": "ArtSource/QuietInkUIV1/Concepts/07-items-unity-review.png",
+        "subject": "物品与属性图集16个Sprite，浅纸/深绿双背景，无明显彩边串图",
+        "status": "passed_with_dark_background_contrast_limit"
+      },
+      {
+        "path": "ArtSource/QuietInkUIV1/Concepts/08-controls-unity-review.png",
+        "subject": "控件图集16个Sprite，浅纸/深绿双背景及指定尺寸拉伸，无破角",
+        "status": "passed_for_sample_sizes"
+      }
+    ],
+    "nine_slice_samples": [
+      {
+        "usage": "图集审核按钮",
+        "width": 206,
+        "height": 68,
+        "result": "未见破角"
+      },
+      {
+        "usage": "图集审核面板",
+        "width": 206,
+        "height": 125,
+        "result": "未见破角"
+      },
+      {
+        "usage": "图集审核血条",
+        "width": 206,
+        "height": 18,
+        "result": "未见破角"
+      },
+      {
+        "usage": "登录选服行",
+        "width": 501,
+        "height": 82,
+        "result": "未见破角"
+      },
+      {
+        "usage": "登录主按钮",
+        "width": 601,
+        "height": 118,
+        "result": "未见破角"
+      }
+    ],
+    "known_limitations": [
+      "深底上的深墨细节对比偏低，正式主题使用浅纸底。",
+      "只验证上述尺寸；其他拉伸比例、屏幕和正式页尚未完整验证。",
+      "背景与人物资源中未出现在当前审核截图的内容不在本轮运行截图验收范围。"
+    ],
+    "record_path": "ArtSource/QuietInkUIV1/unity-visual-review.json"
+  },
+  "unity_package": {
+    "path": "ArtSource/QuietInkUIV1/QuietInkV1-project-assets.unitypackage",
+    "status": "exported_and_archive_read_verified",
+    "intended_use": "同一g1Client工程内导入/迁移这批UI资源和登录设计预览",
+    "includes": [
+      "Assets/Art/Resources/UI/QuietInkV1/下10个PNG及其Sprite导入元数据",
+      "Assets/Prefabs/UI/QuietInkV1/LoginConcept.prefab"
+    ],
+    "existing_project_dependencies_not_bundled": [
+      {
+        "type": "font",
+        "resource_key": "Fonts/LobbyDisplay"
+      },
+      {
+        "type": "font",
+        "resource_key": "Fonts/MSYaHei SDF"
+      },
+      {
+        "type": "script",
+        "path": "Assets/Scripts/UI/LobbyPortraitLayout.cs"
+      },
+      {
+        "type": "editor_script",
+        "path": "Assets/Scripts/Editor/ArtTextureImportProcessor.cs"
+      },
+      {
+        "type": "unity_package",
+        "name": "uGUI"
+      },
+      {
+        "type": "unity_package",
+        "name": "TextMeshPro"
+      }
+    ],
+    "limitation": "不作为可直接导入任意空Unity工程的独立资源包；字体与布局脚本依赖沿用同工程已有内容。",
+    "note": "已导出并可读取归档目录；包用于现有g1Client工程，不包含已有字体、布局脚本、纹理导入处理器或uGUI/TMP依赖。",
+    "bytes": 13081122,
+    "sha256": "96cbca7bd3c09b87b008cf3a12aa8d9890b43e177ba16d83b0b1319279ca3d79",
+    "archive_verification": {
+      "method": "tar -tf",
+      "exit_code": 0,
+      "entries": 57,
+      "pathname_entries": 12
+    }
+  }
+}
+

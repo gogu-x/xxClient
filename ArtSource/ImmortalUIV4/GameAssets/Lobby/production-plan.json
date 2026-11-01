@@ -1,0 +1,137 @@
+[
+  [
+    "hero",
+    "人物立绘",
+    "Only the central white-haired immortal hero. Preserve EXACT face, pose, costume and flowing silhouette from this lobby, not another character. Remove all scenery, text and UI; reconstruct only tiny occluded costume parts. Entire character on zero-alpha transparency with 4% padding, no halo backdrop."
+  ],
+  [
+    "profile_frame",
+    "玩家信息框",
+    "Only the top-left player profile frame: attached circular portrait ring at left and darkjade horizontal nameplate to right with gold cloud trim. Remove portrait, text, number, level badge and progress bar. Portrait hole transparent, nameplate interior darkjade. Exact original proportions."
+  ],
+  [
+    "portrait",
+    "角色头像",
+    "Only the white-haired hero head and shoulders used in top-left circular portrait. No circular frame, level, UI or scenery. Transparent cutout portrait; exact face and costume."
+  ],
+  [
+    "level_badge",
+    "等级徽章",
+    "Only the tiny circular darkjade and gold-rim level badge containing 30 near player portrait. Remove 30. Single empty round badge, transparent outside; no frame context."
+  ],
+  [
+    "currency_plate",
+    "货币底框",
+    "Only the top green darkjade horizontal currency capsule rim and interior. Remove gem, number, plus symbol. Same simple thin gold rim and rounded beveled ends. One blank horizontal capsule, no elaborate extra sculpture."
+  ],
+  [
+    "currency_green",
+    "灵石图标",
+    "Only the green teardrop jade currency icon from first top currency counter. Preserve green teardrop silhouette and darkgreen hollow marks exactly. No frame, values or scenery."
+  ],
+  [
+    "currency_blue",
+    "仙玉图标",
+    "Only the blue-purple angular crystal currency icon from second top counter. Preserve exact facets, color and silhouette. No capsule, numbers or scene."
+  ],
+  [
+    "plus",
+    "增加按钮",
+    "Only the top currency plus sign on its small circular darkjade gold-bordered button. No capsule or numbers. Small simple UI sprite, centered cream-gold plus with jade circle."
+  ],
+  [
+    "progress_track",
+    "经验条底槽",
+    "Only the thin horizontal darkjade progress track under player name and realm in top-left profile. Remove green filled amount, all text, portrait and frame. Thin empty dark track with delicate gold edge, rectangular horizontal about 9:1."
+  ],
+  [
+    "progress_fill",
+    "经验条填充",
+    "Only the bright celadon thin horizontal filled progress strip under top-left player name. Straight rectangle with subtle vertical green highlight, width-to-height 12:1, no frame, numbers or surrounding panel. For UI Image Filled."
+  ],
+  [
+    "quest_scroll",
+    "任务卷轴",
+    "Only left quest scroll INCLUDING rolled gold top and bottom, darkjade parchment with small painted mountain illustration, hanging red tassel and jade pendant. Remove ALL lettering AND gold 前往 button completely, fill their areas naturally with scroll interior. Preserve exact long narrow proportions and decorative silhouette."
+  ],
+  [
+    "quest_button",
+    "任务按钮",
+    "Only small gold 前往 button in left quest scroll, remove all Chinese text and arrow symbols. Preserve exact compact oblong gold filigree outline and palegold center. Transparent outside, no scroll or scene."
+  ],
+  [
+    "shortcut_frame",
+    "功能入口底框",
+    "Only one empty frame of right side circular sect/activity/welfare shortcut. Preserve almost-round pointed arch jadegold rim AND attached bottom darkjade label plaque. Remove central building/item icon, ALL text and red notification dot; darkjade interior, transparent outside. Exact original silhouette."
+  ],
+  [
+    "icon_sect",
+    "宗门图标",
+    "Only the small goldroof Chinese sect gateway/palace icon inside right top shortcut. Preserve miniature building, steps and greenery. No frame, label, red dot or large landscape; transparent miniature building sprite."
+  ],
+  [
+    "icon_activity",
+    "活动图标",
+    "Only the redgold open scroll icon inside right middle activity shortcut. Same scroll paper, red rod and gold bindings. No frame, title, red dot or background."
+  ],
+  [
+    "icon_welfare",
+    "福利图标",
+    "Only the red gift box with gold ribbon inside right lower shortcut. Same square box and gold bow. No frame, label, notification dot or background."
+  ],
+  [
+    "notification_dot",
+    "提示红点",
+    "Only one tiny red circular notification badge with cream-gold slim rim from right shortcut. Single red round indicator, no number or exclamation mark. Transparent outside."
+  ],
+  [
+    "location_plate",
+    "地点底框",
+    "Only slim blackjade gold-edged 云海仙门 location label above portal entrance. Remove ALL text AND pin icon, preserve exact thin beveled plaque shape. Blank interior transparent exterior."
+  ],
+  [
+    "location_pin",
+    "地点图标",
+    "Only small cream-gold map location pin symbol on 云海仙门 plaque. Transparent icon, no plaque or characters."
+  ],
+  [
+    "portal_arch",
+    "秘境传送门",
+    "Only the ornamental miniature blue luminous portal/Chinese gate above large 进入秘境 button: roof, pillars, tiny central mist mountain beyond gateway, clouds and gold arch. Remove the large green button entirely. Full portal silhouette on transparency, no scene outside miniature portal. Preserve source exact blue glow and golden architecture."
+  ],
+  [
+    "realm_button",
+    "秘境主按钮",
+    "Only large ornate green 进入秘境 button under portal. Preserve exact wide jadegold cloud/dragon decorated silhouette and empty patterned deepgreen center. Remove ALL lettering, right arrow AND portal building on top. No unrelated background; transparent outside."
+  ],
+  [
+    "nav_frame",
+    "底部导航底框",
+    "Only the full bottom five-cell darkjade navigation bar from reference. Five equal connected scalloped panels with thin gold boundaries and original outer gold cloudcorners. Remove ALL portraits, icons, text and red dots. Preserve 5-cell topology exactly, long bar ratio about4.7:1, no added height. Empty darkjade interior, transparent outside."
+  ],
+  [
+    "icon_cultivation",
+    "修炼图标",
+    "Only golden flame aura enclosing dark meditating silhouette from second bottom navigation item. Preserve exact seated figure and flame shape. No cell frame, red dot, text or scene."
+  ],
+  [
+    "icon_equipment",
+    "装备图标",
+    "Only the diagonally posed silverblue gold-hilt sword from center bottom navigation icon. Preserve exact shape and diagonal orientation. No ring/cell border, title, notification or background."
+  ],
+  [
+    "icon_inventory",
+    "背包图标",
+    "Only the ivory cloth pouch tied with red cord from fourth bottom navigation item. Preserve bag exact fabric, knot and redgold ornament. No panel, red dot, title or background."
+  ],
+  [
+    "icon_souljade",
+    "魂玉图标",
+    "Only green round jade medallion with its gold chain and red tassel from last bottom navigation item. Preserve precise original pendant. No cell frame, label or landscape."
+  ],
+  [
+    "button_arrow",
+    "按钮箭头",
+    "Only small gold right-pointing chevron arrow from large 进入秘境 button. Single sculpted palegold > arrow, transparent background, no button or letters."
+  ]
+]

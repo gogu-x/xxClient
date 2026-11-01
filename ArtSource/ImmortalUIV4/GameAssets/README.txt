@@ -1,0 +1,1 @@
+装备页首批：17 个正式导入 Sprite（含 1 张背景与 16 张透明素材）。hero.png 为旧试稿，hero_clean.png 为导入版本。素材已去除动态文字，可分层组合。EquipmentArtPreview.prefab 仅用于美术检查，不含业务功能。尚未完成全部页面、独立货币图标、按下/禁用状态、九宫格边界及最终 1:1 视觉验收。雕花轮廓、人物比例及发光边缘仍需精修。Unity 实际组合见 unity-equipment-preview.png。

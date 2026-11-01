@@ -1,0 +1,15 @@
+Realm entrance production atlas source review
+2026-11-01
+
+Deliverable: Assets/realm-entrances.png, 1086 x 1448, RGBA8.
+Production mode: built-in image_gen, transparent_background=true.
+Prompt history: Prompts/realm-entrances.txt.
+First generation was rejected for crowded outer margins; the final is an image_gen spacing/alpha cleanup edit. No raster code altered pixels.
+
+Visual content inspection: 12 complete, distinct entrance landmarks in the requested 3-column/4-row order. Four large types: Qingyun gate, floating palace, ice cave and giant-sword ruins. Four medium types: autumn gate, bamboo grotto, lake pavilion and cliff grotto. Four small types: ancient well, plain stone door, tree shrine and small cave. Colors and ink-painted architecture match the provided blue/teal/gold/ochre reference direction. No words, nameplates, generic pins, cell grid, or interface frames are baked into the sprites.
+
+Read-only PNG audit: Python stdlib decoder and connected-component measurement, alpha >=16, components >=20 pixels, 4-pixel metadata padding. Twelve significant components; zero overlap between the measured sprite rectangles. Content margin at the image outer border: left25, top39, right15, bottom61 pixels. Tiny detached pixels excluded from metadata:12. Full transparency:47.727%; alpha<16:53.297%. Source bytes and project PNG are identical (SHA256 in entrances-alpha-report.json).
+
+The displayed black-background alpha preview can exaggerate low-alpha colored fringe. The original alpha has been preserved. Real composition on the map, zoomed rendering and Unity import remain separate checks for the root agent. This source-level review does not certify pixel-exact reconstruction or a completed runtime map.
+
+Metadata: entrances-layout.json. Rect coordinates are top-left source pixels, not equal-grid crops. All pivots are bottom center [0.5,0]. suggestedWorldSize is an initial composition size in a 3840x2560 reference world and preserves each measured aspect ratio. Source art resolution is approximately240-360 pixels tall per sprite; further magnification above1:1 will require quality review.

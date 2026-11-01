@@ -1,0 +1,6 @@
+{
+  "id": "icon_welfare",
+  "title": "福利图标",
+  "prompt": "Produce ONE standalone game-ready PNG asset extracted/reconstructed from this precise lobby design. Match source shape, colors, proportions and illustration exactly, do not invent a new UI design. Transparent background outside the requested object, no scene backdrop, no mockup, no sheet. Preserve full silhouette with small transparent margin. No text or numbers except an explicitly requested symbol. Only the red gift box with gold ribbon inside right lower shortcut. Same square box and gold bow. No frame, label, notification dot or background.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-a791f87f-8b9b-4abe-839c-a6fc19356b5e.png"
+}

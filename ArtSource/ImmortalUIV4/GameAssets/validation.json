@@ -1,0 +1,290 @@
+[
+  {
+    "id": "background",
+    "width": 941,
+    "height": 1672,
+    "expectedAlpha": false,
+    "transparentFraction": 0.0,
+    "partialFraction": 0.0,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      0,
+      0,
+      944,
+      1672
+    ],
+    "file": "Equipment/background.png"
+  },
+  {
+    "id": "button_gold",
+    "width": 2073,
+    "height": 759,
+    "expectedAlpha": true,
+    "transparentFraction": 0.4528,
+    "partialFraction": 0.547,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      40,
+      72,
+      1996,
+      616
+    ],
+    "file": "Equipment/button_gold.png"
+  },
+  {
+    "id": "button_jade",
+    "width": 2172,
+    "height": 724,
+    "expectedAlpha": true,
+    "transparentFraction": 0.4922,
+    "partialFraction": 0.5077,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      52,
+      124,
+      2068,
+      508
+    ],
+    "file": "Equipment/button_jade.png"
+  },
+  {
+    "id": "currency_plate",
+    "width": 2172,
+    "height": 724,
+    "expectedAlpha": true,
+    "transparentFraction": 0.5975,
+    "partialFraction": 0.4025,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      80,
+      156,
+      2016,
+      400
+    ],
+    "file": "Equipment/currency_plate.png"
+  },
+  {
+    "id": "detail_panel",
+    "width": 1692,
+    "height": 930,
+    "expectedAlpha": true,
+    "transparentFraction": 0.2407,
+    "partialFraction": 0.7593,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      32,
+      76,
+      1632,
+      804
+    ],
+    "file": "Equipment/detail_panel.png"
+  },
+  {
+    "id": "equipment_slot",
+    "width": 1254,
+    "height": 1254,
+    "expectedAlpha": true,
+    "transparentFraction": 0.3242,
+    "partialFraction": 0.6757,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      32,
+      84,
+      1200,
+      1068
+    ],
+    "file": "Equipment/equipment_slot.png"
+  },
+  {
+    "id": "header_plate",
+    "width": 2061,
+    "height": 763,
+    "expectedAlpha": true,
+    "transparentFraction": 0.4822,
+    "partialFraction": 0.5178,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      12,
+      12,
+      2044,
+      744
+    ],
+    "file": "Equipment/header_plate.png"
+  },
+  {
+    "id": "hero_clean",
+    "width": 1024,
+    "height": 1536,
+    "expectedAlpha": true,
+    "transparentFraction": 0.359,
+    "partialFraction": 0.641,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      12,
+      0,
+      1008,
+      1536
+    ],
+    "file": "Equipment/hero_clean.png"
+  },
+  {
+    "id": "hero",
+    "width": 1024,
+    "height": 1536,
+    "expectedAlpha": true,
+    "transparentFraction": 0.3469,
+    "partialFraction": 0.6531,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      12,
+      0,
+      1012,
+      1536
+    ],
+    "file": "Equipment/hero.png"
+  },
+  {
+    "id": "icon_boots",
+    "width": 1536,
+    "height": 1024,
+    "expectedAlpha": true,
+    "transparentFraction": 0.5994,
+    "partialFraction": 0.4006,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      260,
+      32,
+      1056,
+      964
+    ],
+    "file": "Equipment/icon_boots.png"
+  },
+  {
+    "id": "icon_bracer",
+    "width": 1315,
+    "height": 1197,
+    "expectedAlpha": true,
+    "transparentFraction": 0.6347,
+    "partialFraction": 0.3652,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      148,
+      60,
+      1112,
+      1108
+    ],
+    "file": "Equipment/icon_bracer.png"
+  },
+  {
+    "id": "icon_crown",
+    "width": 1322,
+    "height": 1190,
+    "expectedAlpha": true,
+    "transparentFraction": 0.5105,
+    "partialFraction": 0.4893,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      12,
+      16,
+      1300,
+      1140
+    ],
+    "file": "Equipment/icon_crown.png"
+  },
+  {
+    "id": "icon_pendant",
+    "width": 1217,
+    "height": 1292,
+    "expectedAlpha": true,
+    "transparentFraction": 0.6209,
+    "partialFraction": 0.3788,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      112,
+      48,
+      1004,
+      1208
+    ],
+    "file": "Equipment/icon_pendant.png"
+  },
+  {
+    "id": "icon_robe",
+    "width": 1150,
+    "height": 1368,
+    "expectedAlpha": true,
+    "transparentFraction": 0.35,
+    "partialFraction": 0.6496,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      12,
+      8,
+      1132,
+      1352
+    ],
+    "file": "Equipment/icon_robe.png"
+  },
+  {
+    "id": "icon_sword",
+    "width": 1200,
+    "height": 1310,
+    "expectedAlpha": true,
+    "transparentFraction": 0.6675,
+    "partialFraction": 0.3325,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      104,
+      64,
+      1080,
+      1224
+    ],
+    "file": "Equipment/icon_sword.png"
+  },
+  {
+    "id": "power_plate",
+    "width": 2129,
+    "height": 738,
+    "expectedAlpha": true,
+    "transparentFraction": 0.5445,
+    "partialFraction": 0.4552,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      32,
+      80,
+      2068,
+      600
+    ],
+    "file": "Equipment/power_plate.png"
+  },
+  {
+    "id": "tab_gold",
+    "width": 2135,
+    "height": 736,
+    "expectedAlpha": true,
+    "transparentFraction": 0.4499,
+    "partialFraction": 0.55,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      100,
+      16,
+      1940,
+      684
+    ],
+    "file": "Equipment/tab_gold.png"
+  },
+  {
+    "id": "tab_jade",
+    "width": 2172,
+    "height": 724,
+    "expectedAlpha": true,
+    "transparentFraction": 0.5205,
+    "partialFraction": 0.4794,
+    "alphaPass": true,
+    "visibleBoundsSampled": [
+      80,
+      120,
+      2016,
+      588
+    ],
+    "file": "Equipment/tab_jade.png"
+  }
+]

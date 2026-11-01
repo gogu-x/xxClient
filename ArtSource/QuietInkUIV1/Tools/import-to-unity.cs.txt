@@ -1,0 +1,42 @@
+var source=System.IO.Path.GetFullPath(Application.dataPath+"/../ArtSource/QuietInkUIV1");
+var destination="Assets/Art/Resources/UI/QuietInkV1";
+System.IO.Directory.CreateDirectory(destination);
+var layouts=new System.Collections.Generic.List<Newtonsoft.Json.Linq.JToken>();
+foreach(var file in new[]{"atlas-layout.json","item-atlas-layout.json"}) {
+ var path=System.IO.Path.Combine(source,file);if(!System.IO.File.Exists(path))continue;
+ var json=Newtonsoft.Json.Linq.JObject.Parse(System.IO.File.ReadAllText(path));
+ var slices=json["sprites"] ?? json["items"];if(slices!=null)foreach(var slice in slices)layouts.Add(slice);
+}
+var report=new System.Collections.Generic.List<string>();
+foreach(var path in System.IO.Directory.GetFiles(source+"/Assets","*.png")) {
+ var filename=System.IO.Path.GetFileName(path);var target=destination+"/"+filename;
+ System.IO.File.Copy(path,target,true);
+ AssetDatabase.ImportAsset(target,ImportAssetOptions.ForceSynchronousImport);
+ var importer=(TextureImporter)AssetImporter.GetAtPath(target);
+ importer.textureType=TextureImporterType.Sprite;importer.spritePixelsPerUnit=100;
+ importer.alphaIsTransparency=true;importer.mipmapEnabled=false;
+ importer.npotScale=TextureImporterNPOTScale.None;importer.wrapMode=TextureWrapMode.Clamp;
+ importer.filterMode=FilterMode.Bilinear;importer.maxTextureSize=2048;
+ importer.textureCompression=TextureImporterCompression.Uncompressed;
+ var settings=new TextureImporterSettings();importer.ReadTextureSettings(settings);
+ settings.spriteMeshType=SpriteMeshType.FullRect;importer.SetTextureSettings(settings);
+ var metadata=new System.Collections.Generic.List<SpriteMetaData>();
+ var texture=AssetDatabase.LoadAssetAtPath<Texture2D>(target);
+ foreach(var slice in layouts) {
+  if((string)slice["atlas"]!=filename)continue;
+  float x=(float)slice["x"],y=(float)slice["y"],w=(float)slice["width"],h=(float)slice["height"];
+  var border=Vector4.zero;var proposed=slice["proposed_border_lbrt"];
+  if(proposed!=null&&proposed.Type==Newtonsoft.Json.Linq.JTokenType.Array&&((Newtonsoft.Json.Linq.JArray)proposed).Count==4)
+    border=new Vector4((float)proposed[0],(float)proposed[1],(float)proposed[2],(float)proposed[3]);
+  metadata.Add(new SpriteMetaData{name=(string)slice["name"],rect=new Rect(x,texture.height-y-h,w,h),alignment=9,pivot=new Vector2(.5f,.5f),border=border});
+ }
+ importer.spriteImportMode=metadata.Count>0?SpriteImportMode.Multiple:SpriteImportMode.Single;
+ if(metadata.Count>0)importer.spritesheet=metadata.ToArray();
+ importer.SaveAndReimport();int sprites=0;
+ foreach(var asset in AssetDatabase.LoadAllAssetsAtPath(target))if(asset is Sprite)sprites++;
+ report.Add(filename+" => "+sprites+" sprites");
+}
+AssetDatabase.SaveAssets();
+var result=string.Join("\n",report.ToArray());
+System.IO.File.WriteAllText(source+"/unity-import-report.txt",result);
+return result;

@@ -1,0 +1,8273 @@
+{
+  "version": 1,
+  "coordinateSystem": "native pixels, top-left origin; no resizing",
+  "scope": "Visible flattened artwork crops, not recovered editable layers",
+  "pages": [
+    {
+      "id": "login",
+      "regions": [
+        {
+          "name": "logo",
+          "kind": "title",
+          "rect": [
+            150,
+            50,
+            630,
+            310
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            150,
+            1312,
+            630,
+            310
+          ],
+          "file": "login/title/logo.png"
+        },
+        {
+          "name": "hero_scene",
+          "kind": "illustration",
+          "rect": [
+            0,
+            355,
+            941,
+            655
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            662,
+            941,
+            655
+          ],
+          "file": "login/illustration/hero_scene.png"
+        },
+        {
+          "name": "login_panel",
+          "kind": "panel",
+          "rect": [
+            5,
+            965,
+            931,
+            620
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            5,
+            87,
+            931,
+            620
+          ],
+          "file": "login/panel/login_panel.png"
+        },
+        {
+          "name": "account",
+          "kind": "input",
+          "rect": [
+            125,
+            1065,
+            690,
+            90
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            125,
+            517,
+            690,
+            90
+          ],
+          "file": "login/input/account.png"
+        },
+        {
+          "name": "password",
+          "kind": "input",
+          "rect": [
+            125,
+            1160,
+            690,
+            90
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            125,
+            422,
+            690,
+            90
+          ],
+          "file": "login/input/password.png"
+        },
+        {
+          "name": "server",
+          "kind": "input",
+          "rect": [
+            125,
+            1250,
+            690,
+            90
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            125,
+            332,
+            690,
+            90
+          ],
+          "file": "login/input/server.png"
+        },
+        {
+          "name": "enter",
+          "kind": "button",
+          "rect": [
+            160,
+            1330,
+            620,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            160,
+            177,
+            620,
+            165
+          ],
+          "file": "login/button/enter.png"
+        },
+        {
+          "name": "register",
+          "kind": "button",
+          "rect": [
+            140,
+            1490,
+            325,
+            85
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            140,
+            97,
+            325,
+            85
+          ],
+          "file": "login/button/register.png"
+        },
+        {
+          "name": "guest",
+          "kind": "button",
+          "rect": [
+            480,
+            1490,
+            320,
+            85
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            480,
+            97,
+            320,
+            85
+          ],
+          "file": "login/button/guest.png"
+        },
+        {
+          "name": "account_icon",
+          "kind": "icon",
+          "rect": [
+            180,
+            1088,
+            50,
+            50
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            180,
+            534,
+            50,
+            50
+          ],
+          "file": "login/icon/account_icon.png"
+        },
+        {
+          "name": "password_icon",
+          "kind": "icon",
+          "rect": [
+            180,
+            1178,
+            50,
+            50
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            180,
+            444,
+            50,
+            50
+          ],
+          "file": "login/icon/password_icon.png"
+        },
+        {
+          "name": "eye",
+          "kind": "icon",
+          "rect": [
+            709,
+            1188,
+            65,
+            45
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            709,
+            439,
+            65,
+            45
+          ],
+          "file": "login/icon/eye.png"
+        },
+        {
+          "name": "server_icon",
+          "kind": "icon",
+          "rect": [
+            180,
+            1270,
+            50,
+            50
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            180,
+            352,
+            50,
+            50
+          ],
+          "file": "login/icon/server_icon.png"
+        }
+      ],
+      "title": "登录",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/login.png",
+      "sourceSha256": "a13e15cc4b4b61ed3b4a4d245d3c89c6d591ee58d59f774fdde1a3b1aab72f6e"
+    },
+    {
+      "id": "lobby",
+      "regions": [
+        {
+          "name": "profile",
+          "kind": "panel",
+          "rect": [
+            0,
+            16,
+            420,
+            163
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1493,
+            420,
+            163
+          ],
+          "file": "lobby/panel/profile.png"
+        },
+        {
+          "name": "portrait",
+          "kind": "portrait",
+          "rect": [
+            17,
+            20,
+            165,
+            160
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            17,
+            1492,
+            165,
+            160
+          ],
+          "file": "lobby/portrait/portrait.png"
+        },
+        {
+          "name": "currency_left",
+          "kind": "currency",
+          "rect": [
+            435,
+            49,
+            240,
+            70
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            435,
+            1553,
+            240,
+            70
+          ],
+          "file": "lobby/currency/currency_left.png"
+        },
+        {
+          "name": "currency_right",
+          "kind": "currency",
+          "rect": [
+            680,
+            49,
+            245,
+            70
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            680,
+            1553,
+            245,
+            70
+          ],
+          "file": "lobby/currency/currency_right.png"
+        },
+        {
+          "name": "quest_scroll",
+          "kind": "panel",
+          "rect": [
+            10,
+            212,
+            250,
+            545
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            10,
+            915,
+            250,
+            545
+          ],
+          "file": "lobby/panel/quest_scroll.png"
+        },
+        {
+          "name": "quest_go",
+          "kind": "button",
+          "rect": [
+            59,
+            521,
+            180,
+            64
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            59,
+            1087,
+            180,
+            64
+          ],
+          "file": "lobby/button/quest_go.png"
+        },
+        {
+          "name": "sect",
+          "kind": "button",
+          "rect": [
+            782,
+            260,
+            159,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            782,
+            1247,
+            159,
+            165
+          ],
+          "file": "lobby/button/sect.png"
+        },
+        {
+          "name": "sect_icon",
+          "kind": "icon",
+          "rect": [
+            801,
+            283,
+            122,
+            100
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            801,
+            1289,
+            122,
+            100
+          ],
+          "file": "lobby/icon/sect_icon.png"
+        },
+        {
+          "name": "activity",
+          "kind": "button",
+          "rect": [
+            782,
+            438,
+            159,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            782,
+            1069,
+            159,
+            165
+          ],
+          "file": "lobby/button/activity.png"
+        },
+        {
+          "name": "activity_icon",
+          "kind": "icon",
+          "rect": [
+            801,
+            461,
+            122,
+            100
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            801,
+            1111,
+            122,
+            100
+          ],
+          "file": "lobby/icon/activity_icon.png"
+        },
+        {
+          "name": "welfare",
+          "kind": "button",
+          "rect": [
+            782,
+            616,
+            159,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            782,
+            891,
+            159,
+            165
+          ],
+          "file": "lobby/button/welfare.png"
+        },
+        {
+          "name": "welfare_icon",
+          "kind": "icon",
+          "rect": [
+            801,
+            639,
+            122,
+            100
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            801,
+            933,
+            122,
+            100
+          ],
+          "file": "lobby/icon/welfare_icon.png"
+        },
+        {
+          "name": "hero_scene",
+          "kind": "illustration",
+          "rect": [
+            250,
+            280,
+            530,
+            835
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            250,
+            557,
+            530,
+            835
+          ],
+          "file": "lobby/illustration/hero_scene.png"
+        },
+        {
+          "name": "location",
+          "kind": "label",
+          "rect": [
+            324,
+            1110,
+            302,
+            67
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            324,
+            495,
+            302,
+            67
+          ],
+          "file": "lobby/label/location.png"
+        },
+        {
+          "name": "enter_realm",
+          "kind": "button",
+          "rect": [
+            125,
+            1176,
+            700,
+            256
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            125,
+            240,
+            700,
+            256
+          ],
+          "file": "lobby/button/enter_realm.png"
+        },
+        {
+          "name": "bottom_navigation",
+          "kind": "panel",
+          "rect": [
+            0,
+            1450,
+            941,
+            222
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            0,
+            941,
+            222
+          ],
+          "file": "lobby/panel/bottom_navigation.png"
+        },
+        {
+          "name": "nav_1",
+          "kind": "button",
+          "rect": [
+            0,
+            1470,
+            188,
+            190
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            12,
+            188,
+            190
+          ],
+          "file": "lobby/button/nav_1.png"
+        },
+        {
+          "name": "nav_2",
+          "kind": "button",
+          "rect": [
+            188,
+            1470,
+            188,
+            190
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            188,
+            12,
+            188,
+            190
+          ],
+          "file": "lobby/button/nav_2.png"
+        },
+        {
+          "name": "nav_3",
+          "kind": "button",
+          "rect": [
+            376,
+            1470,
+            188,
+            190
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            376,
+            12,
+            188,
+            190
+          ],
+          "file": "lobby/button/nav_3.png"
+        },
+        {
+          "name": "nav_4",
+          "kind": "button",
+          "rect": [
+            564,
+            1470,
+            188,
+            190
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            564,
+            12,
+            188,
+            190
+          ],
+          "file": "lobby/button/nav_4.png"
+        },
+        {
+          "name": "nav_5",
+          "kind": "button",
+          "rect": [
+            752,
+            1470,
+            188,
+            190
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            752,
+            12,
+            188,
+            190
+          ],
+          "file": "lobby/button/nav_5.png"
+        },
+        {
+          "name": "nav_icon_1",
+          "kind": "icon",
+          "rect": [
+            31,
+            1490,
+            128,
+            112
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            31,
+            70,
+            128,
+            112
+          ],
+          "file": "lobby/icon/nav_icon_1.png"
+        },
+        {
+          "name": "nav_icon_2",
+          "kind": "icon",
+          "rect": [
+            219,
+            1490,
+            128,
+            112
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            219,
+            70,
+            128,
+            112
+          ],
+          "file": "lobby/icon/nav_icon_2.png"
+        },
+        {
+          "name": "nav_icon_3",
+          "kind": "icon",
+          "rect": [
+            407,
+            1490,
+            128,
+            112
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            407,
+            70,
+            128,
+            112
+          ],
+          "file": "lobby/icon/nav_icon_3.png"
+        },
+        {
+          "name": "nav_icon_4",
+          "kind": "icon",
+          "rect": [
+            595,
+            1490,
+            128,
+            112
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            595,
+            70,
+            128,
+            112
+          ],
+          "file": "lobby/icon/nav_icon_4.png"
+        },
+        {
+          "name": "nav_icon_5",
+          "kind": "icon",
+          "rect": [
+            783,
+            1490,
+            128,
+            112
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            783,
+            70,
+            128,
+            112
+          ],
+          "file": "lobby/icon/nav_icon_5.png"
+        }
+      ],
+      "title": "大厅",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/lobby.png",
+      "sourceSha256": "add15c6abad21c4bf22fa1b9f14ea270585fec335ef4384c8f6a69bd65541e4c"
+    },
+    {
+      "id": "character",
+      "regions": [
+        {
+          "name": "header_title",
+          "kind": "header",
+          "rect": [
+            0,
+            12,
+            390,
+            145
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1515,
+            390,
+            145
+          ],
+          "file": "character/header/header_title.png"
+        },
+        {
+          "name": "back",
+          "kind": "button",
+          "rect": [
+            20,
+            20,
+            130,
+            115
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            20,
+            1537,
+            130,
+            115
+          ],
+          "file": "character/button/back.png"
+        },
+        {
+          "name": "currency_left",
+          "kind": "currency",
+          "rect": [
+            490,
+            40,
+            220,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            490,
+            1560,
+            220,
+            72
+          ],
+          "file": "character/currency/currency_left.png"
+        },
+        {
+          "name": "currency_right",
+          "kind": "currency",
+          "rect": [
+            712,
+            40,
+            219,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            712,
+            1560,
+            219,
+            72
+          ],
+          "file": "character/currency/currency_right.png"
+        },
+        {
+          "name": "portrait_selected",
+          "kind": "portrait",
+          "rect": [
+            10,
+            171,
+            230,
+            210
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            10,
+            1291,
+            230,
+            210
+          ],
+          "file": "character/portrait/portrait_selected.png"
+        },
+        {
+          "name": "portrait_other",
+          "kind": "portrait",
+          "rect": [
+            14,
+            385,
+            211,
+            194
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            14,
+            1093,
+            211,
+            194
+          ],
+          "file": "character/portrait/portrait_other.png"
+        },
+        {
+          "name": "hero_scene",
+          "kind": "illustration",
+          "rect": [
+            225,
+            125,
+            716,
+            760
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            225,
+            787,
+            716,
+            760
+          ],
+          "file": "character/illustration/hero_scene.png"
+        },
+        {
+          "name": "name_plate",
+          "kind": "panel",
+          "rect": [
+            145,
+            871,
+            636,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            145,
+            620,
+            636,
+            181
+          ],
+          "file": "character/panel/name_plate.png"
+        },
+        {
+          "name": "stats_panel",
+          "kind": "panel",
+          "rect": [
+            8,
+            1010,
+            925,
+            415
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            8,
+            247,
+            925,
+            415
+          ],
+          "file": "character/panel/stats_panel.png"
+        },
+        {
+          "name": "stat_0",
+          "kind": "label",
+          "rect": [
+            80,
+            1130,
+            365,
+            50
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            80,
+            492,
+            365,
+            50
+          ],
+          "file": "character/label/stat_0.png"
+        },
+        {
+          "name": "stat_icon_0",
+          "kind": "icon",
+          "rect": [
+            98,
+            1135,
+            50,
+            40
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            98,
+            497,
+            50,
+            40
+          ],
+          "file": "character/icon/stat_icon_0.png"
+        },
+        {
+          "name": "stat_1",
+          "kind": "label",
+          "rect": [
+            80,
+            1180,
+            365,
+            50
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            80,
+            442,
+            365,
+            50
+          ],
+          "file": "character/label/stat_1.png"
+        },
+        {
+          "name": "stat_icon_1",
+          "kind": "icon",
+          "rect": [
+            98,
+            1185,
+            50,
+            40
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            98,
+            447,
+            50,
+            40
+          ],
+          "file": "character/icon/stat_icon_1.png"
+        },
+        {
+          "name": "stat_2",
+          "kind": "label",
+          "rect": [
+            80,
+            1230,
+            365,
+            50
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            80,
+            392,
+            365,
+            50
+          ],
+          "file": "character/label/stat_2.png"
+        },
+        {
+          "name": "stat_icon_2",
+          "kind": "icon",
+          "rect": [
+            98,
+            1235,
+            50,
+            40
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            98,
+            397,
+            50,
+            40
+          ],
+          "file": "character/icon/stat_icon_2.png"
+        },
+        {
+          "name": "stat_3",
+          "kind": "label",
+          "rect": [
+            80,
+            1280,
+            365,
+            50
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            80,
+            342,
+            365,
+            50
+          ],
+          "file": "character/label/stat_3.png"
+        },
+        {
+          "name": "stat_icon_3",
+          "kind": "icon",
+          "rect": [
+            98,
+            1285,
+            50,
+            40
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            98,
+            347,
+            50,
+            40
+          ],
+          "file": "character/icon/stat_icon_3.png"
+        },
+        {
+          "name": "skill_1",
+          "kind": "icon",
+          "rect": [
+            505,
+            1132,
+            175,
+            202
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            505,
+            338,
+            175,
+            202
+          ],
+          "file": "character/icon/skill_1.png"
+        },
+        {
+          "name": "skill_2",
+          "kind": "icon",
+          "rect": [
+            693,
+            1132,
+            175,
+            202
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            693,
+            338,
+            175,
+            202
+          ],
+          "file": "character/icon/skill_2.png"
+        },
+        {
+          "name": "select_role",
+          "kind": "button",
+          "rect": [
+            184,
+            1340,
+            581,
+            148
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            184,
+            184,
+            581,
+            148
+          ],
+          "file": "character/button/select_role.png"
+        },
+        {
+          "name": "tab_1",
+          "kind": "tab",
+          "rect": [
+            10,
+            1500,
+            305,
+            120
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            10,
+            52,
+            305,
+            120
+          ],
+          "file": "character/tab/tab_1.png"
+        },
+        {
+          "name": "tab_2",
+          "kind": "tab",
+          "rect": [
+            320,
+            1500,
+            305,
+            120
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            320,
+            52,
+            305,
+            120
+          ],
+          "file": "character/tab/tab_2.png"
+        },
+        {
+          "name": "tab_3",
+          "kind": "tab",
+          "rect": [
+            630,
+            1500,
+            305,
+            120
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            630,
+            52,
+            305,
+            120
+          ],
+          "file": "character/tab/tab_3.png"
+        }
+      ],
+      "title": "角色",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/character.png",
+      "sourceSha256": "730a013aa52a521841cd43f56f46b67b9ab00f0a15f84abcca9dc95644bc51f3"
+    },
+    {
+      "id": "cultivation",
+      "regions": [
+        {
+          "name": "header_title",
+          "kind": "header",
+          "rect": [
+            0,
+            12,
+            390,
+            145
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1515,
+            390,
+            145
+          ],
+          "file": "cultivation/header/header_title.png"
+        },
+        {
+          "name": "back",
+          "kind": "button",
+          "rect": [
+            20,
+            20,
+            130,
+            115
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            20,
+            1537,
+            130,
+            115
+          ],
+          "file": "cultivation/button/back.png"
+        },
+        {
+          "name": "currency_left",
+          "kind": "currency",
+          "rect": [
+            490,
+            40,
+            220,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            490,
+            1560,
+            220,
+            72
+          ],
+          "file": "cultivation/currency/currency_left.png"
+        },
+        {
+          "name": "currency_right",
+          "kind": "currency",
+          "rect": [
+            712,
+            40,
+            219,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            712,
+            1560,
+            219,
+            72
+          ],
+          "file": "cultivation/currency/currency_right.png"
+        },
+        {
+          "name": "realm_title",
+          "kind": "panel",
+          "rect": [
+            253,
+            143,
+            435,
+            124
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            253,
+            1405,
+            435,
+            124
+          ],
+          "file": "cultivation/panel/realm_title.png"
+        },
+        {
+          "name": "meditation_scene",
+          "kind": "illustration",
+          "rect": [
+            45,
+            269,
+            850,
+            583
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            45,
+            820,
+            850,
+            583
+          ],
+          "file": "cultivation/illustration/meditation_scene.png"
+        },
+        {
+          "name": "progress",
+          "kind": "progress",
+          "rect": [
+            60,
+            847,
+            820,
+            70
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            60,
+            755,
+            820,
+            70
+          ],
+          "file": "cultivation/progress/progress.png"
+        },
+        {
+          "name": "requirements",
+          "kind": "panel",
+          "rect": [
+            22,
+            931,
+            900,
+            530
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            22,
+            211,
+            900,
+            530
+          ],
+          "file": "cultivation/panel/requirements.png"
+        },
+        {
+          "name": "requirements_title",
+          "kind": "title",
+          "rect": [
+            245,
+            937,
+            460,
+            92
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            245,
+            643,
+            460,
+            92
+          ],
+          "file": "cultivation/title/requirements_title.png"
+        },
+        {
+          "name": "requirement_0",
+          "kind": "label",
+          "rect": [
+            135,
+            1024,
+            704,
+            47
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            135,
+            601,
+            704,
+            47
+          ],
+          "file": "cultivation/label/requirement_0.png"
+        },
+        {
+          "name": "requirement_1",
+          "kind": "label",
+          "rect": [
+            135,
+            1071,
+            704,
+            47
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            135,
+            554,
+            704,
+            47
+          ],
+          "file": "cultivation/label/requirement_1.png"
+        },
+        {
+          "name": "requirement_2",
+          "kind": "label",
+          "rect": [
+            135,
+            1118,
+            704,
+            47
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            135,
+            507,
+            704,
+            47
+          ],
+          "file": "cultivation/label/requirement_2.png"
+        },
+        {
+          "name": "material_1",
+          "kind": "item",
+          "rect": [
+            258,
+            1230,
+            175,
+            205
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            258,
+            237,
+            175,
+            205
+          ],
+          "file": "cultivation/item/material_1.png"
+        },
+        {
+          "name": "material_2",
+          "kind": "item",
+          "rect": [
+            538,
+            1230,
+            175,
+            205
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            538,
+            237,
+            175,
+            205
+          ],
+          "file": "cultivation/item/material_2.png"
+        },
+        {
+          "name": "action_left",
+          "kind": "button",
+          "rect": [
+            65,
+            1456,
+            400,
+            155
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            65,
+            61,
+            400,
+            155
+          ],
+          "file": "cultivation/button/action_left.png"
+        },
+        {
+          "name": "action_right",
+          "kind": "button",
+          "rect": [
+            475,
+            1456,
+            420,
+            155
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            475,
+            61,
+            420,
+            155
+          ],
+          "file": "cultivation/button/action_right.png"
+        }
+      ],
+      "title": "修炼",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/cultivation.png",
+      "sourceSha256": "5286bd3a81d98bb8847ae5959ad01c4ec462aacd1a8a5970cc9c40f36152bca8"
+    },
+    {
+      "id": "equipment",
+      "regions": [
+        {
+          "name": "header_title",
+          "kind": "header",
+          "rect": [
+            0,
+            12,
+            390,
+            145
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1515,
+            390,
+            145
+          ],
+          "file": "equipment/header/header_title.png"
+        },
+        {
+          "name": "back",
+          "kind": "button",
+          "rect": [
+            20,
+            20,
+            130,
+            115
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            20,
+            1537,
+            130,
+            115
+          ],
+          "file": "equipment/button/back.png"
+        },
+        {
+          "name": "currency_left",
+          "kind": "currency",
+          "rect": [
+            490,
+            40,
+            220,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            490,
+            1560,
+            220,
+            72
+          ],
+          "file": "equipment/currency/currency_left.png"
+        },
+        {
+          "name": "currency_right",
+          "kind": "currency",
+          "rect": [
+            712,
+            40,
+            219,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            712,
+            1560,
+            219,
+            72
+          ],
+          "file": "equipment/currency/currency_right.png"
+        },
+        {
+          "name": "hero_scene",
+          "kind": "illustration",
+          "rect": [
+            246,
+            118,
+            452,
+            776
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            246,
+            778,
+            452,
+            776
+          ],
+          "file": "equipment/illustration/hero_scene.png"
+        },
+        {
+          "name": "slot_left_0",
+          "kind": "item",
+          "rect": [
+            32,
+            229,
+            217,
+            204
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            32,
+            1239,
+            217,
+            204
+          ],
+          "file": "equipment/item/slot_left_0.png"
+        },
+        {
+          "name": "slot_right_0",
+          "kind": "item",
+          "rect": [
+            700,
+            230,
+            205,
+            204
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            700,
+            1238,
+            205,
+            204
+          ],
+          "file": "equipment/item/slot_right_0.png"
+        },
+        {
+          "name": "item_left_0",
+          "kind": "icon",
+          "rect": [
+            70,
+            260,
+            147,
+            126
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            70,
+            1286,
+            147,
+            126
+          ],
+          "file": "equipment/icon/item_left_0.png"
+        },
+        {
+          "name": "item_right_0",
+          "kind": "icon",
+          "rect": [
+            735,
+            262,
+            135,
+            126
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            735,
+            1284,
+            135,
+            126
+          ],
+          "file": "equipment/icon/item_right_0.png"
+        },
+        {
+          "name": "slot_left_1",
+          "kind": "item",
+          "rect": [
+            32,
+            444,
+            217,
+            204
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            32,
+            1024,
+            217,
+            204
+          ],
+          "file": "equipment/item/slot_left_1.png"
+        },
+        {
+          "name": "slot_right_1",
+          "kind": "item",
+          "rect": [
+            700,
+            445,
+            205,
+            204
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            700,
+            1023,
+            205,
+            204
+          ],
+          "file": "equipment/item/slot_right_1.png"
+        },
+        {
+          "name": "item_left_1",
+          "kind": "icon",
+          "rect": [
+            70,
+            475,
+            147,
+            126
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            70,
+            1071,
+            147,
+            126
+          ],
+          "file": "equipment/icon/item_left_1.png"
+        },
+        {
+          "name": "item_right_1",
+          "kind": "icon",
+          "rect": [
+            735,
+            477,
+            135,
+            126
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            735,
+            1069,
+            135,
+            126
+          ],
+          "file": "equipment/icon/item_right_1.png"
+        },
+        {
+          "name": "slot_left_2",
+          "kind": "item",
+          "rect": [
+            32,
+            659,
+            217,
+            204
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            32,
+            809,
+            217,
+            204
+          ],
+          "file": "equipment/item/slot_left_2.png"
+        },
+        {
+          "name": "slot_right_2",
+          "kind": "item",
+          "rect": [
+            700,
+            660,
+            205,
+            204
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            700,
+            808,
+            205,
+            204
+          ],
+          "file": "equipment/item/slot_right_2.png"
+        },
+        {
+          "name": "item_left_2",
+          "kind": "icon",
+          "rect": [
+            70,
+            690,
+            147,
+            126
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            70,
+            856,
+            147,
+            126
+          ],
+          "file": "equipment/icon/item_left_2.png"
+        },
+        {
+          "name": "item_right_2",
+          "kind": "icon",
+          "rect": [
+            735,
+            692,
+            135,
+            126
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            735,
+            854,
+            135,
+            126
+          ],
+          "file": "equipment/icon/item_right_2.png"
+        },
+        {
+          "name": "power",
+          "kind": "panel",
+          "rect": [
+            205,
+            886,
+            535,
+            112
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            205,
+            674,
+            535,
+            112
+          ],
+          "file": "equipment/panel/power.png"
+        },
+        {
+          "name": "detail",
+          "kind": "panel",
+          "rect": [
+            8,
+            994,
+            925,
+            509
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            8,
+            169,
+            925,
+            509
+          ],
+          "file": "equipment/panel/detail.png"
+        },
+        {
+          "name": "weapon_art",
+          "kind": "illustration",
+          "rect": [
+            62,
+            1047,
+            365,
+            323
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            62,
+            302,
+            365,
+            323
+          ],
+          "file": "equipment/illustration/weapon_art.png"
+        },
+        {
+          "name": "item_title",
+          "kind": "label",
+          "rect": [
+            446,
+            1037,
+            365,
+            113
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            446,
+            522,
+            365,
+            113
+          ],
+          "file": "equipment/label/item_title.png"
+        },
+        {
+          "name": "stat_0",
+          "kind": "label",
+          "rect": [
+            452,
+            1154,
+            350,
+            47
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            452,
+            471,
+            350,
+            47
+          ],
+          "file": "equipment/label/stat_0.png"
+        },
+        {
+          "name": "stat_1",
+          "kind": "label",
+          "rect": [
+            452,
+            1201,
+            350,
+            47
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            452,
+            424,
+            350,
+            47
+          ],
+          "file": "equipment/label/stat_1.png"
+        },
+        {
+          "name": "stat_2",
+          "kind": "label",
+          "rect": [
+            452,
+            1248,
+            350,
+            47
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            452,
+            377,
+            350,
+            47
+          ],
+          "file": "equipment/label/stat_2.png"
+        },
+        {
+          "name": "change",
+          "kind": "button",
+          "rect": [
+            160,
+            1362,
+            326,
+            100
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            160,
+            210,
+            326,
+            100
+          ],
+          "file": "equipment/button/change.png"
+        },
+        {
+          "name": "refine",
+          "kind": "button",
+          "rect": [
+            489,
+            1362,
+            312,
+            100
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            489,
+            210,
+            312,
+            100
+          ],
+          "file": "equipment/button/refine.png"
+        },
+        {
+          "name": "tab_1",
+          "kind": "tab",
+          "rect": [
+            10,
+            1510,
+            305,
+            120
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            10,
+            42,
+            305,
+            120
+          ],
+          "file": "equipment/tab/tab_1.png"
+        },
+        {
+          "name": "tab_2",
+          "kind": "tab",
+          "rect": [
+            320,
+            1510,
+            305,
+            120
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            320,
+            42,
+            305,
+            120
+          ],
+          "file": "equipment/tab/tab_2.png"
+        },
+        {
+          "name": "tab_3",
+          "kind": "tab",
+          "rect": [
+            630,
+            1510,
+            305,
+            120
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            630,
+            42,
+            305,
+            120
+          ],
+          "file": "equipment/tab/tab_3.png"
+        }
+      ],
+      "title": "装备",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/equipment.png",
+      "sourceSha256": "290679cae2779772151c24eb05868e9217b7f7c7c1b80a4c9e108c223d19d8d5"
+    },
+    {
+      "id": "inventory",
+      "regions": [
+        {
+          "name": "header_title",
+          "kind": "header",
+          "rect": [
+            0,
+            12,
+            390,
+            145
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1515,
+            390,
+            145
+          ],
+          "file": "inventory/header/header_title.png"
+        },
+        {
+          "name": "back",
+          "kind": "button",
+          "rect": [
+            20,
+            20,
+            130,
+            115
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            20,
+            1537,
+            130,
+            115
+          ],
+          "file": "inventory/button/back.png"
+        },
+        {
+          "name": "currency_left",
+          "kind": "currency",
+          "rect": [
+            490,
+            40,
+            220,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            490,
+            1560,
+            220,
+            72
+          ],
+          "file": "inventory/currency/currency_left.png"
+        },
+        {
+          "name": "currency_right",
+          "kind": "currency",
+          "rect": [
+            712,
+            40,
+            219,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            712,
+            1560,
+            219,
+            72
+          ],
+          "file": "inventory/currency/currency_right.png"
+        },
+        {
+          "name": "filter_1",
+          "kind": "tab",
+          "rect": [
+            75,
+            198,
+            198,
+            104
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            75,
+            1370,
+            198,
+            104
+          ],
+          "file": "inventory/tab/filter_1.png"
+        },
+        {
+          "name": "filter_2",
+          "kind": "tab",
+          "rect": [
+            273,
+            198,
+            198,
+            104
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            273,
+            1370,
+            198,
+            104
+          ],
+          "file": "inventory/tab/filter_2.png"
+        },
+        {
+          "name": "filter_3",
+          "kind": "tab",
+          "rect": [
+            471,
+            198,
+            198,
+            104
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            471,
+            1370,
+            198,
+            104
+          ],
+          "file": "inventory/tab/filter_3.png"
+        },
+        {
+          "name": "filter_4",
+          "kind": "tab",
+          "rect": [
+            669,
+            198,
+            198,
+            104
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            669,
+            1370,
+            198,
+            104
+          ],
+          "file": "inventory/tab/filter_4.png"
+        },
+        {
+          "name": "grid_panel",
+          "kind": "panel",
+          "rect": [
+            35,
+            283,
+            871,
+            864
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            35,
+            525,
+            871,
+            864
+          ],
+          "file": "inventory/panel/grid_panel.png"
+        },
+        {
+          "name": "item_0_0",
+          "kind": "item",
+          "rect": [
+            78,
+            313,
+            187,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            78,
+            1178,
+            187,
+            181
+          ],
+          "file": "inventory/item/item_0_0.png"
+        },
+        {
+          "name": "item_art_0_0",
+          "kind": "icon",
+          "rect": [
+            90,
+            326,
+            159,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            90,
+            1211,
+            159,
+            135
+          ],
+          "file": "inventory/icon/item_art_0_0.png"
+        },
+        {
+          "name": "item_0_1",
+          "kind": "item",
+          "rect": [
+            278,
+            313,
+            187,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            278,
+            1178,
+            187,
+            181
+          ],
+          "file": "inventory/item/item_0_1.png"
+        },
+        {
+          "name": "item_art_0_1",
+          "kind": "icon",
+          "rect": [
+            290,
+            326,
+            159,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            290,
+            1211,
+            159,
+            135
+          ],
+          "file": "inventory/icon/item_art_0_1.png"
+        },
+        {
+          "name": "item_0_2",
+          "kind": "item",
+          "rect": [
+            478,
+            313,
+            187,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            478,
+            1178,
+            187,
+            181
+          ],
+          "file": "inventory/item/item_0_2.png"
+        },
+        {
+          "name": "item_art_0_2",
+          "kind": "icon",
+          "rect": [
+            490,
+            326,
+            159,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            490,
+            1211,
+            159,
+            135
+          ],
+          "file": "inventory/icon/item_art_0_2.png"
+        },
+        {
+          "name": "item_0_3",
+          "kind": "item",
+          "rect": [
+            678,
+            313,
+            187,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            678,
+            1178,
+            187,
+            181
+          ],
+          "file": "inventory/item/item_0_3.png"
+        },
+        {
+          "name": "item_art_0_3",
+          "kind": "icon",
+          "rect": [
+            690,
+            326,
+            159,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            690,
+            1211,
+            159,
+            135
+          ],
+          "file": "inventory/icon/item_art_0_3.png"
+        },
+        {
+          "name": "item_1_0",
+          "kind": "item",
+          "rect": [
+            78,
+            498,
+            187,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            78,
+            993,
+            187,
+            181
+          ],
+          "file": "inventory/item/item_1_0.png"
+        },
+        {
+          "name": "item_art_1_0",
+          "kind": "icon",
+          "rect": [
+            90,
+            511,
+            159,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            90,
+            1026,
+            159,
+            135
+          ],
+          "file": "inventory/icon/item_art_1_0.png"
+        },
+        {
+          "name": "item_1_1",
+          "kind": "item",
+          "rect": [
+            278,
+            498,
+            187,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            278,
+            993,
+            187,
+            181
+          ],
+          "file": "inventory/item/item_1_1.png"
+        },
+        {
+          "name": "item_art_1_1",
+          "kind": "icon",
+          "rect": [
+            290,
+            511,
+            159,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            290,
+            1026,
+            159,
+            135
+          ],
+          "file": "inventory/icon/item_art_1_1.png"
+        },
+        {
+          "name": "item_1_2",
+          "kind": "item",
+          "rect": [
+            478,
+            498,
+            187,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            478,
+            993,
+            187,
+            181
+          ],
+          "file": "inventory/item/item_1_2.png"
+        },
+        {
+          "name": "item_art_1_2",
+          "kind": "icon",
+          "rect": [
+            490,
+            511,
+            159,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            490,
+            1026,
+            159,
+            135
+          ],
+          "file": "inventory/icon/item_art_1_2.png"
+        },
+        {
+          "name": "item_1_3",
+          "kind": "item",
+          "rect": [
+            678,
+            498,
+            187,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            678,
+            993,
+            187,
+            181
+          ],
+          "file": "inventory/item/item_1_3.png"
+        },
+        {
+          "name": "item_art_1_3",
+          "kind": "icon",
+          "rect": [
+            690,
+            511,
+            159,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            690,
+            1026,
+            159,
+            135
+          ],
+          "file": "inventory/icon/item_art_1_3.png"
+        },
+        {
+          "name": "item_2_0",
+          "kind": "item",
+          "rect": [
+            78,
+            683,
+            187,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            78,
+            808,
+            187,
+            181
+          ],
+          "file": "inventory/item/item_2_0.png"
+        },
+        {
+          "name": "item_art_2_0",
+          "kind": "icon",
+          "rect": [
+            90,
+            696,
+            159,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            90,
+            841,
+            159,
+            135
+          ],
+          "file": "inventory/icon/item_art_2_0.png"
+        },
+        {
+          "name": "item_2_1",
+          "kind": "item",
+          "rect": [
+            278,
+            683,
+            187,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            278,
+            808,
+            187,
+            181
+          ],
+          "file": "inventory/item/item_2_1.png"
+        },
+        {
+          "name": "item_art_2_1",
+          "kind": "icon",
+          "rect": [
+            290,
+            696,
+            159,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            290,
+            841,
+            159,
+            135
+          ],
+          "file": "inventory/icon/item_art_2_1.png"
+        },
+        {
+          "name": "item_2_2",
+          "kind": "item",
+          "rect": [
+            478,
+            683,
+            187,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            478,
+            808,
+            187,
+            181
+          ],
+          "file": "inventory/item/item_2_2.png"
+        },
+        {
+          "name": "item_art_2_2",
+          "kind": "icon",
+          "rect": [
+            490,
+            696,
+            159,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            490,
+            841,
+            159,
+            135
+          ],
+          "file": "inventory/icon/item_art_2_2.png"
+        },
+        {
+          "name": "item_2_3",
+          "kind": "item",
+          "rect": [
+            678,
+            683,
+            187,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            678,
+            808,
+            187,
+            181
+          ],
+          "file": "inventory/item/item_2_3.png"
+        },
+        {
+          "name": "item_art_2_3",
+          "kind": "icon",
+          "rect": [
+            690,
+            696,
+            159,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            690,
+            841,
+            159,
+            135
+          ],
+          "file": "inventory/icon/item_art_2_3.png"
+        },
+        {
+          "name": "item_3_0",
+          "kind": "item",
+          "rect": [
+            78,
+            868,
+            187,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            78,
+            623,
+            187,
+            181
+          ],
+          "file": "inventory/item/item_3_0.png"
+        },
+        {
+          "name": "item_art_3_0",
+          "kind": "icon",
+          "rect": [
+            90,
+            881,
+            159,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            90,
+            656,
+            159,
+            135
+          ],
+          "file": "inventory/icon/item_art_3_0.png"
+        },
+        {
+          "name": "item_3_1",
+          "kind": "item",
+          "rect": [
+            278,
+            868,
+            187,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            278,
+            623,
+            187,
+            181
+          ],
+          "file": "inventory/item/item_3_1.png"
+        },
+        {
+          "name": "item_art_3_1",
+          "kind": "icon",
+          "rect": [
+            290,
+            881,
+            159,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            290,
+            656,
+            159,
+            135
+          ],
+          "file": "inventory/icon/item_art_3_1.png"
+        },
+        {
+          "name": "item_3_2",
+          "kind": "item",
+          "rect": [
+            478,
+            868,
+            187,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            478,
+            623,
+            187,
+            181
+          ],
+          "file": "inventory/item/item_3_2.png"
+        },
+        {
+          "name": "item_art_3_2",
+          "kind": "icon",
+          "rect": [
+            490,
+            881,
+            159,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            490,
+            656,
+            159,
+            135
+          ],
+          "file": "inventory/icon/item_art_3_2.png"
+        },
+        {
+          "name": "item_3_3",
+          "kind": "item",
+          "rect": [
+            678,
+            868,
+            187,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            678,
+            623,
+            187,
+            181
+          ],
+          "file": "inventory/item/item_3_3.png"
+        },
+        {
+          "name": "item_art_3_3",
+          "kind": "icon",
+          "rect": [
+            690,
+            881,
+            159,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            690,
+            656,
+            159,
+            135
+          ],
+          "file": "inventory/icon/item_art_3_3.png"
+        },
+        {
+          "name": "capacity",
+          "kind": "label",
+          "rect": [
+            275,
+            1066,
+            432,
+            63
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            275,
+            543,
+            432,
+            63
+          ],
+          "file": "inventory/label/capacity.png"
+        },
+        {
+          "name": "detail",
+          "kind": "panel",
+          "rect": [
+            24,
+            1127,
+            890,
+            453
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            24,
+            92,
+            890,
+            453
+          ],
+          "file": "inventory/panel/detail.png"
+        },
+        {
+          "name": "selected_art",
+          "kind": "illustration",
+          "rect": [
+            67,
+            1170,
+            282,
+            278
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            67,
+            224,
+            282,
+            278
+          ],
+          "file": "inventory/illustration/selected_art.png"
+        },
+        {
+          "name": "selected_description",
+          "kind": "label",
+          "rect": [
+            360,
+            1165,
+            509,
+            274
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            360,
+            233,
+            509,
+            274
+          ],
+          "file": "inventory/label/selected_description.png"
+        },
+        {
+          "name": "action_left",
+          "kind": "button",
+          "rect": [
+            65,
+            1450,
+            400,
+            118
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            65,
+            104,
+            400,
+            118
+          ],
+          "file": "inventory/button/action_left.png"
+        },
+        {
+          "name": "action_right",
+          "kind": "button",
+          "rect": [
+            475,
+            1450,
+            420,
+            118
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            475,
+            104,
+            420,
+            118
+          ],
+          "file": "inventory/button/action_right.png"
+        }
+      ],
+      "title": "背包",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/inventory.png",
+      "sourceSha256": "d62839830ca15dfd528fde3f4451d5ebc7be7d804be008dd7b53a776c0cd06c9"
+    },
+    {
+      "id": "souljade",
+      "regions": [
+        {
+          "name": "header_title",
+          "kind": "header",
+          "rect": [
+            0,
+            8,
+            390,
+            124
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1540,
+            390,
+            124
+          ],
+          "file": "souljade/header/header_title.png"
+        },
+        {
+          "name": "back",
+          "kind": "button",
+          "rect": [
+            21,
+            16,
+            125,
+            112
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            21,
+            1544,
+            125,
+            112
+          ],
+          "file": "souljade/button/back.png"
+        },
+        {
+          "name": "currency_left",
+          "kind": "currency",
+          "rect": [
+            469,
+            35,
+            223,
+            63
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            469,
+            1574,
+            223,
+            63
+          ],
+          "file": "souljade/currency/currency_left.png"
+        },
+        {
+          "name": "currency_right",
+          "kind": "currency",
+          "rect": [
+            698,
+            35,
+            222,
+            63
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            698,
+            1574,
+            222,
+            63
+          ],
+          "file": "souljade/currency/currency_right.png"
+        },
+        {
+          "name": "mode_1",
+          "kind": "tab",
+          "rect": [
+            104,
+            132,
+            246,
+            88
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            104,
+            1452,
+            246,
+            88
+          ],
+          "file": "souljade/tab/mode_1.png"
+        },
+        {
+          "name": "mode_2",
+          "kind": "tab",
+          "rect": [
+            350,
+            132,
+            246,
+            88
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            350,
+            1452,
+            246,
+            88
+          ],
+          "file": "souljade/tab/mode_2.png"
+        },
+        {
+          "name": "mode_3",
+          "kind": "tab",
+          "rect": [
+            596,
+            132,
+            246,
+            88
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            596,
+            1452,
+            246,
+            88
+          ],
+          "file": "souljade/tab/mode_3.png"
+        },
+        {
+          "name": "astrolabe_scene",
+          "kind": "illustration",
+          "rect": [
+            51,
+            220,
+            840,
+            739
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            51,
+            713,
+            840,
+            739
+          ],
+          "file": "souljade/illustration/astrolabe_scene.png"
+        },
+        {
+          "name": "socket_0",
+          "kind": "icon",
+          "rect": [
+            370,
+            227,
+            205,
+            225
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            370,
+            1220,
+            205,
+            225
+          ],
+          "file": "souljade/icon/socket_0.png"
+        },
+        {
+          "name": "socket_1",
+          "kind": "icon",
+          "rect": [
+            617,
+            384,
+            205,
+            225
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            617,
+            1063,
+            205,
+            225
+          ],
+          "file": "souljade/icon/socket_1.png"
+        },
+        {
+          "name": "socket_2",
+          "kind": "icon",
+          "rect": [
+            619,
+            646,
+            205,
+            225
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            619,
+            801,
+            205,
+            225
+          ],
+          "file": "souljade/icon/socket_2.png"
+        },
+        {
+          "name": "socket_3",
+          "kind": "icon",
+          "rect": [
+            370,
+            746,
+            205,
+            225
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            370,
+            701,
+            205,
+            225
+          ],
+          "file": "souljade/icon/socket_3.png"
+        },
+        {
+          "name": "socket_4",
+          "kind": "icon",
+          "rect": [
+            114,
+            645,
+            205,
+            225
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            114,
+            802,
+            205,
+            225
+          ],
+          "file": "souljade/icon/socket_4.png"
+        },
+        {
+          "name": "socket_5",
+          "kind": "icon",
+          "rect": [
+            115,
+            382,
+            205,
+            225
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            115,
+            1065,
+            205,
+            225
+          ],
+          "file": "souljade/icon/socket_5.png"
+        },
+        {
+          "name": "central_orb",
+          "kind": "illustration",
+          "rect": [
+            350,
+            485,
+            246,
+            258
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            350,
+            929,
+            246,
+            258
+          ],
+          "file": "souljade/illustration/central_orb.png"
+        },
+        {
+          "name": "detail",
+          "kind": "panel",
+          "rect": [
+            78,
+            990,
+            785,
+            299
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            78,
+            383,
+            785,
+            299
+          ],
+          "file": "souljade/panel/detail.png"
+        },
+        {
+          "name": "selected_gem",
+          "kind": "icon",
+          "rect": [
+            139,
+            1032,
+            241,
+            228
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            139,
+            412,
+            241,
+            228
+          ],
+          "file": "souljade/icon/selected_gem.png"
+        },
+        {
+          "name": "detail_title",
+          "kind": "label",
+          "rect": [
+            388,
+            1036,
+            394,
+            61
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            388,
+            575,
+            394,
+            61
+          ],
+          "file": "souljade/label/detail_title.png"
+        },
+        {
+          "name": "stat_0",
+          "kind": "label",
+          "rect": [
+            419,
+            1105,
+            350,
+            47
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            419,
+            520,
+            350,
+            47
+          ],
+          "file": "souljade/label/stat_0.png"
+        },
+        {
+          "name": "stat_1",
+          "kind": "label",
+          "rect": [
+            419,
+            1153,
+            350,
+            47
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            419,
+            472,
+            350,
+            47
+          ],
+          "file": "souljade/label/stat_1.png"
+        },
+        {
+          "name": "stat_2",
+          "kind": "label",
+          "rect": [
+            419,
+            1201,
+            350,
+            47
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            419,
+            424,
+            350,
+            47
+          ],
+          "file": "souljade/label/stat_2.png"
+        },
+        {
+          "name": "inventory",
+          "kind": "panel",
+          "rect": [
+            64,
+            1287,
+            815,
+            210
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            64,
+            175,
+            815,
+            210
+          ],
+          "file": "souljade/panel/inventory.png"
+        },
+        {
+          "name": "owned_gem_1",
+          "kind": "item",
+          "rect": [
+            163,
+            1341,
+            135,
+            132
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            163,
+            199,
+            135,
+            132
+          ],
+          "file": "souljade/item/owned_gem_1.png"
+        },
+        {
+          "name": "owned_gem_2",
+          "kind": "item",
+          "rect": [
+            318,
+            1341,
+            135,
+            132
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            318,
+            199,
+            135,
+            132
+          ],
+          "file": "souljade/item/owned_gem_2.png"
+        },
+        {
+          "name": "owned_gem_3",
+          "kind": "item",
+          "rect": [
+            473,
+            1341,
+            135,
+            132
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            473,
+            199,
+            135,
+            132
+          ],
+          "file": "souljade/item/owned_gem_3.png"
+        },
+        {
+          "name": "owned_gem_4",
+          "kind": "item",
+          "rect": [
+            628,
+            1341,
+            135,
+            132
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            628,
+            199,
+            135,
+            132
+          ],
+          "file": "souljade/item/owned_gem_4.png"
+        },
+        {
+          "name": "previous",
+          "kind": "button",
+          "rect": [
+            65,
+            1354,
+            62,
+            88
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            65,
+            230,
+            62,
+            88
+          ],
+          "file": "souljade/button/previous.png"
+        },
+        {
+          "name": "next",
+          "kind": "button",
+          "rect": [
+            812,
+            1354,
+            62,
+            88
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            812,
+            230,
+            62,
+            88
+          ],
+          "file": "souljade/button/next.png"
+        },
+        {
+          "name": "action_left",
+          "kind": "button",
+          "rect": [
+            65,
+            1495,
+            400,
+            132
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            65,
+            45,
+            400,
+            132
+          ],
+          "file": "souljade/button/action_left.png"
+        },
+        {
+          "name": "action_right",
+          "kind": "button",
+          "rect": [
+            475,
+            1495,
+            420,
+            132
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            475,
+            45,
+            420,
+            132
+          ],
+          "file": "souljade/button/action_right.png"
+        }
+      ],
+      "title": "魂玉",
+      "width": 940,
+      "height": 1672,
+      "source": "../Concepts/souljade.png",
+      "sourceSha256": "6b0d47c8dcc9dd623d954aac58a6b5cee214d01c03c070ec13fb599926a2c9a9"
+    },
+    {
+      "id": "talent",
+      "regions": [
+        {
+          "name": "header_title",
+          "kind": "header",
+          "rect": [
+            0,
+            12,
+            390,
+            145
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1515,
+            390,
+            145
+          ],
+          "file": "talent/header/header_title.png"
+        },
+        {
+          "name": "points",
+          "kind": "currency",
+          "rect": [
+            580,
+            44,
+            350,
+            78
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            580,
+            1550,
+            350,
+            78
+          ],
+          "file": "talent/currency/points.png"
+        },
+        {
+          "name": "branch_1",
+          "kind": "tab",
+          "rect": [
+            10,
+            230,
+            230,
+            112
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            10,
+            1330,
+            230,
+            112
+          ],
+          "file": "talent/tab/branch_1.png"
+        },
+        {
+          "name": "branch_2",
+          "kind": "tab",
+          "rect": [
+            240,
+            230,
+            230,
+            112
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            240,
+            1330,
+            230,
+            112
+          ],
+          "file": "talent/tab/branch_2.png"
+        },
+        {
+          "name": "branch_3",
+          "kind": "tab",
+          "rect": [
+            470,
+            230,
+            230,
+            112
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            470,
+            1330,
+            230,
+            112
+          ],
+          "file": "talent/tab/branch_3.png"
+        },
+        {
+          "name": "branch_4",
+          "kind": "tab",
+          "rect": [
+            700,
+            230,
+            230,
+            112
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            700,
+            1330,
+            230,
+            112
+          ],
+          "file": "talent/tab/branch_4.png"
+        },
+        {
+          "name": "tree_scene",
+          "kind": "illustration",
+          "rect": [
+            22,
+            339,
+            901,
+            739
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            22,
+            594,
+            901,
+            739
+          ],
+          "file": "talent/illustration/tree_scene.png"
+        },
+        {
+          "name": "node_0",
+          "kind": "icon",
+          "rect": [
+            387,
+            348,
+            170,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            387,
+            1159,
+            170,
+            165
+          ],
+          "file": "talent/icon/node_0.png"
+        },
+        {
+          "name": "node_1",
+          "kind": "icon",
+          "rect": [
+            208,
+            491,
+            170,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            208,
+            1016,
+            170,
+            165
+          ],
+          "file": "talent/icon/node_1.png"
+        },
+        {
+          "name": "node_2",
+          "kind": "icon",
+          "rect": [
+            572,
+            491,
+            170,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            572,
+            1016,
+            170,
+            165
+          ],
+          "file": "talent/icon/node_2.png"
+        },
+        {
+          "name": "node_3",
+          "kind": "icon",
+          "rect": [
+            58,
+            680,
+            170,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            58,
+            827,
+            170,
+            165
+          ],
+          "file": "talent/icon/node_3.png"
+        },
+        {
+          "name": "node_4",
+          "kind": "icon",
+          "rect": [
+            269,
+            680,
+            170,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            269,
+            827,
+            170,
+            165
+          ],
+          "file": "talent/icon/node_4.png"
+        },
+        {
+          "name": "node_5",
+          "kind": "icon",
+          "rect": [
+            494,
+            680,
+            170,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            494,
+            827,
+            170,
+            165
+          ],
+          "file": "talent/icon/node_5.png"
+        },
+        {
+          "name": "node_6",
+          "kind": "icon",
+          "rect": [
+            714,
+            680,
+            170,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            714,
+            827,
+            170,
+            165
+          ],
+          "file": "talent/icon/node_6.png"
+        },
+        {
+          "name": "node_7",
+          "kind": "icon",
+          "rect": [
+            107,
+            875,
+            170,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            107,
+            632,
+            170,
+            165
+          ],
+          "file": "talent/icon/node_7.png"
+        },
+        {
+          "name": "node_8",
+          "kind": "icon",
+          "rect": [
+            310,
+            875,
+            170,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            310,
+            632,
+            170,
+            165
+          ],
+          "file": "talent/icon/node_8.png"
+        },
+        {
+          "name": "node_9",
+          "kind": "icon",
+          "rect": [
+            511,
+            875,
+            170,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            511,
+            632,
+            170,
+            165
+          ],
+          "file": "talent/icon/node_9.png"
+        },
+        {
+          "name": "node_10",
+          "kind": "icon",
+          "rect": [
+            711,
+            875,
+            170,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            711,
+            632,
+            170,
+            165
+          ],
+          "file": "talent/icon/node_10.png"
+        },
+        {
+          "name": "detail",
+          "kind": "panel",
+          "rect": [
+            19,
+            1075,
+            902,
+            372
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            19,
+            225,
+            902,
+            372
+          ],
+          "file": "talent/panel/detail.png"
+        },
+        {
+          "name": "selected_icon",
+          "kind": "icon",
+          "rect": [
+            103,
+            1150,
+            253,
+            252
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            103,
+            270,
+            253,
+            252
+          ],
+          "file": "talent/icon/selected_icon.png"
+        },
+        {
+          "name": "description",
+          "kind": "label",
+          "rect": [
+            380,
+            1150,
+            430,
+            236
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            380,
+            286,
+            430,
+            236
+          ],
+          "file": "talent/label/description.png"
+        },
+        {
+          "name": "action_left",
+          "kind": "button",
+          "rect": [
+            65,
+            1465,
+            400,
+            131
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            65,
+            76,
+            400,
+            131
+          ],
+          "file": "talent/button/action_left.png"
+        },
+        {
+          "name": "action_right",
+          "kind": "button",
+          "rect": [
+            475,
+            1465,
+            420,
+            131
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            475,
+            76,
+            420,
+            131
+          ],
+          "file": "talent/button/action_right.png"
+        }
+      ],
+      "title": "天赋",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/talent.png",
+      "sourceSha256": "3cb9fe616432f7a5a08c38c2ccd4c8af6475cc3c701ed3ea2f7083c7fba69c5e"
+    },
+    {
+      "id": "battle",
+      "regions": [
+        {
+          "name": "header",
+          "kind": "header",
+          "rect": [
+            0,
+            15,
+            565,
+            122
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1535,
+            565,
+            122
+          ],
+          "file": "battle/header/header.png"
+        },
+        {
+          "name": "turn",
+          "kind": "label",
+          "rect": [
+            682,
+            38,
+            242,
+            73
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            682,
+            1561,
+            242,
+            73
+          ],
+          "file": "battle/label/turn.png"
+        },
+        {
+          "name": "arena",
+          "kind": "illustration",
+          "rect": [
+            0,
+            135,
+            941,
+            1040
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            497,
+            941,
+            1040
+          ],
+          "file": "battle/illustration/arena.png"
+        },
+        {
+          "name": "combatant_context_0",
+          "kind": "illustration",
+          "rect": [
+            10,
+            292,
+            282,
+            309
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            10,
+            1071,
+            282,
+            309
+          ],
+          "file": "battle/illustration/combatant_context_0.png"
+        },
+        {
+          "name": "combatant_context_1",
+          "kind": "illustration",
+          "rect": [
+            284,
+            209,
+            386,
+            391
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            284,
+            1072,
+            386,
+            391
+          ],
+          "file": "battle/illustration/combatant_context_1.png"
+        },
+        {
+          "name": "combatant_context_2",
+          "kind": "illustration",
+          "rect": [
+            663,
+            296,
+            278,
+            310
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            663,
+            1066,
+            278,
+            310
+          ],
+          "file": "battle/illustration/combatant_context_2.png"
+        },
+        {
+          "name": "combatant_context_3",
+          "kind": "illustration",
+          "rect": [
+            20,
+            769,
+            305,
+            325
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            20,
+            578,
+            305,
+            325
+          ],
+          "file": "battle/illustration/combatant_context_3.png"
+        },
+        {
+          "name": "combatant_context_4",
+          "kind": "illustration",
+          "rect": [
+            285,
+            726,
+            384,
+            379
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            285,
+            567,
+            384,
+            379
+          ],
+          "file": "battle/illustration/combatant_context_4.png"
+        },
+        {
+          "name": "combatant_context_5",
+          "kind": "illustration",
+          "rect": [
+            638,
+            770,
+            303,
+            332
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            638,
+            570,
+            303,
+            332
+          ],
+          "file": "battle/illustration/combatant_context_5.png"
+        },
+        {
+          "name": "health_0",
+          "kind": "progress",
+          "rect": [
+            29,
+            219,
+            250,
+            83
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            29,
+            1370,
+            250,
+            83
+          ],
+          "file": "battle/progress/health_0.png"
+        },
+        {
+          "name": "health_1",
+          "kind": "progress",
+          "rect": [
+            365,
+            178,
+            250,
+            83
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            365,
+            1411,
+            250,
+            83
+          ],
+          "file": "battle/progress/health_1.png"
+        },
+        {
+          "name": "health_2",
+          "kind": "progress",
+          "rect": [
+            679,
+            253,
+            250,
+            83
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            679,
+            1336,
+            250,
+            83
+          ],
+          "file": "battle/progress/health_2.png"
+        },
+        {
+          "name": "health_3",
+          "kind": "progress",
+          "rect": [
+            45,
+            1062,
+            250,
+            83
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            45,
+            527,
+            250,
+            83
+          ],
+          "file": "battle/progress/health_3.png"
+        },
+        {
+          "name": "health_4",
+          "kind": "progress",
+          "rect": [
+            357,
+            1090,
+            250,
+            83
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            357,
+            499,
+            250,
+            83
+          ],
+          "file": "battle/progress/health_4.png"
+        },
+        {
+          "name": "health_5",
+          "kind": "progress",
+          "rect": [
+            676,
+            1080,
+            250,
+            83
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            676,
+            509,
+            250,
+            83
+          ],
+          "file": "battle/progress/health_5.png"
+        },
+        {
+          "name": "skill_1",
+          "kind": "button",
+          "rect": [
+            17,
+            1180,
+            217,
+            250
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            17,
+            242,
+            217,
+            250
+          ],
+          "file": "battle/button/skill_1.png"
+        },
+        {
+          "name": "skill_2",
+          "kind": "button",
+          "rect": [
+            246,
+            1180,
+            217,
+            250
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            246,
+            242,
+            217,
+            250
+          ],
+          "file": "battle/button/skill_2.png"
+        },
+        {
+          "name": "skill_3",
+          "kind": "button",
+          "rect": [
+            475,
+            1180,
+            217,
+            250
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            475,
+            242,
+            217,
+            250
+          ],
+          "file": "battle/button/skill_3.png"
+        },
+        {
+          "name": "skill_4",
+          "kind": "button",
+          "rect": [
+            704,
+            1180,
+            217,
+            250
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            704,
+            242,
+            217,
+            250
+          ],
+          "file": "battle/button/skill_4.png"
+        },
+        {
+          "name": "skill_art_1",
+          "kind": "icon",
+          "rect": [
+            35,
+            1195,
+            183,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            35,
+            296,
+            183,
+            181
+          ],
+          "file": "battle/icon/skill_art_1.png"
+        },
+        {
+          "name": "skill_art_2",
+          "kind": "icon",
+          "rect": [
+            264,
+            1195,
+            183,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            264,
+            296,
+            183,
+            181
+          ],
+          "file": "battle/icon/skill_art_2.png"
+        },
+        {
+          "name": "skill_art_3",
+          "kind": "icon",
+          "rect": [
+            493,
+            1195,
+            183,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            493,
+            296,
+            183,
+            181
+          ],
+          "file": "battle/icon/skill_art_3.png"
+        },
+        {
+          "name": "skill_art_4",
+          "kind": "icon",
+          "rect": [
+            722,
+            1195,
+            183,
+            181
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            722,
+            296,
+            183,
+            181
+          ],
+          "file": "battle/icon/skill_art_4.png"
+        },
+        {
+          "name": "log",
+          "kind": "panel",
+          "rect": [
+            10,
+            1452,
+            515,
+            205
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            10,
+            15,
+            515,
+            205
+          ],
+          "file": "battle/panel/log.png"
+        },
+        {
+          "name": "auto",
+          "kind": "button",
+          "rect": [
+            594,
+            1465,
+            157,
+            160
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            594,
+            47,
+            157,
+            160
+          ],
+          "file": "battle/button/auto.png"
+        },
+        {
+          "name": "speed",
+          "kind": "button",
+          "rect": [
+            758,
+            1465,
+            164,
+            160
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            758,
+            47,
+            164,
+            160
+          ],
+          "file": "battle/button/speed.png"
+        }
+      ],
+      "title": "战斗",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/battle.png",
+      "sourceSha256": "39a28d17e4b12b59562ab36a99e2a9fda1b6dad8c21421a913ae67119e81d05b"
+    },
+    {
+      "id": "task",
+      "regions": [
+        {
+          "name": "header_title",
+          "kind": "header",
+          "rect": [
+            0,
+            12,
+            390,
+            145
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1515,
+            390,
+            145
+          ],
+          "file": "task/header/header_title.png"
+        },
+        {
+          "name": "category_1",
+          "kind": "tab",
+          "rect": [
+            30,
+            195,
+            294,
+            117
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            30,
+            1360,
+            294,
+            117
+          ],
+          "file": "task/tab/category_1.png"
+        },
+        {
+          "name": "category_2",
+          "kind": "tab",
+          "rect": [
+            324,
+            195,
+            294,
+            117
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            324,
+            1360,
+            294,
+            117
+          ],
+          "file": "task/tab/category_2.png"
+        },
+        {
+          "name": "category_3",
+          "kind": "tab",
+          "rect": [
+            618,
+            195,
+            294,
+            117
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            618,
+            1360,
+            294,
+            117
+          ],
+          "file": "task/tab/category_3.png"
+        },
+        {
+          "name": "quest_0",
+          "kind": "panel",
+          "rect": [
+            26,
+            302,
+            891,
+            157
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            26,
+            1213,
+            891,
+            157
+          ],
+          "file": "task/panel/quest_0.png"
+        },
+        {
+          "name": "quest_icon_0",
+          "kind": "icon",
+          "rect": [
+            64,
+            318,
+            177,
+            131
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            64,
+            1223,
+            177,
+            131
+          ],
+          "file": "task/icon/quest_icon_0.png"
+        },
+        {
+          "name": "quest_action_0",
+          "kind": "button",
+          "rect": [
+            679,
+            334,
+            212,
+            98
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            679,
+            1240,
+            212,
+            98
+          ],
+          "file": "task/button/quest_action_0.png"
+        },
+        {
+          "name": "quest_1",
+          "kind": "panel",
+          "rect": [
+            26,
+            460,
+            891,
+            157
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            26,
+            1055,
+            891,
+            157
+          ],
+          "file": "task/panel/quest_1.png"
+        },
+        {
+          "name": "quest_icon_1",
+          "kind": "icon",
+          "rect": [
+            64,
+            476,
+            177,
+            131
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            64,
+            1065,
+            177,
+            131
+          ],
+          "file": "task/icon/quest_icon_1.png"
+        },
+        {
+          "name": "quest_action_1",
+          "kind": "button",
+          "rect": [
+            679,
+            492,
+            212,
+            98
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            679,
+            1082,
+            212,
+            98
+          ],
+          "file": "task/button/quest_action_1.png"
+        },
+        {
+          "name": "quest_2",
+          "kind": "panel",
+          "rect": [
+            26,
+            618,
+            891,
+            157
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            26,
+            897,
+            891,
+            157
+          ],
+          "file": "task/panel/quest_2.png"
+        },
+        {
+          "name": "quest_icon_2",
+          "kind": "icon",
+          "rect": [
+            64,
+            634,
+            177,
+            131
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            64,
+            907,
+            177,
+            131
+          ],
+          "file": "task/icon/quest_icon_2.png"
+        },
+        {
+          "name": "quest_action_2",
+          "kind": "button",
+          "rect": [
+            679,
+            650,
+            212,
+            98
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            679,
+            924,
+            212,
+            98
+          ],
+          "file": "task/button/quest_action_2.png"
+        },
+        {
+          "name": "quest_3",
+          "kind": "panel",
+          "rect": [
+            26,
+            776,
+            891,
+            157
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            26,
+            739,
+            891,
+            157
+          ],
+          "file": "task/panel/quest_3.png"
+        },
+        {
+          "name": "quest_icon_3",
+          "kind": "icon",
+          "rect": [
+            64,
+            792,
+            177,
+            131
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            64,
+            749,
+            177,
+            131
+          ],
+          "file": "task/icon/quest_icon_3.png"
+        },
+        {
+          "name": "quest_action_3",
+          "kind": "button",
+          "rect": [
+            679,
+            808,
+            212,
+            98
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            679,
+            766,
+            212,
+            98
+          ],
+          "file": "task/button/quest_action_3.png"
+        },
+        {
+          "name": "selected_detail",
+          "kind": "panel",
+          "rect": [
+            8,
+            939,
+            925,
+            546
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            8,
+            187,
+            925,
+            546
+          ],
+          "file": "task/panel/selected_detail.png"
+        },
+        {
+          "name": "reward_1",
+          "kind": "item",
+          "rect": [
+            290,
+            1327,
+            108,
+            122
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            290,
+            223,
+            108,
+            122
+          ],
+          "file": "task/item/reward_1.png"
+        },
+        {
+          "name": "reward_2",
+          "kind": "item",
+          "rect": [
+            420,
+            1327,
+            108,
+            122
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            420,
+            223,
+            108,
+            122
+          ],
+          "file": "task/item/reward_2.png"
+        },
+        {
+          "name": "reward_3",
+          "kind": "item",
+          "rect": [
+            550,
+            1327,
+            108,
+            122
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            550,
+            223,
+            108,
+            122
+          ],
+          "file": "task/item/reward_3.png"
+        },
+        {
+          "name": "claim",
+          "kind": "button",
+          "rect": [
+            205,
+            1478,
+            544,
+            135
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            205,
+            59,
+            544,
+            135
+          ],
+          "file": "task/button/claim.png"
+        }
+      ],
+      "title": "任务",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/task.png",
+      "sourceSha256": "cfbc6ccbaf262f4b36da5fc6ea2c0de00a98e981bf4b7f97e73e9450ed068ae6"
+    },
+    {
+      "id": "sect",
+      "regions": [
+        {
+          "name": "header_title",
+          "kind": "header",
+          "rect": [
+            0,
+            12,
+            390,
+            145
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1515,
+            390,
+            145
+          ],
+          "file": "sect/header/header_title.png"
+        },
+        {
+          "name": "back",
+          "kind": "button",
+          "rect": [
+            20,
+            20,
+            130,
+            115
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            20,
+            1537,
+            130,
+            115
+          ],
+          "file": "sect/button/back.png"
+        },
+        {
+          "name": "currency_left",
+          "kind": "currency",
+          "rect": [
+            490,
+            40,
+            220,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            490,
+            1560,
+            220,
+            72
+          ],
+          "file": "sect/currency/currency_left.png"
+        },
+        {
+          "name": "currency_right",
+          "kind": "currency",
+          "rect": [
+            712,
+            40,
+            219,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            712,
+            1560,
+            219,
+            72
+          ],
+          "file": "sect/currency/currency_right.png"
+        },
+        {
+          "name": "palace_scene",
+          "kind": "illustration",
+          "rect": [
+            0,
+            133,
+            941,
+            342
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1197,
+            941,
+            342
+          ],
+          "file": "sect/illustration/palace_scene.png"
+        },
+        {
+          "name": "sect_title",
+          "kind": "panel",
+          "rect": [
+            209,
+            474,
+            532,
+            225
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            209,
+            973,
+            532,
+            225
+          ],
+          "file": "sect/panel/sect_title.png"
+        },
+        {
+          "name": "announcement",
+          "kind": "panel",
+          "rect": [
+            35,
+            699,
+            874,
+            266
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            35,
+            707,
+            874,
+            266
+          ],
+          "file": "sect/panel/announcement.png"
+        },
+        {
+          "name": "building_0_0",
+          "kind": "button",
+          "rect": [
+            29,
+            962,
+            438,
+            213
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            29,
+            497,
+            438,
+            213
+          ],
+          "file": "sect/button/building_0_0.png"
+        },
+        {
+          "name": "building_0_1",
+          "kind": "button",
+          "rect": [
+            474,
+            962,
+            438,
+            213
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            474,
+            497,
+            438,
+            213
+          ],
+          "file": "sect/button/building_0_1.png"
+        },
+        {
+          "name": "building_1_0",
+          "kind": "button",
+          "rect": [
+            29,
+            1174,
+            438,
+            213
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            29,
+            285,
+            438,
+            213
+          ],
+          "file": "sect/button/building_1_0.png"
+        },
+        {
+          "name": "building_1_1",
+          "kind": "button",
+          "rect": [
+            474,
+            1174,
+            438,
+            213
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            474,
+            285,
+            438,
+            213
+          ],
+          "file": "sect/button/building_1_1.png"
+        },
+        {
+          "name": "action_left",
+          "kind": "button",
+          "rect": [
+            65,
+            1415,
+            400,
+            153
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            65,
+            104,
+            400,
+            153
+          ],
+          "file": "sect/button/action_left.png"
+        },
+        {
+          "name": "action_right",
+          "kind": "button",
+          "rect": [
+            475,
+            1415,
+            420,
+            153
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            475,
+            104,
+            420,
+            153
+          ],
+          "file": "sect/button/action_right.png"
+        }
+      ],
+      "title": "宗门",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/sect.png",
+      "sourceSha256": "8bc0819f431b6cb11ede7a91c73843f6da40ec5abfb8e879494703b2ae158ed6"
+    },
+    {
+      "id": "activity",
+      "regions": [
+        {
+          "name": "header_title",
+          "kind": "header",
+          "rect": [
+            0,
+            12,
+            390,
+            145
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1515,
+            390,
+            145
+          ],
+          "file": "activity/header/header_title.png"
+        },
+        {
+          "name": "category_1",
+          "kind": "tab",
+          "rect": [
+            140,
+            235,
+            235,
+            102
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            140,
+            1335,
+            235,
+            102
+          ],
+          "file": "activity/tab/category_1.png"
+        },
+        {
+          "name": "category_2",
+          "kind": "tab",
+          "rect": [
+            385,
+            235,
+            235,
+            102
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            385,
+            1335,
+            235,
+            102
+          ],
+          "file": "activity/tab/category_2.png"
+        },
+        {
+          "name": "category_3",
+          "kind": "tab",
+          "rect": [
+            630,
+            235,
+            235,
+            102
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            630,
+            1335,
+            235,
+            102
+          ],
+          "file": "activity/tab/category_3.png"
+        },
+        {
+          "name": "event_0",
+          "kind": "panel",
+          "rect": [
+            9,
+            350,
+            922,
+            394
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            9,
+            928,
+            922,
+            394
+          ],
+          "file": "activity/panel/event_0.png"
+        },
+        {
+          "name": "event_go_0",
+          "kind": "button",
+          "rect": [
+            642,
+            641,
+            276,
+            91
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            642,
+            940,
+            276,
+            91
+          ],
+          "file": "activity/button/event_go_0.png"
+        },
+        {
+          "name": "event_time_0",
+          "kind": "label",
+          "rect": [
+            35,
+            672,
+            495,
+            54
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            35,
+            946,
+            495,
+            54
+          ],
+          "file": "activity/label/event_time_0.png"
+        },
+        {
+          "name": "event_1",
+          "kind": "panel",
+          "rect": [
+            9,
+            758,
+            922,
+            393
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            9,
+            521,
+            922,
+            393
+          ],
+          "file": "activity/panel/event_1.png"
+        },
+        {
+          "name": "event_go_1",
+          "kind": "button",
+          "rect": [
+            642,
+            1048,
+            276,
+            91
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            642,
+            533,
+            276,
+            91
+          ],
+          "file": "activity/button/event_go_1.png"
+        },
+        {
+          "name": "event_time_1",
+          "kind": "label",
+          "rect": [
+            35,
+            1079,
+            495,
+            54
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            35,
+            539,
+            495,
+            54
+          ],
+          "file": "activity/label/event_time_1.png"
+        },
+        {
+          "name": "event_2",
+          "kind": "panel",
+          "rect": [
+            9,
+            1161,
+            922,
+            315
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            9,
+            196,
+            922,
+            315
+          ],
+          "file": "activity/panel/event_2.png"
+        },
+        {
+          "name": "event_go_2",
+          "kind": "button",
+          "rect": [
+            642,
+            1373,
+            276,
+            91
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            642,
+            208,
+            276,
+            91
+          ],
+          "file": "activity/button/event_go_2.png"
+        },
+        {
+          "name": "event_time_2",
+          "kind": "label",
+          "rect": [
+            35,
+            1404,
+            495,
+            54
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            35,
+            214,
+            495,
+            54
+          ],
+          "file": "activity/label/event_time_2.png"
+        },
+        {
+          "name": "rules",
+          "kind": "button",
+          "rect": [
+            195,
+            1500,
+            559,
+            111
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            195,
+            61,
+            559,
+            111
+          ],
+          "file": "activity/button/rules.png"
+        }
+      ],
+      "title": "活动",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/activity.png",
+      "sourceSha256": "8879a6d289e56c7d49e9a07fe3337185733f70d8294c1af6eedaeeb0551c257e"
+    },
+    {
+      "id": "welfare",
+      "regions": [
+        {
+          "name": "header_title",
+          "kind": "header",
+          "rect": [
+            0,
+            12,
+            390,
+            145
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1515,
+            390,
+            145
+          ],
+          "file": "welfare/header/header_title.png"
+        },
+        {
+          "name": "banner",
+          "kind": "illustration",
+          "rect": [
+            0,
+            142,
+            941,
+            505
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1025,
+            941,
+            505
+          ],
+          "file": "welfare/illustration/banner.png"
+        },
+        {
+          "name": "day_1",
+          "kind": "item",
+          "rect": [
+            26,
+            650,
+            294,
+            225
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            26,
+            797,
+            294,
+            225
+          ],
+          "file": "welfare/item/day_1.png"
+        },
+        {
+          "name": "day_art_1",
+          "kind": "icon",
+          "rect": [
+            71,
+            715,
+            201,
+            147
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            71,
+            810,
+            201,
+            147
+          ],
+          "file": "welfare/icon/day_art_1.png"
+        },
+        {
+          "name": "day_2",
+          "kind": "item",
+          "rect": [
+            329,
+            650,
+            294,
+            225
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            329,
+            797,
+            294,
+            225
+          ],
+          "file": "welfare/item/day_2.png"
+        },
+        {
+          "name": "day_art_2",
+          "kind": "icon",
+          "rect": [
+            374,
+            715,
+            201,
+            147
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            374,
+            810,
+            201,
+            147
+          ],
+          "file": "welfare/icon/day_art_2.png"
+        },
+        {
+          "name": "day_3",
+          "kind": "item",
+          "rect": [
+            632,
+            650,
+            294,
+            225
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            632,
+            797,
+            294,
+            225
+          ],
+          "file": "welfare/item/day_3.png"
+        },
+        {
+          "name": "day_art_3",
+          "kind": "icon",
+          "rect": [
+            677,
+            715,
+            201,
+            147
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            677,
+            810,
+            201,
+            147
+          ],
+          "file": "welfare/icon/day_art_3.png"
+        },
+        {
+          "name": "day_4",
+          "kind": "item",
+          "rect": [
+            26,
+            876,
+            294,
+            225
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            26,
+            571,
+            294,
+            225
+          ],
+          "file": "welfare/item/day_4.png"
+        },
+        {
+          "name": "day_art_4",
+          "kind": "icon",
+          "rect": [
+            71,
+            941,
+            201,
+            147
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            71,
+            584,
+            201,
+            147
+          ],
+          "file": "welfare/icon/day_art_4.png"
+        },
+        {
+          "name": "day_5",
+          "kind": "item",
+          "rect": [
+            329,
+            876,
+            294,
+            225
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            329,
+            571,
+            294,
+            225
+          ],
+          "file": "welfare/item/day_5.png"
+        },
+        {
+          "name": "day_art_5",
+          "kind": "icon",
+          "rect": [
+            374,
+            941,
+            201,
+            147
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            374,
+            584,
+            201,
+            147
+          ],
+          "file": "welfare/icon/day_art_5.png"
+        },
+        {
+          "name": "day_6",
+          "kind": "item",
+          "rect": [
+            632,
+            876,
+            294,
+            225
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            632,
+            571,
+            294,
+            225
+          ],
+          "file": "welfare/item/day_6.png"
+        },
+        {
+          "name": "day_art_6",
+          "kind": "icon",
+          "rect": [
+            677,
+            941,
+            201,
+            147
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            677,
+            584,
+            201,
+            147
+          ],
+          "file": "welfare/icon/day_art_6.png"
+        },
+        {
+          "name": "day_7",
+          "kind": "item",
+          "rect": [
+            29,
+            1091,
+            885,
+            212
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            29,
+            369,
+            885,
+            212
+          ],
+          "file": "welfare/item/day_7.png"
+        },
+        {
+          "name": "reward_preview",
+          "kind": "panel",
+          "rect": [
+            28,
+            1300,
+            891,
+            174
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            28,
+            198,
+            891,
+            174
+          ],
+          "file": "welfare/panel/reward_preview.png"
+        },
+        {
+          "name": "preview_icon_1",
+          "kind": "icon",
+          "rect": [
+            79,
+            1344,
+            88,
+            100
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            79,
+            228,
+            88,
+            100
+          ],
+          "file": "welfare/icon/preview_icon_1.png"
+        },
+        {
+          "name": "preview_icon_2",
+          "kind": "icon",
+          "rect": [
+            177,
+            1344,
+            88,
+            100
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            177,
+            228,
+            88,
+            100
+          ],
+          "file": "welfare/icon/preview_icon_2.png"
+        },
+        {
+          "name": "preview_icon_3",
+          "kind": "icon",
+          "rect": [
+            275,
+            1344,
+            88,
+            100
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            275,
+            228,
+            88,
+            100
+          ],
+          "file": "welfare/icon/preview_icon_3.png"
+        },
+        {
+          "name": "preview_icon_4",
+          "kind": "icon",
+          "rect": [
+            373,
+            1344,
+            88,
+            100
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            373,
+            228,
+            88,
+            100
+          ],
+          "file": "welfare/icon/preview_icon_4.png"
+        },
+        {
+          "name": "preview_icon_5",
+          "kind": "icon",
+          "rect": [
+            471,
+            1344,
+            88,
+            100
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            471,
+            228,
+            88,
+            100
+          ],
+          "file": "welfare/icon/preview_icon_5.png"
+        },
+        {
+          "name": "preview_icon_6",
+          "kind": "icon",
+          "rect": [
+            569,
+            1344,
+            88,
+            100
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            569,
+            228,
+            88,
+            100
+          ],
+          "file": "welfare/icon/preview_icon_6.png"
+        },
+        {
+          "name": "preview_icon_7",
+          "kind": "icon",
+          "rect": [
+            667,
+            1344,
+            88,
+            100
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            667,
+            228,
+            88,
+            100
+          ],
+          "file": "welfare/icon/preview_icon_7.png"
+        },
+        {
+          "name": "preview_icon_8",
+          "kind": "icon",
+          "rect": [
+            765,
+            1344,
+            88,
+            100
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            765,
+            228,
+            88,
+            100
+          ],
+          "file": "welfare/icon/preview_icon_8.png"
+        },
+        {
+          "name": "claim",
+          "kind": "button",
+          "rect": [
+            179,
+            1478,
+            590,
+            133
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            179,
+            61,
+            590,
+            133
+          ],
+          "file": "welfare/button/claim.png"
+        }
+      ],
+      "title": "福利",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/welfare.png",
+      "sourceSha256": "fd3623f1a84ad0f3c0aa5b564a2d620d5f9c6ba774673e8a39d768cde1e92ef6"
+    },
+    {
+      "id": "partner",
+      "regions": [
+        {
+          "name": "header_title",
+          "kind": "header",
+          "rect": [
+            0,
+            12,
+            390,
+            145
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1515,
+            390,
+            145
+          ],
+          "file": "partner/header/header_title.png"
+        },
+        {
+          "name": "back",
+          "kind": "button",
+          "rect": [
+            20,
+            20,
+            130,
+            115
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            20,
+            1537,
+            130,
+            115
+          ],
+          "file": "partner/button/back.png"
+        },
+        {
+          "name": "currency_left",
+          "kind": "currency",
+          "rect": [
+            490,
+            40,
+            220,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            490,
+            1560,
+            220,
+            72
+          ],
+          "file": "partner/currency/currency_left.png"
+        },
+        {
+          "name": "currency_right",
+          "kind": "currency",
+          "rect": [
+            712,
+            40,
+            219,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            712,
+            1560,
+            219,
+            72
+          ],
+          "file": "partner/currency/currency_right.png"
+        },
+        {
+          "name": "hero_scene",
+          "kind": "illustration",
+          "rect": [
+            0,
+            135,
+            941,
+            776
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            761,
+            941,
+            776
+          ],
+          "file": "partner/illustration/hero_scene.png"
+        },
+        {
+          "name": "name_plate",
+          "kind": "label",
+          "rect": [
+            52,
+            289,
+            176,
+            347
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            52,
+            1036,
+            176,
+            347
+          ],
+          "file": "partner/label/name_plate.png"
+        },
+        {
+          "name": "bond_panel",
+          "kind": "panel",
+          "rect": [
+            15,
+            906,
+            911,
+            568
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            15,
+            198,
+            911,
+            568
+          ],
+          "file": "partner/panel/bond_panel.png"
+        },
+        {
+          "name": "bond_title",
+          "kind": "title",
+          "rect": [
+            198,
+            905,
+            516,
+            100
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            198,
+            667,
+            516,
+            100
+          ],
+          "file": "partner/title/bond_title.png"
+        },
+        {
+          "name": "skill_1",
+          "kind": "icon",
+          "rect": [
+            166,
+            1083,
+            176,
+            224
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            166,
+            365,
+            176,
+            224
+          ],
+          "file": "partner/icon/skill_1.png"
+        },
+        {
+          "name": "skill_2",
+          "kind": "icon",
+          "rect": [
+            387,
+            1083,
+            176,
+            224
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            387,
+            365,
+            176,
+            224
+          ],
+          "file": "partner/icon/skill_2.png"
+        },
+        {
+          "name": "skill_3",
+          "kind": "icon",
+          "rect": [
+            608,
+            1083,
+            176,
+            224
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            608,
+            365,
+            176,
+            224
+          ],
+          "file": "partner/icon/skill_3.png"
+        },
+        {
+          "name": "portrait_1",
+          "kind": "portrait",
+          "rect": [
+            182,
+            1303,
+            178,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            182,
+            204,
+            178,
+            165
+          ],
+          "file": "partner/portrait/portrait_1.png"
+        },
+        {
+          "name": "portrait_2",
+          "kind": "portrait",
+          "rect": [
+            384,
+            1303,
+            178,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            384,
+            204,
+            178,
+            165
+          ],
+          "file": "partner/portrait/portrait_2.png"
+        },
+        {
+          "name": "portrait_3",
+          "kind": "portrait",
+          "rect": [
+            586,
+            1303,
+            178,
+            165
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            586,
+            204,
+            178,
+            165
+          ],
+          "file": "partner/portrait/portrait_3.png"
+        },
+        {
+          "name": "previous",
+          "kind": "button",
+          "rect": [
+            94,
+            1340,
+            75,
+            90
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            94,
+            242,
+            75,
+            90
+          ],
+          "file": "partner/button/previous.png"
+        },
+        {
+          "name": "next",
+          "kind": "button",
+          "rect": [
+            794,
+            1340,
+            65,
+            90
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            794,
+            242,
+            65,
+            90
+          ],
+          "file": "partner/button/next.png"
+        },
+        {
+          "name": "action_left",
+          "kind": "button",
+          "rect": [
+            65,
+            1470,
+            400,
+            141
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            65,
+            61,
+            400,
+            141
+          ],
+          "file": "partner/button/action_left.png"
+        },
+        {
+          "name": "action_right",
+          "kind": "button",
+          "rect": [
+            475,
+            1470,
+            420,
+            141
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            475,
+            61,
+            420,
+            141
+          ],
+          "file": "partner/button/action_right.png"
+        }
+      ],
+      "title": "仙侣",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/partner.png",
+      "sourceSha256": "566197aa904961add34b1f82dbc333245a9da141d9330ffe34317983b7990915"
+    },
+    {
+      "id": "rank",
+      "regions": [
+        {
+          "name": "header_title",
+          "kind": "header",
+          "rect": [
+            0,
+            12,
+            390,
+            145
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1515,
+            390,
+            145
+          ],
+          "file": "rank/header/header_title.png"
+        },
+        {
+          "name": "champion_scene",
+          "kind": "illustration",
+          "rect": [
+            0,
+            145,
+            941,
+            466
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1061,
+            941,
+            466
+          ],
+          "file": "rank/illustration/champion_scene.png"
+        },
+        {
+          "name": "champion_title",
+          "kind": "label",
+          "rect": [
+            427,
+            435,
+            477,
+            157
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            427,
+            1080,
+            477,
+            157
+          ],
+          "file": "rank/label/champion_title.png"
+        },
+        {
+          "name": "rank_type_1",
+          "kind": "tab",
+          "rect": [
+            30,
+            609,
+            294,
+            95
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            30,
+            968,
+            294,
+            95
+          ],
+          "file": "rank/tab/rank_type_1.png"
+        },
+        {
+          "name": "rank_type_2",
+          "kind": "tab",
+          "rect": [
+            324,
+            609,
+            294,
+            95
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            324,
+            968,
+            294,
+            95
+          ],
+          "file": "rank/tab/rank_type_2.png"
+        },
+        {
+          "name": "rank_type_3",
+          "kind": "tab",
+          "rect": [
+            618,
+            609,
+            294,
+            95
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            618,
+            968,
+            294,
+            95
+          ],
+          "file": "rank/tab/rank_type_3.png"
+        },
+        {
+          "name": "rank_row_0",
+          "kind": "panel",
+          "rect": [
+            21,
+            706,
+            899,
+            146
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            21,
+            820,
+            899,
+            146
+          ],
+          "file": "rank/panel/rank_row_0.png"
+        },
+        {
+          "name": "rank_portrait_0",
+          "kind": "portrait",
+          "rect": [
+            133,
+            718,
+            238,
+            128
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            133,
+            826,
+            238,
+            128
+          ],
+          "file": "rank/portrait/rank_portrait_0.png"
+        },
+        {
+          "name": "rank_badge_0",
+          "kind": "icon",
+          "rect": [
+            57,
+            726,
+            83,
+            106
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            57,
+            840,
+            83,
+            106
+          ],
+          "file": "rank/icon/rank_badge_0.png"
+        },
+        {
+          "name": "rank_row_1",
+          "kind": "panel",
+          "rect": [
+            21,
+            853,
+            899,
+            146
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            21,
+            673,
+            899,
+            146
+          ],
+          "file": "rank/panel/rank_row_1.png"
+        },
+        {
+          "name": "rank_portrait_1",
+          "kind": "portrait",
+          "rect": [
+            133,
+            865,
+            238,
+            128
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            133,
+            679,
+            238,
+            128
+          ],
+          "file": "rank/portrait/rank_portrait_1.png"
+        },
+        {
+          "name": "rank_badge_1",
+          "kind": "icon",
+          "rect": [
+            57,
+            873,
+            83,
+            106
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            57,
+            693,
+            83,
+            106
+          ],
+          "file": "rank/icon/rank_badge_1.png"
+        },
+        {
+          "name": "rank_row_2",
+          "kind": "panel",
+          "rect": [
+            21,
+            1000,
+            899,
+            146
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            21,
+            526,
+            899,
+            146
+          ],
+          "file": "rank/panel/rank_row_2.png"
+        },
+        {
+          "name": "rank_portrait_2",
+          "kind": "portrait",
+          "rect": [
+            133,
+            1012,
+            238,
+            128
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            133,
+            532,
+            238,
+            128
+          ],
+          "file": "rank/portrait/rank_portrait_2.png"
+        },
+        {
+          "name": "rank_badge_2",
+          "kind": "icon",
+          "rect": [
+            57,
+            1020,
+            83,
+            106
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            57,
+            546,
+            83,
+            106
+          ],
+          "file": "rank/icon/rank_badge_2.png"
+        },
+        {
+          "name": "rank_row_3",
+          "kind": "panel",
+          "rect": [
+            21,
+            1147,
+            899,
+            146
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            21,
+            379,
+            899,
+            146
+          ],
+          "file": "rank/panel/rank_row_3.png"
+        },
+        {
+          "name": "rank_portrait_3",
+          "kind": "portrait",
+          "rect": [
+            133,
+            1159,
+            238,
+            128
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            133,
+            385,
+            238,
+            128
+          ],
+          "file": "rank/portrait/rank_portrait_3.png"
+        },
+        {
+          "name": "rank_badge_3",
+          "kind": "icon",
+          "rect": [
+            57,
+            1167,
+            83,
+            106
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            57,
+            399,
+            83,
+            106
+          ],
+          "file": "rank/icon/rank_badge_3.png"
+        },
+        {
+          "name": "rank_row_4",
+          "kind": "panel",
+          "rect": [
+            21,
+            1294,
+            899,
+            146
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            21,
+            232,
+            899,
+            146
+          ],
+          "file": "rank/panel/rank_row_4.png"
+        },
+        {
+          "name": "rank_portrait_4",
+          "kind": "portrait",
+          "rect": [
+            133,
+            1306,
+            238,
+            128
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            133,
+            238,
+            238,
+            128
+          ],
+          "file": "rank/portrait/rank_portrait_4.png"
+        },
+        {
+          "name": "rank_badge_4",
+          "kind": "icon",
+          "rect": [
+            57,
+            1314,
+            83,
+            106
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            57,
+            252,
+            83,
+            106
+          ],
+          "file": "rank/icon/rank_badge_4.png"
+        },
+        {
+          "name": "own_rank",
+          "kind": "panel",
+          "rect": [
+            0,
+            1441,
+            941,
+            158
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            73,
+            941,
+            158
+          ],
+          "file": "rank/panel/own_rank.png"
+        },
+        {
+          "name": "refresh",
+          "kind": "button",
+          "rect": [
+            685,
+            1475,
+            236,
+            93
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            685,
+            104,
+            236,
+            93
+          ],
+          "file": "rank/button/refresh.png"
+        }
+      ],
+      "title": "排行榜",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/rank.png",
+      "sourceSha256": "dfa8ef58407378bec3d4c736702eae5e165ec71e6fd5d91c98b77775cf3e9c13"
+    },
+    {
+      "id": "estate",
+      "regions": [
+        {
+          "name": "header_title",
+          "kind": "header",
+          "rect": [
+            0,
+            12,
+            390,
+            145
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1515,
+            390,
+            145
+          ],
+          "file": "estate/header/header_title.png"
+        },
+        {
+          "name": "back",
+          "kind": "button",
+          "rect": [
+            20,
+            20,
+            130,
+            115
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            20,
+            1537,
+            130,
+            115
+          ],
+          "file": "estate/button/back.png"
+        },
+        {
+          "name": "currency_left",
+          "kind": "currency",
+          "rect": [
+            490,
+            40,
+            220,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            490,
+            1560,
+            220,
+            72
+          ],
+          "file": "estate/currency/currency_left.png"
+        },
+        {
+          "name": "currency_right",
+          "kind": "currency",
+          "rect": [
+            712,
+            40,
+            219,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            712,
+            1560,
+            219,
+            72
+          ],
+          "file": "estate/currency/currency_right.png"
+        },
+        {
+          "name": "estate_name",
+          "kind": "label",
+          "rect": [
+            261,
+            136,
+            422,
+            92
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            261,
+            1444,
+            422,
+            92
+          ],
+          "file": "estate/label/estate_name.png"
+        },
+        {
+          "name": "estate_scene",
+          "kind": "illustration",
+          "rect": [
+            0,
+            228,
+            941,
+            1001
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            443,
+            941,
+            1001
+          ],
+          "file": "estate/illustration/estate_scene.png"
+        },
+        {
+          "name": "building_context_0",
+          "kind": "illustration",
+          "rect": [
+            28,
+            365,
+            478,
+            370
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            28,
+            937,
+            478,
+            370
+          ],
+          "file": "estate/illustration/building_context_0.png"
+        },
+        {
+          "name": "building_context_1",
+          "kind": "illustration",
+          "rect": [
+            480,
+            233,
+            449,
+            363
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            480,
+            1076,
+            449,
+            363
+          ],
+          "file": "estate/illustration/building_context_1.png"
+        },
+        {
+          "name": "building_context_2",
+          "kind": "illustration",
+          "rect": [
+            456,
+            642,
+            476,
+            418
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            456,
+            612,
+            476,
+            418
+          ],
+          "file": "estate/illustration/building_context_2.png"
+        },
+        {
+          "name": "building_context_3",
+          "kind": "illustration",
+          "rect": [
+            0,
+            818,
+            503,
+            384
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            470,
+            503,
+            384
+          ],
+          "file": "estate/illustration/building_context_3.png"
+        },
+        {
+          "name": "production",
+          "kind": "panel",
+          "rect": [
+            20,
+            1214,
+            904,
+            217
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            20,
+            241,
+            904,
+            217
+          ],
+          "file": "estate/panel/production.png"
+        },
+        {
+          "name": "action_left",
+          "kind": "button",
+          "rect": [
+            65,
+            1455,
+            400,
+            124
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            65,
+            93,
+            400,
+            124
+          ],
+          "file": "estate/button/action_left.png"
+        },
+        {
+          "name": "action_right",
+          "kind": "button",
+          "rect": [
+            475,
+            1455,
+            420,
+            124
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            475,
+            93,
+            420,
+            124
+          ],
+          "file": "estate/button/action_right.png"
+        }
+      ],
+      "title": "洞府",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/estate.png",
+      "sourceSha256": "c088595557c88866d2ff1d361136024827460b09660ab5c23a9c19388c58ca37"
+    },
+    {
+      "id": "settings",
+      "regions": [
+        {
+          "name": "title",
+          "kind": "title",
+          "rect": [
+            177,
+            65,
+            590,
+            300
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            177,
+            1307,
+            590,
+            300
+          ],
+          "file": "settings/title/title.png"
+        },
+        {
+          "name": "panel",
+          "kind": "panel",
+          "rect": [
+            7,
+            375,
+            927,
+            1028
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            7,
+            269,
+            927,
+            1028
+          ],
+          "file": "settings/panel/panel.png"
+        },
+        {
+          "name": "category_1",
+          "kind": "tab",
+          "rect": [
+            37,
+            409,
+            291,
+            99
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            37,
+            1164,
+            291,
+            99
+          ],
+          "file": "settings/tab/category_1.png"
+        },
+        {
+          "name": "category_2",
+          "kind": "tab",
+          "rect": [
+            328,
+            409,
+            291,
+            99
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            328,
+            1164,
+            291,
+            99
+          ],
+          "file": "settings/tab/category_2.png"
+        },
+        {
+          "name": "category_3",
+          "kind": "tab",
+          "rect": [
+            619,
+            409,
+            291,
+            99
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            619,
+            1164,
+            291,
+            99
+          ],
+          "file": "settings/tab/category_3.png"
+        },
+        {
+          "name": "setting_row_0",
+          "kind": "panel",
+          "rect": [
+            49,
+            550,
+            838,
+            172
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            49,
+            950,
+            838,
+            172
+          ],
+          "file": "settings/panel/setting_row_0.png"
+        },
+        {
+          "name": "setting_icon_0",
+          "kind": "icon",
+          "rect": [
+            78,
+            568,
+            146,
+            140
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            78,
+            964,
+            146,
+            140
+          ],
+          "file": "settings/icon/setting_icon_0.png"
+        },
+        {
+          "name": "slider_0",
+          "kind": "progress",
+          "rect": [
+            247,
+            628,
+            610,
+            68
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            247,
+            976,
+            610,
+            68
+          ],
+          "file": "settings/progress/slider_0.png"
+        },
+        {
+          "name": "setting_row_1",
+          "kind": "panel",
+          "rect": [
+            49,
+            722,
+            838,
+            172
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            49,
+            778,
+            838,
+            172
+          ],
+          "file": "settings/panel/setting_row_1.png"
+        },
+        {
+          "name": "setting_icon_1",
+          "kind": "icon",
+          "rect": [
+            78,
+            740,
+            146,
+            140
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            78,
+            792,
+            146,
+            140
+          ],
+          "file": "settings/icon/setting_icon_1.png"
+        },
+        {
+          "name": "slider_1",
+          "kind": "progress",
+          "rect": [
+            247,
+            800,
+            610,
+            68
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            247,
+            804,
+            610,
+            68
+          ],
+          "file": "settings/progress/slider_1.png"
+        },
+        {
+          "name": "setting_row_2",
+          "kind": "panel",
+          "rect": [
+            49,
+            894,
+            838,
+            172
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            49,
+            606,
+            838,
+            172
+          ],
+          "file": "settings/panel/setting_row_2.png"
+        },
+        {
+          "name": "setting_icon_2",
+          "kind": "icon",
+          "rect": [
+            78,
+            912,
+            146,
+            140
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            78,
+            620,
+            146,
+            140
+          ],
+          "file": "settings/icon/setting_icon_2.png"
+        },
+        {
+          "name": "slider_2",
+          "kind": "progress",
+          "rect": [
+            247,
+            972,
+            610,
+            68
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            247,
+            632,
+            610,
+            68
+          ],
+          "file": "settings/progress/slider_2.png"
+        },
+        {
+          "name": "setting_row_3",
+          "kind": "panel",
+          "rect": [
+            49,
+            1066,
+            838,
+            172
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            49,
+            434,
+            838,
+            172
+          ],
+          "file": "settings/panel/setting_row_3.png"
+        },
+        {
+          "name": "setting_icon_3",
+          "kind": "icon",
+          "rect": [
+            78,
+            1084,
+            146,
+            140
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            78,
+            448,
+            146,
+            140
+          ],
+          "file": "settings/icon/setting_icon_3.png"
+        },
+        {
+          "name": "mute",
+          "kind": "button",
+          "rect": [
+            655,
+            1091,
+            190,
+            90
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            655,
+            491,
+            190,
+            90
+          ],
+          "file": "settings/button/mute.png"
+        },
+        {
+          "name": "help",
+          "kind": "panel",
+          "rect": [
+            38,
+            1242,
+            867,
+            143
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            38,
+            287,
+            867,
+            143
+          ],
+          "file": "settings/panel/help.png"
+        },
+        {
+          "name": "action_left",
+          "kind": "button",
+          "rect": [
+            65,
+            1431,
+            400,
+            153
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            65,
+            88,
+            400,
+            153
+          ],
+          "file": "settings/button/action_left.png"
+        },
+        {
+          "name": "action_right",
+          "kind": "button",
+          "rect": [
+            475,
+            1431,
+            420,
+            153
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            475,
+            88,
+            420,
+            153
+          ],
+          "file": "settings/button/action_right.png"
+        }
+      ],
+      "title": "设置",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/settings.png",
+      "sourceSha256": "d7e4c3958bb664dfcb4943a0b6e1f0b39fc309453bb9f6fd6de5770a059d97a6"
+    },
+    {
+      "id": "server",
+      "regions": [
+        {
+          "name": "modal",
+          "kind": "panel",
+          "rect": [
+            18,
+            300,
+            913,
+            1142
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            18,
+            230,
+            913,
+            1142
+          ],
+          "file": "server/panel/modal.png"
+        },
+        {
+          "name": "title",
+          "kind": "title",
+          "rect": [
+            195,
+            313,
+            571,
+            175
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            195,
+            1184,
+            571,
+            175
+          ],
+          "file": "server/title/title.png"
+        },
+        {
+          "name": "close",
+          "kind": "button",
+          "rect": [
+            807,
+            364,
+            106,
+            110
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            807,
+            1198,
+            106,
+            110
+          ],
+          "file": "server/button/close.png"
+        },
+        {
+          "name": "category_1",
+          "kind": "tab",
+          "rect": [
+            116,
+            500,
+            358,
+            96
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            116,
+            1076,
+            358,
+            96
+          ],
+          "file": "server/tab/category_1.png"
+        },
+        {
+          "name": "category_2",
+          "kind": "tab",
+          "rect": [
+            484,
+            500,
+            358,
+            96
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            484,
+            1076,
+            358,
+            96
+          ],
+          "file": "server/tab/category_2.png"
+        },
+        {
+          "name": "server_row_0",
+          "kind": "button",
+          "rect": [
+            87,
+            603,
+            769,
+            150
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            87,
+            919,
+            769,
+            150
+          ],
+          "file": "server/button/server_row_0.png"
+        },
+        {
+          "name": "server_status_0",
+          "kind": "label",
+          "rect": [
+            680,
+            650,
+            160,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            680,
+            950,
+            160,
+            72
+          ],
+          "file": "server/label/server_status_0.png"
+        },
+        {
+          "name": "server_row_1",
+          "kind": "button",
+          "rect": [
+            87,
+            751,
+            769,
+            150
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            87,
+            771,
+            769,
+            150
+          ],
+          "file": "server/button/server_row_1.png"
+        },
+        {
+          "name": "server_status_1",
+          "kind": "label",
+          "rect": [
+            680,
+            798,
+            160,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            680,
+            802,
+            160,
+            72
+          ],
+          "file": "server/label/server_status_1.png"
+        },
+        {
+          "name": "server_row_2",
+          "kind": "button",
+          "rect": [
+            87,
+            899,
+            769,
+            150
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            87,
+            623,
+            769,
+            150
+          ],
+          "file": "server/button/server_row_2.png"
+        },
+        {
+          "name": "server_status_2",
+          "kind": "label",
+          "rect": [
+            680,
+            946,
+            160,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            680,
+            654,
+            160,
+            72
+          ],
+          "file": "server/label/server_status_2.png"
+        },
+        {
+          "name": "server_row_3",
+          "kind": "button",
+          "rect": [
+            87,
+            1047,
+            769,
+            150
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            87,
+            475,
+            769,
+            150
+          ],
+          "file": "server/button/server_row_3.png"
+        },
+        {
+          "name": "server_status_3",
+          "kind": "label",
+          "rect": [
+            680,
+            1094,
+            160,
+            72
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            680,
+            506,
+            160,
+            72
+          ],
+          "file": "server/label/server_status_3.png"
+        },
+        {
+          "name": "confirm",
+          "kind": "button",
+          "rect": [
+            219,
+            1230,
+            502,
+            139
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            219,
+            303,
+            502,
+            139
+          ],
+          "file": "server/button/confirm.png"
+        }
+      ],
+      "title": "服务器选择",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/server.png",
+      "sourceSha256": "40f20e1a457e2c89ef3e12579424b762f0009fab07a01f95a549e82f9e6843a7"
+    },
+    {
+      "id": "register",
+      "regions": [
+        {
+          "name": "modal",
+          "kind": "panel",
+          "rect": [
+            18,
+            334,
+            906,
+            1137
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            18,
+            201,
+            906,
+            1137
+          ],
+          "file": "register/panel/modal.png"
+        },
+        {
+          "name": "title",
+          "kind": "title",
+          "rect": [
+            200,
+            354,
+            550,
+            210
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            200,
+            1108,
+            550,
+            210
+          ],
+          "file": "register/title/title.png"
+        },
+        {
+          "name": "close",
+          "kind": "button",
+          "rect": [
+            808,
+            388,
+            111,
+            119
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            808,
+            1165,
+            111,
+            119
+          ],
+          "file": "register/button/close.png"
+        },
+        {
+          "name": "field_0",
+          "kind": "input",
+          "rect": [
+            300,
+            622,
+            529,
+            85
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            300,
+            965,
+            529,
+            85
+          ],
+          "file": "register/input/field_0.png"
+        },
+        {
+          "name": "field_1",
+          "kind": "input",
+          "rect": [
+            300,
+            732,
+            529,
+            85
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            300,
+            855,
+            529,
+            85
+          ],
+          "file": "register/input/field_1.png"
+        },
+        {
+          "name": "field_2",
+          "kind": "input",
+          "rect": [
+            300,
+            842,
+            529,
+            85
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            300,
+            745,
+            529,
+            85
+          ],
+          "file": "register/input/field_2.png"
+        },
+        {
+          "name": "field_3",
+          "kind": "input",
+          "rect": [
+            300,
+            952,
+            529,
+            85
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            300,
+            635,
+            529,
+            85
+          ],
+          "file": "register/input/field_3.png"
+        },
+        {
+          "name": "agreement",
+          "kind": "label",
+          "rect": [
+            299,
+            1054,
+            506,
+            71
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            299,
+            547,
+            506,
+            71
+          ],
+          "file": "register/label/agreement.png"
+        },
+        {
+          "name": "checkbox",
+          "kind": "button",
+          "rect": [
+            302,
+            1060,
+            47,
+            48
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            302,
+            564,
+            47,
+            48
+          ],
+          "file": "register/button/checkbox.png"
+        },
+        {
+          "name": "submit",
+          "kind": "button",
+          "rect": [
+            196,
+            1143,
+            553,
+            157
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            196,
+            372,
+            553,
+            157
+          ],
+          "file": "register/button/submit.png"
+        },
+        {
+          "name": "back_login",
+          "kind": "button",
+          "rect": [
+            277,
+            1315,
+            398,
+            94
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            277,
+            263,
+            398,
+            94
+          ],
+          "file": "register/button/back_login.png"
+        }
+      ],
+      "title": "注册",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/register.png",
+      "sourceSha256": "8450d294dd605744e1a7712f978b95b3400712272e28d9cf2ea4f4981b220f1b"
+    },
+    {
+      "id": "result",
+      "regions": [
+        {
+          "name": "hero_scene",
+          "kind": "illustration",
+          "rect": [
+            0,
+            0,
+            941,
+            423
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            0,
+            1249,
+            941,
+            423
+          ],
+          "file": "result/illustration/hero_scene.png"
+        },
+        {
+          "name": "modal",
+          "kind": "panel",
+          "rect": [
+            12,
+            401,
+            918,
+            1141
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            12,
+            130,
+            918,
+            1141
+          ],
+          "file": "result/panel/modal.png"
+        },
+        {
+          "name": "victory",
+          "kind": "title",
+          "rect": [
+            16,
+            407,
+            909,
+            306
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            16,
+            959,
+            909,
+            306
+          ],
+          "file": "result/title/victory.png"
+        },
+        {
+          "name": "stat_0",
+          "kind": "label",
+          "rect": [
+            176,
+            731,
+            593,
+            86
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            176,
+            855,
+            593,
+            86
+          ],
+          "file": "result/label/stat_0.png"
+        },
+        {
+          "name": "stat_1",
+          "kind": "label",
+          "rect": [
+            176,
+            820,
+            593,
+            86
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            176,
+            766,
+            593,
+            86
+          ],
+          "file": "result/label/stat_1.png"
+        },
+        {
+          "name": "stat_2",
+          "kind": "label",
+          "rect": [
+            176,
+            909,
+            593,
+            86
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            176,
+            677,
+            593,
+            86
+          ],
+          "file": "result/label/stat_2.png"
+        },
+        {
+          "name": "reward_title",
+          "kind": "title",
+          "rect": [
+            294,
+            1006,
+            370,
+            62
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            294,
+            604,
+            370,
+            62
+          ],
+          "file": "result/title/reward_title.png"
+        },
+        {
+          "name": "reward_1",
+          "kind": "item",
+          "rect": [
+            147,
+            1070,
+            215,
+            239
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            147,
+            363,
+            215,
+            239
+          ],
+          "file": "result/item/reward_1.png"
+        },
+        {
+          "name": "reward_2",
+          "kind": "item",
+          "rect": [
+            402,
+            1070,
+            215,
+            239
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            402,
+            363,
+            215,
+            239
+          ],
+          "file": "result/item/reward_2.png"
+        },
+        {
+          "name": "reward_3",
+          "kind": "item",
+          "rect": [
+            657,
+            1070,
+            215,
+            239
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            657,
+            363,
+            215,
+            239
+          ],
+          "file": "result/item/reward_3.png"
+        },
+        {
+          "name": "action_left",
+          "kind": "button",
+          "rect": [
+            65,
+            1331,
+            400,
+            153
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            65,
+            188,
+            400,
+            153
+          ],
+          "file": "result/button/action_left.png"
+        },
+        {
+          "name": "action_right",
+          "kind": "button",
+          "rect": [
+            475,
+            1331,
+            420,
+            153
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            475,
+            188,
+            420,
+            153
+          ],
+          "file": "result/button/action_right.png"
+        }
+      ],
+      "title": "战斗结算",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/result.png",
+      "sourceSha256": "e9419a192ff2db36d02e371ce8db78b7ea681664a77fb796fc64f5b2f7dafd4d"
+    },
+    {
+      "id": "confirm",
+      "regions": [
+        {
+          "name": "modal",
+          "kind": "panel",
+          "rect": [
+            27,
+            475,
+            888,
+            788
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            27,
+            409,
+            888,
+            788
+          ],
+          "file": "confirm/panel/modal.png"
+        },
+        {
+          "name": "title",
+          "kind": "title",
+          "rect": [
+            199,
+            476,
+            555,
+            158
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            199,
+            1038,
+            555,
+            158
+          ],
+          "file": "confirm/title/title.png"
+        },
+        {
+          "name": "close",
+          "kind": "button",
+          "rect": [
+            775,
+            522,
+            109,
+            112
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            775,
+            1038,
+            109,
+            112
+          ],
+          "file": "confirm/button/close.png"
+        },
+        {
+          "name": "body",
+          "kind": "label",
+          "rect": [
+            170,
+            696,
+            612,
+            152
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            170,
+            824,
+            612,
+            152
+          ],
+          "file": "confirm/label/body.png"
+        },
+        {
+          "name": "warning",
+          "kind": "label",
+          "rect": [
+            191,
+            855,
+            585,
+            77
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            191,
+            740,
+            585,
+            77
+          ],
+          "file": "confirm/label/warning.png"
+        },
+        {
+          "name": "cancel",
+          "kind": "button",
+          "rect": [
+            104,
+            953,
+            370,
+            121
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            104,
+            598,
+            370,
+            121
+          ],
+          "file": "confirm/button/cancel.png"
+        },
+        {
+          "name": "confirm",
+          "kind": "button",
+          "rect": [
+            483,
+            953,
+            363,
+            121
+          ],
+          "flattened": true,
+          "usage": "fixed-position-original-pixels",
+          "unityRect": [
+            483,
+            598,
+            363,
+            121
+          ],
+          "file": "confirm/button/confirm.png"
+        }
+      ],
+      "title": "确认弹窗",
+      "width": 941,
+      "height": 1672,
+      "source": "../Concepts/confirm.png",
+      "sourceSha256": "c7f4c9b7701d0204a5597275f64a1f08c86946035b9744a12e31fa9a90379b05"
+    }
+  ]
+}

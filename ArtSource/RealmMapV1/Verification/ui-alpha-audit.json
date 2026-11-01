@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "coordinate_origin": "top-left",
+  "rect_units": "pixels",
+  "generated_with": "built-in image_gen transparent_background=true",
+  "sprite_count": 12,
+  "pixel_changes": false,
+  "slice_policy": "Actual connected alpha>=16 components >=20px, grouped semantically and padded4px; never equal-grid slicing.",
+  "visual_review": "All twelve semantic elements inspected. Rejected first two overlays for broad ring/overdecoration. Final halo is thin; fog keeps natural alpha. Runtime white/dark composition and nine-slice review still required.",
+  "atlases": [
+    {
+      "file": "nav-six.png",
+      "source": "C:\\Users\\25348\\.codex\\generated_images\\01a195ee-530e-7e71-9392-5d802aec6fcd\\exec-91dcf93d-f7dc-4801-91ff-4752822ad997.png",
+      "width": 1254,
+      "height": 1254,
+      "format": "RGBA8",
+      "sha256": "242f5acbecf9042ceab078bcf18e98d3ce96dcc2ed488e39488b3e88d390c79e",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_percent": 72.436,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "discarded_isolated_component_pixels": 169,
+      "alpha_probe": {},
+      "source_bytes_identical": true,
+      "sprite_rectangles_nonoverlapping": true
+    },
+    {
+      "file": "map-overlays.png",
+      "source": "C:\\Users\\25348\\.codex\\generated_images\\01a195ee-530e-7e71-9392-5d802aec6fcd\\exec-6e4751f7-6cae-4e7d-81e7-e11cd4539a95.png",
+      "width": 1536,
+      "height": 1024,
+      "format": "RGBA8",
+      "sha256": "038a0304c09503e84556c22440bb4ae07640ba95a3c41f7df53caa94bb401bf0",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "fully_transparent_percent": 83.615,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "discarded_isolated_component_pixels": 8,
+      "alpha_probe": {
+        "selection_halo": 0,
+        "map_locate_open_quadrant": 0
+      },
+      "source_bytes_identical": true,
+      "sprite_rectangles_nonoverlapping": true
+    }
+  ],
+  "sprites": [
+    {
+      "atlas": "nav-six.png",
+      "name": "nav_character",
+      "x": 23,
+      "y": 223,
+      "width": 384,
+      "height": 391,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 1,
+      "padding": 4,
+      "measured_alpha_threshold": 16
+    },
+    {
+      "atlas": "nav-six.png",
+      "name": "nav_cultivation",
+      "x": 454,
+      "y": 250,
+      "width": 344,
+      "height": 339,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 2,
+      "padding": 4,
+      "measured_alpha_threshold": 16
+    },
+    {
+      "atlas": "nav-six.png",
+      "name": "nav_realm",
+      "x": 826,
+      "y": 286,
+      "width": 404,
+      "height": 317,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 2,
+      "padding": 4,
+      "measured_alpha_threshold": 16
+    },
+    {
+      "atlas": "nav-six.png",
+      "name": "nav_sect",
+      "x": 39,
+      "y": 709,
+      "width": 354,
+      "height": 340,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 1,
+      "padding": 4,
+      "measured_alpha_threshold": 16
+    },
+    {
+      "atlas": "nav-six.png",
+      "name": "nav_inventory",
+      "x": 471,
+      "y": 728,
+      "width": 309,
+      "height": 336,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 1,
+      "padding": 4,
+      "measured_alpha_threshold": 16
+    },
+    {
+      "atlas": "nav-six.png",
+      "name": "nav_souljade",
+      "x": 891,
+      "y": 742,
+      "width": 326,
+      "height": 318,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 5,
+      "padding": 4,
+      "measured_alpha_threshold": 16
+    },
+    {
+      "atlas": "map-overlays.png",
+      "name": "nameplate_vertical",
+      "x": 204,
+      "y": 92,
+      "width": 119,
+      "height": 403,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        22,
+        42,
+        22,
+        42
+      ],
+      "components": 1,
+      "padding": 4,
+      "measured_alpha_threshold": 16,
+      "nine_slice_note": "Preserves clipped cap and fine outline; intended labels 3-5 vertical characters."
+    },
+    {
+      "atlas": "map-overlays.png",
+      "name": "selection_halo",
+      "x": 597,
+      "y": 138,
+      "width": 340,
+      "height": 338,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 1,
+      "padding": 4,
+      "measured_alpha_threshold": 16
+    },
+    {
+      "atlas": "map-overlays.png",
+      "name": "fog_ribbon",
+      "x": 990,
+      "y": 268,
+      "width": 523,
+      "height": 139,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 1,
+      "padding": 4,
+      "measured_alpha_threshold": 16
+    },
+    {
+      "atlas": "map-overlays.png",
+      "name": "fog_patch",
+      "x": 22,
+      "y": 628,
+      "width": 558,
+      "height": 294,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 1,
+      "padding": 4,
+      "measured_alpha_threshold": 16
+    },
+    {
+      "atlas": "map-overlays.png",
+      "name": "map_lock",
+      "x": 702,
+      "y": 685,
+      "width": 137,
+      "height": 185,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 1,
+      "padding": 4,
+      "measured_alpha_threshold": 16
+    },
+    {
+      "atlas": "map-overlays.png",
+      "name": "map_locate",
+      "x": 1156,
+      "y": 649,
+      "width": 248,
+      "height": 248,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 2,
+      "padding": 4,
+      "measured_alpha_threshold": 16
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "id": "profile_frame",
+  "title": "玩家信息框",
+  "prompt": "Produce ONE standalone game-ready PNG asset extracted/reconstructed from this precise lobby design. Match source shape, colors, proportions and illustration exactly, do not invent a new UI design. Transparent background outside the requested object, no scene backdrop, no mockup, no sheet. Preserve full silhouette with small transparent margin. No text or numbers except an explicitly requested symbol. Only the top-left player profile frame: attached circular portrait ring at left and darkjade horizontal nameplate to right with gold cloud trim. Remove portrait, text, number, level badge and progress bar. Portrait hole transparent, nameplate interior darkjade. Exact original proportions.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-faf30d73-a4a3-4182-a063-8b0d45b5c886.png"
+}

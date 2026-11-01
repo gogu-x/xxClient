@@ -1,0 +1,6 @@
+{
+  "id": "detail_panel",
+  "alpha": true,
+  "prompt": "Create an actual standalone production game sprite by editing the supplied design reference. Match the reference asset geometry, palette, materials and details very closely. Do not redesign or show a UI screenshot or sprite sheet. Extract and clean ONLY the large dark jade equipment detail panel in the lower third of reference. Horizontal approx 1.82:1 silhouette. Preserve sculpted palejade cloud corners, fine golden frame, little red side tassels and subtle dark teal interior pattern. Remove ALL sword, scenery, text, values, icons, dividers and buttons from interior; clean uninterrupted dark jade interior. One isolated blank panel, straight-on flat UI sprite, transparent exterior, generous padding.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-641da72f-7eb5-4053-b43f-9e4a1f816e1c.png"
+}

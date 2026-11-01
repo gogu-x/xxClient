@@ -1,0 +1,6 @@
+**
+!build/
+!build/**
+!docker/
+!docker/nginx.conf
+!Dockerfile

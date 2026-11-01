@@ -1,0 +1,235 @@
+{
+  "coordinate_origin": "top-left",
+  "sprites": [
+    {
+      "atlas": "lobby-icons.png",
+      "name": "activity",
+      "row": 2,
+      "column": 3,
+      "x": 678,
+      "y": 411,
+      "width": 224,
+      "height": 198,
+      "contentRect": {
+        "x": 682,
+        "y": 415,
+        "width": 216,
+        "height": 190
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "展开活动卷轴",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "lobby-icons.png",
+      "name": "welfare",
+      "row": 2,
+      "column": 4,
+      "x": 998,
+      "y": 419,
+      "width": 186,
+      "height": 187,
+      "contentRect": {
+        "x": 1002,
+        "y": 423,
+        "width": 178,
+        "height": 179
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "福利礼盒",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "atlas": "lobby-controls.png",
+      "name": "button_primary",
+      "row": 1,
+      "column": 1,
+      "x": 50,
+      "y": 154,
+      "width": 262,
+      "height": 81,
+      "contentRect": {
+        "x": 54,
+        "y": 158,
+        "width": 254,
+        "height": 73
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "青玉主按钮",
+      "proposed_border_lbrt": [
+        26,
+        25,
+        25,
+        25
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 21,
+          "last_straight": 59,
+          "middle_outer_low": 5,
+          "middle_outer_high": 255
+        },
+        "column_geometry": {
+          "first_straight": 22,
+          "last_straight": 240,
+          "middle_outer_low": 6,
+          "middle_outer_high": 75
+        },
+        "stretchable_center": {
+          "width": 211,
+          "height": 31
+        }
+      }
+    },
+    {
+      "atlas": "lobby-controls.png",
+      "name": "button_secondary",
+      "row": 1,
+      "column": 2,
+      "x": 355,
+      "y": 154,
+      "width": 257,
+      "height": 81,
+      "contentRect": {
+        "x": 359,
+        "y": 158,
+        "width": 249,
+        "height": 73
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "米白次按钮",
+      "proposed_border_lbrt": [
+        25,
+        25,
+        26,
+        25
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 21,
+          "last_straight": 59,
+          "middle_outer_low": 5,
+          "middle_outer_high": 250
+        },
+        "column_geometry": {
+          "first_straight": 21,
+          "last_straight": 234,
+          "middle_outer_low": 6.0,
+          "middle_outer_high": 75.0
+        },
+        "stretchable_center": {
+          "width": 206,
+          "height": 31
+        }
+      }
+    },
+    {
+      "atlas": "lobby-controls.png",
+      "name": "info_card",
+      "row": 2,
+      "column": 2,
+      "x": 365,
+      "y": 401,
+      "width": 238,
+      "height": 147,
+      "contentRect": {
+        "x": 369,
+        "y": 405,
+        "width": 230,
+        "height": 139
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "信息卡",
+      "proposed_border_lbrt": [
+        24,
+        24,
+        24,
+        25
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 21,
+          "last_straight": 126,
+          "middle_outer_low": 6,
+          "middle_outer_high": 232
+        },
+        "column_geometry": {
+          "first_straight": 20,
+          "last_straight": 217,
+          "middle_outer_low": 6,
+          "middle_outer_high": 141
+        },
+        "stretchable_center": {
+          "width": 190,
+          "height": 98
+        }
+      }
+    },
+    {
+      "atlas": "lobby-controls.png",
+      "name": "avatar_frame",
+      "row": 3,
+      "column": 1,
+      "x": 76,
+      "y": 688,
+      "width": 213,
+      "height": 212,
+      "contentRect": {
+        "x": 80,
+        "y": 692,
+        "width": 205,
+        "height": 204
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "透明中心头像框",
+      "center_alpha": 0,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "border_validation": {
+        "status": "not_applicable",
+        "reason": "Circular geometry or center diamond; preserve aspect instead of nine-slice stretching."
+      }
+    }
+  ],
+  "reused_from": "QuietInkUIV2 generated source files, unchanged PNG bytes",
+  "schema_version": 1,
+  "rect_units": "pixels"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "hero",
+  "alpha": true,
+  "prompt": "Create an actual standalone production game sprite by editing the supplied design reference. Match the reference asset geometry, palette, materials and details very closely. Do not redesign or show a UI screenshot or sprite sheet. Extract ONLY the central white-haired male immortal, retain exactly his face, pose, navy ivory teal gold costume, flowing hair and ribbons. Reconstruct clothing hidden by UI naturally. Full silhouette entirely inside canvas with padding; transparent background, no scene, no UI, no lettering, no panel, no pedestal. Portrait character sprite, preserve original illustration as closely as possible.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-87c7fca6-c549-4054-97ed-f2c1fb6d434d.png"
+}

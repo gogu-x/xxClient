@@ -1,0 +1,6 @@
+{
+  "id": "quest_button",
+  "title": "任务按钮",
+  "prompt": "Edit only this isolated small gold button: erase the Chinese text and the double arrow, fill the center seamlessly with palegold texture. Remove the surrounding gray/green scene outside the gold ornamental contour to true zero-alpha transparency. Preserve button outline and engraving exactly. Output ONLY one blank small horizontal gold button. No person, no other UI, no new design.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-75cfb67b-e384-4d1a-b5d6-b434425622e4.png"
+}

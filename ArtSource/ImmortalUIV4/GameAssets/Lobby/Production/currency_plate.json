@@ -1,0 +1,6 @@
+{
+  "id": "currency_plate",
+  "title": "货币底框",
+  "prompt": "Produce ONE standalone game-ready PNG asset extracted/reconstructed from this precise lobby design. Match source shape, colors, proportions and illustration exactly, do not invent a new UI design. Transparent background outside the requested object, no scene backdrop, no mockup, no sheet. Preserve full silhouette with small transparent margin. No text or numbers except an explicitly requested symbol. Only the top green darkjade horizontal currency capsule rim and interior. Remove gem, number, plus symbol. Same simple thin gold rim and rounded beveled ends. One blank horizontal capsule, no elaborate extra sculpture.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-cfd30aba-2d76-47bd-8b12-7c96a15416d2.png"
+}

@@ -1,0 +1,466 @@
+[
+  {
+    "id": "login",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. LOGIN SCREEN. Breathtaking dawn-to-starlit celestial mountains, huge subtle immortal apparitions, elegant white-haired swordsman at left center, ivory navy flowing robes, turquoise and amber spiritual light. Title '云海仙途' upper left as tasteful original brush calligraphy. Right third a beautiful narrow suspended jade and ivory silk login shrine with two dark inset input fields '账号' and '密码', server selection '一区 · 云海仙门', large sculpted warm gold primary button '进入仙途', smaller '注册' and '游客'. Tiny settings emblem top right. No currencies on login. Jade-green, moon-white, warm peach and gold palette; violet limited to sky. Hand-painted entire interface, not rectangular form styling. Polished final screenshot.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-897e73a6-eacb-4a10-bef1-de1968ed0359.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/login.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "2d4d8af3fdf29daa63f19e973bdb71b308d433f4964ca36eb468219545199f1b"
+  },
+  {
+    "id": "character",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. CHARACTER SCREEN titled '角色'. Central-left large full-length adult white-haired male immortal in ivory and navy robes with jade sash, his intricate face and clothing unobstructed. Two small portrait selection medallions bottom left male and female. Right third an exquisite carved jade character scroll, name '清风道人', class '剑修', realm '筑基初期', large tasteful combat rating '战力 128430', four readable stat rows '生命 28100', '攻击 3520', '防御 1280', '速度 125'. Three small illustrated skill medallions at lower scroll. Bottom sculpted buttons '角色', '装备', '天赋' with 角色 selected. Ivory and celadon palatial terrace with pale peach blossom, silver and fine gold material accents, less warm than equipment.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-3eb82d26-79c1-4c8d-bbb3-b03e5f5ec623.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/character.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "19335a37d5723f20ed7f5b40ed1163342d6b7632c3c18e32a2a56cf9d6a959ff"
+  },
+  {
+    "id": "cultivation",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. CULTIVATION SCREEN titled '修炼'. Amber and cinnabar alchemy sanctuary at dawn, luminous jade altar, drifting petals. Central-left same white-haired male immortal seated meditatively inside breathtaking nested golden spiritual circles, floating calligraphic aura, refined manhua. Beautiful circular progress ring around altar '灵气 6800 / 10000'. Ornamental realm plaque '筑基 · 初期' beneath. Right a vertical elegant jade-and-gold progression scroll showing three milestones '炼气', '筑基', '金丹', middle active with amber glow, below list of two illustrated breakthrough materials with counts '12/20', '3/5'. Large tangible golden primary button '突破' and smaller jade '凝神修炼'. Bottom narrow tabs '修炼', '灵根', '功法'. Warm gold and red accents with emerald structural jade; rich art, no blocky cards.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-3d3fe0b6-119a-40e8-a8f0-fa67ccb1f02e.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/cultivation.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "0e4b953db74e0e20885222f5690d96feedbdf5b427b7b965484dff56659eb00f"
+  },
+  {
+    "id": "inventory",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. INVENTORY SCREEN titled '背包'. Warm bronze treasury interior with emerald jade shelves, cream silk, red tassels and quiet ivory mist. Main left 62% framed intricately like a jade treasure cabinet, 5 columns by 4 rows of distinct legible actual inventory items: silver sword, jade crown, robe, pill bottle, ore, spirit stone, lotus, potion, red talisman, book, violet gem, red gift chest. Thin rarity rims gold/violet/green, small counts 12, 24, 8. Four top tabs '全部', '装备', '材料', '消耗品', 全部 active warm gold. NO repeated portraits/building icons as items. Right tall emerald carved jade detail scroll with a large selected scarlet alchemy bottle, title '聚灵丹', tag '极品', short description '凝聚天地灵气，助益修行。', count '持有 24', two richly painted buttons '使用' gold and '来源' jade. Bottom left small capacity '68 / 120' and restrained '整理' button. No character figure; emphasize crafted item art and very clear information organization.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-2ef6f2da-ac51-463e-af84-cb4d627720ac.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/inventory.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "229a0377ed31dace2f428928f8795046a16671fa59e5f52346910e2fb3c5ec35"
+  },
+  {
+    "id": "talent",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. TALENT SCREEN titled '灵根'. Violet-indigo midnight celestial atlas with ivory mist, delicate constellation paths and restrained gold. Left 65% a gorgeous branching talent constellation with 4 vertical tiers and 3 branches, EXACTLY twelve distinct rune medallion nodes in total, refined jade-gold ring frames, thin luminous connections, some activated turquoise, selected sword node amber, locked nodes dark with small lock. Three nodes per tier. Top tabs '剑道', '灵法', '山岳', '雷霆', 剑道 active; top small '可用天赋点 8'. Right tall midnight jade scroll with large spectral sword emblem, title '剑意凝心', '等级 1 / 3', separated lines '当前效果  攻击提升 3%', '下级效果  攻击提升 6%', '消耗  1 天赋点'. Gold '修习' and jade '重置' at bottom. Around central constellation subtle cloud motifs and celestial astrolabe engravings; gorgeous finished illustrated game UI, not simple boxes/lines.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-5a1c3ab0-4a26-4823-b7e4-5d25fe6b1f2b.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/talent.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "6bcc79f8a9281f4f4bcc12d6b55a3671ac30e4a0be2d240409f7d8f14a870f61"
+  },
+  {
+    "id": "battle",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. BATTLE SCREEN titled '青云秘境'. Premium illustrated isometric battlefield on huge carved ivory stone floating platform at dusk, jade railings, emerald mountains, coral gold horizon. Party of three refined manhua cultivator miniatures on lower left faces three distinct demonic guardians upper right, visually grounded at small playable scale with room between them, one beautiful arc of cyan sword energy, purple enemy spell. Clear slim health bars over each unit, restrained floating damage '1280'. Top central ornate compact '第 3 回合' and enemy name '玄冥守卫', back icon upper left. Bottom-left small jade-framed three character portraits with green bars. Bottom-right FOUR beautifully illustrated circular skill icons sword, lotus, shield, thunder with distinct color/materials, one gold-highlighted and one dark cooldown numeral '2'. Bottom center narrow sculpted combat log scroll with two lines '清风道人施放御剑诀' and '造成1280点伤害'. Small gold toggles '自动' and '×2' upper right. Entire screen is a functional combat HUD, NOT equipment page, NOT giant character standing in front of a form. Legible sparse overlay leaving most battlefield visible.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-cc445851-4c9e-4ce7-b608-346c5fe2cc78.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/battle.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "62340c1d7b18932c85193401c13cceb128de1d1716d7625bd815410031e075e0"
+  },
+  {
+    "id": "task",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. QUEST JOURNAL titled '仙途任务'. Cream silk parchment and celadon jade with gold edging, sunset warm green mountain library terrace. Left third beautifully bound hanging bamboo-and-jade journal list four quests, selected '初入仙途' with gold seal, other entries '灵根初醒','锋芒初试','青云之上'. Top tabs '主线','每日','成就'. Right broad parchment quest scroll, large tasteful '初入仙途', short text '前往青云秘境，完成首次试炼。', clear progress '1 / 1' with green completed seal, bottom three detailed reward objects spirit stones, crimson bottle, ore with quantities. Large gold '领取奖励' button. Decorative small ink mountain vignette on parchment, pen brush and sealed scroll foreground, sparse actual text, readability. No giant character, no web dashboard. Artful asymmetry and crafted material panels.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-ab64c6ac-62ad-48dc-a78d-3029a4641f05.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/task.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "47da471b794fb7b6024b1ffc3f4b7f9bcf9a31e7a9e3090ce5395101bc2efb1e"
+  },
+  {
+    "id": "sect",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. SECT SCREEN titled '宗门'. Grand emerald-jade mountain monastery above turquoise waterfalls and ivory clouds at clear daylight, warm peach sunlight. Left half large illustrated glorious Chinese gate integrated into background, a suspended gold/jade crest, calligraphy '青云仙宗', small '等级 5' and '成员 38/50'. Right carved pale jade/ivory announcement scroll with jade border and antique gold cloud ends, tabs '总览','成员','事务', heading '仙门公告', two restrained announcement lines '同心同德，共守山门。' and '宗门试炼即将开启。', contribution '我的贡献 1280'. Bottom across screen FOUR richly painted sculptural building shortcuts: library '藏经阁', furnace '炼丹房', arena '宗门试炼', shop '贡献商店'. Smaller gold '捐献' and jade '成员' buttons on scroll. Airy celadon green identity, not blue-purple, no uniform card layout.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-e09b2a9b-3b9c-40ed-993e-1080ba375c19.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/sect.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "338795f5c87f906807bb83b43a945729587351cb60c5b96fb5f3e4f4399e6cb2"
+  },
+  {
+    "id": "activity",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. EVENT CENTER titled '仙途盛会'. Vermilion silk, antique gold and warm ivory celestial festival pavilions with lanterns, orange-pink cloud sky. THREE distinct tall beautifully crafted irregular hanging event scrolls across main screen, red/jade/ivory material combinations, ample spacing. Each has large dedicated detailed event illustration upper half: first a spectral gold sword above floating mountain duel arena; second a peach blossom celestial stairway and lotus; third a treasure cave with emerald spirit stones. Clear titles '云海问剑', '七日登仙', '灵玉寻踪', small duration badges '剩余3天','剩余7天','剩余2天'. Each lower portion has only one short tagline and an ornate gold/jade button '前往'. First event selected with subtle golden glow and crimson tassels, others quieter. Top small tabs '限时活动','成长活动'. Elegant full game art, no giant rectangle cards or backend dashboard.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-00a1781b-63ed-4cf2-861a-dd0b8c487a19.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/activity.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "68a0fe4bd292dc6df21f2368bfad18bfee82b9a22b0ffc109de4faf3369981c7"
+  },
+  {
+    "id": "welfare",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. WELFARE DAILY SIGN-IN SCREEN titled '仙途有礼'. Celebratory vermilion, warm peach, ivory silk and antique gold with emerald accents, floating festival courtyard with suspended lanterns, no character. Main title plaque '七日修行' and subheading '每日一礼，仙途相伴'. Seven individually painted reward shrines arranged four in first row and three in second, last one wider and more important. Each is a sculpted jade/gold frame with readable '第一天' through '第七天', a large distinct reward object: spirit stones, red pill bottle, ore, jade pendant, purple crystal, gold book, and grand red-gold chest. First two small green '已领取' seals, third highlighted warm gold with '领取', later tiny locks. Right side grand red-gold treasure chest with rays and silk ribbons and caption '登仙大礼'. Bottom narrow tabs '每日签到','成长馈赠','在线奖励'. Warm delightful polished game art, clear reward hierarchy; all seven shrines visible, no fake browser.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-ec02bd4b-b99d-4387-9c52-dbcb834096d4.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/welfare.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "d053e133dde314b85a62fdfba356188d929407b6c5dd4ca073955e4b725b8f48"
+  },
+  {
+    "id": "partner",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. PARTNER SCREEN titled '仙侣'. Celadon, blush pink and ivory palette, a graceful adult dark-haired female immortal with refined manhua face, long flowing ivory rose robes, jade floral ornaments and translucent ribbons, holding a glowing pink lotus, whole body center-left framed by peach branches and distant cloud palaces. Bottom-left row of four small gilded portrait medallions of distinct adult companions, first selected. Right exquisite ivory silk scroll with carved celadon-gold borders, title '云梦仙子', class '灵法 · 辅助', relationship motif of intertwined jade knots, '羁绊  青云同道'. Three distinct round skill emblems pink lotus, cyan water and gold shield. Clear small stat rows '生命 18600','攻击 2680','防御 960'. Two polished buttons jade '羁绊' and gold '上阵'. Gentle elegant atmosphere with bespoke hand-painted controls, no modern rectangles.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-bdfde2c1-b0cf-442a-b806-9b2762726442.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/partner.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "8771da1eaa8b9840f557802f7ec44cba5c5013f84125af48f452831687a3f23d"
+  },
+  {
+    "id": "rank",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. LEADERBOARD SCREEN titled '仙榜'. Dignified antique gold, ivory and deep midnight jade, celestial mountain summit beneath starry navy sky and moonlit clouds. Left third beautiful large floating gold laurel-shaped Chinese dragon crest and champion portrait of elegant silver-haired adult immortal, caption '榜首', name '清虚真人', '战力 268800'. Right two thirds premium wide ivory-and-dark-jade scroll leaderboard with finely engraved gold borders and clean six-row composition, column headings '名次','道号','宗门','战力'. Rows 2-7 with small varied portraits, restrained simple readable Chinese names, aligned values, decorative gold/silver/bronze rank badges at top. Top tabs '战力榜','秘境榜','宗门榜'. Bottom personal rank slim jade bar '我的排名  128' and '清风道人  128430'. No dense spreadsheet, no rectangular web table: designed fantasy scroll with generous row spacing and refined linework.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-881468b4-9ebf-4b49-af7b-28a41e2a25d3.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/rank.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "60ff7637b34decf92089d38a1a879f8f8adc49bec12cd39e73486a35b6de6a10"
+  },
+  {
+    "id": "estate",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. ESTATE SCREEN titled '仙府'. A beautiful playable isometric miniature floating island garden, vibrant emerald vegetation, celadon tiled Chinese villas, peach blossoms, jade water ponds, ivory mist around island edges. FOUR distinct named buildings clearly separated: magical herb field '灵田', small furnace workshop '炼丹房', book pavilion '藏经阁', peaceful open meditation pavilion '静修室'. Each has small elegant hanging jade name label, one golden ready harvest marker. Left narrow sculpted ivory-jade estate scroll title '云栖洞府', '等级 3', small stats '灵气 +120/时', '修行效率 +6%', gold '升级' button. Bottom right tasteful gold '一键收取' and jade '布置' buttons. Main view is richly illustrated game environment with building interaction markers, NOT four rectangular building cards. Daylight green and warm cream palette.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-074394fe-991d-4668-beb0-34d9d4650864.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/estate.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "8dc939f2b8162e0d051391d29cf4f5ed6f00ecb8b01fd78e0faab318a584e742"
+  },
+  {
+    "id": "settings",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. SETTINGS SCREEN titled '设置'. Quiet sophisticated jade study, bamboo shadows, incense, silk and pale green paper, beautiful antique gold ornamental accents. Center broad sculpted jade-and-ivory silk scroll panel, left integrated three slim vertical carved jade tabs '声音','画面','操作', 声音 selected soft gold. Main ivory panel has generous clear spacing: three rows '主音量','音乐','音效', each long jade-inlaid slider trough with round polished jade knob, subtle gold caps, values '70%','60%','80%'. Bottom two matching handmade toggle switches labeled '战斗音效' and '界面提示', on state green illuminated jade. Small decorative cloud divider, golden '保存设置' and dark jade '恢复默认' at lower edge. Clean readable restrained UI, materially crafted jade controls and silk, no excessive ornamental clutter, no dashboard, no character or item grid.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-e9136fc5-e6bf-49c4-8d4b-a2cde1e40102.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/settings.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "331454f265e6e952baaf6912b262c15528bf921b59f0fd2fb8f84b2b9858d8af"
+  },
+  {
+    "id": "server",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. SERVER SELECTION DIALOG design titled '选择仙域'. Full 16:9 game screenshot with dimmed blurred celestial lobby behind, central exquisite ornate ivory silk scroll modal bounded by carved jade and antique gold cloud flourishes, safe large margin all sides. Inside left slim vertical jade tabs '最近登录','推荐仙域','全部仙域'. Main area six server nameplates in two columns and three rows, each beautifully shaped small jade panel, distinct readable labels '一区 云海仙门','二区 青莲剑域','三区 紫霄天境','四区 蓬莱仙岛','五区 昆仑仙境','六区 太虚道庭'. Small green/orange/grey status dots and text '流畅','繁忙','维护'. Selected first server gold outline. Close small gilded X top right of modal. Bottom wide gold button '确认仙域'. This is a finished in-game overlay, not a dashboard, no account form.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-783779c6-9c0c-42c0-9f23-5dc727f0c459.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/server.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "b0bb1ea7c50c87bbf9013d33afc4450819401269b81df7b3e6f8f6c4afa5691a"
+  },
+  {
+    "id": "result",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. BATTLE VICTORY RESULTS OVERLAY. Full landscape screenshot with dimmed moonlit floating stone arena behind. Center grand gilded dragon-and-cloud victory crest with luminous original brush title '试炼胜利', ivory white/gold light rays, tasteful drifting petals. Broad curved jade and gold reward scroll below, subtitle '青云秘境 · 第一重', two clear stats '用时 01:28' and '回合 8'. Three large ornate reward sockets with distinct jade spirit stones '×680', silver ore '×12', scarlet pill bottle '×3'. Bottom two hand-painted sculpted buttons jade '返回大厅' and gold '再次挑战'. A few small round character portraits at lower left of scroll. Elegant triumph, no excessive confetti, no character face blocked, no web-like modal.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-fbd96ac1-201e-4f17-b5d3-682e3e4c9200.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/result.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "4766eb5b40ec0291cf57ad301c34a91f69b3bb406f539c8d954eb033cc5b40b9"
+  },
+  {
+    "id": "register",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. ACCOUNT REGISTRATION OVERLAY titled '初入仙途'. Full landscape screenshot, softly dimmed celestial dawn login background. Central exquisite tall jade and ivory hanging scroll framed in antique gold with ruyi cloud silhouette and red tassels. Three ample empty dark-jade inset fields with clear labels '账号', '密码', '确认密码', password eye icons, small unchecked square and '同意用户协议'. Large sculpted gold '创建账号', secondary jade '返回登录'. Beautiful closed lotus medallion at scroll top and small X close corner. Prioritize legibility and generous spacing, no extra unrelated content. Premium game art form, no dashboard.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-86c78ef8-8973-45ea-9aa8-023090ead7d9.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/register.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "fb4f936e2a14010a8ddcc96d1c8a1c28c375566e34ab4950a9fce56450d5221d"
+  },
+  {
+    "id": "confirm",
+    "kind": "concept",
+    "prompt": "Use case ui-mockup. ONE finished premium Chinese xianxia RPG game UI art screenshot, full bleed landscape 16:9. Same game as reference: refined Chinese manhua illustration, exquisite translucent carved jade and antique gold ruyi/cloud frames, painted bevels, material depth, silk tassels, bespoke richly colored sculptural icons, legible elegant simplified Chinese labels, restrained ornament and clear hierarchy. Commercial game art, NOT software wireframe, no review sidebar, no generic flat rectangular dashboard, no device mockup, no watermark. Use reference for cohesive craftsmanship, not its page layout. Keep title/back medallion upper left and compact jade currencies upper right; realistic readable functional layout with breathing space, all controls within safe edges. GENERAL CONFIRMATION DIALOG overlay titled '重置灵根'. Full 16:9 screenshot with softly blurred dimmed violet celestial talent background. Small beautifully proportioned centered ivory silk and celadon-jade dialog about 55% screen width, thin antique gold ruyi edge, corners subtly engraved, single violet jade lotus emblem above title. Clear large central text '是否重置当前灵根？', smaller explanation '重置后返还已分配的天赋点。', small gold separator, two equally legible handcrafted buttons subdued jade '取消' and warm gold '确认重置', small gilded X upper right. Lots of clean breathing room, restraint unlike a huge marketing banner. Finished game material art with readable Chinese. No actual talent tree rendered sharply behind modal.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-831a7fd7-9856-4ebf-aa06-b26231e6a0f8.png",
+    "path": "ArtSource/ImmortalUIV3/Concepts/confirm.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "742f93c3731b66b90a4d78c8a032b2251a0d0d5aeb22137d7fc72288fb2d9e20"
+  },
+  {
+    "id": "daylight",
+    "kind": "background",
+    "prompt": "Production raster art asset for the same premium Chinese xianxia RPG as reference. Delicate exquisite Chinese manhua painting, celadon jade, antique gold, ivory cloudwork, precise fine contours, richly layered materials. Reference for art direction only. NO TEXT, no numbers, no logos, no watermarks, no game UI, no panels, no borders around canvas. Wide landscape 16:9 EMPTY SCENE BACKGROUND: magnificent ivory and celadon palace terrace above sea of clouds, pale peach blossom branches at far left and right, distant vertical green mountains crowned with ornate gold-roofed pavilions, peach sunrise to left blending into pale blue heavenly sky. Foreground is open jade stone terrace along lower quarter. Large quiet center for adding character separately. No humans, no silhouettes, no statues of people, no magical portal. Preserve elaborate scene illustration matching reference but remove every interface object and character. Full bleed.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-27e7459e-b5d1-463d-8364-7e22754befbd.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Backgrounds/daylight.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "9be0d6570d8e3c407fede06456a7207b73ff1d6a3488d72e3ce9425c2ac0f0ad"
+  },
+  {
+    "id": "stars",
+    "kind": "background",
+    "prompt": "Production raster art asset for the same premium Chinese xianxia RPG as reference. Delicate exquisite Chinese manhua painting, celadon jade, antique gold, ivory cloudwork, precise fine contours, richly layered materials. Reference for art direction only. NO TEXT, no numbers, no logos, no watermarks, no game UI, no panels, no borders around canvas. Wide landscape 16:9 EMPTY SCENE BACKGROUND: moonlit floating sanctuary, indigo-violet celestial heavens with fine stars, bright ivory moon upper right, subtle distant celadon mountains and gold-roofed pagodas below cloud sea, violet wisteria framing only far edges. Main middle broad atmospheric quiet blue-violet mist for placing a separate soul array or talent tree. Open low jade terrace at bottom. No people, no characters, no soul gems, no circles or astrolabe in foreground, no interface. Luxurious mystical atmosphere, restrained light; full bleed.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-0bcfba72-a876-46e1-a567-0e6b15ffb3ef.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Backgrounds/stars.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "8ecbd741bd5cef91b2bdbe671765edcaa9e1dd94b5e21080ab4dad2fd8fa6f16"
+  },
+  {
+    "id": "treasury",
+    "kind": "background",
+    "prompt": "Production raster art asset for the same premium Chinese xianxia RPG as reference. Delicate exquisite Chinese manhua painting, celadon jade, antique gold, ivory cloudwork, precise fine contours, richly layered materials. Reference for art direction only. NO TEXT, no numbers, no logos, no watermarks, no game UI, no panels, no borders around canvas. Wide landscape 16:9 EMPTY SCENE BACKGROUND: elegant celestial study and treasury interior, warm bronze wood lattice windows, jade carvings, silk curtains, golden sunlight through distant mountains, books and antique bronze incense burner concentrated at far left lower edge, bamboo shadows and ivory haze. Quiet spacious open center and right for future interface overlays. No people, no characters, no treasure icons floating, no text on books, no UI. Warm taupe, pale jade, cream and antique gold palette. Full bleed.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-891186f6-d9bd-458a-a415-76ca93a13268.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Backgrounds/treasury.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "9c3713cc3710d38d4f1c1fa1ae8f77046c2610e04979bddd724f56a284aa194a"
+  },
+  {
+    "id": "hero_male",
+    "kind": "foreground",
+    "prompt": "Create a production transparent character cutout for a premium Chinese xianxia game. Reference is style and male character identity only. Exquisite hand-painted manhua, fine expressive contours, elegant anatomy and intricate fabrics, polished promotional illustration quality. No UI, text, numbers, shadows on background, scenery or watermark. A single full body white-haired handsome young male immortal matching the reference hero, navy and ivory flowing robes, celadon sashes and gold filigree crown and belt, one hand gracefully extended. Entire feet and trailing ribbons visible, generous transparent margins, standing pose. No platform.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-ea983ce8-6e41-484f-8852-07d5c1130909.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Foregrounds/hero_male.png",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "59a58512fbe29606eef4e007774c48aeb2b49e379d1cdf58606519f3f239e3af"
+  },
+  {
+    "id": "hero_female",
+    "kind": "foreground",
+    "prompt": "Create a production transparent character cutout for a premium Chinese xianxia game. Reference is style and male character identity only. Exquisite hand-painted manhua, fine expressive contours, elegant anatomy and intricate fabrics, polished promotional illustration quality. No UI, text, numbers, shadows on background, scenery or watermark. A single full body elegant adult female immortal, long black hair, ivory and celadon silk hanfu with refined golden jewelry and pink lotus hairpin, holding a delicate jade fan. Delicate Chinese manhua face, flowing ribbons, entire feet visible, generous transparent margins. No platform.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-e880d7a2-566d-4a0b-a743-24bc101efed8.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Foregrounds/hero_female.png",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "bf09f9feb4714b26ce560d5276e2d51d1a5261d0673183955a8da246b6c3f328"
+  },
+  {
+    "id": "hero_meditating",
+    "kind": "foreground",
+    "prompt": "Create a production transparent character cutout for a premium Chinese xianxia game. Reference is style and male character identity only. Exquisite hand-painted manhua, fine expressive contours, elegant anatomy and intricate fabrics, polished promotional illustration quality. No UI, text, numbers, shadows on background, scenery or watermark. A single full body white-haired handsome male immortal matching reference hero, navy and ivory robe and celadon sash, seated cross-legged in meditation, hands holding a tiny golden pearl near abdomen. Entire silhouette and trailing robes visible with generous transparent margins. No platform, no circle, no background.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-07d31c5c-3953-450f-af4a-546340faf6c7.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Foregrounds/hero_meditating.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "203b27879495674ba5c11da689ba447f3ffc192040d934717c46dfcd5d340a99"
+  },
+  {
+    "id": "panels",
+    "kind": "atlas",
+    "prompt": "Production game UI sprite atlas, exquisite Chinese xianxia manhua art matching reference jade and antique gold ornament, premium sculpted materials, sharp fine detail. TRUE TRANSPARENT canvas outside every independent object. Absolutely NO text, letters, numbers, watermarks or background scenery. No overall outer frame. Square sprite sheet precisely 2 columns x 2 rows of four separate blank ornate rectangular UI panel skins. Order left-to-right top-to-bottom: deep jade dark panel, ivory parchment panel, deep plum violet panel, vermilion lacquer panel. Each has beautiful carved cloud corners and gold trim, simple quiet empty interior suitable for text. All four fully enclosed inside their equal cells, generous transparent gutters at 50% horizontal/vertical lines. No attached buttons.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-7a56c183-491a-4940-856a-2497735cd62a.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Atlases/panels.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "07386a1d56157051e892a99baf3943e69e9dccb34c4d4c3b610f92215bec43c9"
+  },
+  {
+    "id": "controls",
+    "kind": "atlas",
+    "prompt": "Production game UI sprite atlas, exquisite Chinese xianxia manhua art matching reference jade and antique gold ornament, premium sculpted materials, sharp fine detail. TRUE TRANSPARENT canvas outside every independent object. Absolutely NO text, letters, numbers, watermarks or background scenery. No overall outer frame. Square sprite sheet exactly 2 columns x 4 rows, eight horizontal UI control skins each fully inside its equal cell, 15% transparent padding. Reading order: glowing gold primary button, jade secondary button; vermilion button, gray disabled button; gold selected navigation tab, darkjade inactive tab; dark ivory-inset empty input field, darkjade currency capsule. Ornate gold cloudwork rims with quiet empty centers. No symbols.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-e936e65c-df7a-4e95-a9af-dccb6379bb54.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Atlases/controls.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "e3108b5f5c9bc68f6a75ee8b20ca7ef169fc968c69e444cbc82592a8768def9c"
+  },
+  {
+    "id": "frames",
+    "kind": "atlas",
+    "prompt": "Production game UI sprite atlas, exquisite Chinese xianxia manhua art matching reference jade and antique gold ornament, premium sculpted materials, sharp fine detail. TRUE TRANSPARENT canvas outside every independent object. Absolutely NO text, letters, numbers, watermarks or background scenery. No overall outer frame. Square sprite sheet exactly 3 columns x 2 rows, six fully separated decorative frames. Reading order: darkjade gold octagonal equipment socket, glowing selected gold octagonal socket, round jade portrait frame; circular gold talent node frame, red/gold hanging ranking banner, horizontal jade/gold title plaque. Ring and socket interiors fully TRANSPARENT empty holes. Generous gutters and padding inside each equal cell.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-42524d7d-2ddf-4814-8b20-092a940031b9.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Atlases/frames.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "57f5012b2704bf9e3478770b26e7e7bf3c64874763314e9f3f80fb0681eabe31"
+  },
+  {
+    "id": "navigation",
+    "kind": "atlas",
+    "prompt": "Production transparent icon atlas for exquisite Chinese xianxia RPG matching reference gold and carved jade manhua style. Square canvas exact 4 columns x 4 rows equal grid. 16 different discrete icons reading order: bust of immortal, meditating lotus, sword and crown, treasure satchel, violet soul gemstone, jade temple, red festival lantern, gift chest, scroll quest, paired hearts and ribbon, golden trophy, mountain estate, gear jade, crossed swords, golden branching tree, sealed letter. Center each icon inside its cell, scale to max 65% cell width and height, leave WIDE fully transparent gutters. No plaques, no text, no numbers, no outside frame, no shadows or glow bleeding into neighbor. Each icon unmistakable polished material, varied gem colors, fine gold contour, readable at small size. Transparent background.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-25b4596d-f4a8-4a6e-b549-42b738a9d927.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Atlases/navigation.png",
+    "width": 1264,
+    "height": 1244,
+    "sha256": "7f448feca4e37f709f6ede72b56a86f061dd77afe1772f47ff995723d2f636ee"
+  },
+  {
+    "id": "skills",
+    "kind": "atlas",
+    "prompt": "Production transparent icon atlas for exquisite Chinese xianxia RPG matching reference gold and carved jade manhua style. Square canvas exact 4 columns x 3 rows equal grid. 12 different discrete icons reading order: azure sword, pink lotus, jade shield, violet thunderbolt, turquoise whirlwind, vermilion flame, amber mountain, ice crystal, white spirit orb, golden dragon, green healing leaf, golden focused eye. Center each icon inside its cell, scale to max 65% cell width and height, leave WIDE fully transparent gutters. No plaques, no text, no numbers, no outside frame, no shadows or glow bleeding into neighbor. Each icon unmistakable polished material, varied gem colors, fine gold contour, readable at small size. Transparent background.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-38f41ef9-101a-40f4-acb1-76b517deb5d5.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Atlases/skills.png",
+    "width": 1448,
+    "height": 1086,
+    "sha256": "c666f45fd0c8959c368ea9be3499d949664210cc1aec62c4c3d6c8d47217cc99"
+  },
+  {
+    "id": "hud",
+    "kind": "atlas",
+    "prompt": "Production transparent icon atlas for exquisite Chinese xianxia RPG matching reference gold and carved jade manhua style. Square canvas exact 4 columns x 3 rows equal grid. 12 different discrete icons reading order: left arrow, close X, plus sign, golden padlock, checkmark, right arrow, heart, small sword, shield, winged boot, gear, red notification gem. Center each icon inside its cell, scale to max 65% cell width and height, leave WIDE fully transparent gutters. No plaques, no text, no numbers, no outside frame, no shadows or glow bleeding into neighbor. Each icon unmistakable polished material, varied gem colors, fine gold contour, readable at small size. Transparent background.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-b9c79910-bb9a-4736-a0b6-ef23fb3c27b7.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Atlases/hud.png",
+    "width": 1448,
+    "height": 1086,
+    "sha256": "05ed2d61eec84d5e827bdb2dd6b80f62915c1effe7ef195c96b95922e5d3c4a0"
+  },
+  {
+    "id": "buildings",
+    "kind": "atlas",
+    "prompt": "Production transparent sprite atlas, premium Chinese xianxia illustrated game matching reference carved jade and gold artistry. Square canvas, TRUE ALPHA TRANSPARENCY outside objects, WIDE EMPTY GUTTERS between all equal grid cells. No text, labels, numbers, watermark, scenery background, overall frame. Exactly 2 columns x 2 rows equal grid, four separate isometric miniature Chinese immortal estate buildings reading order: medicinal herb garden with lotus pond, alchemy pavilion with bronze furnace, tall jade library pagoda, meditation pavilion on rocky island. Intricate roofs and trees, no surrounding environment beyond each small base. Each entirely within central 75% of its cell.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-f3fc148d-e22e-42ab-9d59-f78ce1ee4711.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Atlases/buildings.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "11bc0e6213df213909449be119c30ac6f7bd37d7d3b785f5bace5f0ef3407522"
+  },
+  {
+    "id": "meters",
+    "kind": "atlas",
+    "prompt": "Production transparent sprite atlas, premium Chinese xianxia illustrated game matching reference carved jade and gold artistry. Square canvas, TRUE ALPHA TRANSPARENCY outside objects, WIDE EMPTY GUTTERS between all equal grid cells. No text, labels, numbers, watermark, scenery background, overall frame. Exactly 3 columns x 3 rows equal grid, nine isolated UI components reading order: empty thin horizontal darkjade progress trough with gold rim, simple glowing emerald horizontal fill strip, simple ruby horizontal fill strip; simple violet horizontal fill strip, round jade slider knob, small horizontal darkjade pill toggle track; small ivory-gold round toggle knob, thin horizontal gold cloud divider, soft rounded rectangular gold selection outline with transparent center. No lettering. Progress fills separate from tracks, clean restrained detail for practical UI. Each within central 70% of its cell.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-44cbb55a-00bd-401e-b5ff-7dbb5649b09e.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Atlases/meters.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "b404d53735ab19a557bf6730192599441edb7059ec7596cf28eff755e3488cee"
+  },
+  {
+    "id": "souljades",
+    "kind": "atlas",
+    "prompt": "Production transparent sprite atlas, premium Chinese xianxia illustrated game matching reference carved jade and gold artistry. Square canvas, TRUE ALPHA TRANSPARENCY outside objects, WIDE EMPTY GUTTERS between all equal grid cells. No text, labels, numbers, watermark, scenery background, overall frame. Exactly 3 columns x 2 rows equal grid, six separate carved magical gemstone icons reading order: ruby flame, emerald arrow, amber tortoise, sapphire wolf, amethyst lightning, pearl dragon. Each animal/emblem carved inside its gemstone, precious gold setting. Each entirely within central 70% of its cell.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-a9b20dcb-59dd-4818-9a86-1fec54fa3868.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Atlases/souljades.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "44da8734468642d01e6a0bef9ffa69b10a5e7c293a53d87504e8af782d3b480c"
+  },
+  {
+    "id": "portal",
+    "kind": "foreground",
+    "prompt": "Premium Chinese xianxia game production illustration matching reference gold/jade material and fine manhua contours. No text, numbers, logos or watermark. Single standalone ornate golden celadon circular portal, frontal slight perspective, cloud-carved ring on small stone base, EMPTY transparent center aperture. All silhouette comfortably within canvas. No scenery inside opening.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-b60f39dc-70e4-47ac-ab70-5c7245c3b2df.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Foregrounds/portal.png",
+    "width": 1374,
+    "height": 1145,
+    "sha256": "2354019a7030899791a5414002e3cb5726b318d6576387b32ae53fa695a24a54"
+  },
+  {
+    "id": "soul_array",
+    "kind": "foreground",
+    "prompt": "Premium Chinese xianxia game production illustration matching reference gold/jade material and fine manhua contours. No text, numbers, logos or watermark. Single standalone circular violet silver astrolabe mandala, face-on, six empty circular sockets evenly spaced at clock positions 12,2,4,6,8,10 around ring, central empty circle. Elaborate fine celestial arcs and lotus ornament. Transparent between fine rings and inside sockets. No gemstones, no characters, no runic text. Whole object comfortably inside square canvas.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-f54c6675-9416-4190-bbe9-eac398c10416.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Foregrounds/soul_array.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "ddcd3c736d016e4d8d35141cde004a55bd7bcdd98c65df5883aab9207e22a0c6"
+  },
+  {
+    "id": "battle",
+    "kind": "background",
+    "prompt": "Premium Chinese xianxia game production illustration matching reference gold/jade material and fine manhua contours. No text, numbers, logos or watermark. 16:9 landscape wide empty jade stone combat arena amid towering misty peaks and waterfalls, golden dawn, distant imperial Chinese temples, amber trees framing edge, clear open flat foreground covering lower half for combatants. No characters, no monsters, no UI, no text. Fine detailed painted Chinese manhua environment.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-1e388438-a15f-41fc-a4d7-b76420f3a7be.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Backgrounds/battle.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "50848f53375553005e41fb9ec9700acb95d95c429d8027d18eaf55f8f18b5b21"
+  },
+  {
+    "id": "event_art",
+    "kind": "atlas",
+    "prompt": "Exquisite premium Chinese xianxia manhua production art, reference for fine contour work and material-rich fantasy atmosphere, polished professional painted illustration. Wide 2:1 canvas, exactly three equal vertical illustration panels side by side, no gaps and no borders. Left panel azure sword floating above dramatic cliff temple during a trial; middle panel joyful red lantern celebration with a golden gift chest and peach blossoms; right panel mystical jade cavern with luminous emerald crystals and waterfall. Each panel is an independent portrait landscape artwork edge-to-edge, subjects centered inside own third. NO UI, text, labels, logos, numbers.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-947c694f-2bba-4583-9ef8-cc8470d9e91f.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Atlases/event_art.png",
+    "width": 1774,
+    "height": 887,
+    "sha256": "fd78531ffe7a99a464d624c4d4aa550415244896dd78d8e3510b34518527576d"
+  },
+  {
+    "id": "portraits",
+    "kind": "atlas",
+    "prompt": "Exquisite premium Chinese xianxia manhua production art, reference for fine contour work and material-rich fantasy atmosphere, polished professional painted illustration. Square transparent sprite atlas exactly 2 columns x 2 rows equal grid, four separate head-and-shoulder portraits with fully transparent padding around each. Reading order: white-haired male immortal in navy/ivory/celadon matching reference; elegant long black-haired woman in ivory celadon with lotus hairpin; confident dark-haired swordsman in vermilion black; serene silver-haired goddess in violet silver. Refined manhua faces, ornate costumes. No circles or frames, no text, no scenery. Keep each portrait fully within its own cell, wide transparent gutters.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-90b2202d-8c99-4b0b-9a9f-f53b34c25baa.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Atlases/portraits.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "32d84a7c93d8c4196969bc1f22a85382ff4bf352f800a04a454cc052693e7f14"
+  },
+  {
+    "id": "login",
+    "kind": "background",
+    "prompt": "Exquisite premium Chinese xianxia manhua production art, reference for fine contour work and material-rich fantasy atmosphere, polished professional painted illustration. 16:9 landscape scene-only illustrated backdrop for login screen. Grand ivory floating Chinese heavenly palace and giant pale golden sun in distance, teal mountains and clouds, jade terraces in lower foreground, pink peach blossoms at edge, subtle violet-blue celestial sky in upper half, varied warm and cool palette. Quiet open space at center for overlay title and hero. NO characters, no UI, no writing, no borders.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-88131a91-7866-43ca-ae47-9b2a28b3dfb1.png",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Backgrounds/login.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "44b0179d0281da32999e1e4e541e71928648e6b5d026ac589e171522efd82b16"
+  },
+  {
+    "id": "amber",
+    "kind": "background",
+    "source": "C:/Users/25348/.codex/generated_images/01a16ea3-0a46-7c82-a99a-86b355ded0a8/exec-06090cb9-3f8c-44a4-a539-8575cea4bcad.png",
+    "prompt": "Reused original generated artwork from earlier in this conversation; original full prompt not retained in this batch.",
+    "provenance": "Existing generated source, unchanged pixels",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Backgrounds/amber.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "eb701c25dcdfd7818b635d44d898a7f1a691a51d1a5b6f267f80d0ac5be3a347"
+  },
+  {
+    "id": "jade",
+    "kind": "background",
+    "source": "C:/Users/25348/.codex/generated_images/01a16ea3-0a46-7c82-a99a-86b355ded0a8/exec-e80afa6b-ed15-4db5-84c7-09db700fae15.png",
+    "prompt": "Reused original generated artwork from earlier in this conversation; original full prompt not retained in this batch.",
+    "provenance": "Existing generated source, unchanged pixels",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Backgrounds/jade.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "e7bb690b8497a15319bddb328792fa72589d96d983b07b9aab43931123538974"
+  },
+  {
+    "id": "festival",
+    "kind": "background",
+    "source": "C:/Users/25348/.codex/generated_images/01a16ea3-0a46-7c82-a99a-86b355ded0a8/exec-7246e0c3-add1-49e3-9568-1dcb37b26bd9.png",
+    "prompt": "Reused original generated artwork from earlier in this conversation; original full prompt not retained in this batch.",
+    "provenance": "Existing generated source, unchanged pixels",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Backgrounds/festival.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "868a37f9f2ba0639bc5d711ac6343eb6245e951cb160e5c6b716886ff2b147f8"
+  },
+  {
+    "id": "items",
+    "kind": "atlas",
+    "source": "C:/Users/25348/.codex/generated_images/01a16ea3-0a46-7c82-a99a-86b355ded0a8/exec-d47aa1c6-41b7-4bd4-9d94-437b6fc6782a.png",
+    "prompt": "Reused original generated artwork from earlier in this conversation; original full prompt not retained in this batch.",
+    "provenance": "Existing generated source, unchanged pixels",
+    "path": "Assets/Art/Resources/UI/ImmortalV3/Atlases/items.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "50f9c91eb2367090997a5a733a558a1d883e56296bfad14b6439b6a6c6404bbe"
+  },
+  {
+    "id": "lobby",
+    "kind": "concept",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-4d4deba5-b17c-4842-8068-fedf60a0af3c.png",
+    "prompt": "Approved visual concept from this conversation: Chinese manhua, jade and gold sculpted UI.",
+    "path": "ArtSource/ImmortalUIV3/Concepts/lobby.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "c6ee3bdcf35dd99e166f55f3db9c589e2806e5bd7b171b22a6795da26040edb6"
+  },
+  {
+    "id": "equipment",
+    "kind": "concept",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-9c9d632b-aae8-447a-8f8b-44d74c1ebbc0.png",
+    "prompt": "Approved visual concept from this conversation: Chinese manhua, jade and gold sculpted UI.",
+    "path": "ArtSource/ImmortalUIV3/Concepts/equipment.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "8c97e912d169fd7dab502107f1566850c43fd6e3fa22ae0abb404fb4985ccd08"
+  },
+  {
+    "id": "souljade",
+    "kind": "concept",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-3ec9e74e-e0ee-4af9-baf6-06e5249c6157.png",
+    "prompt": "Approved visual concept from this conversation: Chinese manhua, jade and gold sculpted UI.",
+    "path": "ArtSource/ImmortalUIV3/Concepts/souljade.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "41e6ea78ce00b505501997593e10691960f300cef390e60d920f985be00ebb2c"
+  }
+]

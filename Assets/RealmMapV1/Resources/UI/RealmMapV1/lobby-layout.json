@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "design_width": 941,
+  "design_height": 1672,
+  "background_color": "#F6F2E7FF",
+  "purpose": "Composable visual assembly; no account data, routes, buttons or battle actions are bound.",
+  "variants": {
+    "female_avatar": "lobby-avatar-female",
+    "male_character_without_bench": "lobby-hero-male",
+    "female_character_without_bench": "lobby-hero-female"
+  },
+  "layers": [
+    {
+      "name": "Landscape",
+      "asset": "lobby-background",
+      "x": 0,
+      "y": 0,
+      "width": 941,
+      "height": 1672,
+      "preserveAspect": false,
+      "opacity": 1
+    },
+    {
+      "name": "MeditatingCharacter",
+      "asset": "lobby-hero-seated",
+      "x": 115,
+      "y": 640,
+      "width": 475,
+      "height": 420,
+      "preserveAspect": true,
+      "opacity": 1
+    },
+    {
+      "name": "Avatar",
+      "asset": "lobby-avatar-male",
+      "x": 51,
+      "y": 42,
+      "width": 132,
+      "height": 143,
+      "preserveAspect": true,
+      "opacity": 1
+    },
+    {
+      "name": "AvatarFrame",
+      "asset": "avatar_frame",
+      "x": 40,
+      "y": 36,
+      "width": 154,
+      "height": 154,
+      "preserveAspect": true,
+      "opacity": 1
+    },
+    {
+      "name": "Activities",
+      "asset": "activity",
+      "x": 813,
+      "y": 240,
+      "width": 72,
+      "height": 72,
+      "preserveAspect": true,
+      "opacity": 1
+    },
+    {
+      "name": "Welfare",
+      "asset": "welfare",
+      "x": 813,
+      "y": 398,
+      "width": 72,
+      "height": 72,
+      "preserveAspect": true,
+      "opacity": 1
+    },
+    {
+      "name": "QuestStrip",
+      "asset": "info_card",
+      "x": 50,
+      "y": 1403,
+      "width": 841,
+      "height": 104,
+      "preserveAspect": false,
+      "opacity": 0.92
+    },
+    {
+      "name": "Nav0",
+      "asset": "nav_character",
+      "x": 44,
+      "y": 1540,
+      "width": 68,
+      "height": 68,
+      "preserveAspect": true,
+      "opacity": 1
+    },
+    {
+      "name": "Nav1",
+      "asset": "nav_cultivation",
+      "x": 200.83333333333334,
+      "y": 1540,
+      "width": 68,
+      "height": 68,
+      "preserveAspect": true,
+      "opacity": 1
+    },
+    {
+      "name": "Nav2",
+      "asset": "nav_realm",
+      "x": 357.6666666666667,
+      "y": 1540,
+      "width": 68,
+      "height": 68,
+      "preserveAspect": true,
+      "opacity": 1
+    },
+    {
+      "name": "Nav3",
+      "asset": "nav_sect",
+      "x": 514.5,
+      "y": 1540,
+      "width": 68,
+      "height": 68,
+      "preserveAspect": true,
+      "opacity": 1
+    },
+    {
+      "name": "Nav4",
+      "asset": "nav_inventory",
+      "x": 671.3333333333334,
+      "y": 1540,
+      "width": 68,
+      "height": 68,
+      "preserveAspect": true,
+      "opacity": 1
+    },
+    {
+      "name": "Nav5",
+      "asset": "nav_souljade",
+      "x": 828.1666666666666,
+      "y": 1540,
+      "width": 68,
+      "height": 68,
+      "preserveAspect": true,
+      "opacity": 1
+    }
+  ],
+  "texts": [
+    {
+      "name": "PlayerName",
+      "text": "清风道人",
+      "x": 224,
+      "y": 59,
+      "width": 430,
+      "height": 60,
+      "fontSize": 42,
+      "color": "#232F2BFF",
+      "alignment": "Left"
+    },
+    {
+      "name": "RealmState",
+      "text": "境界待同步",
+      "x": 226,
+      "y": 124,
+      "width": 430,
+      "height": 40,
+      "fontSize": 28,
+      "color": "#6F7167FF",
+      "alignment": "Left"
+    },
+    {
+      "name": "Menu",
+      "text": "☰",
+      "x": 811,
+      "y": 45,
+      "width": 80,
+      "height": 80,
+      "fontSize": 47,
+      "color": "#232F2BFF",
+      "alignment": "Center"
+    },
+    {
+      "name": "ActivityLabel",
+      "text": "活动",
+      "x": 782,
+      "y": 325,
+      "width": 130,
+      "height": 47,
+      "fontSize": 29,
+      "color": "#232F2BFF",
+      "alignment": "Center"
+    },
+    {
+      "name": "WelfareLabel",
+      "text": "福利",
+      "x": 782,
+      "y": 483,
+      "width": 130,
+      "height": 47,
+      "fontSize": 29,
+      "color": "#232F2BFF",
+      "alignment": "Center"
+    },
+    {
+      "name": "QuestTitle",
+      "text": "仙途指引  ›",
+      "x": 77,
+      "y": 1410,
+      "width": 450,
+      "height": 48,
+      "fontSize": 32,
+      "color": "#232F2BFF",
+      "alignment": "Left"
+    },
+    {
+      "name": "QuestHint",
+      "text": "踏入秘境，寻访修行机缘",
+      "x": 77,
+      "y": 1460,
+      "width": 750,
+      "height": 34,
+      "fontSize": 25,
+      "color": "#6F7167FF",
+      "alignment": "Left"
+    },
+    {
+      "name": "NavLabel0",
+      "text": "角色",
+      "x": 4,
+      "y": 1610,
+      "width": 148.83333333333334,
+      "height": 48,
+      "fontSize": 28,
+      "color": "#232F2BFF",
+      "alignment": "Center"
+    },
+    {
+      "name": "NavLabel1",
+      "text": "修炼",
+      "x": 160.83333333333334,
+      "y": 1610,
+      "width": 148.83333333333334,
+      "height": 48,
+      "fontSize": 28,
+      "color": "#232F2BFF",
+      "alignment": "Center"
+    },
+    {
+      "name": "NavLabel2",
+      "text": "秘境",
+      "x": 317.6666666666667,
+      "y": 1610,
+      "width": 148.83333333333334,
+      "height": 48,
+      "fontSize": 28,
+      "color": "#232F2BFF",
+      "alignment": "Center"
+    },
+    {
+      "name": "NavLabel3",
+      "text": "宗门",
+      "x": 474.5,
+      "y": 1610,
+      "width": 148.83333333333334,
+      "height": 48,
+      "fontSize": 28,
+      "color": "#232F2BFF",
+      "alignment": "Center"
+    },
+    {
+      "name": "NavLabel4",
+      "text": "背包",
+      "x": 631.3333333333334,
+      "y": 1610,
+      "width": 148.83333333333334,
+      "height": 48,
+      "fontSize": 28,
+      "color": "#232F2BFF",
+      "alignment": "Center"
+    },
+    {
+      "name": "NavLabel5",
+      "text": "魂玉",
+      "x": 788.1666666666666,
+      "y": 1610,
+      "width": 148.83333333333334,
+      "height": 48,
+      "fontSize": 28,
+      "color": "#232F2BFF",
+      "alignment": "Center"
+    }
+  ]
+}

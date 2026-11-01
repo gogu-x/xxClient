@@ -1,0 +1,488 @@
+[
+  {
+    "id": "hero",
+    "title": "人物立绘",
+    "file": "Production/hero.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-0e48118f-3fe1-43ba-8e6f-1a5409ea647d.png",
+    "sha256": "9dd388d94214dc4b554bd3c9dd24b13b6b508b5a5426853713093ffa612ae712",
+    "width": 1024,
+    "height": 1536,
+    "transparentFraction": 0.3223,
+    "alphaPass": true,
+    "visibleBounds": [
+      18,
+      3,
+      1006,
+      1533
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "profile_frame",
+    "title": "玩家信息框",
+    "file": "Production/profile_frame.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-faf30d73-a4a3-4182-a063-8b0d45b5c886.png",
+    "sha256": "063c4f9b2082a03e2d1e15dbeadef216c91f11512ced41d47a001d6fcb847bc7",
+    "width": 1974,
+    "height": 797,
+    "transparentFraction": 0.5138,
+    "alphaPass": true,
+    "visibleBounds": [
+      24,
+      21,
+      1929,
+      750
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "portrait",
+    "title": "角色头像",
+    "file": "Production/portrait.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-f119ebcc-fdbf-4bf6-8265-ed9cdac373c4.png",
+    "sha256": "73a7909790edae55394e08f0dc0475a903aabad26698a53858440f0d087fd93c",
+    "width": 1296,
+    "height": 1213,
+    "transparentFraction": 0.3868,
+    "alphaPass": true,
+    "visibleBounds": [
+      0,
+      3,
+      1296,
+      1210
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "level_badge",
+    "title": "等级徽章",
+    "file": "Production/level_badge.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-0fde41dd-bfab-448f-8e66-2e24c18e9a32.png",
+    "sha256": "fb5699bf62784f52d62e160874df62d76423a3f4217e258c7466eff7312174a4",
+    "width": 1254,
+    "height": 1254,
+    "transparentFraction": 0.8454,
+    "alphaPass": true,
+    "visibleBounds": [
+      351,
+      348,
+      552,
+      549
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "currency_plate",
+    "title": "货币底框",
+    "file": "Production/currency_plate.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-cfd30aba-2d76-47bd-8b12-7c96a15416d2.png",
+    "sha256": "f9f87b4970246896a8269a2cb4a9d42997a3225f100c6759c8033c9a4b2aab4b",
+    "width": 2086,
+    "height": 754,
+    "transparentFraction": 0.6111,
+    "alphaPass": true,
+    "visibleBounds": [
+      129,
+      198,
+      1839,
+      348
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "currency_green",
+    "title": "灵石图标",
+    "file": "Production/currency_green.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-8e1be8cf-367a-422a-bc55-ce36474ae78b.png",
+    "sha256": "d2d817584620ef3a9d4a66d28a08f3862c1b40cc771ff58b7b7eca1c61804ba9",
+    "width": 1316,
+    "height": 1195,
+    "transparentFraction": 0.5868,
+    "alphaPass": true,
+    "visibleBounds": [
+      219,
+      69,
+      882,
+      1095
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "currency_blue",
+    "title": "仙玉图标",
+    "file": "Production/currency_blue.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-944a8f2b-57f1-4480-bb8a-e1c289750ba1.png",
+    "sha256": "76aa01bd6914d2205ddae797e33a7ea913a45fcd04eaa653686891930ebf70ce",
+    "width": 1334,
+    "height": 1179,
+    "transparentFraction": 0.7149,
+    "alphaPass": true,
+    "visibleBounds": [
+      288,
+      63,
+      762,
+      1041
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "plus",
+    "title": "增加按钮",
+    "file": "Production/plus.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-35666c4a-e698-4854-9ea9-062590f2750a.png",
+    "sha256": "cf46cfb03a6e8ef6f9d825d340a389b6fdca6ea8ea3e4ee2a5c43d9eb978a8a1",
+    "width": 1269,
+    "height": 1239,
+    "transparentFraction": 0.5286,
+    "alphaPass": true,
+    "visibleBounds": [
+      72,
+      51,
+      1125,
+      1125
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "progress_track",
+    "title": "经验条底槽",
+    "file": "Production/progress_track.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-ab6dcba5-c5ff-4c43-b690-c6ec2ec6e2fa.png",
+    "sha256": "f7fdb051040eff5e64de8909fbe8ef5be9d3f513669683949391e6f64f662c63",
+    "width": 1672,
+    "height": 941,
+    "transparentFraction": 0.9557,
+    "alphaPass": true,
+    "visibleBounds": [
+      339,
+      420,
+      996,
+      102
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "progress_fill",
+    "title": "经验条填充",
+    "file": "Production/progress_fill.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-9722a82f-44fc-419c-b352-4f54dd6fa171.png",
+    "sha256": "ca28d5b91451c15479f23df4aa4ab3b3c7684e168009a9241703c192702a2414",
+    "width": 1942,
+    "height": 809,
+    "transparentFraction": 0.9114,
+    "alphaPass": true,
+    "visibleBounds": [
+      114,
+      369,
+      1716,
+      75
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "quest_scroll",
+    "title": "任务卷轴",
+    "file": "Production/quest_scroll.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-2a57c6e7-bfb8-4d1a-a513-08697d822277.png",
+    "sha256": "e00c36c17649c9dc6973bf3beebac3d4e5cab5ba5e77d661103fc3b4e10228da",
+    "width": 941,
+    "height": 1672,
+    "transparentFraction": 0.5538,
+    "alphaPass": true,
+    "visibleBounds": [
+      75,
+      9,
+      696,
+      1632
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "quest_button",
+    "title": "任务按钮",
+    "file": "Production/quest_button.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-75cfb67b-e384-4d1a-b5d6-b434425622e4.png",
+    "sha256": "9eb0a1a8e3488459e6691078a640e045d2a23cd4c45e541d757fe4cade3dd60c",
+    "width": 2103,
+    "height": 748,
+    "transparentFraction": 0.2448,
+    "alphaPass": true,
+    "visibleBounds": [
+      0,
+      18,
+      2103,
+      687
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "shortcut_frame",
+    "title": "功能入口底框",
+    "file": "Production/shortcut_frame.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-d3d6f36b-3ec0-442a-95ba-1938de53eb52.png",
+    "sha256": "377e8a66f6249ed83e38473fdfcdd629fca963cf7d858ab1ccc22f7493a74d18",
+    "width": 1199,
+    "height": 1312,
+    "transparentFraction": 0.367,
+    "alphaPass": true,
+    "visibleBounds": [
+      42,
+      30,
+      1119,
+      1209
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "icon_sect",
+    "title": "宗门图标",
+    "file": "Production/icon_sect.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-c14f51c0-d21a-46a8-8c14-e452caf8a77d.png",
+    "sha256": "1008e871f98a918d8f61ba5fec31bf03b4827aba3759d388625e2f02e16b5153",
+    "width": 1402,
+    "height": 1122,
+    "transparentFraction": 0.529,
+    "alphaPass": true,
+    "visibleBounds": [
+      78,
+      66,
+      1296,
+      996
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "icon_activity",
+    "title": "活动图标",
+    "file": "Production/icon_activity.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-5603ee98-597f-4db0-8539-85e2faf0be5b.png",
+    "sha256": "0b55f9fe0e3499049d72550751e67456e8886018bbf1139224e98665e6aa30d6",
+    "width": 1333,
+    "height": 1180,
+    "transparentFraction": 0.492,
+    "alphaPass": true,
+    "visibleBounds": [
+      60,
+      63,
+      1242,
+      1074
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "icon_welfare",
+    "title": "福利图标",
+    "file": "Production/icon_welfare.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-a791f87f-8b9b-4abe-839c-a6fc19356b5e.png",
+    "sha256": "feac1743f2428ffb7854743953ecf8b2ffd25bb3a67cb0a96dafeda1ce4fccc3",
+    "width": 1349,
+    "height": 1166,
+    "transparentFraction": 0.5024,
+    "alphaPass": true,
+    "visibleBounds": [
+      177,
+      57,
+      1008,
+      1056
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "notification_dot",
+    "title": "提示红点",
+    "file": "Production/notification_dot.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-bb0b5969-1bab-4562-9200-8798ad189c40.png",
+    "sha256": "3e1783b23f64ac6d703fb0bc48d1ba6ae6b6052fda10cfbab5bdcf0df88aa403",
+    "width": 1262,
+    "height": 1246,
+    "transparentFraction": 0.792,
+    "alphaPass": true,
+    "visibleBounds": [
+      306,
+      288,
+      648,
+      633
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "location_plate",
+    "title": "地点底框",
+    "file": "Production/location_plate.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-a57c2bfe-17fb-40fc-b16d-5d2e170ee000.png",
+    "sha256": "4844da5974f50a60ced10bc7db78e94eea6edef558a2614809043a05d1761307",
+    "width": 2020,
+    "height": 779,
+    "transparentFraction": 0.5406,
+    "alphaPass": true,
+    "visibleBounds": [
+      21,
+      183,
+      1983,
+      393
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "location_pin",
+    "title": "地点图标",
+    "file": "Production/location_pin.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-75f95cc4-9358-45e9-966f-8576480fcddc.png",
+    "sha256": "a1a99a52b29810b7b9074c0453817b02f22fe89521663604bd12efe4f17f2530",
+    "width": 1263,
+    "height": 1245,
+    "transparentFraction": 0.8321,
+    "alphaPass": true,
+    "visibleBounds": [
+      345,
+      231,
+      576,
+      771
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "portal_arch",
+    "title": "秘境传送门",
+    "file": "Production/portal_arch.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-e118b9fc-bf73-47b3-ae3a-ce5f7fea7170.png",
+    "sha256": "041316ccc6ae7a273909ac7eb078922fdc1c51b52f87da4441c0e178f633cff0",
+    "width": 1983,
+    "height": 793,
+    "transparentFraction": 0.5518,
+    "alphaPass": true,
+    "visibleBounds": [
+      6,
+      12,
+      1974,
+      765
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "realm_button",
+    "title": "秘境主按钮",
+    "file": "Production/realm_button.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-421e39c7-a9ac-420c-a9e2-008e8216b378.png",
+    "sha256": "8086b710caeffc62c8e3d095e3924282223bc61750010e85240029da11b12b4e",
+    "width": 2172,
+    "height": 724,
+    "transparentFraction": 0.3764,
+    "alphaPass": true,
+    "visibleBounds": [
+      15,
+      15,
+      2145,
+      684
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "nav_frame",
+    "title": "底部导航底框",
+    "file": "Production/nav_frame.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-bf8d3352-4142-474c-b2bd-6424be290c91.png",
+    "sha256": "2eaa9b30627199ea97a51d9b6579ac1bf04b65896f664da4c60d338998b80a97",
+    "width": 2103,
+    "height": 748,
+    "transparentFraction": 0.5369,
+    "alphaPass": true,
+    "visibleBounds": [
+      0,
+      246,
+      2103,
+      447
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "icon_cultivation",
+    "title": "修炼图标",
+    "file": "Production/icon_cultivation.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-9f2ab2b6-19d6-430e-8d83-0741245c8680.png",
+    "sha256": "25caee1aa5528f07f44a55cb9f3c3dd6b99bbe211648841cc28b97a04d77f14e",
+    "width": 1333,
+    "height": 1180,
+    "transparentFraction": 0.5033,
+    "alphaPass": true,
+    "visibleBounds": [
+      48,
+      3,
+      1236,
+      1176
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "icon_equipment",
+    "title": "装备图标",
+    "file": "Production/icon_equipment.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-b4276863-83f7-4903-9616-39bd5231329b.png",
+    "sha256": "7bc4c7927d15c030b2028417410bf2be3cf157d9f07b9e4f2a82d68ff2703bd6",
+    "width": 1261,
+    "height": 1247,
+    "transparentFraction": 0.8156,
+    "alphaPass": true,
+    "visibleBounds": [
+      153,
+      30,
+      1083,
+      1203
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "icon_inventory",
+    "title": "背包图标",
+    "file": "Production/icon_inventory.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-f8b675e4-8603-4605-8e3c-489c278408e8.png",
+    "sha256": "b9b9907bbed1fc7252def74d18fc1aaa54c3340b6c3c6a60a6d6bf831965eeeb",
+    "width": 1313,
+    "height": 1198,
+    "transparentFraction": 0.4468,
+    "alphaPass": true,
+    "visibleBounds": [
+      75,
+      66,
+      1188,
+      1098
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "icon_souljade",
+    "title": "魂玉图标",
+    "file": "Production/icon_souljade.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-44bf8e11-8570-4418-8903-03413db7f2ad.png",
+    "sha256": "f5c6b6c20903a53a745c9a7bcab9f51b06edbb148c72f948b3be52fb0951e105",
+    "width": 1024,
+    "height": 1536,
+    "transparentFraction": 0.6061,
+    "alphaPass": true,
+    "visibleBounds": [
+      93,
+      51,
+      885,
+      1353
+    ],
+    "status": "individual-asset-review"
+  },
+  {
+    "id": "button_arrow",
+    "title": "按钮箭头",
+    "file": "Production/button_arrow.png",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-d3a4f869-811c-458b-a9e2-cead3c0c7dc7.png",
+    "sha256": "92dd7e0b75e4ab340e8f36acbb0ca406298e71471b26b3a645852fb5b3ae0b9b",
+    "width": 1374,
+    "height": 1145,
+    "transparentFraction": 0.855,
+    "alphaPass": true,
+    "visibleBounds": [
+      300,
+      114,
+      786,
+      915
+    ],
+    "status": "individual-asset-review"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "name": "云海仙台",
+  "version": "BattleRedesignV2",
+  "stage": "art-design",
+  "runtimeReplaced": false,
+  "layout": "portrait 9:16; centered adaptation on PC",
+  "visualIntent": ["quiet slate-teal ground", "restrained gold inlays", "cloud-sea atmospheric distance", "compact silver-blue HUD"],
+  "roster": "3v3; use current white-robed cultivator and horned monster models",
+  "cameraIntent": "elevated three-quarter view; final projection and angle to be tuned against actual meshes",
+  "formationIntent": "shallow triangular rows, center figure offset in depth; clear gap for attacks",
+  "preserve": ["server battle timeline", "unit health and death state", "automatic battle controls", "playback speed", "phone safe area"],
+  "productionAssetsPending": [
+    "3D arena platform mesh and low-noise material",
+    "far railing and lantern props",
+    "separate sky and mountain backdrop",
+    "contact shadows and subtle selection decal",
+    "independent compact HUD graphics"
+  ],
+  "delivered": ["battle-concept.png", "environment-plate.png", "concept.prompt.txt", "environment.prompt.txt"],
+  "generationTool": "built-in imagegen",
+  "imageLimitations": "Environment plate includes perspective and lighting, so it is not a tiling ground texture; final 3D assets and runtime validation are separate production work."
+}

@@ -1,0 +1,28 @@
+{
+  "file": "realm-entrances.png",
+  "width": 1086,
+  "height": 1448,
+  "format": "RGBA8",
+  "alpha_min": 0,
+  "alpha_max": 255,
+  "fully_transparent_percent": 47.727,
+  "alpha_below16_percent": 53.297,
+  "outer_content_margin_ltrb": [
+    25,
+    39,
+    15,
+    61
+  ],
+  "components_alpha_ge16": 24,
+  "significant_components": 12,
+  "excluded_tiny_component_pixels": 12,
+  "rect_overlaps": [],
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a195ed-e4a1-7100-bd11-05e3e51fd61a\\exec-49bc252d-8c94-4681-a2c0-ac2c22f89f4f.png",
+  "sha256": "5919558fc0b16b5b3cb283080100a3f2e953d7d978d0e29c17d0b16b5e450c94",
+  "expected_sha256": "5919558fc0b16b5b3cb283080100a3f2e953d7d978d0e29c17d0b16b5e450c94",
+  "expected_sha256_matches": true,
+  "source_available": true,
+  "source_identical": true,
+  "pixel_edits": false,
+  "validation_scope": "Source pixels, alpha and sprite metadata only; Unity composition requires separate visual review."
+}

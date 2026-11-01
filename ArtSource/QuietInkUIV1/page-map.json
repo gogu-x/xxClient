@@ -1,0 +1,761 @@
+{
+  "schema_version": 1,
+  "title": "QuietInk UI V1 竖版页面覆盖与真实功能清单",
+  "verified_on": "2026-11-01",
+  "project": "g1Client",
+  "path_base": "项目根目录；所有 scripts 和 asset_paths 使用项目相对路径；resource_keys 为 Unity Resources 加载键",
+  "purpose": "供先制作手机竖屏效果图、再制作可组合 UI 资源使用；不把预览或未开放功能画成已接入业务",
+  "verification": {
+    "source_review": "已只读核对场景、生成器、页面构建代码、按钮绑定和资源加载路径",
+    "runtime_evidence": "根代理通过 Unity MCP 确认 Game View 为 1080×1920，存在 BattleView、MainPanel、HomePanel；未发现 GameBootstrap 或 ImmortalUIArtPreview 实例",
+    "limitation": "此 JSON 是页面与资源盘点，不表示本轮逐一实跑了所有按钮、后端接口或本地存档",
+    "runtime_code_changed": false
+  },
+  "primary_route": {
+    "scene": "Assets/Scenes/Bootstrap.unity",
+    "scripts": [
+      "Assets/Scripts/Editor/BootstrapSceneBuilder.cs",
+      "Assets/Scripts/Core/UIManager.cs",
+      "Assets/Scripts/UI/HomePanel.cs",
+      "Assets/Scripts/UI/MainPanel.cs",
+      "Assets/Scripts/UI/LobbyReferenceView.cs"
+    ],
+    "flow": "HomePanel 登录 → MainPanel / LobbyReferenceView 大厅 → 角色、功能页或 BattleView → BattleResultPage",
+    "orientation": "portrait",
+    "mockup_resolution": {
+      "width": 1080,
+      "height": 1920
+    },
+    "common_authored_design": {
+      "width": 941,
+      "height": 1672
+    },
+    "route_caveat": "GameBootstrap.Start 无条件调用 ImmortalUIArtPreview.OpenLive，但当前 Bootstrap 场景与生成器未挂载或创建 GameBootstrap；不能据此把横版预览系统当作当前主路径"
+  },
+  "design_constraints": [
+    "以手机竖屏为主，背景与装饰减少干扰，保留清晰的文字、列表与操作区",
+    "页面文字、数值、人物、背景、按钮、边框、图标须可独立组合，效果图不能直接充当完整运行页面",
+    "未同步的境界、等级、货币继续显示待同步或破折号，不杜撰战力、排行、奖励或道具数量",
+    "本地展示角色、魂玉和天赋需保留本地功能边界，不表示已同步到服务器或已影响真实战斗",
+    "未开放操作保持不可用或明确标注未开放；纯展示入口不画成可领奖、可购买或可升级",
+    "战斗结算按服务器胜负与存活数据展示，奖励未提供时保留真实空状态"
+  ],
+  "page_families": [
+    {
+      "id": "login",
+      "name": "登录、选服、创建角色",
+      "pages": [
+        "登录",
+        "选服弹窗",
+        "创建角色确认",
+        "更多"
+      ],
+      "scripts": [
+        "Assets/Scripts/UI/HomePanel.cs",
+        "Assets/Scripts/UI/ServerPickerPopup.cs",
+        "Assets/Scripts/UI/ServerListItem.cs",
+        "Assets/Scripts/UI/LoginCelestialSkin.cs"
+      ],
+      "available_interactions": [
+        {
+          "label": "选择服务器",
+          "behavior": "选择登录或创建角色所在区服",
+          "scope": "server_and_client_server_list"
+        },
+        {
+          "label": "进入仙途",
+          "behavior": "使用本机游客凭据进入登录流程",
+          "scope": "server"
+        },
+        {
+          "label": "确认创建",
+          "behavior": "确认当前区服创建角色后登录",
+          "scope": "server"
+        },
+        {
+          "label": "更多",
+          "behavior": "打开公告、账号说明、重新连接等入口",
+          "scope": "navigation"
+        },
+        {
+          "label": "重新连接",
+          "behavior": "重新连接战斗游戏网络服务",
+          "scope": "network"
+        }
+      ],
+      "unavailable_features": [
+        "正式账号密码登录与绑定未接入当前 HomePanel 主路径"
+      ],
+      "real_state_text": [
+        "本机游客账号 · 自动登录",
+        "正在连接…",
+        "选择服务器",
+        "进入仙途"
+      ],
+      "shared_replacements": [
+        "portrait_layout",
+        "login_skin",
+        "fonts"
+      ]
+    },
+    {
+      "id": "lobby",
+      "name": "大厅与更多",
+      "pages": [
+        "大厅",
+        "更多功能"
+      ],
+      "scripts": [
+        "Assets/Scripts/UI/MainPanel.cs",
+        "Assets/Scripts/UI/LobbyReferenceView.cs",
+        "Assets/Scripts/UI/LobbyFeaturePanel.cs"
+      ],
+      "available_interactions": [
+        {
+          "label": "角色 / 修炼 / 装备 / 背包 / 魂玉",
+          "behavior": "打开对应页面；页面可用范围见各页面族",
+          "scope": "navigation"
+        },
+        {
+          "label": "进入秘境",
+          "behavior": "打开并启动现有 BattleView 战斗流程",
+          "scope": "server"
+        },
+        {
+          "label": "宗门 / 活动 / 福利 / 更多",
+          "behavior": "打开对应功能页面",
+          "scope": "navigation"
+        },
+        {
+          "label": "头像",
+          "behavior": "打开角色页面",
+          "scope": "navigation"
+        }
+      ],
+      "unavailable_features": [
+        "境界、等级与货币数值尚未同步",
+        "前往未开放功能页不等于该业务已开放"
+      ],
+      "real_state_text": [
+        "清风道人",
+        "境界待同步",
+        "—",
+        "仙途指引",
+        "云海仙门",
+        "进入秘境"
+      ],
+      "shared_replacements": [
+        "portrait_layout",
+        "lobby_skin",
+        "common_v4_widgets",
+        "fonts"
+      ]
+    },
+    {
+      "id": "character_equipment",
+      "name": "角色与装备",
+      "pages": [
+        "角色",
+        "装备",
+        "灵器仓库",
+        "装备详情"
+      ],
+      "scripts": [
+        "Assets/Scripts/UI/CharacterPanel.cs",
+        "Assets/Scripts/UI/RoleEquipmentPanel.cs"
+      ],
+      "available_interactions": [
+        {
+          "label": "选定角色",
+          "behavior": "在清风道人和云梦仙子之间切换本地展示并保存",
+          "scope": "local"
+        },
+        {
+          "label": "角色 / 装备 / 天赋",
+          "behavior": "切换对应页面",
+          "scope": "navigation"
+        },
+        {
+          "label": "装备槽位",
+          "behavior": "查看灵剑、仙冠、法袍、护腕、玉佩、云履对应数据",
+          "scope": "server"
+        },
+        {
+          "label": "更换 / 穿戴 / 卸下",
+          "behavior": "从真实灵器仓库选择装备并请求服务器更换",
+          "scope": "server"
+        }
+      ],
+      "unavailable_features": [
+        "精炼未开放",
+        "角色展示切换不是服务器角色收集或职业切换",
+        "角色页未同步的属性不能填入虚构值"
+      ],
+      "real_state_text": [
+        "清风道人",
+        "云梦仙子",
+        "生命",
+        "攻击",
+        "防御",
+        "速度",
+        "精炼 · 未开放",
+        "连接服务器后可查看装备"
+      ],
+      "shared_replacements": [
+        "portrait_layout",
+        "common_v4_widgets",
+        "character_equipment_skin",
+        "fonts"
+      ]
+    },
+    {
+      "id": "souljade_talent_cultivation",
+      "name": "魂玉、天赋与修炼",
+      "pages": [
+        "魂玉镶嵌",
+        "魂玉背包与词条",
+        "洗练展示页",
+        "升级展示页",
+        "天赋树",
+        "天赋详情与重置",
+        "修炼"
+      ],
+      "scripts": [
+        "Assets/Scripts/UI/RoleSoulJadePanel.cs",
+        "Assets/Scripts/UI/RoleSoulJadePanel.Layout.cs",
+        "Assets/Scripts/UI/RoleSoulJadePanel.V4.cs",
+        "Assets/Scripts/UI/RoleTalentPanel.cs",
+        "Assets/Scripts/UI/LobbyFeaturePanel.cs"
+      ],
+      "available_interactions": [
+        {
+          "label": "选择魂玉 / 替换魂玉 / 卸下",
+          "behavior": "操作六槽与本地魂玉库并保存本机配装",
+          "scope": "local"
+        },
+        {
+          "label": "查看背包",
+          "behavior": "查看当前魂玉页面内的本地魂玉列表",
+          "scope": "local"
+        },
+        {
+          "label": "镶嵌 / 洗练 / 升级",
+          "behavior": "切换相应展示界面；后两项执行操作未开放",
+          "scope": "navigation"
+        },
+        {
+          "label": "破军 / 御灵 / 守御 / 身法",
+          "behavior": "切换天赋分支并查看节点详情",
+          "scope": "local"
+        },
+        {
+          "label": "修习 / 重置",
+          "behavior": "按前置节点与可用点数修改本地天赋；重置有确认",
+          "scope": "local"
+        },
+        {
+          "label": "灵根天赋",
+          "behavior": "从修炼页前往天赋树",
+          "scope": "navigation"
+        }
+      ],
+      "unavailable_features": [
+        "魂玉服务器同步未接入",
+        "魂玉升级与洗练执行操作未开放",
+        "天赋服务器同步未接入",
+        "境界进度、突破条件和材料服务未接入"
+      ],
+      "real_state_text": [
+        "本地配装 · 未接入服务器",
+        "升级暂未开放",
+        "洗练暂未开放",
+        "境界突破 · 未开放"
+      ],
+      "shared_replacements": [
+        "portrait_layout",
+        "common_v4_widgets",
+        "souljade_skin",
+        "talent_skin",
+        "fonts"
+      ]
+    },
+    {
+      "id": "sect_partner_estate",
+      "name": "宗门、伙伴与洞府",
+      "pages": [
+        "宗门",
+        "道侣",
+        "洞府"
+      ],
+      "scripts": [
+        "Assets/Scripts/UI/LobbyFeaturePanel.cs"
+      ],
+      "available_interactions": [
+        {
+          "label": "宗门 / 道侣 / 洞府",
+          "behavior": "从大厅或更多打开当前展示页面，并返回",
+          "scope": "navigation"
+        }
+      ],
+      "unavailable_features": [
+        "竖版宗门列表、成员、公告、加入与捐献未接入",
+        "宗门试炼、藏经阁、贡献商店、成员名册为未开放入口",
+        "道侣、羁绊及上阵未开放",
+        "洞府等级、产出、收取与升级未开放"
+      ],
+      "real_state_text": [
+        "宗门山门",
+        "宗门公告",
+        "宗门捐献 · 未开放",
+        "云梦仙子",
+        "上阵 · 未开放",
+        "云栖洞府",
+        "洞府等级与产出尚未开放"
+      ],
+      "shared_replacements": [
+        "portrait_layout",
+        "common_v4_widgets",
+        "feature_skin",
+        "fonts"
+      ]
+    },
+    {
+      "id": "inventory_shop",
+      "name": "背包与商店边界",
+      "pages": [
+        "背包",
+        "灵器仓库"
+      ],
+      "scripts": [
+        "Assets/Scripts/UI/LobbyFeaturePanel.cs",
+        "Assets/Scripts/UI/RoleEquipmentPanel.cs"
+      ],
+      "available_interactions": [
+        {
+          "label": "全部 / 装备 / 材料 / 消耗品",
+          "behavior": "切换背包展示分类；普通背包当前无服务器数据",
+          "scope": "navigation"
+        },
+        {
+          "label": "查看灵器仓库",
+          "behavior": "前往已连接服务器的装备仓库",
+          "scope": "server"
+        }
+      ],
+      "unavailable_features": [
+        "普通背包服务、容量及道具数量未接入",
+        "未发现独立可用商店页面或购买流程",
+        "贡献商店仅为未开放入口"
+      ],
+      "real_state_text": [
+        "尚未接入背包服务",
+        "容量与道具数量 · 待同步",
+        "查看灵器仓库"
+      ],
+      "shared_replacements": [
+        "portrait_layout",
+        "common_v4_widgets",
+        "feature_skin",
+        "character_equipment_skin",
+        "fonts"
+      ]
+    },
+    {
+      "id": "rank_task",
+      "name": "排行与任务",
+      "pages": [
+        "排行",
+        "任务"
+      ],
+      "scripts": [
+        "Assets/Scripts/UI/LobbyFeaturePanel.cs"
+      ],
+      "available_interactions": [
+        {
+          "label": "战力榜 / 秘境榜 / 宗门榜",
+          "behavior": "切换排行展示分类；当前无真实排名数据",
+          "scope": "navigation"
+        },
+        {
+          "label": "主线 / 每日 / 成就",
+          "behavior": "切换任务展示分类",
+          "scope": "navigation"
+        },
+        {
+          "label": "前往",
+          "behavior": "部分主线引导行可前往战斗或天赋；不代表已接任务进度",
+          "scope": "navigation"
+        }
+      ],
+      "unavailable_features": [
+        "排行服务、榜首与我的排名未接入",
+        "任务进度、完成状态与奖励未接入",
+        "其余任务操作未开放"
+      ],
+      "real_state_text": [
+        "榜首虚位以待",
+        "暂无排名数据",
+        "我的排名  —",
+        "排行服务尚未开放",
+        "进度与奖励待任务服务同步"
+      ],
+      "shared_replacements": [
+        "portrait_layout",
+        "common_v4_widgets",
+        "feature_skin",
+        "fonts"
+      ]
+    },
+    {
+      "id": "activity_welfare_settings",
+      "name": "活动、福利与设置",
+      "pages": [
+        "活动",
+        "福利",
+        "设置"
+      ],
+      "scripts": [
+        "Assets/Scripts/UI/LobbyFeaturePanel.cs"
+      ],
+      "available_interactions": [
+        {
+          "label": "限时 / 日常 / 全部",
+          "behavior": "切换活动展示分类；当前竖版活动为未开放预览",
+          "scope": "navigation"
+        },
+        {
+          "label": "主音量 / 静音 / 取消静音",
+          "behavior": "修改 Unity 音频音量与静音状态，音量保存本机",
+          "scope": "local"
+        },
+        {
+          "label": "画质",
+          "behavior": "选择项目实际 QualitySettings 档位并保存本机",
+          "scope": "local"
+        },
+        {
+          "label": "恢复声音默认 / 完成",
+          "behavior": "重置音量或关闭设置",
+          "scope": "local"
+        }
+      ],
+      "unavailable_features": [
+        "竖版活动日程、参与条件与奖励未接入",
+        "竖版七日福利领取未开放",
+        "自定义操作未开放"
+      ],
+      "real_state_text": [
+        "美术预览 · 活动尚未开放",
+        "奖励待开放",
+        "福利尚未开放",
+        "自定义操作尚未开放"
+      ],
+      "shared_replacements": [
+        "portrait_layout",
+        "common_v4_widgets",
+        "feature_skin",
+        "fonts"
+      ]
+    },
+    {
+      "id": "battle_result",
+      "name": "战斗与结算",
+      "pages": [
+        "真实战斗",
+        "胜利结算",
+        "失败结算",
+        "平局结算"
+      ],
+      "scripts": [
+        "Assets/Scripts/UI/BattleView.cs",
+        "Assets/Scripts/UI/BattleView.ReferencePresentation.cs",
+        "Assets/Scripts/UI/BattleView.Responsive.cs",
+        "Assets/Scripts/UI/BattleView.Environments.cs",
+        "Assets/Scripts/UI/BattleResultPage.cs"
+      ],
+      "available_interactions": [
+        {
+          "label": "进入秘境",
+          "behavior": "请求真实战斗并播放服务器战报",
+          "scope": "server"
+        },
+        {
+          "label": "退出",
+          "behavior": "离开战斗页面返回大厅",
+          "scope": "navigation"
+        },
+        {
+          "label": "再次挑战",
+          "behavior": "从结算进入下一次挑战流程",
+          "scope": "server"
+        },
+        {
+          "label": "返回大厅",
+          "behavior": "关闭结算返回大厅",
+          "scope": "navigation"
+        }
+      ],
+      "visible_data": [
+        "单位与双方队伍",
+        "真实当前血量和生命上限",
+        "控制状态",
+        "战斗事件与已释放技能展示",
+        "服务器胜负结果",
+        "我方存活数",
+        "敌方存活数"
+      ],
+      "unavailable_features": [
+        "结算奖励数据尚未提供",
+        "技能展示槽不能设计成当前已经支持手动施法",
+        "原速 ×1 显示不能设计成已实现的任意倍速控制"
+      ],
+      "real_state_text": [
+        "天道演武",
+        "原速 · ×1",
+        "待释放",
+        "试炼胜利",
+        "试炼未成",
+        "势均力敌",
+        "奖励尚未提供 · 以服务器实际发放为准"
+      ],
+      "shared_replacements": [
+        "portrait_layout",
+        "common_v4_widgets",
+        "battle_skin",
+        "battle_environments",
+        "character_equipment_skin",
+        "fonts"
+      ]
+    }
+  ],
+  "shared_replacement_points": [
+    {
+      "id": "portrait_layout",
+      "role": "设计空间、屏幕与安全区适配",
+      "scripts": [
+        "Assets/Scripts/UI/ImmortalV4PageKit.cs",
+        "Assets/Scripts/UI/LobbyPortraitLayout.cs",
+        "Assets/Scripts/UI/MobileGuiStandards.cs",
+        "Assets/Scripts/UI/CelestialBackgroundCover.cs",
+        "Assets/Scripts/UI/BattleView.Responsive.cs"
+      ],
+      "note": "MobileAdaptiveCanvasScaler 定义于 MobileGuiStandards.cs；公共页设计空间 941×1672，手机效果图按 1080×1920，须留出可用显示区域与控件边距"
+    },
+    {
+      "id": "common_v4_widgets",
+      "role": "通用标题、返回、按钮、页签、面板、装备槽、列表与图标框",
+      "scripts": [
+        "Assets/Scripts/UI/ImmortalV4PageKit.cs",
+        "Assets/Scripts/UI/ConceptPageSkin.cs",
+        "Assets/Scripts/UI/CelestialUITheme.cs"
+      ],
+      "asset_paths": [
+        "Assets/Art/Resources/UI/ImmortalV4/Equipment",
+        "Assets/Art/Resources/UI/ImmortalV4/Features",
+        "Assets/Art/Resources/UI/ImmortalV4/asset-bounds.json"
+      ],
+      "resource_keys": [
+        "UI/ImmortalV4/Equipment/header_plate",
+        "UI/ImmortalV4/Equipment/detail_panel",
+        "UI/ImmortalV4/Equipment/power_plate",
+        "UI/ImmortalV4/Equipment/button_jade",
+        "UI/ImmortalV4/Equipment/button_gold",
+        "UI/ImmortalV4/Equipment/tab_jade",
+        "UI/ImmortalV4/Equipment/tab_gold",
+        "UI/ImmortalV4/Equipment/equipment_slot",
+        "UI/ImmortalV4/Features/paper_panel",
+        "UI/ImmortalV4/Features/jade_row",
+        "UI/ImmortalV4/Features/jade_vertical"
+      ],
+      "note": "按皮肤方案可能被 ConceptPageSkin 重映射到图集 UV。换图集需同步映射/切片，不能只替换整张图"
+    },
+    {
+      "id": "login_skin",
+      "role": "登录专用背景、标识、按钮、列表行、弹窗",
+      "scripts": [
+        "Assets/Scripts/UI/LoginCelestialSkin.cs",
+        "Assets/Scripts/UI/HomePanel.cs"
+      ],
+      "asset_paths": [
+        "Assets/Art/Resources/UI/ImmortalV4/Login"
+      ],
+      "resource_keys": [
+        "UI/ImmortalV4/Login/background_cosmic_anime_v2",
+        "UI/ImmortalV4/Login/celestial_logo_v3",
+        "UI/ImmortalV4/Login/celestial_button_v3",
+        "UI/ImmortalV4/Login/celestial_row_v3",
+        "UI/ImmortalV4/Login/celestial_panel_v3"
+      ],
+      "note": "按钮与行有去透明边距 UV 裁切；登录主按钮文案保留进入仙途"
+    },
+    {
+      "id": "lobby_skin",
+      "role": "大厅背景、人物、头像框、导航、任务引导、传送门、货币图标",
+      "scripts": [
+        "Assets/Scripts/UI/LobbyReferenceView.cs"
+      ],
+      "asset_paths": [
+        "Assets/Art/Resources/UI/ImmortalV4/Lobby",
+        "Assets/Art/Resources/UI/ImmortalV4/ConceptV1"
+      ],
+      "resource_keys": [
+        "UI/ImmortalV4/ConceptV1/lobby_bg",
+        "UI/ImmortalV4/ConceptV1/lobby_hero",
+        "UI/Lobby/Lobby_Female_Character_Cutout"
+      ],
+      "note": "大厅背景与男性人物当前加载 ConceptV1，而非只加载 Lobby/background 或 Lobby/hero"
+    },
+    {
+      "id": "character_equipment_skin",
+      "role": "角色立绘、装备背景、装备图标与面板；结算也复用其中资源",
+      "scripts": [
+        "Assets/Scripts/UI/CharacterPanel.cs",
+        "Assets/Scripts/UI/RoleEquipmentPanel.cs",
+        "Assets/Scripts/UI/ConceptPageSkin.cs",
+        "Assets/Scripts/UI/BattleResultPage.cs"
+      ],
+      "asset_paths": [
+        "Assets/Art/Resources/UI/ImmortalV4/Character",
+        "Assets/Art/Resources/UI/ImmortalV4/Equipment"
+      ],
+      "resource_keys": [
+        "UI/ImmortalV4/Character/hero",
+        "UI/ImmortalV4/ConceptV1/equipment_bg",
+        "UI/ImmortalV4/ConceptV1/equipment_hero_cutout",
+        "UI/ImmortalV4/ConceptV1/equipment_ui"
+      ]
+    },
+    {
+      "id": "souljade_skin",
+      "role": "魂玉背景、环形机制、六槽、词条与背包",
+      "scripts": [
+        "Assets/Scripts/UI/RoleSoulJadePanel.V4.cs",
+        "Assets/Scripts/UI/RoleSoulJadePanel.Layout.cs",
+        "Assets/Scripts/UI/ConceptPageSkin.cs"
+      ],
+      "asset_paths": [
+        "Assets/Art/Resources/UI/ImmortalV4/SoulJade",
+        "Assets/Art/Resources/UI/SoulJade/DesignElements"
+      ],
+      "resource_keys": [
+        "UI/ImmortalV4/ConceptV1/soul_bg",
+        "UI/ImmortalV4/ConceptV1/soul_ring",
+        "UI/ImmortalV4/ConceptV1/soul_ui"
+      ],
+      "note": "DesignElements 为独立魂玉素材库，替换时按实际引用保留道具身份，不把背景与可交互槽位合成一张图"
+    },
+    {
+      "id": "talent_skin",
+      "role": "天赋背景、节点状态、分支图标、详情与重置确认",
+      "scripts": [
+        "Assets/Scripts/UI/RoleTalentPanel.cs"
+      ],
+      "resource_keys": [
+        "UI/ImmortalV4/Talent/background",
+        "UI/TalentTreeConcept_v3/",
+        "UI/TalentTreeConcept_v4/",
+        "UI/ImmortalV4/Login/celestial_row_v3",
+        "UI/ImmortalV4/Login/celestial_panel_v3"
+      ],
+      "note": "节点与分支仍跨版本资源目录；只换 ImmortalV4 不能覆盖全部天赋视觉"
+    },
+    {
+      "id": "feature_skin",
+      "role": "修炼、宗门、伙伴、洞府、背包、任务、排行、活动、福利与设置",
+      "scripts": [
+        "Assets/Scripts/UI/LobbyFeaturePanel.cs"
+      ],
+      "asset_paths": [
+        "Assets/Art/Resources/UI/ImmortalV4/Features"
+      ],
+      "resource_keys": [
+        "UI/ImmortalV4/Features/sect_scene",
+        "UI/ImmortalV4/Features/partner_hero",
+        "UI/ImmortalV4/Features/estate_scene",
+        "UI/ImmortalV4/Features/rank_hero",
+        "UI/ImmortalV4/Features/welfare_treasure"
+      ],
+      "note": "这些页面共用 Equipment 页面底板与 Features 行/纸面板；人物与场景独立替换，真实未开放状态保留"
+    },
+    {
+      "id": "battle_skin",
+      "role": "战斗 HUD、技能展示、状态栏、退出与原速显示",
+      "scripts": [
+        "Assets/Scripts/UI/BattleView.ReferencePresentation.cs",
+        "Assets/Scripts/UI/ConceptPageSkin.cs"
+      ],
+      "resource_keys": [
+        "UI/ImmortalV4/ConceptV1/battle_ui",
+        "UI/ImmortalV4/ConceptV1/battle_skills",
+        "UI/ImmortalV4/Battle/reference_log_panel",
+        "UI/ImmortalV4/Battle/reference_back",
+        "UI/ImmortalV4/Battle/reference_control"
+      ],
+      "note": "HUD 与单位、特效、环境背景分层；不通过改动画速度表现 UI 优化"
+    },
+    {
+      "id": "battle_environments",
+      "role": "可随机轮换的四张战斗环境背景",
+      "scripts": [
+        "Assets/Scripts/UI/BattleView.Environments.cs"
+      ],
+      "asset_paths": [
+        "Assets/Art/Resources/UI/Battle/Environments"
+      ],
+      "resource_keys": [
+        "UI/Battle/Environments/mist_peaks",
+        "UI/Battle/Environments/moon_sea",
+        "UI/Battle/Environments/jade_valley",
+        "UI/Battle/Environments/dusk_ridges"
+      ],
+      "real_state_text": [
+        "晨雾群峰",
+        "月下云海",
+        "青岚幽谷",
+        "暮色山岚"
+      ]
+    },
+    {
+      "id": "fonts",
+      "role": "标题、按钮、数值与正文统一可读性",
+      "scripts": [
+        "Assets/Scripts/UI/ImmortalV4PageKit.cs"
+      ],
+      "resource_keys": [
+        "Fonts/LobbyDisplay",
+        "Fonts/MSYaHei SDF"
+      ],
+      "note": "保留动态文字；较小多行正文与装饰标题分别设置，勿把文字烘焙进页面背景"
+    }
+  ],
+  "alternative_system": {
+    "name": "ImmortalUIArtPreview / OpenLive 横版备用系统",
+    "current_primary_route": false,
+    "scripts": [
+      "Assets/Scripts/Core/GameBootstrap.cs",
+      "Assets/Scripts/UI/ImmortalUIArtPreview.cs",
+      "Assets/Scripts/UI/ImmortalUIArtPreview.Live.cs",
+      "Assets/Scripts/UI/ImmortalArtKit.cs",
+      "Assets/Scripts/UI/ImmortalGameService.cs",
+      "Assets/Scripts/UI/FeaturePageFit.cs"
+    ],
+    "authored_design": {
+      "width": 1600,
+      "height": 900
+    },
+    "asset_paths": [
+      "Assets/Art/Resources/UI/ImmortalV3/Backgrounds",
+      "Assets/Art/Resources/UI/ImmortalV3/Foregrounds",
+      "Assets/Art/Resources/UI/ImmortalV3/Atlases"
+    ],
+    "routing": "只有存在 Live=true 的 ImmortalUIArtPreview 实例时，UIManager.Show 才由 RouteLive 接管非战斗页面",
+    "existing_service_bindings": [
+      "账号与密码登录",
+      "装备",
+      "活动列表、参与、进度和领奖",
+      "宗门查询、创建、加入、退出"
+    ],
+    "caveat": "这是代码中的另一条界面与服务路径，不等于当前竖版页面已接入上述全部功能；本次效果图不以横版示例数值和预览内容为事实依据"
+  }
+}
+

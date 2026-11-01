@@ -1,0 +1,269 @@
+{
+  "background": "background-login-style.png",
+  "assets": [
+    {
+      "id": "hero",
+      "title": "人物立绘",
+      "group": "人物",
+      "file": "Production/hero.png",
+      "sourceHash": "9dd388d94214dc4b554bd3c9dd24b13b6b508b5a5426853713093ffa612ae712",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/hero.png",
+      "separateText": true
+    },
+    {
+      "id": "profile_frame",
+      "title": "玩家信息框",
+      "group": "玩家信息",
+      "file": "Production/profile_frame.png",
+      "sourceHash": "063c4f9b2082a03e2d1e15dbeadef216c91f11512ced41d47a001d6fcb847bc7",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/profile_frame.png",
+      "separateText": true
+    },
+    {
+      "id": "portrait",
+      "title": "角色头像",
+      "group": "人物",
+      "file": "Production/portrait.png",
+      "sourceHash": "73a7909790edae55394e08f0dc0475a903aabad26698a53858440f0d087fd93c",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/portrait.png",
+      "separateText": true
+    },
+    {
+      "id": "level_badge",
+      "title": "等级徽章",
+      "group": "玩家信息",
+      "file": "Production/level_badge.png",
+      "sourceHash": "fb5699bf62784f52d62e160874df62d76423a3f4217e258c7466eff7312174a4",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/level_badge.png",
+      "separateText": true
+    },
+    {
+      "id": "currency_plate",
+      "title": "货币底框",
+      "group": "货币",
+      "file": "Production/currency_plate.png",
+      "sourceHash": "f9f87b4970246896a8269a2cb4a9d42997a3225f100c6759c8033c9a4b2aab4b",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/currency_plate.png",
+      "separateText": true
+    },
+    {
+      "id": "currency_green",
+      "title": "灵石图标",
+      "group": "货币",
+      "file": "Production/currency_green.png",
+      "sourceHash": "d2d817584620ef3a9d4a66d28a08f3862c1b40cc771ff58b7b7eca1c61804ba9",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/currency_green.png",
+      "separateText": true
+    },
+    {
+      "id": "currency_blue",
+      "title": "仙玉图标",
+      "group": "货币",
+      "file": "Production/currency_blue.png",
+      "sourceHash": "76aa01bd6914d2205ddae797e33a7ea913a45fcd04eaa653686891930ebf70ce",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/currency_blue.png",
+      "separateText": true
+    },
+    {
+      "id": "plus",
+      "title": "增加按钮",
+      "group": "货币",
+      "file": "Production/plus.png",
+      "sourceHash": "cf46cfb03a6e8ef6f9d825d340a389b6fdca6ea8ea3e4ee2a5c43d9eb978a8a1",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/plus.png",
+      "separateText": true
+    },
+    {
+      "id": "progress_track",
+      "title": "经验条底槽",
+      "group": "玩家信息",
+      "file": "Production/progress_track.png",
+      "sourceHash": "f7fdb051040eff5e64de8909fbe8ef5be9d3f513669683949391e6f64f662c63",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/progress_track.png",
+      "separateText": true
+    },
+    {
+      "id": "progress_fill",
+      "title": "经验条填充",
+      "group": "玩家信息",
+      "file": "Production/progress_fill.png",
+      "sourceHash": "ca28d5b91451c15479f23df4aa4ab3b3c7684e168009a9241703c192702a2414",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/progress_fill.png",
+      "separateText": true
+    },
+    {
+      "id": "quest_scroll",
+      "title": "任务卷轴",
+      "group": "任务",
+      "file": "Production/quest_scroll.png",
+      "sourceHash": "e00c36c17649c9dc6973bf3beebac3d4e5cab5ba5e77d661103fc3b4e10228da",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/quest_scroll.png",
+      "separateText": true
+    },
+    {
+      "id": "quest_button",
+      "title": "任务按钮",
+      "group": "任务",
+      "file": "Production/quest_button.png",
+      "sourceHash": "9eb0a1a8e3488459e6691078a640e045d2a23cd4c45e541d757fe4cade3dd60c",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/quest_button.png",
+      "separateText": true
+    },
+    {
+      "id": "shortcut_frame",
+      "title": "功能入口底框",
+      "group": "功能入口",
+      "file": "Production/shortcut_frame.png",
+      "sourceHash": "377e8a66f6249ed83e38473fdfcdd629fca963cf7d858ab1ccc22f7493a74d18",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/shortcut_frame.png",
+      "separateText": true
+    },
+    {
+      "id": "icon_sect",
+      "title": "宗门图标",
+      "group": "功能入口",
+      "file": "Production/icon_sect.png",
+      "sourceHash": "1008e871f98a918d8f61ba5fec31bf03b4827aba3759d388625e2f02e16b5153",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/icon_sect.png",
+      "separateText": true
+    },
+    {
+      "id": "icon_activity",
+      "title": "活动图标",
+      "group": "功能入口",
+      "file": "Production/icon_activity.png",
+      "sourceHash": "0b55f9fe0e3499049d72550751e67456e8886018bbf1139224e98665e6aa30d6",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/icon_activity.png",
+      "separateText": true
+    },
+    {
+      "id": "icon_welfare",
+      "title": "福利图标",
+      "group": "功能入口",
+      "file": "Production/icon_welfare.png",
+      "sourceHash": "feac1743f2428ffb7854743953ecf8b2ffd25bb3a67cb0a96dafeda1ce4fccc3",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/icon_welfare.png",
+      "separateText": true
+    },
+    {
+      "id": "notification_dot",
+      "title": "提示红点",
+      "group": "通用提示",
+      "file": "Production/notification_dot.png",
+      "sourceHash": "3e1783b23f64ac6d703fb0bc48d1ba6ae6b6052fda10cfbab5bdcf0df88aa403",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/notification_dot.png",
+      "separateText": true
+    },
+    {
+      "id": "location_plate",
+      "title": "地点底框",
+      "group": "秘境入口",
+      "file": "Production/location_plate.png",
+      "sourceHash": "4844da5974f50a60ced10bc7db78e94eea6edef558a2614809043a05d1761307",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/location_plate.png",
+      "separateText": true
+    },
+    {
+      "id": "location_pin",
+      "title": "地点图标",
+      "group": "秘境入口",
+      "file": "Production/location_pin.png",
+      "sourceHash": "a1a99a52b29810b7b9074c0453817b02f22fe89521663604bd12efe4f17f2530",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/location_pin.png",
+      "separateText": true
+    },
+    {
+      "id": "portal_arch",
+      "title": "秘境传送门",
+      "group": "秘境入口",
+      "file": "Production/portal_arch.png",
+      "sourceHash": "041316ccc6ae7a273909ac7eb078922fdc1c51b52f87da4441c0e178f633cff0",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/portal_arch.png",
+      "separateText": true
+    },
+    {
+      "id": "realm_button",
+      "title": "秘境主按钮",
+      "group": "秘境入口",
+      "file": "Production/realm_button.png",
+      "sourceHash": "8086b710caeffc62c8e3d095e3924282223bc61750010e85240029da11b12b4e",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/realm_button.png",
+      "separateText": true
+    },
+    {
+      "id": "nav_frame",
+      "title": "底部导航底框",
+      "group": "底部导航",
+      "file": "Production/nav_frame.png",
+      "sourceHash": "2eaa9b30627199ea97a51d9b6579ac1bf04b65896f664da4c60d338998b80a97",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/nav_frame.png",
+      "separateText": true
+    },
+    {
+      "id": "icon_cultivation",
+      "title": "修炼图标",
+      "group": "底部导航",
+      "file": "Production/icon_cultivation.png",
+      "sourceHash": "25caee1aa5528f07f44a55cb9f3c3dd6b99bbe211648841cc28b97a04d77f14e",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/icon_cultivation.png",
+      "separateText": true
+    },
+    {
+      "id": "icon_equipment",
+      "title": "装备图标",
+      "group": "底部导航",
+      "file": "Production/icon_equipment.png",
+      "sourceHash": "7bc4c7927d15c030b2028417410bf2be3cf157d9f07b9e4f2a82d68ff2703bd6",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/icon_equipment.png",
+      "separateText": true
+    },
+    {
+      "id": "icon_inventory",
+      "title": "背包图标",
+      "group": "底部导航",
+      "file": "Production/icon_inventory.png",
+      "sourceHash": "b9b9907bbed1fc7252def74d18fc1aaa54c3340b6c3c6a60a6d6bf831965eeeb",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/icon_inventory.png",
+      "separateText": true
+    },
+    {
+      "id": "icon_souljade",
+      "title": "魂玉图标",
+      "group": "底部导航",
+      "file": "Production/icon_souljade.png",
+      "sourceHash": "f5c6b6c20903a53a745c9a7bcab9f51b06edbb148c72f948b3be52fb0951e105",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/icon_souljade.png",
+      "separateText": true
+    },
+    {
+      "id": "button_arrow",
+      "title": "按钮箭头",
+      "group": "秘境入口",
+      "file": "Production/button_arrow.png",
+      "sourceHash": "92dd7e0b75e4ab340e8f36acbb0ca406298e71471b26b3a645852fb5b3ae0b9b",
+      "unityPath": "Assets/Art/Resources/UI/ImmortalV4/Lobby/button_arrow.png",
+      "separateText": true
+    }
+  ],
+  "dynamicText": [
+    "玩家名",
+    "境界",
+    "等级",
+    "灵石数量",
+    "仙玉数量",
+    "任务标题",
+    "任务目标",
+    "前往",
+    "宗门",
+    "活动",
+    "福利",
+    "地点名称",
+    "进入秘境",
+    "角色",
+    "修炼",
+    "装备",
+    "背包",
+    "魂玉"
+  ],
+  "status": "all visible UI asset categories exported; exact-fidelity approval pending"
+}

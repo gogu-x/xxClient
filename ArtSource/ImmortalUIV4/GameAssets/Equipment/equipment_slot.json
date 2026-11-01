@@ -1,0 +1,6 @@
+{
+  "id": "equipment_slot",
+  "alpha": true,
+  "prompt": "Create an actual standalone production game sprite by editing the supplied design reference. Match the reference asset geometry, palette, materials and details very closely. Do not redesign or show a UI screenshot or sprite sheet. Extract ONLY a normal gold-and-jade equipment slot frame from right side, including attached bottom blank darkjade label plaque and red tassel. Exactly same octagonal nearlysquare shape, sculpted jade corners and fine golden edges. Remove equipment object and ALL text. Preserve plain dark jade inside slot. Single empty slot with blank label; transparent exterior, no scene.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-2a8c70ee-f1b5-4e31-9c64-0fb8426f8b87.png"
+}

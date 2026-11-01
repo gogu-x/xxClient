@@ -1,0 +1,3 @@
+Built-in image_gen edit, no pixel postprocessing.
+Source: exec-0d23e379-96cb-459d-8111-07aad08b07c9.png
+Production game background edit. Edit the FIRST input (bg-paper) to match the warmer colored Chinese watercolor visual design of the SECOND input service-page concept. Keep its exact 941x1672 portrait geometry: top 74 percent clean ivory rice paper with extremely subtle texture for interface content. Only the bottom mountain vignette gets clearer controlled color: slate blue and jade-teal mountain ridges, tiny warm ochre pines and restrained rust leaves, misty ivory valleys; same positions and silhouettes. No writing, no frames, no icons, no people, no UI. Keep dominant empty paper calm. Color present but not busy, a faithful companion to the concept board.

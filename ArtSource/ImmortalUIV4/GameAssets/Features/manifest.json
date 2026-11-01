@@ -1,0 +1,44 @@
+[
+  {
+    "id": "cultivation_hero",
+    "ref": "cultivation",
+    "prompt": "Only the central white-haired meditating immortal seated cross-legged on the golden lotus, with gold circular spiritual aura. Match exact face white navy gold robe and jade ribbons. Remove ALL UI panels lettering numbers bars and scenery. Entire character lotus and aura with true transparent outside, opaque interior, clean alpha no stippling.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-c48c59fb-4c7f-45db-ae30-81dd29bd0a37.png"
+  },
+  {
+    "id": "paper_panel",
+    "ref": "inventory",
+    "prompt": "Only the large ivory parchment panel with thin ornate gold and jade cloud border. Empty warm cream parchment interior with very faint mountain motifs near bottom corners. Remove ALL icons item cells text tabs buttons quantities and scenery. Single rectangular blank panel, ratio 1.3:1, true transparent exterior, no extra UI.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-983ab443-8258-46d8-96ec-84b0d9d123df.png"
+  },
+  {
+    "id": "sect_scene",
+    "ref": "sect",
+    "prompt": "Create the main sect palace illustration alone: the giant azure and gold-roof immortal Chinese gate and surrounding floating mountain waterfalls and cranes, same exact art style. No UI, no name plaques, no Chinese writing, no gold frame. Landscape 3:2 illustration suitable for top hero banner.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-d20a5c46-96d9-4af9-80d3-eb2058124aa9.png"
+  },
+  {
+    "id": "welfare_treasure",
+    "ref": "welfare",
+    "prompt": "Only the grand ornate crimson gold jade treasure chest overflowing gifts and jade gems with flowing red silk ribbons, same exact illustration. No person, no UI, no lettering, no panels, no scenery. True transparent exterior, tight complete silhouette.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-c484f449-5fa2-4db5-97ef-92d7e1da5e4a.png"
+  },
+  {
+    "id": "activity_sword",
+    "ref": "activity",
+    "prompt": "Only the first event banner illustration: white-haired immortal swordsman at left facing right over blue sky cloud sea floating palace mountains, open dark-blue cloud space at right for later text. WIDE 2.5:1 landscape illustration. Remove ALL existing text, dates, UI buttons, frames.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-3e90936a-53d1-46c6-bde4-69db8b2d7398.png"
+  },
+  {
+    "id": "activity_lantern",
+    "ref": "activity",
+    "prompt": "Only second event banner illustration: red-robed woman on left releasing a lantern among warm orange lanterns and Chinese palace night scene, dark space right for later text. WIDE 2.5:1. No lettering numbers dates buttons borders or other UI.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-65932554-2f88-4da1-8357-41f59d0d34c9.png"
+  },
+  {
+    "id": "activity_jade",
+    "ref": "activity",
+    "prompt": "Only third event banner illustration: glowing emerald jade orb at left amongst ancient jade green cavern palace ruins and hanging crystals, darker space right for later text. WIDE 2.5:1. No text dates buttons borders or UI.",
+    "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-153fda5c-7b6f-4be2-be79-a4d2b4d51a4d.png"
+  }
+]

@@ -1,0 +1,118 @@
+{
+  "page": "cultivation",
+  "concept": "../Concepts/cultivation.png",
+  "background": "UI/ImmortalV3/Backgrounds/amber",
+  "foregrounds": [
+    "UI/ImmortalV3/Foregrounds/hero_meditating"
+  ],
+  "atlases": {
+    "panels": {
+      "resource": "UI/ImmortalV3/Atlases/panels",
+      "sprites": [
+        "jade_dark",
+        "ivory_scroll",
+        "plum_dark",
+        "red_lacquer"
+      ]
+    },
+    "controls": {
+      "resource": "UI/ImmortalV3/Atlases/controls",
+      "sprites": [
+        "button_gold",
+        "button_jade",
+        "button_red",
+        "button_disabled",
+        "tab_active",
+        "tab_inactive",
+        "input_field",
+        "currency_capsule"
+      ]
+    },
+    "frames": {
+      "resource": "UI/ImmortalV3/Atlases/frames",
+      "sprites": [
+        "socket_octagon",
+        "socket_selected",
+        "portrait_ring",
+        "node_ring",
+        "badge_banner",
+        "title_plaque"
+      ]
+    },
+    "skills": {
+      "resource": "UI/ImmortalV3/Atlases/skills",
+      "sprites": [
+        "sword",
+        "lotus",
+        "shield",
+        "thunder",
+        "wind",
+        "flame",
+        "mountain",
+        "ice",
+        "spirit",
+        "dragon",
+        "heal",
+        "focus"
+      ]
+    },
+    "items": {
+      "resource": "UI/ImmortalV3/Atlases/items",
+      "sprites": [
+        "sword",
+        "crown",
+        "robe",
+        "bracer",
+        "pendant",
+        "boots",
+        "pill",
+        "ore",
+        "spirit_stone",
+        "lotus",
+        "potion",
+        "talisman",
+        "book",
+        "crystal",
+        "gift",
+        "token"
+      ]
+    },
+    "hud": {
+      "resource": "UI/ImmortalV3/Atlases/hud",
+      "sprites": [
+        "back",
+        "close",
+        "plus",
+        "lock",
+        "check",
+        "arrow",
+        "heart",
+        "attack",
+        "defense",
+        "speed",
+        "gear",
+        "notification"
+      ]
+    },
+    "meters": {
+      "resource": "UI/ImmortalV3/Atlases/meters",
+      "sprites": [
+        "track",
+        "fill_green",
+        "fill_red",
+        "fill_violet",
+        "slider_knob",
+        "toggle_track",
+        "toggle_knob",
+        "divider",
+        "selection_glow"
+      ]
+    }
+  },
+  "textPolicy": "All localized labels, values and counts are runtime text, not baked into resource art.",
+  "referenceResolution": [
+    1920,
+    1080
+  ],
+  "status": "Visual design and reusable art kit; no gameplay binding."
+}

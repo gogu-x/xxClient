@@ -1,0 +1,6 @@
+{
+  "id": "portrait",
+  "title": "角色头像",
+  "prompt": "Produce ONE standalone game-ready PNG asset extracted/reconstructed from this precise lobby design. Match source shape, colors, proportions and illustration exactly, do not invent a new UI design. Transparent background outside the requested object, no scene backdrop, no mockup, no sheet. Preserve full silhouette with small transparent margin. No text or numbers except an explicitly requested symbol. Only the white-haired hero head and shoulders used in top-left circular portrait. No circular frame, level, UI or scenery. Transparent cutout portrait; exact face and costume.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-f119ebcc-fdbf-4bf6-8265-ed9cdac373c4.png"
+}

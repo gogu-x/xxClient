@@ -1,0 +1,14 @@
+D:\gosrc\gotree\g1Client\tools\BattleTimelineLogic.Tests\bin\Release\net8.0\BattleTimelineLogic.Tests.exe
+D:\gosrc\gotree\g1Client\tools\BattleTimelineLogic.Tests\bin\Release\net8.0\BattleTimelineLogic.Tests.deps.json
+D:\gosrc\gotree\g1Client\tools\BattleTimelineLogic.Tests\bin\Release\net8.0\BattleTimelineLogic.Tests.runtimeconfig.json
+D:\gosrc\gotree\g1Client\tools\BattleTimelineLogic.Tests\bin\Release\net8.0\BattleTimelineLogic.Tests.dll
+D:\gosrc\gotree\g1Client\tools\BattleTimelineLogic.Tests\bin\Release\net8.0\BattleTimelineLogic.Tests.pdb
+D:\gosrc\gotree\g1Client\tools\BattleTimelineLogic.Tests\obj\Release\net8.0\BattleTimelineLogic.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\gosrc\gotree\g1Client\tools\BattleTimelineLogic.Tests\obj\Release\net8.0\BattleTimelineLogic.Tests.AssemblyInfoInputs.cache
+D:\gosrc\gotree\g1Client\tools\BattleTimelineLogic.Tests\obj\Release\net8.0\BattleTimelineLogic.Tests.AssemblyInfo.cs
+D:\gosrc\gotree\g1Client\tools\BattleTimelineLogic.Tests\obj\Release\net8.0\BattleTimelineLogic.Tests.csproj.CoreCompileInputs.cache
+D:\gosrc\gotree\g1Client\tools\BattleTimelineLogic.Tests\obj\Release\net8.0\BattleTimelineLogic.Tests.dll
+D:\gosrc\gotree\g1Client\tools\BattleTimelineLogic.Tests\obj\Release\net8.0\refint\BattleTimelineLogic.Tests.dll
+D:\gosrc\gotree\g1Client\tools\BattleTimelineLogic.Tests\obj\Release\net8.0\BattleTimelineLogic.Tests.pdb
+D:\gosrc\gotree\g1Client\tools\BattleTimelineLogic.Tests\obj\Release\net8.0\BattleTimelineLogic.Tests.genruntimeconfig.cache
+D:\gosrc\gotree\g1Client\tools\BattleTimelineLogic.Tests\obj\Release\net8.0\ref\BattleTimelineLogic.Tests.dll

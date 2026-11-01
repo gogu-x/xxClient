@@ -1,0 +1,6 @@
+{
+  "id": "icon_equipment",
+  "title": "装备图标",
+  "prompt": "Produce ONE standalone game-ready PNG asset extracted/reconstructed from this precise lobby design. Match source shape, colors, proportions and illustration exactly, do not invent a new UI design. Transparent background outside the requested object, no scene backdrop, no mockup, no sheet. Preserve full silhouette with small transparent margin. No text or numbers except an explicitly requested symbol. Only the diagonally posed silverblue gold-hilt sword from center bottom navigation icon. Preserve exact shape and diagonal orientation. No ring/cell border, title, notification or background.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-b4276863-83f7-4903-9616-39bd5231329b.png"
+}

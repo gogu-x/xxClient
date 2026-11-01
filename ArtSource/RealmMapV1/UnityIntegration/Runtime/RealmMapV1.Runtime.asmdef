@@ -1,0 +1,6 @@
+{
+  "name": "RealmMapV1.Runtime",
+  "rootNamespace": "XiuXian.RealmMap",
+  "references": ["Unity.TextMeshPro"],
+  "autoReferenced": true
+}

@@ -1,0 +1,256 @@
+{
+    "atlas": "Assets/Art/Resources/UI/QuietInkV3/SoulJade/icons.png",
+    "coordinate_origin": "bottom-left",
+    "name_order": "top-left, then left-to-right, then next row",
+    "source_sha256": "2860c352413569c633f49668226b271c15634de5ca83f65d8d099ec5c0bc1686",
+    "source_bytes_unchanged": true,
+    "width": 1983,
+    "height": 793,
+    "columns": 5,
+    "rows": 2,
+    "sprite_count": 10,
+    "alpha_threshold": 0.15000000596046449,
+    "padding_ratio_per_side": 0.009999999776482582,
+    "sprites": [
+        {
+            "name": "soul_jade_00",
+            "column": 0,
+            "row_from_top": 0,
+            "padding_pixels": 4,
+            "cell": {
+                "x": 0,
+                "y": 397,
+                "width": 396,
+                "height": 396
+            },
+            "alpha_bounds": {
+                "x": 44,
+                "y": 425,
+                "width": 337,
+                "height": 328
+            },
+            "sprite_rect": {
+                "x": 40,
+                "y": 416,
+                "width": 345,
+                "height": 345
+            }
+        },
+        {
+            "name": "soul_jade_01",
+            "column": 1,
+            "row_from_top": 0,
+            "padding_pixels": 4,
+            "cell": {
+                "x": 396,
+                "y": 397,
+                "width": 397,
+                "height": 396
+            },
+            "alpha_bounds": {
+                "x": 431,
+                "y": 423,
+                "width": 339,
+                "height": 331
+            },
+            "sprite_rect": {
+                "x": 427,
+                "y": 415,
+                "width": 347,
+                "height": 347
+            }
+        },
+        {
+            "name": "soul_jade_02",
+            "column": 2,
+            "row_from_top": 0,
+            "padding_pixels": 4,
+            "cell": {
+                "x": 793,
+                "y": 397,
+                "width": 396,
+                "height": 396
+            },
+            "alpha_bounds": {
+                "x": 823,
+                "y": 423,
+                "width": 337,
+                "height": 331
+            },
+            "sprite_rect": {
+                "x": 819,
+                "y": 416,
+                "width": 345,
+                "height": 345
+            }
+        },
+        {
+            "name": "soul_jade_03",
+            "column": 3,
+            "row_from_top": 0,
+            "padding_pixels": 4,
+            "cell": {
+                "x": 1189,
+                "y": 397,
+                "width": 397,
+                "height": 396
+            },
+            "alpha_bounds": {
+                "x": 1214,
+                "y": 423,
+                "width": 339,
+                "height": 331
+            },
+            "sprite_rect": {
+                "x": 1210,
+                "y": 415,
+                "width": 347,
+                "height": 347
+            }
+        },
+        {
+            "name": "soul_jade_04",
+            "column": 4,
+            "row_from_top": 0,
+            "padding_pixels": 4,
+            "cell": {
+                "x": 1586,
+                "y": 397,
+                "width": 397,
+                "height": 396
+            },
+            "alpha_bounds": {
+                "x": 1601,
+                "y": 425,
+                "width": 339,
+                "height": 330
+            },
+            "sprite_rect": {
+                "x": 1597,
+                "y": 416,
+                "width": 347,
+                "height": 347
+            }
+        },
+        {
+            "name": "soul_jade_05",
+            "column": 0,
+            "row_from_top": 1,
+            "padding_pixels": 4,
+            "cell": {
+                "x": 0,
+                "y": 0,
+                "width": 396,
+                "height": 397
+            },
+            "alpha_bounds": {
+                "x": 44,
+                "y": 45,
+                "width": 337,
+                "height": 334
+            },
+            "sprite_rect": {
+                "x": 40,
+                "y": 39,
+                "width": 345,
+                "height": 345
+            }
+        },
+        {
+            "name": "soul_jade_06",
+            "column": 1,
+            "row_from_top": 1,
+            "padding_pixels": 4,
+            "cell": {
+                "x": 396,
+                "y": 0,
+                "width": 397,
+                "height": 397
+            },
+            "alpha_bounds": {
+                "x": 430,
+                "y": 45,
+                "width": 338,
+                "height": 334
+            },
+            "sprite_rect": {
+                "x": 426,
+                "y": 39,
+                "width": 346,
+                "height": 346
+            }
+        },
+        {
+            "name": "soul_jade_07",
+            "column": 2,
+            "row_from_top": 1,
+            "padding_pixels": 4,
+            "cell": {
+                "x": 793,
+                "y": 0,
+                "width": 396,
+                "height": 397
+            },
+            "alpha_bounds": {
+                "x": 823,
+                "y": 43,
+                "width": 339,
+                "height": 335
+            },
+            "sprite_rect": {
+                "x": 819,
+                "y": 37,
+                "width": 347,
+                "height": 347
+            }
+        },
+        {
+            "name": "soul_jade_08",
+            "column": 3,
+            "row_from_top": 1,
+            "padding_pixels": 4,
+            "cell": {
+                "x": 1189,
+                "y": 0,
+                "width": 397,
+                "height": 397
+            },
+            "alpha_bounds": {
+                "x": 1215,
+                "y": 45,
+                "width": 337,
+                "height": 334
+            },
+            "sprite_rect": {
+                "x": 1211,
+                "y": 39,
+                "width": 345,
+                "height": 345
+            }
+        },
+        {
+            "name": "soul_jade_09",
+            "column": 4,
+            "row_from_top": 1,
+            "padding_pixels": 4,
+            "cell": {
+                "x": 1586,
+                "y": 0,
+                "width": 397,
+                "height": 397
+            },
+            "alpha_bounds": {
+                "x": 1601,
+                "y": 44,
+                "width": 339,
+                "height": 336
+            },
+            "sprite_rect": {
+                "x": 1597,
+                "y": 38,
+                "width": 347,
+                "height": 347
+            }
+        }
+    ]
+}

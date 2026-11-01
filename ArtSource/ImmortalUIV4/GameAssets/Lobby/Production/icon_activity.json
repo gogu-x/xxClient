@@ -1,0 +1,6 @@
+{
+  "id": "icon_activity",
+  "title": "活动图标",
+  "prompt": "Produce ONE standalone game-ready PNG asset extracted/reconstructed from this precise lobby design. Match source shape, colors, proportions and illustration exactly, do not invent a new UI design. Transparent background outside the requested object, no scene backdrop, no mockup, no sheet. Preserve full silhouette with small transparent margin. No text or numbers except an explicitly requested symbol. Only the redgold open scroll icon inside right middle activity shortcut. Same scroll paper, red rod and gold bindings. No frame, title, red dot or background.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-5603ee98-597f-4db0-8539-85e2faf0be5b.png"
+}

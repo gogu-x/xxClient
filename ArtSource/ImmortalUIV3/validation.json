@@ -1,0 +1,12 @@
+{
+  "expectedImages": 46,
+  "actualImages": 46,
+  "missing": [],
+  "pages": 21,
+  "namedAtlasSprites": 100,
+  "runtimeIntegration": false,
+  "note": "Source PNG files preserved unchanged; Unity import verification tracked separately.",
+  "unityVerifiedAtlasSprites": 100,
+  "unityConsoleErrors": 1,
+  "importWarningResolution": "Manifest timestamp race during asset preview; import-plan.json synchronously reimported and package re-exported. All 100 atlas sprites load."
+}

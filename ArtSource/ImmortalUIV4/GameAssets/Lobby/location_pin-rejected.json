@@ -1,0 +1,6 @@
+{
+  "id": "location_pin",
+  "title": "地点图标",
+  "prompt": "Produce ONE standalone game-ready PNG asset extracted/reconstructed from this precise lobby design. Match source shape, colors, proportions and illustration exactly, do not invent a new UI design. Transparent background outside the requested object, no scene backdrop, no mockup, no sheet. Preserve full silhouette with small transparent margin. No text or numbers except an explicitly requested symbol. Only small cream-gold map location pin symbol on 云海仙门 plaque. Transparent icon, no plaque or characters.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-14d90037-0a55-4c3e-83c1-53622182f0d0.png"
+}

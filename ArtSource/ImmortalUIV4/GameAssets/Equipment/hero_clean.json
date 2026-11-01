@@ -1,0 +1,6 @@
+{
+  "id": "hero_clean",
+  "alpha": true,
+  "prompt": "Clean this character sprite for production: remove ALL gray/green cloudy halo and all backdrop between hair strands and around silhouette. Keep only character, hair, costume and ribbons on actual zero-alpha transparent background. Preserve face, costume, pose and illustration unchanged. Expand transparent canvas enough for 5% padding on all sides; do not clip crown or shoes. No added lighting bloom or shadow, no new scene. Alpha edges clean and softly antialiased.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-a2e2c023-6bae-4949-bb8a-2aed4f8228ab.png"
+}

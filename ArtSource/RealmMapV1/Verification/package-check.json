@@ -1,0 +1,26 @@
+{
+  "png_count": 12,
+  "atlas_count": 5,
+  "sprite_count": 37,
+  "entrance_types": 12,
+  "map_entrances": 24,
+  "persistent_map_labels": 6,
+  "lobby_layers": 13,
+  "lobby_texts": 13,
+  "missing_references": [],
+  "overlapping_slices": [],
+  "out_of_bounds_slices": [],
+  "pixel_edits": false,
+  "unity_import_executed_by_this_check": false,
+  "unity_visual_review_executed_by_this_check": false,
+  "unity_import_report_present": true,
+  "actual_world_texture": [
+    1536,
+    1024
+  ],
+  "coordinate_domain": [
+    3840,
+    2560
+  ],
+  "note": "Coordinate domain is not source texture resolution. No 4K or pixel-exact runtime fidelity claim."
+}

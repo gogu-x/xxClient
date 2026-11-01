@@ -1,0 +1,6 @@
+{
+  "id": "tab_jade",
+  "alpha": true,
+  "prompt": "Create an actual standalone production game sprite by editing the supplied design reference. Match the reference asset geometry, palette, materials and details very closely. Do not redesign or show a UI screenshot or sprite sheet. Extract only bottom-right darkjade 天赋 navigation tab with gold trim and small red tassel. Erase all text. One blank horizontal tab approx3:1 with preserved decorative edges. Transparent exterior, no adjacent tabs or scene.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-45250088-35cf-4634-9c00-65174a803038.png"
+}

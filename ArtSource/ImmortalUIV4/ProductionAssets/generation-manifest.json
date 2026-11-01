@@ -1,0 +1,47 @@
+{
+  "method": "built-in imagegen",
+  "referenceRoot": "ArtSource/ImmortalUIV4/Concepts",
+  "jobs": [
+    {
+      "id": "nameplate",
+      "prompt": "Extract the ivory horizontal character-name panel around y890-1040 from this character UI into a standalone transparent game sprite. Keep gold filigree border, pale ivory cloud-pattern center, jade-green curling clouds and pink cherry blossoms at ends. Remove ALL Chinese text, seals, divider text, background, hero and all other UI. Preserve source proportions approx 650:170, exact decorative style, clean blank editable center. One panel only."
+    },
+    {
+      "id": "portrait_frame",
+      "prompt": "Extract only one ornate circular character portrait frame from the left side of the reference, gold sculpted ring with cloud filigree, small jade ornaments and red tassel at right, transparent inside and outside. Remove character portrait, all text, selection tag and all background. One circular frame asset only, faithful thin gold design, no replacement UI, no extra icons."
+    },
+    {
+      "id": "partner_hero",
+      "ref": "partner",
+      "prompt": "Extract ONLY the central black-haired female immortal holding a round pink lotus fan from the reference as a transparent standalone game character sprite. Preserve her exact face, pose, flowing ivory gold jade and pink dress, jewelry and ribbons. Remove all UI, name banners, buttons, background and text. Faithful extraction, no redesign. Character down to her flowing robe hem. Transparent background."
+    },
+    {
+      "id": "rank_hero",
+      "ref": "rank",
+      "prompt": "Extract ONLY the seated white-haired male immortal with his ornate circular golden throne from the top half of the reference, as one standalone transparent game artwork. Preserve reclining pose, hand beside face, flowing white hair, navy gold white robes, exact composition. Remove ranking medal, name banner, all labels, UI panels and background. No text or numbers. Faithful source artwork not redesign."
+    },
+    {
+      "id": "estate_scene",
+      "ref": "estate",
+      "prompt": "Extract the central floating estate island complex from this reference as one transparent game environmental illustration. Preserve its exact perspective and layout: green spirit farm left upper, library pagoda right upper, huge gold alchemy furnace right middle, meditation pavilion left lower, linking stairways and waterfalls. Remove ALL text plaques, levels, icons, resource panels, buttons, UI, surrounding sky and distant mountains. Standalone island asset, transparent outside. Faithful gold jade white pink palette."
+    },
+    {
+      "id": "jade_row",
+      "ref": "rank",
+      "prompt": "Extract one narrow horizontal ranking row panel from the lower half of reference, as standalone blank reusable game UI resource. Dark navy teal silk interior with subtle distant palace pattern, very thin ornate gold border and small corner cloud accents. Remove portraits, medal, names, numbers, ALL text. Wide 6:1 visible panel ratio, no long tassels, no huge corner embellishments. Actual alpha transparent outside frame. One panel only faithful original."
+    },
+    {
+      "id": "jade_vertical",
+      "ref": "estate",
+      "prompt": "Extract only the vertical dark jade and gold building-name plaque from right side of reference (the plaque labeled library). Remove all lettering. Standalone vertical narrow UI nameplate, dark jade interior thin sculpted gold rim with small cloud tips, transparent outside. Visible proportion about 1:2.7. No icons, scenery, horizontal levels or badges, no text."
+    },
+    {
+      "id": "background",
+      "prompt": "Extract and restore only the clean environment background layer of this portrait login concept. Remove central character, logo, all text, all input frames buttons panels and UI. Preserve the original giant golden moon near top, golden floating ivory palaces, waterfalls, cloud ocean, red maple framing left and right, foreground lanterns. Maintain exact 9:16 composition and illumination, no new design. Fill occluded areas naturally. Opaque full bleed portrait background."
+    },
+    {
+      "id": "logo",
+      "prompt": "Extract only the top calligraphy logo from this login concept as one transparent game logo sprite: black brush-calligraphy Chinese 仙途, small red seal, flowing pale-gold cloud flourish, and subtitle 三千大道 自在修仙. Preserve lettering style and arrangement faithfully. Remove all sky, palace, background, hero and UI, transparent background. Only logo and subtitle."
+    }
+  ]
+}

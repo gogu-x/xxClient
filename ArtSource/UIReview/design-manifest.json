@@ -1,0 +1,96 @@
+{
+  "project": "D:\\gosrc\\gotree\\g1Client",
+  "backend": {
+    "path": "D:\\gosrc\\gotree\\gogs",
+    "branch": "v1006"
+  },
+  "phase": "UI design preview only; no backend requests or player-save writes",
+  "menu": "仙途/UI/打开全页面设计预览",
+  "referenceResolution": [
+    1600,
+    900
+  ],
+  "screenshotResolution": [
+    1920,
+    1080
+  ],
+  "pages": [
+    "登录",
+    "大厅",
+    "角色",
+    "修炼",
+    "装备",
+    "背包",
+    "天赋",
+    "魂玉",
+    "秘境战斗",
+    "任务",
+    "宗门",
+    "活动",
+    "福利",
+    "伙伴",
+    "排行",
+    "仙府",
+    "设置"
+  ],
+  "checks": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "pages": [
+          "0: OK",
+          "1: OK",
+          "2: OK",
+          "3: OK",
+          "4: OK",
+          "5: OK",
+          "6: OK",
+          "7: OK",
+          "8: OK",
+          "9: OK",
+          "10: OK",
+          "11: OK",
+          "12: OK",
+          "13: OK",
+          "14: OK",
+          "15: OK",
+          "16: OK"
+        ],
+        "inventorySelection": "星纹符",
+        "modal": true,
+        "tabs": true,
+        "serverPicker": true
+      },
+      "compiler": "codedom"
+    }
+  },
+  "assets": [
+    {
+      "file": "Assets/Art/Resources/UI/Destinations/AmberSanctuary.png",
+      "tool": "built-in image_gen",
+      "prompt": "16:9 Chinese manhua xianxia sanctuary, bronze incense vessel and golden dao circle, amber sunlight, autumn vermilion maples, ivory clouds, turquoise jade accents; no people, text, UI or logo."
+    },
+    {
+      "file": "Assets/Art/Resources/UI/Destinations/JadeMonastery.png",
+      "tool": "built-in image_gen",
+      "prompt": "16:9 emerald mountain monastery, jade-tiled gate, waterfall, turquoise lake, bamboo, ivory mist and peach sunrise; refined manhua linework; no people, UI, text or logo."
+    },
+    {
+      "file": "Assets/Art/Resources/UI/Destinations/VermilionFestival.png",
+      "tool": "built-in image_gen",
+      "prompt": "16:9 celestial festival courtyard above clouds at sunset, vermilion pavilion, silk banners, coral lanterns, ivory gold details, peach clouds; detailed manhua; no people, UI, text or logos."
+    },
+    {
+      "file": "Assets/Art/Resources/UI/Destinations/ItemAtlas.png",
+      "tool": "built-in image_gen; revised for transparent gutters",
+      "prompt": "Transparent 4x4 Chinese fantasy inventory atlas: sword, crown, robe, bracer, jade pendant, boots, red pill bottle, ore, spirit stone, lotus, turquoise vial, red talisman, book, purple crystal, gift chest, bronze token. Varied gold, jade, red, ivory and violet. Preserve complete silhouettes with transparent separation, no frames or labels."
+    }
+  ],
+  "limitations": [
+    "Independent design-preview overlay; production screens are not switched to mock data.",
+    "Battle uses illustrative standees, not a replacement 3D combat implementation.",
+    "Detail, upgrade and reward dialogs show design interactions only.",
+    "Existing soul-jade icon art reused for accurate item identity."
+  ]
+}

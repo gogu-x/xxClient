@@ -1,0 +1,6 @@
+{
+  "id": "background",
+  "alpha": false,
+  "prompt": "Create an actual standalone production game sprite by editing the supplied design reference. Match the reference asset geometry, palette, materials and details very closely. Do not redesign or show a UI screenshot or sprite sheet. Remove ALL UI, text, numbers, frames, icons, character and character clothing from this image. Reconstruct only the continuous floating-palace cloud mountain environment in exactly the same perspective, placement, warm light, red maple corners and stone terrace. Portrait 9:16 background plate, full bleed. No people, objects from equipment slots, logos or interface.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-eff963a7-1357-4c9b-ab7f-ba8f55029bab.png"
+}

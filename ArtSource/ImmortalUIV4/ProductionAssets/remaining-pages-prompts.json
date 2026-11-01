@@ -1,0 +1,37 @@
+{
+  "method": "built-in imagegen",
+  "jobs": [
+    {
+      "id": "SoulJade/background",
+      "ref": "souljade",
+      "transparent": false,
+      "prompt": "Edit target is the attached portrait game UI. Extract/reconstruct ONLY its full 9:16 background: violet celestial night, huge white moon upper right, many tiered Chinese palaces on steep floating mountains, white waterfalls, violet starry sky, flowering branches, stone terrace at bottom. Precisely retain reference perspective, colors, placement and style. Remove ALL UI, rings, jewels, icons, text, panels and buttons, naturally fill behind them. No new hero. This is a production game background, not a screen mockup."
+    },
+    {
+      "id": "SoulJade/ring",
+      "ref": "souljade",
+      "transparent": true,
+      "prompt": "Extract ONLY the large thin gold astrolabe behind the 6 soul gems from the attached UI reference. One standalone circular transparent sprite. Preserve delicate concentric gold orbital rings, fine glyph ornaments, small moon phase discs, tiny violet stars. Remove ALL six gems, their frames and names, central purple orb, background scene, panels, text, UI. Keep transparent center and outside; original gold filigree geometry. Entire circle centered with minimal padding."
+    },
+    {
+      "id": "SoulJade/panel",
+      "ref": "souljade",
+      "transparent": true,
+      "prompt": "Extract ONLY the wide lower item detail panel at y1000-1280 from reference as ONE standalone transparent game sprite. Preserve dark violet-black patterned interior, delicate silver gold curling corners, white clouds, red tassels and exact frame proportions about 780 wide x 280 high. Remove ALL gem icons, text, rarity labels, dividers and other UI. Clean blank interior for live text. Transparent outside. No redesign."
+    },
+    {
+      "id": "Talent/background",
+      "ref": "talent",
+      "transparent": false,
+      "prompt": "Extract/reconstruct ONLY the full portrait 9:16 background of attached talent page. Match reference closely: magical blue violet night sky golden celestial orbit at top, mountain palaces, waterfalls and immense valley, flowering branches and warm lanterns, terrace at bottom. Remove ALL interface: nodes, gold connection lines, header, buttons, text, panels, jewels. Reconstruct behind all removed UI, no characters. Faithful color, perspective and placement, standalone background."
+    },
+    {
+      "id": "Battle/background",
+      "prompt": "Extract/reconstruct ONLY the full 9:16 background environment of attached battle UI. Preserve exact warm sunrise, red maple branches at top corners, distant golden Chinese palaces on vertical mountains and waterfalls, and large jade green circular carved stone battle terrace occupying bottom half with golden rails. Remove ALL characters, creatures, health bars, UI, panels, text, skill effects and buttons. No people or creatures at all. Reconstruct clean empty arena floor for actual game combat units. Match original perspective and warm gold turquoise palette precisely."
+    },
+    {
+      "id": "SoulJade/socket",
+      "prompt": "Extract a single ornate circular soul-jade socket frame from the attached reference UI: thin sculpted gold ring with white pearl/jade accents and four small filigree protrusions, similar to fire gem frame at top. Transparent center and outside. Remove all gem artwork, fire, glow interior, text, name label, background and other UI. One isolated circular empty gold frame only, centered, minimal padding, faithful delicate source styling."
+    }
+  ]
+}

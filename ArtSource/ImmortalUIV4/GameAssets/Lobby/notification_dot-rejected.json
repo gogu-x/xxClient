@@ -1,0 +1,6 @@
+{
+  "id": "notification_dot",
+  "title": "提示红点",
+  "prompt": "Produce ONE standalone game-ready PNG asset extracted/reconstructed from this precise lobby design. Match source shape, colors, proportions and illustration exactly, do not invent a new UI design. Transparent background outside the requested object, no scene backdrop, no mockup, no sheet. Preserve full silhouette with small transparent margin. No text or numbers except an explicitly requested symbol. Only one tiny red circular notification badge with cream-gold slim rim from right shortcut. Single red round indicator, no number or exclamation mark. Transparent outside.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-7de9ea0f-a76b-4f0a-9378-5c312e56d54e.png"
+}

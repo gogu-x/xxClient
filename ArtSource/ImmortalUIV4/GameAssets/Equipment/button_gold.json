@@ -1,0 +1,6 @@
+{
+  "id": "button_gold",
+  "alpha": true,
+  "prompt": "Create an actual standalone production game sprite by editing the supplied design reference. Match the reference asset geometry, palette, materials and details very closely. Do not redesign or show a UI screenshot or sprite sheet. Extract ONLY the gold 精炼 button from lower detail panel. One isolated horizontal gold button approx 3.3:1, original ornate cloud edge and luminous palegold patterned center. Remove letters completely; blank center. No surrounding panel or scene. Transparent outside contour, full ornament visible with padding.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-94262b51-811e-4dd6-b5ee-33c2fc0712bf.png"
+}

@@ -1,0 +1,85 @@
+{
+  "page": "confirm",
+  "concept": "../Concepts/confirm.png",
+  "background": "UI/ImmortalV3/Backgrounds/amber",
+  "foregrounds": [],
+  "atlases": {
+    "panels": {
+      "resource": "UI/ImmortalV3/Atlases/panels",
+      "sprites": [
+        "jade_dark",
+        "ivory_scroll",
+        "plum_dark",
+        "red_lacquer"
+      ]
+    },
+    "controls": {
+      "resource": "UI/ImmortalV3/Atlases/controls",
+      "sprites": [
+        "button_gold",
+        "button_jade",
+        "button_red",
+        "button_disabled",
+        "tab_active",
+        "tab_inactive",
+        "input_field",
+        "currency_capsule"
+      ]
+    },
+    "hud": {
+      "resource": "UI/ImmortalV3/Atlases/hud",
+      "sprites": [
+        "back",
+        "close",
+        "plus",
+        "lock",
+        "check",
+        "arrow",
+        "heart",
+        "attack",
+        "defense",
+        "speed",
+        "gear",
+        "notification"
+      ]
+    },
+    "items": {
+      "resource": "UI/ImmortalV3/Atlases/items",
+      "sprites": [
+        "sword",
+        "crown",
+        "robe",
+        "bracer",
+        "pendant",
+        "boots",
+        "pill",
+        "ore",
+        "spirit_stone",
+        "lotus",
+        "potion",
+        "talisman",
+        "book",
+        "crystal",
+        "gift",
+        "token"
+      ]
+    },
+    "frames": {
+      "resource": "UI/ImmortalV3/Atlases/frames",
+      "sprites": [
+        "socket_octagon",
+        "socket_selected",
+        "portrait_ring",
+        "node_ring",
+        "badge_banner",
+        "title_plaque"
+      ]
+    }
+  },
+  "textPolicy": "All localized labels, values and counts are runtime text, not baked into resource art.",
+  "referenceResolution": [
+    1920,
+    1080
+  ],
+  "status": "Visual design and reusable art kit; no gameplay binding."
+}

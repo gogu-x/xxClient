@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaea967ab5dd7b04187d4c8e89d36bf8, type: 3}
+  m_Name: BuildingDef_XianFu
+  m_EditorClassIdentifier: 
+  id: xianfu
+  displayName: "\u4ED9\u5E9C"
+  icon: {fileID: 0}
+  glowIcon: {fileID: 0}
+  anchoredPosition: {x: -40, y: -230}
+  size: {x: 200, y: 240}
+  sortOrder: 0
+  targetScreen: 2
+  unlockLevel: 0
+  lockedTip: "\u5C1A\u672A\u5F00\u653E"

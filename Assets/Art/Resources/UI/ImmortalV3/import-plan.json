@@ -1,0 +1,215 @@
+{
+  "sheets": [
+    {
+      "id": "panels",
+      "columns": 2,
+      "rows": 2,
+      "names": [
+        "jade_dark",
+        "ivory_scroll",
+        "plum_dark",
+        "red_lacquer"
+      ]
+    },
+    {
+      "id": "controls",
+      "columns": 2,
+      "rows": 4,
+      "names": [
+        "button_gold",
+        "button_jade",
+        "button_red",
+        "button_disabled",
+        "tab_active",
+        "tab_inactive",
+        "input_field",
+        "currency_capsule"
+      ]
+    },
+    {
+      "id": "frames",
+      "columns": 3,
+      "rows": 2,
+      "names": [
+        "socket_octagon",
+        "socket_selected",
+        "portrait_ring",
+        "node_ring",
+        "badge_banner",
+        "title_plaque"
+      ]
+    },
+    {
+      "id": "navigation",
+      "columns": 4,
+      "rows": 4,
+      "names": [
+        "character",
+        "cultivation",
+        "equipment",
+        "inventory",
+        "souljade",
+        "sect",
+        "activity",
+        "welfare",
+        "task",
+        "partner",
+        "rank",
+        "estate",
+        "settings",
+        "battle",
+        "talent",
+        "mail"
+      ],
+      "yCuts": [
+        0,
+        334,
+        650,
+        950,
+        1244
+      ]
+    },
+    {
+      "id": "items",
+      "columns": 4,
+      "rows": 4,
+      "names": [
+        "sword",
+        "crown",
+        "robe",
+        "bracer",
+        "pendant",
+        "boots",
+        "pill",
+        "ore",
+        "spirit_stone",
+        "lotus",
+        "potion",
+        "talisman",
+        "book",
+        "crystal",
+        "gift",
+        "token"
+      ],
+      "xCuts": [
+        0,
+        320,
+        640,
+        960,
+        1254
+      ],
+      "yCuts": [
+        0,
+        344,
+        636,
+        930,
+        1254
+      ]
+    },
+    {
+      "id": "skills",
+      "columns": 4,
+      "rows": 3,
+      "names": [
+        "sword",
+        "lotus",
+        "shield",
+        "thunder",
+        "wind",
+        "flame",
+        "mountain",
+        "ice",
+        "spirit",
+        "dragon",
+        "heal",
+        "focus"
+      ],
+      "yCuts": [
+        0,
+        390,
+        730,
+        1086
+      ]
+    },
+    {
+      "id": "souljades",
+      "columns": 3,
+      "rows": 2,
+      "names": [
+        "flame",
+        "arrow",
+        "tortoise",
+        "wolf",
+        "lightning",
+        "dragon"
+      ]
+    },
+    {
+      "id": "buildings",
+      "columns": 2,
+      "rows": 2,
+      "names": [
+        "field",
+        "alchemy",
+        "library",
+        "meditation"
+      ]
+    },
+    {
+      "id": "hud",
+      "columns": 4,
+      "rows": 3,
+      "names": [
+        "back",
+        "close",
+        "plus",
+        "lock",
+        "check",
+        "arrow",
+        "heart",
+        "attack",
+        "defense",
+        "speed",
+        "gear",
+        "notification"
+      ]
+    },
+    {
+      "id": "meters",
+      "columns": 3,
+      "rows": 3,
+      "names": [
+        "track",
+        "fill_green",
+        "fill_red",
+        "fill_violet",
+        "slider_knob",
+        "toggle_track",
+        "toggle_knob",
+        "divider",
+        "selection_glow"
+      ]
+    },
+    {
+      "id": "event_art",
+      "columns": 3,
+      "rows": 1,
+      "names": [
+        "sword_trial",
+        "seven_days",
+        "jade_cave"
+      ]
+    },
+    {
+      "id": "portraits",
+      "columns": 2,
+      "rows": 2,
+      "names": [
+        "male",
+        "female",
+        "swordsman",
+        "goddess"
+      ]
+    }
+  ]
+}

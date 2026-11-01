@@ -1,0 +1,16 @@
+{
+  "reference": "ArtSource/ImmortalUIV4/Concepts/lobby.png",
+  "method": "built-in imagegen",
+  "assets": [
+    {
+      "id": "background",
+      "prompt": "Edit target: attached original lobby concept. Produce ONLY its clean environment background layer, same portrait 941:1672 composition. Remove all UI panels, all text, currency bars, task scroll, right icons, bottom navigation, green entrance button and its small portal decoration, location label, and central white-haired male character. Carefully inpaint only these removed regions using the surrounding floating palace architecture, waterfalls, clouds, red maple and foreground balcony. Preserve existing visible environment, camera, golden small sun at upper center, ivory palace at upper middle, red maple branches upper left, color and illumination as faithfully as possible. Do not redesign, do not add giant moon, do not change camera. No text or UI remains. Full bleed opaque background.",
+      "output": "Generated images are saved to C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8 as C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-a9f1a8a0-9451-43ec-9541-414cb1f128b1.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "hero",
+      "prompt": "Edit target: original lobby concept. Extract ONLY the exact central white-haired male character as one game sprite on genuinely transparent background. Preserve his face, gold branching crown, flowing long white hair, left-reaching open palm, navy white gold robes, teal ribbons, large flowing hem, exact pose and proportions and painted detail. The character originally occupies x170..940 y285..1165 of 941x1672 canvas. Output tightly framed around this character, no feet added, keep original flowing hem silhouette. Remove environment, all UI, all text, icons, foreground label and button. Restore tiny occluded robe sections naturally. This is faithful extraction not character redesign; do not change anatomy costume face or pose.",
+      "output": "Generated images are saved to C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8 as C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-d60e38aa-022f-49d2-b8a2-cb12e03f1d2e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-01",
+  "method": "Unity MCP execute_code + ScreenCapture, inspected actual PNG outputs",
+  "resolution": [1080, 1920],
+  "design_resolution": [941, 1672],
+  "state": "Existing running game was paused; preview overlay advanced by a frame, original pause state preserved",
+  "login": {
+    "screenshot": "Concepts/05-login-unity-composite.png",
+    "result": "pass-for-layered-design-preview",
+    "layers": "Independent background, transparent cultivator, logo, sliced controls, dynamic TMP text",
+    "fixes": ["Replaced unsupported dropdown glyph with two UI strokes", "Advanced paused frame before final capture"],
+    "prefab_missing_scripts": 0,
+    "network_actions_wired": false
+  },
+  "atlases": {
+    "sprite_count": 48,
+    "surfaces": ["#F3F0E8", "#29332E"],
+    "screenshots": ["Concepts/06-navigation-unity-review.png", "Concepts/07-items-unity-review.png", "Concepts/08-controls-unity-review.png"],
+    "result": "No obvious colored fringe, opaque atlas background, clipped primary shapes or neighboring sprite bleed at inspected sizes",
+    "limitations": "Dark ink details and divider have low contrast on the dark test surface; intended theme is light paper, not a dark theme"
+  },
+  "nine_slice_samples": {
+    "buttons": [206, 68],
+    "panels": [206, 125],
+    "health_bars": [206, 18],
+    "login_selector": [501, 82],
+    "login_primary_button": [601, 118],
+    "result": "Corners remain intact at inspected dimensions; no all-size guarantee"
+  },
+  "compile_error_CS_count": 0,
+  "console_note": "One existing missing-script warning/error in the game Console; the new prefab hierarchy has zero missing scripts",
+  "out_of_scope": ["Live login and server selection integration", "Replacement of all formal game pages", "Real battle playback validation", "Mobile device safe-area and multi-resolution acceptance"],
+  "package": "QuietInkV1-project-assets.unitypackage",
+  "package_dependencies": "For the current g1Client project; existing TMP fonts, uGUI, TMP package, LobbyPortraitLayout and texture import processor are not bundled"
+}

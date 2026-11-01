@@ -1,0 +1,7 @@
+{
+  "name": "RealmMapV1.Editor",
+  "rootNamespace": "XiuXian.RealmMap.Editor",
+  "references": ["RealmMapV1.Runtime", "Unity.TextMeshPro"],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}

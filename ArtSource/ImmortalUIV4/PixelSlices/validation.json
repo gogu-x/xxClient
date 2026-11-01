@@ -1,0 +1,195 @@
+{
+  "pageCount": 21,
+  "cropCount": null,
+  "reports": [
+    {
+      "id": "login",
+      "cropCount": 13,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "lobby",
+      "cropCount": 26,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "character",
+      "cropCount": 23,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "cultivation",
+      "cropCount": 16,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "equipment",
+      "cropCount": 29,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "inventory",
+      "cropCount": 47,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "souljade",
+      "cropCount": 30,
+      "sourceWidth": 940,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "talent",
+      "cropCount": 23,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "battle",
+      "cropCount": 26,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "task",
+      "cropCount": 21,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "sect",
+      "cropCount": 13,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "activity",
+      "cropCount": 14,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "welfare",
+      "cropCount": 25,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "partner",
+      "cropCount": 18,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "rank",
+      "cropCount": 23,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "estate",
+      "cropCount": 13,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "settings",
+      "cropCount": 20,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "server",
+      "cropCount": 14,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "register",
+      "cropCount": 11,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "result",
+      "cropCount": 12,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    },
+    {
+      "id": "confirm",
+      "cropCount": 7,
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "cropPixelComparison": "PASS",
+      "reassemblyDifferentPixels": 0,
+      "transparentIndependentLayers": false
+    }
+  ]
+}

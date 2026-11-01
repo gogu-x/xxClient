@@ -1,0 +1,17 @@
+{
+  "version": 4,
+  "status": "portrait visual redesign; not runtime-complete",
+  "referenceResolution": [1080,1920],
+  "orientation": "portrait",
+  "supersedes": "V3 landscape 1600x900 runtime layouts",
+  "mobile": {"safeArea": "Respect device safe area for navigation and actions", "minimumTouchTargetReferencePixels": 96},
+  "desktop": {"layout": "Keep portrait content proportions, scale to available height/width", "sides": "Extend scene artwork; never stretch controls or redistribute portrait UI into a dashboard"},
+  "implementationRule": "Match approved composition before binding business interfaces. Background, hero, frame and icon layers must preserve geometry. Runtime labels and values are separate from artwork.",
+  "businessScope": "Use existing interfaces; mark missing functionality explicitly. Preserve existing service work while visual implementation is paused.",
+  "pages": {
+    "lobby": {"header": [0,0,1080,200], "hero": [180,300,850,1040], "shortcuts": [880,300,180,590], "quest": [20,250,290,490], "primaryAction": [150,1370,780,280], "navigation": [0,1690,1080,230]},
+    "equipment": {"header": [0,0,1080,160], "hero": [240,130,650,980], "leftSlots": [40,260,250,740], "rightSlots": [800,260,250,740], "power": [250,1030,580,110], "details": [30,1145,1020,565], "navigation": [0,1760,1080,160]},
+    "souljade": {"header": [0,0,1080,150], "tabs": [110,160,860,85], "array": [70,260,940,850], "details": [90,1140,900,330], "inventory": [100,1500,880,220], "actions": [90,1730,900,150]}
+  },
+  "validation": "Compare rendered screenshots with the portrait concept at the same aspect ratio. Check real mobile readability, safe areas, overlap, hit targets and desktop side extension. Do not count concept generation as runtime completion."
+}

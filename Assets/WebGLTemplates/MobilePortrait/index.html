@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>{{{ PRODUCT_NAME }}}</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --page-background: #070b11;
+      --loading-accent: #c89b45;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: var(--page-background);
+      overscroll-behavior: none;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+    }
+
+    /* 桌面浏览器中保持 9:16，模拟手机竖屏并居中显示。 */
+    #unity-container {
+      position: relative;
+      width: min(100vw, calc(100vh * 9 / 16));
+      height: min(100vh, calc(100vw * 16 / 9));
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 0 32px rgb(0 0 0 / 55%);
+    }
+
+    #unity-canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      outline: none;
+      touch-action: none;
+    }
+
+    #loading-screen {
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 32px;
+      color: #f4ead5;
+      background: #070b11;
+      transition: opacity 180ms ease;
+    }
+
+    #loading-title {
+      max-width: 90%;
+      overflow: hidden;
+      font-size: clamp(20px, 4vw, 36px);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-align: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    #progress-track {
+      width: min(72%, 420px);
+      height: 8px;
+      overflow: hidden;
+      border: 1px solid rgb(200 155 69 / 65%);
+      border-radius: 999px;
+      background: rgb(255 255 255 / 10%);
+    }
+
+    #progress-bar {
+      width: 0;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--loading-accent);
+      transition: width 100ms linear;
+    }
+
+    #loading-status {
+      min-height: 22px;
+      color: rgb(244 234 213 / 78%);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    #orientation-hint {
+      position: absolute;
+      inset: 0;
+      z-index: 20;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      color: #f4ead5;
+      background: #070b11;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    /* 手机/触屏设备使用真实浏览器可视尺寸，CanvasScaler 负责 UI 自适应。 */
+    @media (max-width: 768px), (hover: none) and (pointer: coarse) {
+      #unity-container {
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        box-shadow: none;
+      }
+    }
+
+    @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+      #orientation-hint {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main id="unity-container">
+    <canvas id="unity-canvas" width="{{{ WIDTH }}}" height="{{{ HEIGHT }}}" tabindex="-1"></canvas>
+    <section id="loading-screen" aria-live="polite">
+      <div id="loading-title">{{{ PRODUCT_NAME }}}</div>
+      <div id="progress-track"><div id="progress-bar"></div></div>
+      <div id="loading-status">正在加载…</div>
+    </section>
+    <div id="orientation-hint">请将手机旋转为竖屏后继续</div>
+  </main>
+
+  <script>
+    const canvas = document.querySelector("#unity-canvas");
+    const loadingScreen = document.querySelector("#loading-screen");
+    const progressBar = document.querySelector("#progress-bar");
+    const loadingStatus = document.querySelector("#loading-status");
+    const buildUrl = "Build";
+    const loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
+
+    const config = {
+      dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
+      frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
+      codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
+#if MEMORY_FILENAME
+      memoryUrl: buildUrl + "/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+      symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",
+#endif
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "{{{ COMPANY_NAME }}}",
+      productName: "{{{ PRODUCT_NAME }}}",
+      productVersion: "{{{ PRODUCT_VERSION }}}",
+      devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2)
+    };
+
+    function showError(message) {
+      loadingStatus.textContent = message;
+      loadingStatus.style.color = "#ff8a80";
+      console.error(message);
+    }
+
+    const script = document.createElement("script");
+    script.src = loaderUrl;
+    script.onload = () => {
+      createUnityInstance(canvas, config, (progress) => {
+        progressBar.style.width = `${Math.round(progress * 100)}%`;
+        loadingStatus.textContent = `正在加载… ${Math.round(progress * 100)}%`;
+      }).then(() => {
+        loadingScreen.style.opacity = "0";
+        window.setTimeout(() => loadingScreen.remove(), 180);
+      }).catch((error) => {
+        showError(`加载失败：${error}`);
+      });
+    };
+    script.onerror = () => {
+      showError("加载器下载失败，请检查网络或服务器配置。");
+    };
+    document.body.appendChild(script);
+  </script>
+</body>
+</html>

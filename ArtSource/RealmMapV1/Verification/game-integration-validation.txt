@@ -1,0 +1,58 @@
+RealmMapV1 game integration validation
+Date: 2026-11-01 (Asia/Shanghai)
+
+Scope: Unity MCP, actual editor Play Mode and UI components. These checks were
+reported by the primary integration agent. They are separate from package_assets.py.
+
+Imported assets: 12 PNG, 37 Sprite; see ../unity-import-report.txt.
+Final live map: 24 nodes, 1 open entrance, 24 status badges, 0 bottom navigation
+buttons, 0 selection halos; viewport height 1507 design units.
+Qingyun / 青云古境 is open and its entry button is enabled. Cloud / 云海仙宫 and
+the other 23 gates remain closed; the cloud details entry button was checked disabled.
+The host maps Qingyun to the existing current-trial action, whose tower layer remains
+server-owned; it does not invent 24 distinct backend realm configurations.
+The map screenshot shows the open/closed status labels and absence of navigation/halo.
+Secondary pages 角色 / 修炼 / 宗门 / 背包 / 魂玉: navigation count = 0 and Back = true.
+Only the lobby retains the six bottom menu entries.
+
+Real battle through the final Qingyun entry:
+Qingyun details EnterRealm -> server BattleFinishedNtf.
+Battle ID: 6a727717-918e-406b-a743-eebc7d9ee2ec.
+Battle type / outcome: BATTLE_TYPE_TOWER / ATTACKER_WIN.
+Friendly remaining HP: 1110 / 1226; both enemy units dead.
+Result return button clicked = true; Main active = true.
+
+Diagnostics boundary:
+Compilation completed with 0 errors. During screenshot capture the console contained
+5 PlayerLoop recursion errors, whose captured stacks originated in
+Packages/com.coplaydev.unity-mcp/Runtime/Helpers/ScreenshotUtility.cs:191,
+CaptureCompositedAfterFrame -> ManageCamera, rather than the modified UI scripts.
+This run must not be described as having 0 total console errors.
+Separate follow-up after recording and clearing those screenshot diagnostics:
+MCP Show map -> click Qingyun -> Enter enabled = true -> close details -> Back ->
+Main active = true. No screenshot tool was used in that follow-up; read_console(error)
+returned 0 new errors. This limited clean result does not erase the earlier plugin errors.
+
+Final WebGL build (includes the latest secondary-navigation removal, 24 status badges,
+Qingyun entry and single entrance motion): MCP latest BuildReport = Succeeded,
+errors = 0, warnings = 31, duration = 00:00:57.5136234.
+Output: D:/gosrc/gotree/g1Client/Builds/BrowserPreview/WebGL.
+Library/BrowserPreview/state.json: ready, version 639291202849606702.
+This is build/deployment-readiness evidence, not browser visual verification.
+
+Entrance motion: controlled runtime time sample on the real Unity component.
+Setting its time field to elapsed .325 seconds and calling Update produced a
+13.999999-design-pixel lift and scale 1.018; at .7 seconds it restored and stopped.
+Natural continuous-frame peak sampling was not established because of editor pause /
+tool main-thread timing. This controlled sample must not be described as a natural
+frame-by-frame animation or physical-device visual verification.
+
+Deliverable screenshots:
+01-lobby-live.png
+11-realm-status-verified.png
+Intermediate diagnostic captures remain in the project but are excluded from the ZIP.
+
+Boundary: Unity editor validation is not physical touch-device verification.
+Pixel-exact 1:1 fidelity and naturally sampled continuous animation are not asserted.
+The earlier screenshots and old six-tab secondary-page flow are historical diagnostics,
+excluded from this final package; they are not evidence for the final navigation design.

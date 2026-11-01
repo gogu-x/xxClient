@@ -1,0 +1,32 @@
+QuietInk UI V2 import completed
+PNG: 27; atlases: 6; standalone images: 21; sprites: 89; trimmed character rectangles: 5; nine-slice controls: 11; copied PNG: 2
+Source PNG bytes unchanged. Sprite bounds only; no pixel editing.
+Import checks do not replace runtime visual review.
+
+avatar-female.png => 1 sprites; 1254x1254; copied byte-for-byte
+avatar.png => 1 sprites; 1254x1254; original bytes unchanged
+battle-enemy-mage.png => 1 sprites; 1254x1254; original bytes unchanged; alpha >= 16 rect (x:66.00, y:37.00, width:1156.00, height:1179.00); padding 4
+battle-enemy-swordsman.png => 1 sprites; 1254x1254; original bytes unchanged; alpha >= 16 rect (x:14.00, y:87.00, width:1208.00, height:1034.00); padding 4
+battle-player.png => 1 sprites; 1254x1254; original bytes unchanged; alpha >= 16 rect (x:20.00, y:57.00, width:1226.00, height:1118.00); padding 4
+bg-battle-jade.png => 1 sprites; 941x1672; original bytes unchanged
+bg-battle-moon.png => 1 sprites; 941x1672; original bytes unchanged
+bg-battle.png => 1 sprites; 941x1672; original bytes unchanged
+bg-lobby.png => 1 sprites; 941x1671; original bytes unchanged
+bg-login.png => 1 sprites; 941x1672; original bytes unchanged
+bg-paper.png => 1 sprites; 941x1670; original bytes unchanged
+character-scene.png => 1 sprites; 1254x1254; original bytes unchanged
+fx-impact.png => 1 sprites; 1254x1254; original bytes unchanged
+fx-ring.png => 1 sprites; 1254x1254; original bytes unchanged
+fx-slash.png => 1 sprites; 1774x887; original bytes unchanged
+hero-character-female.png => 1 sprites; 1254x1254; original bytes unchanged; alpha >= 16 rect (x:216.00, y:8.00, width:824.00, height:1230.00); padding 4
+hero-character.png => 1 sprites; 1254x1254; original bytes unchanged; alpha >= 16 rect (x:166.00, y:5.00, width:915.00, height:1241.00); padding 4
+hero-lobby-female.png => 1 sprites; 1254x1254; copied byte-for-byte
+hero-lobby.png => 1 sprites; 1254x1254; original bytes unchanged
+hero-login.png => 1 sprites; 1254x1254; original bytes unchanged
+icons-extra.png => 8 sprites; 1774x887; original bytes unchanged
+icons-items.png => 16 sprites; 1254x1254; original bytes unchanged
+icons-navigation.png => 16 sprites; 1254x1254; original bytes unchanged
+icons-settings.png => 4 sprites; 1254x1254; original bytes unchanged
+illustrations.png => 8 sprites; 1774x887; original bytes unchanged
+logo.png => 1 sprites; 1774x887; original bytes unchanged
+ui-controls.png => 16 sprites; 1254x1254; original bytes unchanged

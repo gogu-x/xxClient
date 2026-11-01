@@ -1,0 +1,26 @@
+RealmMapV1 UnityIntegration offline validation
+Date: 2026-11-01 (Asia/Shanghai)
+
+Scope: optional standalone resource importer/composition source, under ArtSource only.
+No Unity MCP calls, no Unity launch, no player build, no network or backend actions.
+No files installed into Assets/RealmMapV1; the destination does not yet exist.
+
+Compiler: Unity 6000.5.9f1 bundled Roslyn 4.10.0, actual project assembly references.
+Runtime source compilation exit 0; Editor source compilation exit 0.
+Editor JSON DTOs have expected CS0649 field-deserialization warnings; no compile errors.
+Compiler output: local temporary folder realm-map-package-compile-27545e83763b4345b2bdb2299f856edd.
+
+Installer: Install-Unity.ps1 -ProjectPath D:/gosrc/gotree/g1Client -WhatIf completed exit 0.
+All printed destinations are inside Assets/RealmMapV1. No file writes were performed.
+Installer preflights all package files and existing-file conflicts before copying anything;
+copies retain SHA256. It never opens Unity, modifies existing game code or changes scenes.
+
+Static layout/resource check: 24 world nodes, 13 lobby image layers, 13 separate lobby texts.
+All referenced Sprite IDs exist in the supplied PNG names and measured atlas metadata.
+Terrain design coordinates: 3840x2560. Actual terrain PNG: 1536x1024; no claim of 4K source.
+Max preview zoom capped at 1.6 to limit magnification of current source resolution.
+
+Future explicit import verifies unchanged PNG bytes/dimensions and actual Sprite counts,
+rectangles, normalized pivots and nine-slice borders, and generates separate lobby/map prefabs.
+Those Unity import/prefab checks have NOT run in this delivery. Mouse/touch operation and
+runtime visual parity have NOT been verified. Offline source compilation is not a substitute.

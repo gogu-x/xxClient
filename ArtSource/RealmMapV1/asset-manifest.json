@@ -1,0 +1,1041 @@
+{
+  "package": "RealmMapV1",
+  "version": 1,
+  "generated_with": "built-in image_gen; preserved source PNG bytes",
+  "status": "runtime synchronized with g1Client; lobby-only bottom navigation; qingyun opens the existing current trial; 23 other gates closed",
+  "summary": {
+    "png_count": 12,
+    "atlas_count": 5,
+    "sprite_count": 37,
+    "entrance_types": 12,
+    "map_entrances": 24,
+    "persistent_map_labels": 6,
+    "lobby_layers": 13,
+    "lobby_texts": 13,
+    "missing_references": [],
+    "overlapping_slices": [],
+    "out_of_bounds_slices": [],
+    "pixel_edits": false,
+    "unity_import_executed_by_this_check": false,
+    "unity_visual_review_executed_by_this_check": false,
+    "unity_import_report_present": true,
+    "actual_world_texture": [
+      1536,
+      1024
+    ],
+    "coordinate_domain": [
+      3840,
+      2560
+    ],
+    "note": "Coordinate domain is not source texture resolution. No 4K or pixel-exact runtime fidelity claim."
+  },
+  "images": [
+    {
+      "file": "Assets/lobby-avatar-female.png",
+      "width": 1254,
+      "height": 1254,
+      "color_type": 6,
+      "bytes": 2364759,
+      "sha256": "c672021916e9abd48251a7f637a7dbb5680379562c15803dfe90f2a8ef09c491"
+    },
+    {
+      "file": "Assets/lobby-avatar-male.png",
+      "width": 1254,
+      "height": 1254,
+      "color_type": 6,
+      "bytes": 2400249,
+      "sha256": "2d5b5849ddf68a6996a639e7b9d95530a84a770d3350f81060ecdfc9fdb7911f"
+    },
+    {
+      "file": "Assets/lobby-background.png",
+      "width": 940,
+      "height": 1672,
+      "color_type": 2,
+      "bytes": 2817711,
+      "sha256": "cb3bc7458b6103238704b7d6e241f6ded9be32aff1c0730a6e5c87ae7f48b5a4"
+    },
+    {
+      "file": "Assets/lobby-controls.png",
+      "width": 1254,
+      "height": 1254,
+      "color_type": 6,
+      "bytes": 571183,
+      "sha256": "42135c83ea1a8f1ae9205377c922924dbd6404b2cbed8048edb2495d29af1031"
+    },
+    {
+      "file": "Assets/lobby-hero-female.png",
+      "width": 1254,
+      "height": 1254,
+      "color_type": 6,
+      "bytes": 1456353,
+      "sha256": "72509cefe7b478d6179e00b58001791c11ce2304db7badb849a95970e87b623a"
+    },
+    {
+      "file": "Assets/lobby-hero-male.png",
+      "width": 1254,
+      "height": 1254,
+      "color_type": 6,
+      "bytes": 1267207,
+      "sha256": "9bedd5e2a7639b5805a620e8938d86d72982f993e4e3f604a8b64f3879fe26dd"
+    },
+    {
+      "file": "Assets/lobby-hero-seated.png",
+      "width": 1254,
+      "height": 1254,
+      "color_type": 6,
+      "bytes": 1445746,
+      "sha256": "cc7aa0b786efa2408f27af98cee5187a2cb834cb4929fc55f816adb4b6b8b379"
+    },
+    {
+      "file": "Assets/lobby-icons.png",
+      "width": 1254,
+      "height": 1254,
+      "color_type": 6,
+      "bytes": 1138461,
+      "sha256": "cb264fe3e6a635e1f10acfd6989eaa557f2558542009715e26154a3ad22e310c"
+    },
+    {
+      "file": "Assets/map-overlays.png",
+      "width": 1536,
+      "height": 1024,
+      "color_type": 6,
+      "bytes": 1463483,
+      "sha256": "038a0304c09503e84556c22440bb4ae07640ba95a3c41f7df53caa94bb401bf0"
+    },
+    {
+      "file": "Assets/nav-six.png",
+      "width": 1254,
+      "height": 1254,
+      "color_type": 6,
+      "bytes": 1048331,
+      "sha256": "242f5acbecf9042ceab078bcf18e98d3ce96dcc2ed488e39488b3e88d390c79e"
+    },
+    {
+      "file": "Assets/realm-entrances.png",
+      "width": 1086,
+      "height": 1448,
+      "color_type": 6,
+      "bytes": 2432787,
+      "sha256": "5919558fc0b16b5b3cb283080100a3f2e953d7d978d0e29c17d0b16b5e450c94"
+    },
+    {
+      "file": "Assets/world-map-base.png",
+      "width": 1536,
+      "height": 1024,
+      "color_type": 2,
+      "bytes": 3623722,
+      "sha256": "2b7e8d9ebcbc37632998d35e2d434726b38a057f07956fd0f43d205027622f64"
+    }
+  ],
+  "sprites": [
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-qingyun-gate",
+      "display_name": "青云古门",
+      "size_tier": "large",
+      "x": 34,
+      "y": 35,
+      "width": 332,
+      "height": 327,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        325,
+        320
+      ],
+      "row": 1,
+      "column": 1,
+      "component_count": 1,
+      "solid_pixels": 69888,
+      "metadata": "entrances-layout.json"
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-cloud-palace",
+      "display_name": "浮空仙宫",
+      "size_tier": "large",
+      "x": 398,
+      "y": 41,
+      "width": 318,
+      "height": 345,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        313,
+        340
+      ],
+      "row": 1,
+      "column": 2,
+      "component_count": 1,
+      "solid_pixels": 69507,
+      "metadata": "entrances-layout.json"
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-ice-cave",
+      "display_name": "冰雪洞天",
+      "size_tier": "large",
+      "x": 752,
+      "y": 60,
+      "width": 323,
+      "height": 313,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        341,
+        330
+      ],
+      "row": 1,
+      "column": 3,
+      "component_count": 1,
+      "solid_pixels": 63255,
+      "metadata": "entrances-layout.json"
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-sword-ruins",
+      "display_name": "巨剑遗墟",
+      "size_tier": "large",
+      "x": 24,
+      "y": 384,
+      "width": 350,
+      "height": 360,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        331,
+        340
+      ],
+      "row": 2,
+      "column": 1,
+      "component_count": 1,
+      "solid_pixels": 63636,
+      "metadata": "entrances-layout.json"
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-autumn-gate",
+      "display_name": "秋林山门",
+      "size_tier": "medium",
+      "x": 403,
+      "y": 431,
+      "width": 314,
+      "height": 301,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        240,
+        230
+      ],
+      "row": 2,
+      "column": 2,
+      "component_count": 1,
+      "solid_pixels": 60018,
+      "metadata": "entrances-layout.json"
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-bamboo-grotto",
+      "display_name": "竹林洞府",
+      "size_tier": "medium",
+      "x": 754,
+      "y": 440,
+      "width": 307,
+      "height": 287,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        235,
+        220
+      ],
+      "row": 2,
+      "column": 3,
+      "component_count": 1,
+      "solid_pixels": 61848,
+      "metadata": "entrances-layout.json"
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-lake-pavilion",
+      "display_name": "湖心仙阁",
+      "size_tier": "medium",
+      "x": 34,
+      "y": 754,
+      "width": 353,
+      "height": 317,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        245,
+        220
+      ],
+      "row": 3,
+      "column": 1,
+      "component_count": 1,
+      "solid_pixels": 57430,
+      "metadata": "entrances-layout.json"
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-cliff-grotto",
+      "display_name": "悬崖石窟",
+      "size_tier": "medium",
+      "x": 393,
+      "y": 769,
+      "width": 334,
+      "height": 294,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        261,
+        230
+      ],
+      "row": 3,
+      "column": 2,
+      "component_count": 1,
+      "solid_pixels": 67758,
+      "metadata": "entrances-layout.json"
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-ancient-well",
+      "display_name": "古井阵眼",
+      "size_tier": "small",
+      "x": 757,
+      "y": 832,
+      "width": 312,
+      "height": 238,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        170,
+        130
+      ],
+      "row": 3,
+      "column": 3,
+      "component_count": 1,
+      "solid_pixels": 44056,
+      "metadata": "entrances-layout.json"
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-stone-door",
+      "display_name": "小型石门",
+      "size_tier": "small",
+      "x": 21,
+      "y": 1114,
+      "width": 339,
+      "height": 269,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        176,
+        140
+      ],
+      "row": 4,
+      "column": 1,
+      "component_count": 1,
+      "solid_pixels": 52718,
+      "metadata": "entrances-layout.json"
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-tree-shrine",
+      "display_name": "树下小祠",
+      "size_tier": "small",
+      "x": 397,
+      "y": 1078,
+      "width": 338,
+      "height": 313,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        167,
+        155
+      ],
+      "row": 4,
+      "column": 2,
+      "component_count": 1,
+      "solid_pixels": 71656,
+      "metadata": "entrances-layout.json"
+    },
+    {
+      "atlas": "realm-entrances.png",
+      "name": "entrance-small-cave",
+      "display_name": "小型洞口",
+      "size_tier": "small",
+      "x": 754,
+      "y": 1127,
+      "width": 318,
+      "height": 251,
+      "pivot": [
+        0.5,
+        0
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suggestedWorldSize": [
+        177,
+        140
+      ],
+      "row": 4,
+      "column": 3,
+      "component_count": 1,
+      "solid_pixels": 52638,
+      "metadata": "entrances-layout.json"
+    },
+    {
+      "atlas": "nav-six.png",
+      "name": "nav_character",
+      "x": 23,
+      "y": 223,
+      "width": 384,
+      "height": 391,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 1,
+      "padding": 4,
+      "measured_alpha_threshold": 16,
+      "metadata": "ui-layout.json"
+    },
+    {
+      "atlas": "nav-six.png",
+      "name": "nav_cultivation",
+      "x": 454,
+      "y": 250,
+      "width": 344,
+      "height": 339,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 2,
+      "padding": 4,
+      "measured_alpha_threshold": 16,
+      "metadata": "ui-layout.json"
+    },
+    {
+      "atlas": "nav-six.png",
+      "name": "nav_realm",
+      "x": 826,
+      "y": 286,
+      "width": 404,
+      "height": 317,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 2,
+      "padding": 4,
+      "measured_alpha_threshold": 16,
+      "metadata": "ui-layout.json"
+    },
+    {
+      "atlas": "nav-six.png",
+      "name": "nav_sect",
+      "x": 39,
+      "y": 709,
+      "width": 354,
+      "height": 340,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 1,
+      "padding": 4,
+      "measured_alpha_threshold": 16,
+      "metadata": "ui-layout.json"
+    },
+    {
+      "atlas": "nav-six.png",
+      "name": "nav_inventory",
+      "x": 471,
+      "y": 728,
+      "width": 309,
+      "height": 336,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 1,
+      "padding": 4,
+      "measured_alpha_threshold": 16,
+      "metadata": "ui-layout.json"
+    },
+    {
+      "atlas": "nav-six.png",
+      "name": "nav_souljade",
+      "x": 891,
+      "y": 742,
+      "width": 326,
+      "height": 318,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 5,
+      "padding": 4,
+      "measured_alpha_threshold": 16,
+      "metadata": "ui-layout.json"
+    },
+    {
+      "atlas": "map-overlays.png",
+      "name": "nameplate_vertical",
+      "x": 204,
+      "y": 92,
+      "width": 119,
+      "height": 403,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        22,
+        42,
+        22,
+        42
+      ],
+      "components": 1,
+      "padding": 4,
+      "measured_alpha_threshold": 16,
+      "nine_slice_note": "Preserves clipped cap and fine outline; intended labels 3-5 vertical characters.",
+      "metadata": "ui-layout.json"
+    },
+    {
+      "atlas": "map-overlays.png",
+      "name": "selection_halo",
+      "x": 597,
+      "y": 138,
+      "width": 340,
+      "height": 338,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 1,
+      "padding": 4,
+      "measured_alpha_threshold": 16,
+      "metadata": "ui-layout.json"
+    },
+    {
+      "atlas": "map-overlays.png",
+      "name": "fog_ribbon",
+      "x": 990,
+      "y": 268,
+      "width": 523,
+      "height": 139,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 1,
+      "padding": 4,
+      "measured_alpha_threshold": 16,
+      "metadata": "ui-layout.json"
+    },
+    {
+      "atlas": "map-overlays.png",
+      "name": "fog_patch",
+      "x": 22,
+      "y": 628,
+      "width": 558,
+      "height": 294,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 1,
+      "padding": 4,
+      "measured_alpha_threshold": 16,
+      "metadata": "ui-layout.json"
+    },
+    {
+      "atlas": "map-overlays.png",
+      "name": "map_lock",
+      "x": 702,
+      "y": 685,
+      "width": 137,
+      "height": 185,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 1,
+      "padding": 4,
+      "measured_alpha_threshold": 16,
+      "metadata": "ui-layout.json"
+    },
+    {
+      "atlas": "map-overlays.png",
+      "name": "map_locate",
+      "x": 1156,
+      "y": 649,
+      "width": 248,
+      "height": 248,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components": 2,
+      "padding": 4,
+      "measured_alpha_threshold": 16,
+      "metadata": "ui-layout.json"
+    },
+    {
+      "atlas": "lobby-icons.png",
+      "name": "activity",
+      "row": 2,
+      "column": 3,
+      "x": 678,
+      "y": 411,
+      "width": 224,
+      "height": 198,
+      "contentRect": {
+        "x": 682,
+        "y": 415,
+        "width": 216,
+        "height": 190
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "展开活动卷轴",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "metadata": "lobby-support-layout.json"
+    },
+    {
+      "atlas": "lobby-icons.png",
+      "name": "welfare",
+      "row": 2,
+      "column": 4,
+      "x": 998,
+      "y": 419,
+      "width": 186,
+      "height": 187,
+      "contentRect": {
+        "x": 1002,
+        "y": 423,
+        "width": 178,
+        "height": 179
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "福利礼盒",
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "metadata": "lobby-support-layout.json"
+    },
+    {
+      "atlas": "lobby-controls.png",
+      "name": "button_primary",
+      "row": 1,
+      "column": 1,
+      "x": 50,
+      "y": 154,
+      "width": 262,
+      "height": 81,
+      "contentRect": {
+        "x": 54,
+        "y": 158,
+        "width": 254,
+        "height": 73
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "青玉主按钮",
+      "proposed_border_lbrt": [
+        26,
+        25,
+        25,
+        25
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 21,
+          "last_straight": 59,
+          "middle_outer_low": 5,
+          "middle_outer_high": 255
+        },
+        "column_geometry": {
+          "first_straight": 22,
+          "last_straight": 240,
+          "middle_outer_low": 6,
+          "middle_outer_high": 75
+        },
+        "stretchable_center": {
+          "width": 211,
+          "height": 31
+        }
+      },
+      "metadata": "lobby-support-layout.json"
+    },
+    {
+      "atlas": "lobby-controls.png",
+      "name": "button_secondary",
+      "row": 1,
+      "column": 2,
+      "x": 355,
+      "y": 154,
+      "width": 257,
+      "height": 81,
+      "contentRect": {
+        "x": 359,
+        "y": 158,
+        "width": 249,
+        "height": 73
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "米白次按钮",
+      "proposed_border_lbrt": [
+        25,
+        25,
+        26,
+        25
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 21,
+          "last_straight": 59,
+          "middle_outer_low": 5,
+          "middle_outer_high": 250
+        },
+        "column_geometry": {
+          "first_straight": 21,
+          "last_straight": 234,
+          "middle_outer_low": 6.0,
+          "middle_outer_high": 75.0
+        },
+        "stretchable_center": {
+          "width": 206,
+          "height": 31
+        }
+      },
+      "metadata": "lobby-support-layout.json"
+    },
+    {
+      "atlas": "lobby-controls.png",
+      "name": "info_card",
+      "row": 2,
+      "column": 2,
+      "x": 365,
+      "y": 401,
+      "width": 238,
+      "height": 147,
+      "contentRect": {
+        "x": 369,
+        "y": 405,
+        "width": 230,
+        "height": 139
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "信息卡",
+      "proposed_border_lbrt": [
+        24,
+        24,
+        24,
+        25
+      ],
+      "border_validation": {
+        "status": "source_geometry_validated_runtime_pending",
+        "method": "At alpha>=192 find the first/last three consecutive straight-edge samples within 1px of the middle-third median, then preserve four additional pixels for inset paint and antialiasing.",
+        "alpha_threshold": 192,
+        "inset_safety_pixels": 4,
+        "row_geometry": {
+          "first_straight": 21,
+          "last_straight": 126,
+          "middle_outer_low": 6,
+          "middle_outer_high": 232
+        },
+        "column_geometry": {
+          "first_straight": 20,
+          "last_straight": 217,
+          "middle_outer_low": 6,
+          "middle_outer_high": 141
+        },
+        "stretchable_center": {
+          "width": 190,
+          "height": 98
+        }
+      },
+      "metadata": "lobby-support-layout.json"
+    },
+    {
+      "atlas": "lobby-controls.png",
+      "name": "avatar_frame",
+      "row": 3,
+      "column": 1,
+      "x": 76,
+      "y": 688,
+      "width": 213,
+      "height": 212,
+      "contentRect": {
+        "x": 80,
+        "y": 692,
+        "width": 205,
+        "height": 204
+      },
+      "components": 1,
+      "status": "alpha_measured_and_source_visually_reviewed",
+      "nine_slice_ready": false,
+      "label": "透明中心头像框",
+      "center_alpha": 0,
+      "proposed_border_lbrt": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "border_validation": {
+        "status": "not_applicable",
+        "reason": "Circular geometry or center diamond; preserve aspect instead of nine-slice stretching."
+      },
+      "metadata": "lobby-support-layout.json"
+    },
+    {
+      "name": "lobby-avatar-female",
+      "atlas": "lobby-avatar-female.png",
+      "x": 0,
+      "y": 0,
+      "width": 1254,
+      "height": 1254,
+      "standalone": true
+    },
+    {
+      "name": "lobby-avatar-male",
+      "atlas": "lobby-avatar-male.png",
+      "x": 0,
+      "y": 0,
+      "width": 1254,
+      "height": 1254,
+      "standalone": true
+    },
+    {
+      "name": "lobby-background",
+      "atlas": "lobby-background.png",
+      "x": 0,
+      "y": 0,
+      "width": 940,
+      "height": 1672,
+      "standalone": true
+    },
+    {
+      "name": "lobby-hero-female",
+      "atlas": "lobby-hero-female.png",
+      "x": 0,
+      "y": 0,
+      "width": 1254,
+      "height": 1254,
+      "standalone": true
+    },
+    {
+      "name": "lobby-hero-male",
+      "atlas": "lobby-hero-male.png",
+      "x": 0,
+      "y": 0,
+      "width": 1254,
+      "height": 1254,
+      "standalone": true
+    },
+    {
+      "name": "lobby-hero-seated",
+      "atlas": "lobby-hero-seated.png",
+      "x": 0,
+      "y": 0,
+      "width": 1254,
+      "height": 1254,
+      "standalone": true
+    },
+    {
+      "name": "world-map-base",
+      "atlas": "world-map-base.png",
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 1024,
+      "standalone": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+Built-in image_gen, transparent_background=true.
+Reference: QuietInkUIV2/Concepts/04-lobby-realm-map.png
+Selected source: exec-6e4751f7-6cae-4e7d-81e7-e11cd4539a95.png
+Two earlier passes were rejected for thick halo and heavy decoration.
+A clean professional production texture atlas of six separate UI sprites for a restrained hand-painted Chinese xianxia map. TRANSPARENT BACKGROUND. Landscape 1536 x 1024, strict three columns and two rows. Each cell is 512 x 512. ALL visible content MUST stay at least 80 pixels away from its cell edges. No text anywhere, no cell dividers, no colored backdrop. Carefully separated usable layers.
+TOP LEFT: tall ivory blank paper label for a vertical Chinese place name, narrow 1:3.5 shape, fine muted gold SINGLE line around a simple clipped-corner shape, no elaborate ornament, no bevel, 100px wide and 350px tall.
+TOP MIDDLE: a PERFECT THIN CIRCLE drawn with a single 2px pale jade ink stroke, 240px diameter. This is a selection outline only. NO GLOW, NO DONUT, NO THICK BRUSH BAND, NO FILLED AREA. All interior and exterior genuinely transparent.
+TOP RIGHT: a small delicate horizontal white watercolor mist ribbon, 300px wide x 100px high, mostly transparent soft wisps, no scenery.
+BOTTOM LEFT: a compact irregular ivory-white soft cloud cluster, 280px across x 200px tall, gently feathered transparent alpha.
+BOTTOM MIDDLE: small minimalist flat padlock symbol, gray-umber outline and pale ivory inner fill, 90px wide x 120px tall, no tile, no frame, no glow.
+BOTTOM RIGHT: small flat line-art locate/target symbol 130px across: one thin umber circle with four short cardinal ticks and a tiny center dot. NO metallic 3D styling, no bevel, no shadow, no fill, no glow.
+Premium airy watercolor/ink UI accents, muted jade, warm ivory and gray-brown palette, refined low-detail shapes matching the reference map. No bright red, no neon edges, no extra splashes. Six assets total, unmistakable completely empty transparent gutters.

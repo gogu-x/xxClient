@@ -1,0 +1,6 @@
+{
+  "id": "power_plate",
+  "alpha": true,
+  "prompt": "Create an actual standalone production game sprite by editing the supplied design reference. Match the reference asset geometry, palette, materials and details very closely. Do not redesign or show a UI screenshot or sprite sheet. Extract only horizontal blackgold 战力128430 plaque above detail panel. Remove ALL lettering/numbers. Preserve fine elaborate symmetrical gold silhouette, central top diamond and blackgold empty interior. Aspect approx4.8:1. One isolated blank sprite, transparent exterior, no scene.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-d63054cc-4e4d-472b-938f-64eaa65b560d.png"
+}

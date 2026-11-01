@@ -1,0 +1,6 @@
+{
+  "id": "nav_frame",
+  "title": "底部导航底框",
+  "prompt": "Produce ONE standalone game-ready PNG asset extracted/reconstructed from this precise lobby design. Match source shape, colors, proportions and illustration exactly, do not invent a new UI design. Transparent background outside the requested object, no scene backdrop, no mockup, no sheet. Preserve full silhouette with small transparent margin. No text or numbers except an explicitly requested symbol. Only the full bottom five-cell darkjade navigation bar from reference. Five equal connected scalloped panels with thin gold boundaries and original outer gold cloudcorners. Remove ALL portraits, icons, text and red dots. Preserve 5-cell topology exactly, long bar ratio about4.7:1, no added height. Empty darkjade interior, transparent outside.",
+  "source": "C:\\Users\\25348\\.codex\\generated_images\\01a16ea3-0a46-7c82-a99a-86b355ded0a8\\exec-bf8d3352-4142-474c-b2bd-6424be290c91.png"
+}
