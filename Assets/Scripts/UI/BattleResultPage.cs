@@ -12,7 +12,7 @@ namespace XiuXian.Core
             GameObject page;
             var d=Q.Page(parent,"BattleResultQuietInkV2","结算",back,out page,showHeader:false);
             UnityAction leave=()=>{ if(page!=null)Object.Destroy(page);back?.Invoke(); };
-            Q.Button(d,"Back","‹",22,32,88,88,leave,null,52);
+            Q.BackButton(d,"Back",24,24,leave);
             string title=result==null?"战斗结束":result.Outcome==global::BattleOutcome.AttackerWin?"试炼胜利":
                 result.Outcome==global::BattleOutcome.DefenderWin?"试炼未成":result.Outcome==global::BattleOutcome.Draw?"势均力敌":"战斗结束";
             Q.Text(d,"ResultTitle",title,130,125,681,110,62,result!=null&&result.Outcome==global::BattleOutcome.AttackerWin?Q.Jade:Q.Cinnabar);

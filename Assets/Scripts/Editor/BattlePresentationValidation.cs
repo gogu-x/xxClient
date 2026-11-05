@@ -178,7 +178,7 @@ namespace XiuXian.EditorTools
                 // 使用真实跳过事件进入控制状态，不伪造缺少 motion window 的 SkillUsed。
                 Invoke(view, "DispatchEvent", new BattleEvent
                 {
-                    Type = BattleEventType.ActionSkipped, Action = 790, ActorId = actor, Detail = "stun",
+                    Type = BattleEventType.ActionSkipped, Action = 790, ActorId = actor, Reason = BattleEventReason.Stunned,
                 });
                 Invoke(view, "UpdateUnitControlVisuals");
                 Invoke(view, "UpdateCharacterAnimations");
@@ -189,7 +189,7 @@ namespace XiuXian.EditorTools
 
                 Invoke(view, "DispatchEvent", new BattleEvent
                 {
-                    Type = BattleEventType.ActionSkipped, Action = 791, ActorId = actor, Detail = "silence",
+                    Type = BattleEventType.ActionSkipped, Action = 791, ActorId = actor, Reason = BattleEventReason.Unspecified,
                 });
                 Invoke(view, "UpdateUnitControlVisuals");
                 Invoke(view, "UpdateCharacterAnimations");
@@ -286,7 +286,7 @@ namespace XiuXian.EditorTools
             Invoke(view, "DispatchEvent", new BattleEvent
             {
                 Type = BattleEventType.ActionCancelled, Action = 801, ActorId = actor,
-                TargetId = first, Detail = "target_dead", HpBefore = 0, HpAfter = 0,
+                TargetId = first, Reason = BattleEventReason.TargetDead, HpBefore = 0, HpAfter = 0,
             });
             Check(Read<Dictionary<string, long>>(view, "_unitHp")[actor] == 671 &&
                 !Read<bool>(Unit(view, actor), "DeathStarted"), "target_dead must not overwrite the live actor's 671 HP.");

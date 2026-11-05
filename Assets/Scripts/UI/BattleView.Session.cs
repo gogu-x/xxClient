@@ -65,6 +65,7 @@ namespace XiuXian.Core
         /// <summary>Leaving the account or dismissing a result ends the local session.</summary>
         internal void CloseBattleSession()
         {
+            CloseBattleResponseGate();
             _hasBattleSession = false;
             _isBattleMinimized = false;
             _battleIsFinished = false;
@@ -79,6 +80,7 @@ namespace XiuXian.Core
 
         private void ClearFailedBattleCreation()
         {
+            CloseBattleResponseGate();
             bool wasMinimized = _isBattleMinimized;
             _hasBattleSession = false;
             _isBattleMinimized = false;

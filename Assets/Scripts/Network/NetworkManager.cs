@@ -158,7 +158,10 @@ namespace XiuXian.Network
 
         public void Disconnect()
         {
+            bool hadTransport = _transport != null;
             ReleaseTransport(true);
+            // 主动断开也结束当前会话，避免角色服务继续保留可写的旧快照。
+            if (hadTransport) OnDisconnected?.Invoke("连接已主动断开");
         }
 
         private void ReleaseTransport(bool close)

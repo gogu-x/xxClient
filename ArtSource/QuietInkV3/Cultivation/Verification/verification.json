@@ -1,0 +1,100 @@
+{
+  "localOnly": true,
+  "backendModified": false,
+  "verification": "Actual Unity MCP Game View and Button.onClick callbacks",
+  "logicChecks": 29,
+  "logicPassed": 29,
+  "compileErrors": 0,
+  "runtimeConsoleErrors": 0,
+  "pillClick": {
+    "progressBefore": 16.0310691,
+    "progressAfter": 136.0312343,
+    "stockBefore": 3,
+    "stockAfter": 2,
+    "doubleClickConsumedOnce": true
+  },
+  "breakthrough": {
+    "fullProgress": 600,
+    "required": 600,
+    "rankBefore": 1,
+    "rankAfter": 2,
+    "progressReset": true,
+    "returnedAndReopened": true,
+    "restartedPlayAndRelogged": true,
+    "stockPersisted": [
+      2,
+      2,
+      0
+    ]
+  },
+  "backButtons": {
+    "functionalPagesChecked": 11,
+    "equipment": true,
+    "talent": true,
+    "soulJade": true,
+    "realm": true,
+    "battle": {
+      "id": "834e0e49-2ab7-4461-8f08-29e9db11604f",
+      "minimized": true,
+      "resumedSameBattle": true,
+      "requestsBefore": 2,
+      "requestsAfter": 2
+    },
+    "registration": true
+  },
+  "resolutions": [
+    [
+      1080,
+      1920
+    ],
+    [
+      1920,
+      1080
+    ]
+  ],
+  "art": {
+    "hero": [
+      1254,
+      1254
+    ],
+    "pills": [
+      2172,
+      724
+    ],
+    "spriteSizes": [
+      [
+        577,
+        577
+      ],
+      [
+        577,
+        577
+      ],
+      [
+        577,
+        577
+      ]
+    ],
+    "generationTool": "built-in image_gen"
+  },
+  "testInventoryRestored": true,
+  "webgl": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 33,
+    "seconds": 38.6277259,
+    "path": "D:/gosrc/gotree/g1Client/Builds/BrowserPreview/WebGL"
+  },
+  "screenshots": [
+    "cultivation-initial.png",
+    "cultivation-ready-to-breakthrough.png",
+    "cultivation-after-breakthrough.png",
+    "cultivation-wide.png",
+    "equipment-return-button.png",
+    "realm-return-button.png",
+    "battle-return-button.png",
+    "battle-return-wide.png",
+    "battle-result-return-button.png",
+    "registration-return-button.png"
+  ]
+}

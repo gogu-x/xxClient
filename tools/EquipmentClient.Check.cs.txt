@@ -1,0 +1,74 @@
+// Synthetic client regression only; no equipment requests are sent to the server.
+if (!UnityEngine.Application.isPlaying) return "Run in Unity Play mode";
+var flags = System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic;
+var type = typeof(XiuXian.Core.RoleEquipmentPanel);
+XiuXian.Core.UIManager.Instance.Show(XiuXian.Core.UIScreen.Character);
+var character = UnityEngine.Object.FindFirstObjectByType<XiuXian.Core.CharacterPanel>();
+var panel = character.GetComponent<XiuXian.Core.RoleEquipmentPanel>() ?? character.gameObject.AddComponent<XiuXian.Core.RoleEquipmentPanel>();
+if ((bool)type.GetField("_requestPending", flags).GetValue(panel)) return "Skipped: actual request pending";
+var results = new System.Collections.Generic.List<string>();
+System.Action<string, bool> check = (name, ok) => { if (!ok) throw new System.Exception(name); results.Add("PASS " + name); };
+System.Action<bool> arm = change => type.GetMethod("BeginRequest", flags).Invoke(panel, new object[] {change});
+System.Func<ulong> id = () => (ulong)type.GetField("_pendingRequestId", flags).GetValue(panel);
+System.Func<bool> pending = () => (bool)type.GetField("_requestPending", flags).GetValue(panel);
+System.Func<bool> ready = () => (bool)type.GetField("_isSynchronized", flags).GetValue(panel);
+System.Action<global::GetRoleEquipmentAck> get = ack => type.GetMethod("OnLoadoutReceived", flags).Invoke(panel, new object[] {ack});
+System.Action<global::ChangeRoleEquipmentAck> changeAck = ack => type.GetMethod("OnChangeReceived", flags).Invoke(panel, new object[] {ack});
+var snapshot = new global::RoleEquipmentData {RoleId="__EQUIPMENT_CLIENT_TEST_ONLY__", Attack=14};
+snapshot.Slots.Add(new global::EquipmentSlotDefinition {Slot=(global::EquipSlot)17, Name="配置槽位", IconKey="robe"});
+snapshot.Slots.Add(new global::EquipmentSlotDefinition {Slot=(global::EquipSlot)42, Name="配置副槽", IconKey="sword"});
+try
+{
+    XiuXian.Core.RoleEquipmentPanel.ClearSession();
+    arm(false);
+    get(new global::GetRoleEquipmentAck {Code=global::ErrCode.Ok, RequestId=id()+1, Data=snapshot});
+    check("Wrong request ID cannot finish pending GET", pending() && !ready());
+    get(new global::GetRoleEquipmentAck {Code=global::ErrCode.Ok, RequestId=id(), Data=snapshot});
+    check("Matching GET applies authoritative snapshot", !pending() && ready());
+    check("Equipment selection follows configured slot IDs", (int)type.GetField("_selectedSlot", flags).GetValue(panel)==17);
+    arm(true);
+    get(new global::GetRoleEquipmentAck {Code=global::ErrCode.Ok, RequestId=id(), Data=snapshot});
+    check("GET ACK cannot complete an equipment mutation", pending() && !ready());
+    type.GetMethod("Close", flags).Invoke(panel, null);
+    changeAck(new global::ChangeRoleEquipmentAck {Code=global::ErrCode.Ok, RequestId=id(), Data=snapshot});
+    check("Closing page preserves valid mutation ACK handling", !pending() && ready());
+    arm(false);
+    ulong previous=id();
+    XiuXian.Core.RoleEquipmentPanel.ClearSession();
+    get(new global::GetRoleEquipmentAck {Code=global::ErrCode.Ok, RequestId=previous, Data=snapshot});
+    check("Old session ACK cannot restore equipment", !pending() && !ready() && type.GetField("_data", flags).GetValue(panel)==null);
+    arm(false);
+    get(new global::GetRoleEquipmentAck {Code=global::ErrCode.EquipmentUnavailable, RequestId=id()});
+    check("Error without data leaves writes disabled", !pending() && !ready());
+    arm(true);
+    previous=id();
+    type.GetField("_requestDeadline", flags).SetValue(panel, -1f);
+    type.GetMethod("Update", flags).Invoke(panel, null);
+    var retry=(UnityEngine.UI.Button)type.GetField("_resyncButton", flags).GetValue(panel);
+    check("Mutation timeout offers read-only resync", !pending() && !ready() && retry.gameObject.activeSelf);
+    changeAck(new global::ChangeRoleEquipmentAck {Code=global::ErrCode.Ok, RequestId=previous, Data=snapshot});
+    check("Timed-out mutation ACK is ignored", !pending() && !ready());
+    arm(false);
+    get(new global::GetRoleEquipmentAck {Code=global::ErrCode.Ok, RequestId=id(), Data=snapshot});
+
+    arm(false);
+    get(new global::GetRoleEquipmentAck {RequestId=id(), Data=snapshot});
+    check("GET response missing Code cannot enable writes", !pending() && !ready());
+    arm(true);
+    changeAck(new global::ChangeRoleEquipmentAck {RequestId=id(), Data=snapshot});
+    check("Mutation response missing Code cannot enable writes", !pending() && !ready());
+    arm(false);
+    get(new global::GetRoleEquipmentAck {Code=(global::ErrCode)1234567, RequestId=id(), Data=snapshot});
+    check("Unknown enum GET response cannot enable writes", !pending() && !ready());
+    arm(true);
+    changeAck(new global::ChangeRoleEquipmentAck {Code=(global::ErrCode)1234567, RequestId=id(), Data=snapshot});
+    check("Unknown enum mutation response cannot enable writes", !pending() && !ready());
+    type.GetMethod("OnDisconnected", flags).Invoke(panel, new object[] {"synthetic disconnect"});
+    check("Disconnect clears equipment and pending writes", !pending() && !ready() && type.GetField("_data", flags).GetValue(panel)==null);
+}
+finally
+{
+    XiuXian.Core.RoleEquipmentPanel.ClearSession();
+    XiuXian.Core.UIManager.Instance.Show(XiuXian.Core.UIScreen.Home);
+}
+return new {Scope="CLIENT_SYNTHETIC_REGRESSION_NOT_BACKEND_E2E",Passed=results.Count,Assertions=results};

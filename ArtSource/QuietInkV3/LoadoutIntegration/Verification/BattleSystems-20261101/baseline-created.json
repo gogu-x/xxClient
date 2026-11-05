@@ -1,0 +1,1 @@
+{ "battleId": "71e371d0-7384-4ce0-b7ff-d1e31d03909a", "uid": "1793531576", "tickDurationMs": 100, "units": [ { "instanceId": "1793531576", "team": "BATTLE_TEAM_ATTACKER", "hp": "1222", "maxHp": "1222", "alive": true }, { "instanceId": "monster-1-1", "team": "BATTLE_TEAM_DEFENDER", "hp": "830", "maxHp": "830", "alive": true } ] }

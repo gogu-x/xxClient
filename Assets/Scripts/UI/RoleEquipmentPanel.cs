@@ -20,16 +20,7 @@ namespace XiuXian.Core
         private TMP_Text _detailName;
         private TMP_Text _detailLevel;
         private Image _detailIcon;
-        private static readonly string[] SlotNames = { "灵剑", "仙冠", "法袍", "护腕", "玉佩", "云履" };
-        private static readonly string[][] ItemNames =
-        {
-            new[] { "青锋剑", "落霞灵剑" },
-            new[] { "云纹冠", "玄玉道冠" },
-            new[] { "流云法袍", "玄霜仙衣" },
-            new[] { "缚灵护腕", "星纹腕甲" },
-            new[] { "温玉佩", "太虚灵佩" },
-            new[] { "踏云靴", "追风云履" },
-        };
+        private readonly int[] _displayedSlotIds = { -1, -1, -1, -1, -1, -1 };
 
         private static readonly Color Gold = Q.Gold;
         private static readonly Color Ice = Q.Blue;
@@ -43,6 +34,8 @@ namespace XiuXian.Core
         private TMP_Text _statusText;
         private RectTransform _inventoryContent;
         private Button _unequipButton;
+        private Button _changeButton;
+        private Button _resyncButton;
         private readonly Button[] _slotButtons = new Button[6];
         private readonly TMP_Text[] _slotLabels = new TMP_Text[6];
         private readonly Image[] _slotIcons = new Image[6];
@@ -51,6 +44,45 @@ namespace XiuXian.Core
         private RoleEquipmentData _data;
         private int _selectedSlot = 1;
         private bool _requestPending;
+        private bool _isSynchronized;
+        private bool _pendingIsChange;
+        private ulong _pendingRequestId;
+        private float _requestDeadline;
+        private static ulong _nextRequestId = (ulong)DateTime.UtcNow.Ticks;
+        private const float RequestTimeoutSeconds = 12f;
+
+        /// <summary>登录会话切换时清除装备快照，不创建新的网络或页面对象。</summary>
+        public static void ClearSession()
+        {
+            foreach (var panel in FindObjectsByType<RoleEquipmentPanel>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+                panel.ResetSession();
+        }
+
+        private void ResetSession()
+        {
+            _data = null;
+            _isSynchronized = false;
+            _requestPending = false;
+            _pendingRequestId = 0;
+            if (_picker != null) _picker.SetActive(false);
+            ShowUnavailableView();
+            RefreshArtDetail();
+            SetControlsInteractable(false);
+        }
+
+        private void OnDisconnected(string reason)
+        {
+            ResetSession();
+            ShowSyncFailure("连接已断开，请连接服务器后重新同步");
+        }
+
+        private void Update()
+        {
+            if (!_requestPending || Time.unscaledTime < _requestDeadline) return;
+            _requestPending = false;
+            _pendingRequestId = 0;
+            ShowSyncFailure("同步超时，请重新同步确认装备状态");
+        }
 
         private void Awake()
         {
@@ -68,12 +100,15 @@ namespace XiuXian.Core
                 return;
             net.RegisterProtoHandler("GetRoleEquipmentAck", GetRoleEquipmentAck.Parser, OnLoadoutReceived);
             net.RegisterProtoHandler("ChangeRoleEquipmentAck", ChangeRoleEquipmentAck.Parser, OnChangeReceived);
+            net.OnDisconnected += OnDisconnected;
         }
 
         private void OnDisable()
         {
             Close();
             _requestPending = false;
+            _pendingRequestId = 0;
+            _isSynchronized = false;
             if (!Application.isPlaying)
                 return;
 
@@ -82,21 +117,23 @@ namespace XiuXian.Core
                 return;
             net.UnregisterHandler("GetRoleEquipmentAck");
             net.UnregisterHandler("ChangeRoleEquipmentAck");
+            net.OnDisconnected -= OnDisconnected;
         }
 
         public void OpenSlot(int slot)
         {
-            _selectedSlot = Mathf.Clamp(slot, 1, SlotNames.Length);
+            _selectedSlot = slot;
             Open();
         }
 
-public void Open()
+        public void Open()
         {
             if (_page == null)
                 BuildPage();
+            var character = GetComponent<CharacterPanel>();
+            if (character != null) character.HideAttributes();
             _page.SetActive(true);
             _page.transform.SetAsLastSibling();
-            _selectedSlot = Mathf.Clamp(_selectedSlot, 1, 6);
             if (_data == null) ShowUnavailableView();
             else RefreshView();
             SetStatus("正在同步角色装备…", Ice);
@@ -106,40 +143,85 @@ public void Open()
 
         private void Close()
         {
+            bool wasOpen = _page != null && _page.activeSelf;
             if (_picker != null) _picker.SetActive(false);
             if (_page != null)
                 _page.SetActive(false);
+            if (wasOpen && isActiveAndEnabled)
+            {
+                var character = GetComponent<CharacterPanel>();
+                if (character != null) character.ShowAttributes();
+            }
         }
 
         private void RequestLoadout()
         {
+            if (_requestPending) return;
             var net = NetworkManager.Instance;
             if (net == null || !net.IsConnected)
             {
-                SetStatus("连接服务器后可查看装备", Q.Cinnabar);
+                ShowSyncFailure("连接服务器后可查看装备");
                 return;
             }
 
-            _requestPending = true;
-            SetControlsInteractable(false);
-            net.SendProto(new GetRoleEquipmentReq());
+            BeginRequest(false);
+            SetStatus("正在同步角色装备…", Ice);
+            net.SendProto(new GetRoleEquipmentReq { RequestId = _pendingRequestId });
         }
 
-private void ShowUnavailableView()
+        private void BeginRequest(bool isChange)
         {
+            _requestPending = true;
+            _pendingIsChange = isChange;
+            _isSynchronized = false;
+            _pendingRequestId = ++_nextRequestId;
+            _requestDeadline = Time.unscaledTime + RequestTimeoutSeconds;
+            SetControlsInteractable(false);
+            if (_resyncButton != null) _resyncButton.gameObject.SetActive(false);
+        }
+
+        private bool CompleteRequest(ulong requestId, bool isChange)
+        {
+            if (!_requestPending || _pendingRequestId != requestId || _pendingIsChange != isChange) return false;
+            _requestPending = false;
+            _pendingRequestId = 0;
+            return true;
+        }
+
+        private void ShowSyncFailure(string message)
+        {
+            _isSynchronized = false;
+            SetControlsInteractable(false);
+            SetStatus(message, Q.Cinnabar);
+            if (_resyncButton != null) _resyncButton.gameObject.SetActive(true);
+        }
+
+        private void ApplySnapshot(RoleEquipmentData data, string status)
+        {
+            _data = data;
+            _isSynchronized = true;
+            RefreshView();
+            SetControlsInteractable(true);
+            if (_resyncButton != null) _resyncButton.gameObject.SetActive(false);
+            SetStatus(status, Q.Jade);
+        }
+
+        private void ShowUnavailableView()
+        {
+            RefreshSlotDirectory();
             if (_attributeText != null)
-                _attributeText.text = "角色属性 · 等待服务器同步";
+                _attributeText.text = "装备加成 · 等待服务器同步";
             for (int i = 0; i < _slotLabels.Length; i++)
             {
                 if (_slotLabels[i] != null)
-                    _slotLabels[i].text = SlotNames[i];
+                    _slotLabels[i].text = "槽位 " + (i + 1);
                 if (_slotButtons[i] != null)
-                    _slotButtons[i].interactable = true;
+                    _slotButtons[i].interactable = false;
                 RefreshSlotArt(i, false);
             }
             if (_unequipButton != null) _unequipButton.interactable = false;
             if (_inventoryTitle != null)
-                _inventoryTitle.text = SlotNames[_selectedSlot - 1] + " · 灵器仓库";
+                _inventoryTitle.text = "灵器仓库 · 等待同步";
             if (_emptyInventoryText != null)
             {
                 _emptyInventoryText.text = "登录后同步灵器仓库\n当前槽位的装备会显示在这里";
@@ -151,39 +233,33 @@ private void ShowUnavailableView()
 
         private void OnLoadoutReceived(GetRoleEquipmentAck ack)
         {
-            _requestPending = false;
-            SetControlsInteractable(true);
-            if (!string.IsNullOrEmpty(ack.Error) || ack.Data == null)
+            if (!CompleteRequest(ack.RequestId, false)) return;
+            if (!ack.HasCode || ack.Code != ErrCode.Ok || ack.Data == null)
             {
-                SetStatus(string.IsNullOrEmpty(ack.Error) ? "装备数据暂不可用" : ack.Error,
-                    Q.Cinnabar);
+                ShowSyncFailure(!ack.HasCode || ack.Code != ErrCode.Ok ? LoadoutErrors.ResponseMessage(ack.HasCode, ack.Code) : "装备数据暂不可用");
                 return;
             }
 
-            _data = ack.Data;
-            RefreshView();
-            SetStatus("装备已与道庭同步", Q.Jade);
+            ApplySnapshot(ack.Data, "装备已与道庭同步");
         }
 
         private void OnChangeReceived(ChangeRoleEquipmentAck ack)
         {
-            _requestPending = false;
-            SetControlsInteractable(true);
-            if (!string.IsNullOrEmpty(ack.Error) || ack.Data == null)
+            if (!CompleteRequest(ack.RequestId, true)) return;
+            if (!ack.HasCode || ack.Code != ErrCode.Ok || ack.Data == null)
             {
-                SetStatus(string.IsNullOrEmpty(ack.Error) ? "装备操作失败" : ack.Error,
-                    Q.Cinnabar);
+                ShowSyncFailure(!ack.HasCode || ack.Code != ErrCode.Ok ? LoadoutErrors.ResponseMessage(ack.HasCode, ack.Code) : "装备操作失败");
                 return;
             }
 
-            _data = ack.Data;
-            RefreshView();
-            SetStatus("穿戴完成 · 战斗属性已更新", Q.Jade);
+            ApplySnapshot(ack.Data, "装备已更新 · 后续战斗使用新属性");
+            CombatStatsService.Invalidate();
         }
 
 private void SelectSlot(int slot)
         {
-            _selectedSlot = Mathf.Clamp(slot, 1, SlotNames.Length);
+            if (_data != null && FindSlotDefinition(slot) == null) return;
+            _selectedSlot = slot;
             RefreshArtDetail();
             if (_data == null)
             {
@@ -195,21 +271,22 @@ private void SelectSlot(int slot)
 
         private void ChangeEquipment(string instanceId)
         {
-            if (_requestPending || _data == null)
+            if (_requestPending || !_isSynchronized || _data == null)
                 return;
             var net = NetworkManager.Instance;
             if (net == null || !net.IsConnected)
             {
-                SetStatus("连接服务器后可更换装备", Q.Cinnabar);
+                ShowSyncFailure("连接服务器后可更换装备");
                 return;
             }
 
-            _requestPending = true;
-            SetControlsInteractable(false);
+            BeginRequest(true);
+            SetStatus("正在更新装备…", Ice);
             net.SendProto(new ChangeRoleEquipmentReq
             {
                 Slot = (EquipSlot)_selectedSlot,
                 EquipmentId = instanceId ?? string.Empty,
+                RequestId = _pendingRequestId,
             });
         }
 
@@ -217,37 +294,78 @@ private void SelectSlot(int slot)
         {
             if (_data == null)
                 return;
+            RefreshSlotDirectory();
+            if (FindSlotDefinition(_selectedSlot) == null)
+                _selectedSlot = _displayedSlotIds.Length > 0 ? _displayedSlotIds[0] : -1;
 
             if (_attributeText != null)
             {
-                _attributeText.text = $"生命 +{_data.MaxHp:N0}   攻击 +{_data.Attack:N0}   防御 +{_data.Defense:N0}   速度 +{_data.Speed:N0}";
+                _attributeText.text = $"装备加成 · 生命 +{_data.MaxHp:N0}   攻击 +{_data.Attack:N0}   防御 +{_data.Defense:N0}   速度 +{_data.Speed:N0}";
             }
 
-            for (int slot = 1; slot <= 6; slot++)
+            for (int index = 0; index < _displayedSlotIds.Length; index++)
             {
+                int slot = _displayedSlotIds[index];
                 var equipped = FindEquipped(slot);
-                _slotLabels[slot - 1].text = SlotNames[slot - 1] + (equipped == null ? "" : " Lv." + equipped.Level);
+                _slotLabels[index].text = SlotName(slot) + (equipped == null ? "" : " Lv." + equipped.Level);
 
-                RefreshSlotArt(slot - 1, equipped != null);
+                RefreshSlotArt(index, equipped != null);
             }
 
             if (_inventoryTitle != null)
-                _inventoryTitle.text = $"{SlotNames[_selectedSlot - 1]} · 可用灵器";
+                _inventoryTitle.text = $"{SlotName(_selectedSlot)} · 可用灵器";
             if (_unequipButton != null)
-                _unequipButton.interactable = !_requestPending && FindEquipped(_selectedSlot) != null;
+                _unequipButton.interactable = _isSynchronized && !_requestPending && FindEquipped(_selectedSlot) != null;
             RebuildItemList();
             RefreshArtDetail();
         }
 
         private void RefreshSlotArt(int index, bool equipped)
         {
-            bool selected = index + 1 == _selectedSlot;
+            int slot = _displayedSlotIds[index];
+            bool selected = slot >= 0 && slot == _selectedSlot;
             if (_slotFrames[index] != null)
                 _slotFrames[index].sprite = Q.Sprite(selected ? "equipment_slot_selected" : "equipment_slot");
             if (_slotIcons[index] != null)
+            {
+                _slotIcons[index].sprite = EquipmentIcon(FindEquipped(slot), FindSlotDefinition(slot));
+                _slotIcons[index].enabled = _slotIcons[index].sprite != null;
                 _slotIcons[index].color = equipped ? Color.white : new Color(1, 1, 1, .78f);
+            }
             if (_slotLabels[index] != null)
                 _slotLabels[index].color = selected ? Q.Jade : Q.Ink;
+        }
+
+        private void RefreshSlotDirectory()
+        {
+            for (int i = 0; i < _displayedSlotIds.Length; i++) _displayedSlotIds[i] = -1;
+            if (_data == null) return;
+            var slots = new List<EquipmentSlotDefinition>(_data.Slots);
+            slots.Sort((a, b) => ((int)a.Slot).CompareTo((int)b.Slot));
+            for (int i = 0; i < slots.Count && i < _displayedSlotIds.Length; i++) _displayedSlotIds[i] = (int)slots[i].Slot;
+        }
+
+        private EquipmentSlotDefinition FindSlotDefinition(int slot)
+        {
+            if (_data != null) foreach (var definition in _data.Slots) if ((int)definition.Slot == slot) return definition;
+            return null;
+        }
+
+        private string SlotName(int slot)
+        {
+            var definition = FindSlotDefinition(slot);
+            if (definition != null && !string.IsNullOrEmpty(definition.Name)) return definition.Name;
+            return slot > 0 ? "槽位 " + slot : "未开放";
+        }
+
+        private static Sprite EquipmentIcon(EquipmentItem item, EquipmentSlotDefinition slot)
+        {
+            if (item != null && !string.IsNullOrEmpty(item.IconKey))
+            {
+                var icon = Q.Sprite(item.IconKey);
+                if (icon != null) return icon;
+            }
+            return slot == null || string.IsNullOrEmpty(slot.IconKey) ? null : Q.Sprite(slot.IconKey);
         }
 
         private EquipmentItem FindEquipped(int slot)
@@ -315,16 +433,14 @@ private void RebuildItemList()
             label.rectTransform.anchorMax = Vector2.one;
             label.rectTransform.offsetMin = new Vector2(24, 10);
             label.rectTransform.offsetMax = new Vector2(-24, -10);
-            button.interactable = !_requestPending && !equipped;
+            button.interactable = _isSynchronized && !_requestPending && !equipped;
             return button;
         }
 
         private string DisplayName(EquipmentItem item)
         {
-            int slot = Mathf.Clamp((int)item.Slot - 1, 0, SlotNames.Length - 1);
-            int variant = item.ConfigId > 6 ? 1 : 0;
-            string rarity = item.ConfigId > 6 ? "玄品" : "凡品";
-            return $"{rarity}·{ItemNames[slot][variant]}";
+            string name = string.IsNullOrEmpty(item.DisplayName) ? "未命名装备" : item.DisplayName;
+            return string.IsNullOrEmpty(item.Rarity) ? name : item.Rarity + "·" + name;
         }
 
         private static string AttributeLine(EquipmentItem item) =>
@@ -332,10 +448,12 @@ private void RebuildItemList()
 
         private void SetControlsInteractable(bool interactable)
         {
+            interactable = interactable && _isSynchronized && !_requestPending;
+            if (_changeButton != null) _changeButton.interactable = interactable && FindSlotDefinition(_selectedSlot) != null;
             for (int i = 0; i < _slotButtons.Length; i++)
             {
                 if (_slotButtons[i] != null)
-                    _slotButtons[i].interactable = interactable;
+                    _slotButtons[i].interactable = interactable && FindSlotDefinition(_displayedSlotIds[i]) != null;
             }
             foreach (var button in _itemButtons)
             {
@@ -357,30 +475,32 @@ private void RebuildItemList()
 private void BuildPage()
         {
             var d = Q.Page(transform, PageName, "灵器", Close, out _page);
-            string[] icons = { "sword", "crown", "robe", "bracers", "jade_pendant", "boots" };
-            for (int i = 0; i < icons.Length; i++)
+            for (int i = 0; i < _slotButtons.Length; i++)
             {
                 int slot = i + 1;
+                int visualIndex = i;
                 float x = 74 + (i % 3) * 288, y = 212 + (i / 3) * 258;
-                var button = Q.Button(d, "Slot_" + slot, "", x, y, 216, 226, () => SelectSlot(slot), "equipment_slot");
+                var button = Q.Button(d, "Slot_" + slot, "", x, y, 216, 226, () => SelectSlot(_displayedSlotIds[visualIndex]), "equipment_slot");
                 _slotButtons[i] = button;
                 _slotFrames[i] = button.GetComponent<Image>();
-                _slotIcons[i] = Q.Icon(button.transform, icons[i], 37, 18, 142, 142);
-                _slotLabels[i] = Q.Text(button.transform, "SlotLabel" + slot, SlotNames[i], 9, 174, 198, 38, 27);
+                _slotIcons[i] = Q.Icon(button.transform, "equipment", 37, 18, 142, 142);
+                _slotIcons[i].enabled = false;
+                _slotLabels[i] = Q.Text(button.transform, "SlotLabel" + slot, "槽位 " + slot, 9, 174, 198, 38, 27);
                 _slotLabels[i].enableWordWrapping = false;
                 _slotLabels[i].enableAutoSizing = true;
                 _slotLabels[i].fontSizeMin = 23;
                 _slotLabels[i].fontSizeMax = 28;
             }
             Q.Text(d, "LoadoutHeading", "当前穿戴", 65, 153, 600, 40, 28, Q.Ink, TextAlignmentOptions.Left);
-            _attributeText = Q.Text(d, "Attributes", "角色属性 · 等待服务器同步", 65, 744, 811, 46, 24, Q.Muted);
+            _attributeText = Q.Text(d, "Attributes", "装备加成 · 等待服务器同步", 65, 744, 811, 46, 24, Q.Muted);
             _attributeText.enableWordWrapping = false;
             _attributeText.enableAutoSizing = true;
             _attributeText.fontSizeMin = 20;
             _attributeText.fontSizeMax = 24;
 
             CompactInfoCard.Create(d, "EquipmentDetails", 50, 840, 841, 352);
-            _detailIcon = Q.Icon(d, "sword", 82, 866, 96, 96);
+            _detailIcon = Q.Icon(d, "equipment", 82, 866, 96, 96);
+            _detailIcon.enabled = false;
             _detailName = Q.Text(d, "SelectedName", "", 204, 871, 630, 46, 32, Q.Ink, TextAlignmentOptions.Left);
             _detailName.enableWordWrapping = false;
             _detailName.enableAutoSizing = true;
@@ -400,10 +520,13 @@ private void BuildPage()
                 _detailStats[i].fontSizeMin = 21;
                 _detailStats[i].fontSizeMax = 28;
             }
-            Q.Button(d, "Change", "穿戴 / 更换", 80, 1230, 376, 80,
+            _changeButton = Q.Button(d, "Change", "穿戴 / 更换", 80, 1230, 376, 80,
                 () => { _picker.SetActive(true); _picker.transform.SetAsLastSibling(); });
             _unequipButton = Q.Button(d, "Unequip", "卸下", 485, 1230, 376, 80, () => ChangeEquipment(string.Empty), "button_secondary");
             _statusText = Q.Text(d, "Status", "", 75, 1332, 791, 36, 23, Q.Muted);
+            _resyncButton = Q.Button(d, "Resync", "重新同步", 300, 1396, 341, 78,
+                RequestLoadout, "button_secondary");
+            _resyncButton.gameObject.SetActive(false);
 
             var overlay = Q.Rect(d, "EquipmentPickerOverlay", 0, 0, 941, 1672);
             overlay.gameObject.AddComponent<Image>().color = new Color(.12f, .18f, .16f, .58f);
@@ -441,9 +564,8 @@ private void BuildPage()
         private void RefreshArtDetail()
         {
             if (_detailName == null) return;
-            string[] icons = { "sword", "crown", "robe", "bracers", "jade_pendant", "boots" };
             var item = FindEquipped(_selectedSlot);
-            _detailName.text = item == null ? SlotNames[_selectedSlot - 1] : DisplayName(item);
+            _detailName.text = item == null ? SlotName(_selectedSlot) : DisplayName(item);
             _detailLevel.text = item == null ? (_data == null ? "待同步" : "当前槽位未穿戴")
                 : "Lv." + item.Level + " · 当前穿戴";
             if (item == null)
@@ -457,20 +579,8 @@ private void BuildPage()
                 _detailStats[2].text = $"+{item.Defense:N0}";
                 _detailStats[3].text = $"+{item.Speed:N0}";
             }
-            _detailIcon.sprite = Q.Sprite(icons[_selectedSlot - 1]);
-        }
-
-        private static string SlotGlyph(int slot)
-        {
-            switch (slot)
-            {
-                case 0: return "剑";
-                case 1: return "冠";
-                case 2: return "袍";
-                case 3: return "腕";
-                case 4: return "玉";
-                default: return "履";
-            }
+            _detailIcon.sprite = EquipmentIcon(item, FindSlotDefinition(_selectedSlot));
+            _detailIcon.enabled = _detailIcon.sprite != null;
         }
 
 

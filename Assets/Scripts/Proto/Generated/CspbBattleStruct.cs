@@ -22,68 +22,79 @@ public static partial class CspbBattleStructReflection {
   static CspbBattleStructReflection() {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
-          "Chhjc3BiX2JhdHRsZV9zdHJ1Y3QucHJvdG8iMwoJUm9sZVNraWxsEhcKD3Nr",
-          "aWxsX2NvbmZpZ19pZBgBIAEoBRINCgVsZXZlbBgCIAEoBSJbCglSb2xlRXF1",
-          "aXASEAoIZXF1aXBfaWQYASABKAkSFwoPZXF1aXBfY29uZmlnX2lkGAIgASgF",
-          "Eg0KBWxldmVsGAMgASgFEhQKDHJlZmluZV9sZXZlbBgEIAEoBSKaAQoEUm9s",
-          "ZRIPCgdyb2xlX2lkGAEgASgJEhYKDnJvbGVfY29uZmlnX2lkGAIgASgFEg0K",
-          "BWxldmVsGAMgASgFEgwKBHN0YXIYBCABKAUSFAoMYnJlYWt0aHJvdWdoGAUg",
-          "ASgFEhoKBnNraWxscxgGIAMoCzIKLlJvbGVTa2lsbBIaCgZlcXVpcHMYByAD",
-          "KAsyCi5Sb2xlRXF1aXAiuwIKC0JhdHRsZUV2ZW50EhAKCHNlcXVlbmNlGAEg",
-          "ASgEEg4KBmFjdGlvbhgCIAEoBBIMCgR0aWNrGAMgASgDEh4KBHR5cGUYBCAB",
-          "KA4yEC5CYXR0bGVFdmVudFR5cGUSEAoIYWN0b3JfaWQYBSABKAkSEQoJdGFy",
-          "Z2V0X2lkGAYgASgJEhAKCHNraWxsX2lkGAcgASgJEhEKCXN0YXR1c19pZBgI",
-          "IAEoCRIOCgZhbW91bnQYCSABKAMSEQoJaHBfYmVmb3JlGAogASgDEhAKCGhw",
-          "X2FmdGVyGAsgASgDEg4KBmRldGFpbBgMIAEoCRISCgp0YXJnZXRfaWRzGA0g",
-          "AygJEhIKCnN0YXJ0X3RpY2sYDiABKAMSEwoLaW1wYWN0X3RpY2sYDyABKAMS",
-          "EAoIZW5kX3RpY2sYECABKAMibQoQQmF0dGxlVW5pdFJlc3VsdBITCgtpbnN0",
-          "YW5jZV9pZBgBIAEoCRIZCgR0ZWFtGAIgASgOMgsuQmF0dGxlVGVhbRIKCgJo",
-          "cBgDIAEoAxIOCgZtYXhfaHAYBCABKAMSDQoFYWxpdmUYBSABKAgibgoQQmF0",
-          "dGxlQ3JlYXRlZE50ZhIRCgliYXR0bGVfaWQYASABKAkSCwoDdWlkGAIgASgE",
-          "EhgKEHRpY2tfZHVyYXRpb25fbXMYAyABKAUSIAoFdW5pdHMYBCADKAsyES5C",
-          "YXR0bGVVbml0UmVzdWx0Ik4KD0JhdHRsZUFjdGlvbk50ZhIRCgliYXR0bGVf",
-          "aWQYASABKAkSCwoDdWlkGAIgASgEEhsKBWV2ZW50GAMgASgLMgwuQmF0dGxl",
-          "RXZlbnQiqgEKEUJhdHRsZUZpbmlzaGVkTnRmEhEKCWJhdHRsZV9pZBgBIAEo",
-          "CRILCgN1aWQYAiABKAQSHwoHb3V0Y29tZRgDIAEoDjIOLkJhdHRsZU91dGNv",
-          "bWUSIAoFdW5pdHMYBCADKAsyES5CYXR0bGVVbml0UmVzdWx0EhAKCGNoZWNr",
-          "c3VtGAUgASgJEiAKC2JhdHRsZV90eXBlGAYgASgOMgsuQmF0dGxlVHlwZSI6",
-          "ChhCYXR0bGVSZXN1bHRDb25maXJtZWROdGYSEQoJYmF0dGxlX2lkGAEgASgJ",
-          "EgsKA3VpZBgCIAEoBCqYAQoKQmF0dGxlVHlwZRIbChdCQVRUTEVfVFlQRV9V",
-          "TlNQRUNJRklFRBAAEhUKEUJBVFRMRV9UWVBFX1RPV0VSEAESEwoPQkFUVExF",
-          "X1RZUEVfUFZQEAISFAoQQkFUVExFX1RZUEVfQk9TUxADEhUKEUJBVFRMRV9U",
-          "WVBFX1NUT1JZEAQSFAoQQkFUVExFX1RZUEVfVEVTVBAFKl0KCkJhdHRsZVRl",
-          "YW0SGwoXQkFUVExFX1RFQU1fVU5TUEVDSUZJRUQQABIYChRCQVRUTEVfVEVB",
-          "TV9BVFRBQ0tFUhABEhgKFEJBVFRMRV9URUFNX0RFRkVOREVSEAIqigEKDUJh",
-          "dHRsZU91dGNvbWUSHgoaQkFUVExFX09VVENPTUVfVU5TUEVDSUZJRUQQABIf",
-          "ChtCQVRUTEVfT1VUQ09NRV9BVFRBQ0tFUl9XSU4QARIfChtCQVRUTEVfT1VU",
-          "Q09NRV9ERUZFTkRFUl9XSU4QAhIXChNCQVRUTEVfT1VUQ09NRV9EUkFXEAMq",
-          "mAEKClRhcmdldFJ1bGUSGwoXVEFSR0VUX1JVTEVfVU5TUEVDSUZJRUQQABIc",
-          "ChhUQVJHRVRfUlVMRV9FTkVNWV9TSU5HTEUQARIZChVUQVJHRVRfUlVMRV9F",
-          "TkVNWV9BTEwQAhIeChpUQVJHRVRfUlVMRV9BTExZX0xPV0VTVF9IUBADEhQK",
-          "EFRBUkdFVF9SVUxFX1NFTEYQBCp1CgpFZmZlY3RUeXBlEhsKF0VGRkVDVF9U",
-          "WVBFX1VOU1BFQ0lGSUVEEAASFgoSRUZGRUNUX1RZUEVfREFNQUdFEAESFAoQ",
-          "RUZGRUNUX1RZUEVfSEVBTBACEhwKGEVGRkVDVF9UWVBFX0FQUExZX1NUQVRV",
-          "UxADKqYBCgpTdGF0dXNUeXBlEhsKF1NUQVRVU19UWVBFX1VOU1BFQ0lGSUVE",
-          "EAASFAoQU1RBVFVTX1RZUEVfU1RVThABEhcKE1NUQVRVU19UWVBFX1NJTEVO",
-          "Q0UQAhITCg9TVEFUVVNfVFlQRV9ET1QQAxITCg9TVEFUVVNfVFlQRV9IT1QQ",
-          "BBIiCh5TVEFUVVNfVFlQRV9BVFRSSUJVVEVfTU9ESUZJRVIQBSryAgoPQmF0",
-          "dGxlRXZlbnRUeXBlEiEKHUJBVFRMRV9FVkVOVF9UWVBFX1VOU1BFQ0lGSUVE",
-          "EAASJAogQkFUVExFX0VWRU5UX1RZUEVfQUNUSU9OX1NUQVJURUQQARIgChxC",
-          "QVRUTEVfRVZFTlRfVFlQRV9TS0lMTF9VU0VEEAISHAoYQkFUVExFX0VWRU5U",
-          "X1RZUEVfREFNQUdFEAMSGgoWQkFUVExFX0VWRU5UX1RZUEVfSEVBTBAEEiQK",
-          "IEJBVFRMRV9FVkVOVF9UWVBFX1NUQVRVU19BUFBMSUVEEAUSJAogQkFUVExF",
-          "X0VWRU5UX1RZUEVfQUNUSU9OX1NLSVBQRUQQBhIiCh5CQVRUTEVfRVZFTlRf",
-          "VFlQRV9BQ1RJT05fRU5ERUQQBxIiCh5CQVRUTEVfRVZFTlRfVFlQRV9CQVRU",
-          "TEVfRU5ERUQQCBImCiJCQVRUTEVfRVZFTlRfVFlQRV9BQ1RJT05fQ0FOQ0VM",
-          "TEVEEAlCKlooZ2l0aHViLmNvbS9nb2d1LXgvZ29ncy9wYi9jc3BiL3BiX2Jh",
-          "dHRsZWIGcHJvdG8z"));
+          "Chhjc3BiX2JhdHRsZV9zdHJ1Y3QucHJvdG8aGGNzcGJfY29tbW9uX2dyb3d0",
+          "aC5wcm90byIzCglSb2xlU2tpbGwSFwoPc2tpbGxfY29uZmlnX2lkGAEgASgF",
+          "Eg0KBWxldmVsGAIgASgFIlsKCVJvbGVFcXVpcBIQCghlcXVpcF9pZBgBIAEo",
+          "CRIXCg9lcXVpcF9jb25maWdfaWQYAiABKAUSDQoFbGV2ZWwYAyABKAUSFAoM",
+          "cmVmaW5lX2xldmVsGAQgASgFIuQBCgRSb2xlEg8KB3JvbGVfaWQYASABKAkS",
+          "FgoOcm9sZV9jb25maWdfaWQYAiABKAUSDQoFbGV2ZWwYAyABKAUSDAoEc3Rh",
+          "chgEIAEoBRIUCgxicmVha3Rocm91Z2gYBSABKAUSGgoGc2tpbGxzGAYgAygL",
+          "MgouUm9sZVNraWxsEhoKBmVxdWlwcxgHIAMoCzIKLlJvbGVFcXVpcBIiChpz",
+          "b3VsX2phZGVfZWZmZWN0X2FmZml4X2lkcxgJIAMoBRIkCgxncm93dGhfYm9u",
+          "dXMYCCABKAsyDi5Hcm93dGhCb251c2VzItwDCgtCYXR0bGVFdmVudBIQCghz",
+          "ZXF1ZW5jZRgBIAEoBBIOCgZhY3Rpb24YAiABKAQSDAoEdGljaxgDIAEoAxIe",
+          "CgR0eXBlGAQgASgOMhAuQmF0dGxlRXZlbnRUeXBlEhAKCGFjdG9yX2lkGAUg",
+          "ASgJEhEKCXRhcmdldF9pZBgGIAEoCRIQCghza2lsbF9pZBgHIAEoCRIRCglz",
+          "dGF0dXNfaWQYCCABKAkSDgoGYW1vdW50GAkgASgDEhEKCWhwX2JlZm9yZRgK",
+          "IAEoAxIQCghocF9hZnRlchgLIAEoAxISCgp0YXJnZXRfaWRzGA0gAygJEhIK",
+          "CnN0YXJ0X3RpY2sYDiABKAMSEwoLaW1wYWN0X3RpY2sYDyABKAMSEAoIZW5k",
+          "X3RpY2sYECABKAMSIAoLZWZmZWN0X3R5cGUYESABKA4yCy5FZmZlY3RUeXBl",
+          "EiAKC3N0YXR1c190eXBlGBIgASgOMgsuU3RhdHVzVHlwZRIQCghjcml0aWNh",
+          "bBgTIAEoCBIUCgxiYXNpY19hdHRhY2sYFCABKAgSIgoGcmVhc29uGBUgASgO",
+          "MhIuQmF0dGxlRXZlbnRSZWFzb24SHwoHb3V0Y29tZRgWIAEoDjIOLkJhdHRs",
+          "ZU91dGNvbWUibQoQQmF0dGxlVW5pdFJlc3VsdBITCgtpbnN0YW5jZV9pZBgB",
+          "IAEoCRIZCgR0ZWFtGAIgASgOMgsuQmF0dGxlVGVhbRIKCgJocBgDIAEoAxIO",
+          "CgZtYXhfaHAYBCABKAMSDQoFYWxpdmUYBSABKAgibgoQQmF0dGxlQ3JlYXRl",
+          "ZE50ZhIRCgliYXR0bGVfaWQYASABKAkSCwoDdWlkGAIgASgEEhgKEHRpY2tf",
+          "ZHVyYXRpb25fbXMYAyABKAUSIAoFdW5pdHMYBCADKAsyES5CYXR0bGVVbml0",
+          "UmVzdWx0Ik4KD0JhdHRsZUFjdGlvbk50ZhIRCgliYXR0bGVfaWQYASABKAkS",
+          "CwoDdWlkGAIgASgEEhsKBWV2ZW50GAMgASgLMgwuQmF0dGxlRXZlbnQiqgEK",
+          "EUJhdHRsZUZpbmlzaGVkTnRmEhEKCWJhdHRsZV9pZBgBIAEoCRILCgN1aWQY",
+          "AiABKAQSHwoHb3V0Y29tZRgDIAEoDjIOLkJhdHRsZU91dGNvbWUSIAoFdW5p",
+          "dHMYBCADKAsyES5CYXR0bGVVbml0UmVzdWx0EhAKCGNoZWNrc3VtGAUgASgJ",
+          "EiAKC2JhdHRsZV90eXBlGAYgASgOMgsuQmF0dGxlVHlwZSI6ChhCYXR0bGVS",
+          "ZXN1bHRDb25maXJtZWROdGYSEQoJYmF0dGxlX2lkGAEgASgJEgsKA3VpZBgC",
+          "IAEoBCqYAQoKQmF0dGxlVHlwZRIbChdCQVRUTEVfVFlQRV9VTlNQRUNJRklF",
+          "RBAAEhUKEUJBVFRMRV9UWVBFX1RPV0VSEAESEwoPQkFUVExFX1RZUEVfUFZQ",
+          "EAISFAoQQkFUVExFX1RZUEVfQk9TUxADEhUKEUJBVFRMRV9UWVBFX1NUT1JZ",
+          "EAQSFAoQQkFUVExFX1RZUEVfVEVTVBAFKl0KCkJhdHRsZVRlYW0SGwoXQkFU",
+          "VExFX1RFQU1fVU5TUEVDSUZJRUQQABIYChRCQVRUTEVfVEVBTV9BVFRBQ0tF",
+          "UhABEhgKFEJBVFRMRV9URUFNX0RFRkVOREVSEAIqigEKDUJhdHRsZU91dGNv",
+          "bWUSHgoaQkFUVExFX09VVENPTUVfVU5TUEVDSUZJRUQQABIfChtCQVRUTEVf",
+          "T1VUQ09NRV9BVFRBQ0tFUl9XSU4QARIfChtCQVRUTEVfT1VUQ09NRV9ERUZF",
+          "TkRFUl9XSU4QAhIXChNCQVRUTEVfT1VUQ09NRV9EUkFXEAMqmAEKClRhcmdl",
+          "dFJ1bGUSGwoXVEFSR0VUX1JVTEVfVU5TUEVDSUZJRUQQABIcChhUQVJHRVRf",
+          "UlVMRV9FTkVNWV9TSU5HTEUQARIZChVUQVJHRVRfUlVMRV9FTkVNWV9BTEwQ",
+          "AhIeChpUQVJHRVRfUlVMRV9BTExZX0xPV0VTVF9IUBADEhQKEFRBUkdFVF9S",
+          "VUxFX1NFTEYQBCqpAQoKRWZmZWN0VHlwZRIbChdFRkZFQ1RfVFlQRV9VTlNQ",
+          "RUNJRklFRBAAEhYKEkVGRkVDVF9UWVBFX0RBTUFHRRABEhQKEEVGRkVDVF9U",
+          "WVBFX0hFQUwQAhIcChhFRkZFQ1RfVFlQRV9BUFBMWV9TVEFUVVMQAxIZChVF",
+          "RkZFQ1RfVFlQRV9JQ0VfQlVSU1QQBBIXChNFRkZFQ1RfVFlQRV9USFVOREVS",
+          "EAUqpgEKClN0YXR1c1R5cGUSGwoXU1RBVFVTX1RZUEVfVU5TUEVDSUZJRUQQ",
+          "ABIUChBTVEFUVVNfVFlQRV9TVFVOEAESFwoTU1RBVFVTX1RZUEVfU0lMRU5D",
+          "RRACEhMKD1NUQVRVU19UWVBFX0RPVBADEhMKD1NUQVRVU19UWVBFX0hPVBAE",
+          "EiIKHlNUQVRVU19UWVBFX0FUVFJJQlVURV9NT0RJRklFUhAFKvICCg9CYXR0",
+          "bGVFdmVudFR5cGUSIQodQkFUVExFX0VWRU5UX1RZUEVfVU5TUEVDSUZJRUQQ",
+          "ABIkCiBCQVRUTEVfRVZFTlRfVFlQRV9BQ1RJT05fU1RBUlRFRBABEiAKHEJB",
+          "VFRMRV9FVkVOVF9UWVBFX1NLSUxMX1VTRUQQAhIcChhCQVRUTEVfRVZFTlRf",
+          "VFlQRV9EQU1BR0UQAxIaChZCQVRUTEVfRVZFTlRfVFlQRV9IRUFMEAQSJAog",
+          "QkFUVExFX0VWRU5UX1RZUEVfU1RBVFVTX0FQUExJRUQQBRIkCiBCQVRUTEVf",
+          "RVZFTlRfVFlQRV9BQ1RJT05fU0tJUFBFRBAGEiIKHkJBVFRMRV9FVkVOVF9U",
+          "WVBFX0FDVElPTl9FTkRFRBAHEiIKHkJBVFRMRV9FVkVOVF9UWVBFX0JBVFRM",
+          "RV9FTkRFRBAIEiYKIkJBVFRMRV9FVkVOVF9UWVBFX0FDVElPTl9DQU5DRUxM",
+          "RUQQCSrIAQoRQmF0dGxlRXZlbnRSZWFzb24SIwofQkFUVExFX0VWRU5UX1JF",
+          "QVNPTl9VTlNQRUNJRklFRBAAEiIKHkJBVFRMRV9FVkVOVF9SRUFTT05fQUNU",
+          "T1JfREVBRBABEh8KG0JBVFRMRV9FVkVOVF9SRUFTT05fU1RVTk5FRBACEiMK",
+          "H0JBVFRMRV9FVkVOVF9SRUFTT05fVEFSR0VUX0RFQUQQAxIkCiBCQVRUTEVf",
+          "RVZFTlRfUkVBU09OX0VGRkVDVF9FUlJPUhAEQipaKGdpdGh1Yi5jb20vZ29n",
+          "dS14L2dvZ3MvcGIvY3NwYi9wYl9iYXR0bGViBnByb3RvMw=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-        new pbr::FileDescriptor[] { },
-        new pbr::GeneratedClrTypeInfo(new[] {typeof(global::BattleType), typeof(global::BattleTeam), typeof(global::BattleOutcome), typeof(global::TargetRule), typeof(global::EffectType), typeof(global::StatusType), typeof(global::BattleEventType), }, null, new pbr::GeneratedClrTypeInfo[] {
+        new pbr::FileDescriptor[] { global::CspbCommonGrowthReflection.Descriptor, },
+        new pbr::GeneratedClrTypeInfo(new[] {typeof(global::BattleType), typeof(global::BattleTeam), typeof(global::BattleOutcome), typeof(global::TargetRule), typeof(global::EffectType), typeof(global::StatusType), typeof(global::BattleEventType), typeof(global::BattleEventReason), }, null, new pbr::GeneratedClrTypeInfo[] {
           new pbr::GeneratedClrTypeInfo(typeof(global::RoleSkill), global::RoleSkill.Parser, new[]{ "SkillConfigId", "Level" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::RoleEquip), global::RoleEquip.Parser, new[]{ "EquipId", "EquipConfigId", "Level", "RefineLevel" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::Role), global::Role.Parser, new[]{ "RoleId", "RoleConfigId", "Level", "Star", "Breakthrough", "Skills", "Equips" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::BattleEvent), global::BattleEvent.Parser, new[]{ "Sequence", "Action", "Tick", "Type", "ActorId", "TargetId", "SkillId", "StatusId", "Amount", "HpBefore", "HpAfter", "Detail", "TargetIds", "StartTick", "ImpactTick", "EndTick" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::Role), global::Role.Parser, new[]{ "RoleId", "RoleConfigId", "Level", "Star", "Breakthrough", "Skills", "Equips", "SoulJadeEffectAffixIds", "GrowthBonus" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::BattleEvent), global::BattleEvent.Parser, new[]{ "Sequence", "Action", "Tick", "Type", "ActorId", "TargetId", "SkillId", "StatusId", "Amount", "HpBefore", "HpAfter", "TargetIds", "StartTick", "ImpactTick", "EndTick", "EffectType", "StatusType", "Critical", "BasicAttack", "Reason", "Outcome" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::BattleUnitResult), global::BattleUnitResult.Parser, new[]{ "InstanceId", "Team", "Hp", "MaxHp", "Alive" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::BattleCreatedNtf), global::BattleCreatedNtf.Parser, new[]{ "BattleId", "Uid", "TickDurationMs", "Units" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::BattleActionNtf), global::BattleActionNtf.Parser, new[]{ "BattleId", "Uid", "Event" }, null, null, null, null),
@@ -145,6 +156,8 @@ public enum EffectType {
   [pbr::OriginalName("EFFECT_TYPE_DAMAGE")] Damage = 1,
   [pbr::OriginalName("EFFECT_TYPE_HEAL")] Heal = 2,
   [pbr::OriginalName("EFFECT_TYPE_APPLY_STATUS")] ApplyStatus = 3,
+  [pbr::OriginalName("EFFECT_TYPE_ICE_BURST")] IceBurst = 4,
+  [pbr::OriginalName("EFFECT_TYPE_THUNDER")] Thunder = 5,
 }
 
 /// <summary>
@@ -173,6 +186,17 @@ public enum BattleEventType {
   [pbr::OriginalName("BATTLE_EVENT_TYPE_ACTION_ENDED")] ActionEnded = 7,
   [pbr::OriginalName("BATTLE_EVENT_TYPE_BATTLE_ENDED")] BattleEnded = 8,
   [pbr::OriginalName("BATTLE_EVENT_TYPE_ACTION_CANCELLED")] ActionCancelled = 9,
+}
+
+/// <summary>
+/// BattleEventReason 表示行动跳过或取消的原因。
+/// </summary>
+public enum BattleEventReason {
+  [pbr::OriginalName("BATTLE_EVENT_REASON_UNSPECIFIED")] Unspecified = 0,
+  [pbr::OriginalName("BATTLE_EVENT_REASON_ACTOR_DEAD")] ActorDead = 1,
+  [pbr::OriginalName("BATTLE_EVENT_REASON_STUNNED")] Stunned = 2,
+  [pbr::OriginalName("BATTLE_EVENT_REASON_TARGET_DEAD")] TargetDead = 3,
+  [pbr::OriginalName("BATTLE_EVENT_REASON_EFFECT_ERROR")] EffectError = 4,
 }
 
 #endregion
@@ -773,6 +797,8 @@ public sealed partial class Role : pb::IMessage<Role>
     breakthrough_ = other.breakthrough_;
     skills_ = other.skills_.Clone();
     equips_ = other.equips_.Clone();
+    soulJadeEffectAffixIds_ = other.soulJadeEffectAffixIds_.Clone();
+    growthBonus_ = other.growthBonus_ != null ? other.growthBonus_.Clone() : null;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
@@ -864,6 +890,35 @@ public sealed partial class Role : pb::IMessage<Role>
     get { return equips_; }
   }
 
+  /// <summary>Field number for the "soul_jade_effect_affix_ids" field.</summary>
+  public const int SoulJadeEffectAffixIdsFieldNumber = 9;
+  private static readonly pb::FieldCodec<int> _repeated_soulJadeEffectAffixIds_codec
+      = pb::FieldCodec.ForInt32(74);
+  private readonly pbc::RepeatedField<int> soulJadeEffectAffixIds_ = new pbc::RepeatedField<int>();
+  /// <summary>
+  /// Game 从已装备魂玉提取的效果词条配置 ID；Battle 按配置还原角色被动效果。
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public pbc::RepeatedField<int> SoulJadeEffectAffixIds {
+    get { return soulJadeEffectAffixIds_; }
+  }
+
+  /// <summary>Field number for the "growth_bonus" field.</summary>
+  public const int GrowthBonusFieldNumber = 8;
+  private global::GrowthBonuses growthBonus_;
+  /// <summary>
+  /// 仅由 Game 从玩家存档组装，忽略客户端输入。
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public global::GrowthBonuses GrowthBonus {
+    get { return growthBonus_; }
+    set {
+      growthBonus_ = value;
+    }
+  }
+
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override bool Equals(object other) {
@@ -886,6 +941,8 @@ public sealed partial class Role : pb::IMessage<Role>
     if (Breakthrough != other.Breakthrough) return false;
     if(!skills_.Equals(other.skills_)) return false;
     if(!equips_.Equals(other.equips_)) return false;
+    if(!soulJadeEffectAffixIds_.Equals(other.soulJadeEffectAffixIds_)) return false;
+    if (!object.Equals(GrowthBonus, other.GrowthBonus)) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
@@ -900,6 +957,8 @@ public sealed partial class Role : pb::IMessage<Role>
     if (Breakthrough != 0) hash ^= Breakthrough.GetHashCode();
     hash ^= skills_.GetHashCode();
     hash ^= equips_.GetHashCode();
+    hash ^= soulJadeEffectAffixIds_.GetHashCode();
+    if (growthBonus_ != null) hash ^= GrowthBonus.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -940,6 +999,11 @@ public sealed partial class Role : pb::IMessage<Role>
     }
     skills_.WriteTo(output, _repeated_skills_codec);
     equips_.WriteTo(output, _repeated_equips_codec);
+    if (growthBonus_ != null) {
+      output.WriteRawTag(66);
+      output.WriteMessage(GrowthBonus);
+    }
+    soulJadeEffectAffixIds_.WriteTo(output, _repeated_soulJadeEffectAffixIds_codec);
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
     }
@@ -972,6 +1036,11 @@ public sealed partial class Role : pb::IMessage<Role>
     }
     skills_.WriteTo(ref output, _repeated_skills_codec);
     equips_.WriteTo(ref output, _repeated_equips_codec);
+    if (growthBonus_ != null) {
+      output.WriteRawTag(66);
+      output.WriteMessage(GrowthBonus);
+    }
+    soulJadeEffectAffixIds_.WriteTo(ref output, _repeated_soulJadeEffectAffixIds_codec);
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
     }
@@ -999,6 +1068,10 @@ public sealed partial class Role : pb::IMessage<Role>
     }
     size += skills_.CalculateSize(_repeated_skills_codec);
     size += equips_.CalculateSize(_repeated_equips_codec);
+    size += soulJadeEffectAffixIds_.CalculateSize(_repeated_soulJadeEffectAffixIds_codec);
+    if (growthBonus_ != null) {
+      size += 1 + pb::CodedOutputStream.ComputeMessageSize(GrowthBonus);
+    }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
     }
@@ -1028,6 +1101,13 @@ public sealed partial class Role : pb::IMessage<Role>
     }
     skills_.Add(other.skills_);
     equips_.Add(other.equips_);
+    soulJadeEffectAffixIds_.Add(other.soulJadeEffectAffixIds_);
+    if (other.growthBonus_ != null) {
+      if (growthBonus_ == null) {
+        GrowthBonus = new global::GrowthBonuses();
+      }
+      GrowthBonus.MergeFrom(other.GrowthBonus);
+    }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
 
@@ -1075,6 +1155,18 @@ public sealed partial class Role : pb::IMessage<Role>
           equips_.AddEntriesFrom(input, _repeated_equips_codec);
           break;
         }
+        case 66: {
+          if (growthBonus_ == null) {
+            GrowthBonus = new global::GrowthBonuses();
+          }
+          input.ReadMessage(GrowthBonus);
+          break;
+        }
+        case 74:
+        case 72: {
+          soulJadeEffectAffixIds_.AddEntriesFrom(input, _repeated_soulJadeEffectAffixIds_codec);
+          break;
+        }
       }
     }
   #endif
@@ -1120,6 +1212,18 @@ public sealed partial class Role : pb::IMessage<Role>
         }
         case 58: {
           equips_.AddEntriesFrom(ref input, _repeated_equips_codec);
+          break;
+        }
+        case 66: {
+          if (growthBonus_ == null) {
+            GrowthBonus = new global::GrowthBonuses();
+          }
+          input.ReadMessage(GrowthBonus);
+          break;
+        }
+        case 74:
+        case 72: {
+          soulJadeEffectAffixIds_.AddEntriesFrom(ref input, _repeated_soulJadeEffectAffixIds_codec);
           break;
         }
       }
@@ -1178,11 +1282,16 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
     amount_ = other.amount_;
     hpBefore_ = other.hpBefore_;
     hpAfter_ = other.hpAfter_;
-    detail_ = other.detail_;
     targetIds_ = other.targetIds_.Clone();
     startTick_ = other.startTick_;
     impactTick_ = other.impactTick_;
     endTick_ = other.endTick_;
+    effectType_ = other.effectType_;
+    statusType_ = other.statusType_;
+    critical_ = other.critical_;
+    basicAttack_ = other.basicAttack_;
+    reason_ = other.reason_;
+    outcome_ = other.outcome_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
@@ -1324,18 +1433,6 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
     }
   }
 
-  /// <summary>Field number for the "detail" field.</summary>
-  public const int DetailFieldNumber = 12;
-  private string detail_ = "";
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public string Detail {
-    get { return detail_; }
-    set {
-      detail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-    }
-  }
-
   /// <summary>Field number for the "target_ids" field.</summary>
   public const int TargetIdsFieldNumber = 13;
   private static readonly pb::FieldCodec<string> _repeated_targetIds_codec
@@ -1388,6 +1485,81 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
     }
   }
 
+  /// <summary>Field number for the "effect_type" field.</summary>
+  public const int EffectTypeFieldNumber = 17;
+  private global::EffectType effectType_ = global::EffectType.Unspecified;
+  /// <summary>
+  /// 以下字段按事件类型填写，未涉及的字段保持枚举零值或 false。
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public global::EffectType EffectType {
+    get { return effectType_; }
+    set {
+      effectType_ = value;
+    }
+  }
+
+  /// <summary>Field number for the "status_type" field.</summary>
+  public const int StatusTypeFieldNumber = 18;
+  private global::StatusType statusType_ = global::StatusType.Unspecified;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public global::StatusType StatusType {
+    get { return statusType_; }
+    set {
+      statusType_ = value;
+    }
+  }
+
+  /// <summary>Field number for the "critical" field.</summary>
+  public const int CriticalFieldNumber = 19;
+  private bool critical_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public bool Critical {
+    get { return critical_; }
+    set {
+      critical_ = value;
+    }
+  }
+
+  /// <summary>Field number for the "basic_attack" field.</summary>
+  public const int BasicAttackFieldNumber = 20;
+  private bool basicAttack_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public bool BasicAttack {
+    get { return basicAttack_; }
+    set {
+      basicAttack_ = value;
+    }
+  }
+
+  /// <summary>Field number for the "reason" field.</summary>
+  public const int ReasonFieldNumber = 21;
+  private global::BattleEventReason reason_ = global::BattleEventReason.Unspecified;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public global::BattleEventReason Reason {
+    get { return reason_; }
+    set {
+      reason_ = value;
+    }
+  }
+
+  /// <summary>Field number for the "outcome" field.</summary>
+  public const int OutcomeFieldNumber = 22;
+  private global::BattleOutcome outcome_ = global::BattleOutcome.Unspecified;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public global::BattleOutcome Outcome {
+    get { return outcome_; }
+    set {
+      outcome_ = value;
+    }
+  }
+
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override bool Equals(object other) {
@@ -1414,11 +1586,16 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
     if (Amount != other.Amount) return false;
     if (HpBefore != other.HpBefore) return false;
     if (HpAfter != other.HpAfter) return false;
-    if (Detail != other.Detail) return false;
     if(!targetIds_.Equals(other.targetIds_)) return false;
     if (StartTick != other.StartTick) return false;
     if (ImpactTick != other.ImpactTick) return false;
     if (EndTick != other.EndTick) return false;
+    if (EffectType != other.EffectType) return false;
+    if (StatusType != other.StatusType) return false;
+    if (Critical != other.Critical) return false;
+    if (BasicAttack != other.BasicAttack) return false;
+    if (Reason != other.Reason) return false;
+    if (Outcome != other.Outcome) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
@@ -1437,11 +1614,16 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
     if (Amount != 0L) hash ^= Amount.GetHashCode();
     if (HpBefore != 0L) hash ^= HpBefore.GetHashCode();
     if (HpAfter != 0L) hash ^= HpAfter.GetHashCode();
-    if (Detail.Length != 0) hash ^= Detail.GetHashCode();
     hash ^= targetIds_.GetHashCode();
     if (StartTick != 0L) hash ^= StartTick.GetHashCode();
     if (ImpactTick != 0L) hash ^= ImpactTick.GetHashCode();
     if (EndTick != 0L) hash ^= EndTick.GetHashCode();
+    if (EffectType != global::EffectType.Unspecified) hash ^= EffectType.GetHashCode();
+    if (StatusType != global::StatusType.Unspecified) hash ^= StatusType.GetHashCode();
+    if (Critical != false) hash ^= Critical.GetHashCode();
+    if (BasicAttack != false) hash ^= BasicAttack.GetHashCode();
+    if (Reason != global::BattleEventReason.Unspecified) hash ^= Reason.GetHashCode();
+    if (Outcome != global::BattleOutcome.Unspecified) hash ^= Outcome.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -1504,10 +1686,6 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
       output.WriteRawTag(88);
       output.WriteInt64(HpAfter);
     }
-    if (Detail.Length != 0) {
-      output.WriteRawTag(98);
-      output.WriteString(Detail);
-    }
     targetIds_.WriteTo(output, _repeated_targetIds_codec);
     if (StartTick != 0L) {
       output.WriteRawTag(112);
@@ -1520,6 +1698,30 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
     if (EndTick != 0L) {
       output.WriteRawTag(128, 1);
       output.WriteInt64(EndTick);
+    }
+    if (EffectType != global::EffectType.Unspecified) {
+      output.WriteRawTag(136, 1);
+      output.WriteEnum((int) EffectType);
+    }
+    if (StatusType != global::StatusType.Unspecified) {
+      output.WriteRawTag(144, 1);
+      output.WriteEnum((int) StatusType);
+    }
+    if (Critical != false) {
+      output.WriteRawTag(152, 1);
+      output.WriteBool(Critical);
+    }
+    if (BasicAttack != false) {
+      output.WriteRawTag(160, 1);
+      output.WriteBool(BasicAttack);
+    }
+    if (Reason != global::BattleEventReason.Unspecified) {
+      output.WriteRawTag(168, 1);
+      output.WriteEnum((int) Reason);
+    }
+    if (Outcome != global::BattleOutcome.Unspecified) {
+      output.WriteRawTag(176, 1);
+      output.WriteEnum((int) Outcome);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -1575,10 +1777,6 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
       output.WriteRawTag(88);
       output.WriteInt64(HpAfter);
     }
-    if (Detail.Length != 0) {
-      output.WriteRawTag(98);
-      output.WriteString(Detail);
-    }
     targetIds_.WriteTo(ref output, _repeated_targetIds_codec);
     if (StartTick != 0L) {
       output.WriteRawTag(112);
@@ -1591,6 +1789,30 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
     if (EndTick != 0L) {
       output.WriteRawTag(128, 1);
       output.WriteInt64(EndTick);
+    }
+    if (EffectType != global::EffectType.Unspecified) {
+      output.WriteRawTag(136, 1);
+      output.WriteEnum((int) EffectType);
+    }
+    if (StatusType != global::StatusType.Unspecified) {
+      output.WriteRawTag(144, 1);
+      output.WriteEnum((int) StatusType);
+    }
+    if (Critical != false) {
+      output.WriteRawTag(152, 1);
+      output.WriteBool(Critical);
+    }
+    if (BasicAttack != false) {
+      output.WriteRawTag(160, 1);
+      output.WriteBool(BasicAttack);
+    }
+    if (Reason != global::BattleEventReason.Unspecified) {
+      output.WriteRawTag(168, 1);
+      output.WriteEnum((int) Reason);
+    }
+    if (Outcome != global::BattleOutcome.Unspecified) {
+      output.WriteRawTag(176, 1);
+      output.WriteEnum((int) Outcome);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -1635,9 +1857,6 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
     if (HpAfter != 0L) {
       size += 1 + pb::CodedOutputStream.ComputeInt64Size(HpAfter);
     }
-    if (Detail.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeStringSize(Detail);
-    }
     size += targetIds_.CalculateSize(_repeated_targetIds_codec);
     if (StartTick != 0L) {
       size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartTick);
@@ -1647,6 +1866,24 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
     }
     if (EndTick != 0L) {
       size += 2 + pb::CodedOutputStream.ComputeInt64Size(EndTick);
+    }
+    if (EffectType != global::EffectType.Unspecified) {
+      size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) EffectType);
+    }
+    if (StatusType != global::StatusType.Unspecified) {
+      size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) StatusType);
+    }
+    if (Critical != false) {
+      size += 2 + 1;
+    }
+    if (BasicAttack != false) {
+      size += 2 + 1;
+    }
+    if (Reason != global::BattleEventReason.Unspecified) {
+      size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
+    }
+    if (Outcome != global::BattleOutcome.Unspecified) {
+      size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Outcome);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -1693,9 +1930,6 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
     if (other.HpAfter != 0L) {
       HpAfter = other.HpAfter;
     }
-    if (other.Detail.Length != 0) {
-      Detail = other.Detail;
-    }
     targetIds_.Add(other.targetIds_);
     if (other.StartTick != 0L) {
       StartTick = other.StartTick;
@@ -1705,6 +1939,24 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
     }
     if (other.EndTick != 0L) {
       EndTick = other.EndTick;
+    }
+    if (other.EffectType != global::EffectType.Unspecified) {
+      EffectType = other.EffectType;
+    }
+    if (other.StatusType != global::StatusType.Unspecified) {
+      StatusType = other.StatusType;
+    }
+    if (other.Critical != false) {
+      Critical = other.Critical;
+    }
+    if (other.BasicAttack != false) {
+      BasicAttack = other.BasicAttack;
+    }
+    if (other.Reason != global::BattleEventReason.Unspecified) {
+      Reason = other.Reason;
+    }
+    if (other.Outcome != global::BattleOutcome.Unspecified) {
+      Outcome = other.Outcome;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
@@ -1769,10 +2021,6 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
           HpAfter = input.ReadInt64();
           break;
         }
-        case 98: {
-          Detail = input.ReadString();
-          break;
-        }
         case 106: {
           targetIds_.AddEntriesFrom(input, _repeated_targetIds_codec);
           break;
@@ -1787,6 +2035,30 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
         }
         case 128: {
           EndTick = input.ReadInt64();
+          break;
+        }
+        case 136: {
+          EffectType = (global::EffectType) input.ReadEnum();
+          break;
+        }
+        case 144: {
+          StatusType = (global::StatusType) input.ReadEnum();
+          break;
+        }
+        case 152: {
+          Critical = input.ReadBool();
+          break;
+        }
+        case 160: {
+          BasicAttack = input.ReadBool();
+          break;
+        }
+        case 168: {
+          Reason = (global::BattleEventReason) input.ReadEnum();
+          break;
+        }
+        case 176: {
+          Outcome = (global::BattleOutcome) input.ReadEnum();
           break;
         }
       }
@@ -1852,10 +2124,6 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
           HpAfter = input.ReadInt64();
           break;
         }
-        case 98: {
-          Detail = input.ReadString();
-          break;
-        }
         case 106: {
           targetIds_.AddEntriesFrom(ref input, _repeated_targetIds_codec);
           break;
@@ -1870,6 +2138,30 @@ public sealed partial class BattleEvent : pb::IMessage<BattleEvent>
         }
         case 128: {
           EndTick = input.ReadInt64();
+          break;
+        }
+        case 136: {
+          EffectType = (global::EffectType) input.ReadEnum();
+          break;
+        }
+        case 144: {
+          StatusType = (global::StatusType) input.ReadEnum();
+          break;
+        }
+        case 152: {
+          Critical = input.ReadBool();
+          break;
+        }
+        case 160: {
+          BasicAttack = input.ReadBool();
+          break;
+        }
+        case 168: {
+          Reason = (global::BattleEventReason) input.ReadEnum();
+          break;
+        }
+        case 176: {
+          Outcome = (global::BattleOutcome) input.ReadEnum();
           break;
         }
       }

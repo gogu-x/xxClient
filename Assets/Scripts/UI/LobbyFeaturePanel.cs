@@ -7,7 +7,7 @@ using Q = XiuXian.Core.QuietInkUI;
 namespace XiuXian.Core
 {
     /// <summary>Portrait service pages. Unavailable data stays empty; navigation remains usable.</summary>
-    public sealed class LobbyFeaturePanel : MonoBehaviour
+    public sealed partial class LobbyFeaturePanel : MonoBehaviour
     {
         public enum Feature { Cultivation, Inventory, Task, Sect, Activity, Welfare, More, Partner, Rank, Estate, Settings }
         private GameObject page;
@@ -28,11 +28,13 @@ namespace XiuXian.Core
         }
         public void Close()
         {
+            SaveCultivation();
             if (page != null) page.SetActive(false);
             var callback = onClose; onClose = null; callback?.Invoke();
         }
         private void OnDisable()
         {
+            SaveCultivation();
             // A top-level screen change must not reopen the previous service overlay.
             if (page != null) page.SetActive(false);
             onClose = null;
@@ -94,16 +96,7 @@ namespace XiuXian.Core
         }
         private void Cultivation(Transform d)
         {
-            Q.Text(d, "Rank", "灵根阶位  " + RoleTalentPanel.CultivationRank, 180, 184, 581, 65, 35);
-            Illustration(d, "cultivation_seal", 205, 300, 531, 490);
-            Caption(d, "灵气与境界进度待同步", 815);
-            CompactInfoCard.Create(d, "CultivationState", 55, 915, 831, 230);
-            Q.Text(d, "BreakthroughTitle", "境界突破", 85, 938, 320, 48, 34, Q.Ink, TextAlignmentOptions.Left);
-            Q.Text(d, "TalentPoints", "可用天赋点  " + RoleTalentPanel.AvailablePoints, 435, 945, 420, 40, 28, Q.Jade, TextAlignmentOptions.Right);
-            Q.Divider(d, 85, 1000, 771);
-            Q.Text(d, "Requirements", "境界条件与突破材料尚未接入。\n可先查看并修习已有灵根天赋。", 85, 1024, 771, 88, 28, Q.Muted, TextAlignmentOptions.Left);
-            Q.Button(d, "Talents", "灵根天赋", 90, 1190, 365, 86, OpenTalent);
-            Q.Button(d, "Breakthrough", "突破 · 未开放", 485, 1190, 365, 86, null, "button_disabled", 28);
+            BuildCultivation(d);
         }
         private void Inventory(Transform d)
         {

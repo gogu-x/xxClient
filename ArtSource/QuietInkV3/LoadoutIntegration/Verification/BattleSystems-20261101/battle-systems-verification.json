@@ -1,0 +1,1315 @@
+{
+  "schema_version": 2,
+  "generated_at_utc": "2026-11-01T16:25:05.084405+00:00",
+  "scope": "Five recorded real battles; live role-combat attribute responses before/after equipment changes and reconnect; separate synthetic client regression and compilation evidence.",
+  "account_uid": "1793531576",
+  "formula": {
+    "expression": "floor((base_attribute + equipment_flat) * (1000 + equipped_soul_permille + learned_talent_permille) / 1000)",
+    "code_sources": [
+      "gogs/battle/battle/internal/configcompiler/progression.go",
+      "gogs/game/play/internal/player/loadout.go",
+      "gogs/game/play/internal/player/growth/bonuses.go"
+    ],
+    "configuration_scope": "Current local TSV; no database read. Role config 1 follows PlayerInitRoleCfg; battle packets do not expose role_config_id."
+  },
+  "stages": [
+    {
+      "stage": "baseline",
+      "battle_id": "71e371d0-7384-4ce0-b7ff-d1e31d03909a",
+      "uid": "1793531576",
+      "tick_duration_ms": 100,
+      "snapshot_sources": {
+        "equipment": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-equipment.json",
+        "soul_jade": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-soul.json",
+        "talent": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-talent.json"
+      },
+      "inputs": {
+        "base_attributes": {
+          "maxHp": 1025,
+          "attack": 103,
+          "defense": 52,
+          "speed": 190
+        },
+        "equipment_flat": {
+          "maxHp": 183,
+          "attack": 39,
+          "defense": 21,
+          "speed": 27
+        },
+        "soul_jade_permille": {
+          "maxHpPermille": 12,
+          "attackPermille": 24,
+          "defensePermille": 24,
+          "speedPermille": 12
+        },
+        "talent_permille": {
+          "maxHpPermille": 0,
+          "attackPermille": 0,
+          "defensePermille": 0,
+          "speedPermille": 0
+        },
+        "combined_permille": {
+          "maxHpPermille": 12,
+          "attackPermille": 24,
+          "defensePermille": 24,
+          "speedPermille": 12
+        }
+      },
+      "hp_formula": "floor((1025 + 183) * 1012 / 1000)",
+      "expected_attributes_from_configuration_and_code": {
+        "maxHp": 1222,
+        "attack": 145,
+        "defense": 74,
+        "speed": 219
+      },
+      "observed_battle_fields": {
+        "starting_hp": 1222,
+        "starting_max_hp": 1222,
+        "finished_hp": 1188,
+        "finished_max_hp": 1222,
+        "outcome": "BATTLE_OUTCOME_ATTACKER_WIN",
+        "checksum": "f2604a50229dd8377a8f729e05052bf7d37fd4bd93d39c623135276ce82be599",
+        "enemy_count": 1
+      },
+      "runtime_attribute_verification": {
+        "maxHp": true,
+        "attack": false,
+        "defense": false,
+        "speed": false
+      },
+      "checksum_validation": {
+        "format_and_matching_binary_presence": true,
+        "independent_replay_recomputed": false
+      },
+      "pass": true
+    },
+    {
+      "stage": "equipped",
+      "battle_id": "14b219ce-2b53-408c-9b82-fed8e471f499",
+      "uid": "1793531576",
+      "tick_duration_ms": 100,
+      "snapshot_sources": {
+        "equipment": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-equipment.json",
+        "soul_jade": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-soul.json",
+        "talent": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-talent.json"
+      },
+      "inputs": {
+        "base_attributes": {
+          "maxHp": 1025,
+          "attack": 103,
+          "defense": 52,
+          "speed": 190
+        },
+        "equipment_flat": {
+          "maxHp": 201,
+          "attack": 45,
+          "defense": 24,
+          "speed": 26
+        },
+        "soul_jade_permille": {
+          "maxHpPermille": 12,
+          "attackPermille": 24,
+          "defensePermille": 24,
+          "speedPermille": 12
+        },
+        "talent_permille": {
+          "maxHpPermille": 0,
+          "attackPermille": 0,
+          "defensePermille": 0,
+          "speedPermille": 0
+        },
+        "combined_permille": {
+          "maxHpPermille": 12,
+          "attackPermille": 24,
+          "defensePermille": 24,
+          "speedPermille": 12
+        }
+      },
+      "hp_formula": "floor((1025 + 201) * 1012 / 1000)",
+      "expected_attributes_from_configuration_and_code": {
+        "maxHp": 1240,
+        "attack": 151,
+        "defense": 77,
+        "speed": 218
+      },
+      "observed_battle_fields": {
+        "starting_hp": 1240,
+        "starting_max_hp": 1240,
+        "finished_hp": 1188,
+        "finished_max_hp": 1240,
+        "outcome": "BATTLE_OUTCOME_ATTACKER_WIN",
+        "checksum": "7ad057e10e273a9ca8ea5615db9018c1a97b102270a24ac1592f6b07f22a3575",
+        "enemy_count": 2
+      },
+      "runtime_attribute_verification": {
+        "maxHp": true,
+        "attack": false,
+        "defense": false,
+        "speed": false
+      },
+      "checksum_validation": {
+        "format_and_matching_binary_presence": true,
+        "independent_replay_recomputed": false
+      },
+      "pass": true
+    },
+    {
+      "stage": "composite",
+      "battle_id": "978d693b-057a-4c6d-a0c8-d358150ef841",
+      "uid": "1793531576",
+      "tick_duration_ms": 100,
+      "snapshot_sources": {
+        "equipment": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-equipment.json",
+        "soul_jade": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-soul.json",
+        "talent": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-talent.json"
+      },
+      "inputs": {
+        "base_attributes": {
+          "maxHp": 1025,
+          "attack": 103,
+          "defense": 52,
+          "speed": 190
+        },
+        "equipment_flat": {
+          "maxHp": 201,
+          "attack": 45,
+          "defense": 24,
+          "speed": 26
+        },
+        "soul_jade_permille": {
+          "maxHpPermille": 12,
+          "attackPermille": 24,
+          "defensePermille": 24,
+          "speedPermille": 12
+        },
+        "talent_permille": {
+          "maxHpPermille": 8,
+          "attackPermille": 0,
+          "defensePermille": 0,
+          "speedPermille": 0
+        },
+        "combined_permille": {
+          "maxHpPermille": 20,
+          "attackPermille": 24,
+          "defensePermille": 24,
+          "speedPermille": 12
+        }
+      },
+      "hp_formula": "floor((1025 + 201) * 1020 / 1000)",
+      "expected_attributes_from_configuration_and_code": {
+        "maxHp": 1250,
+        "attack": 151,
+        "defense": 77,
+        "speed": 218
+      },
+      "observed_battle_fields": {
+        "starting_hp": 1250,
+        "starting_max_hp": 1250,
+        "finished_hp": 1205,
+        "finished_max_hp": 1250,
+        "outcome": "BATTLE_OUTCOME_ATTACKER_WIN",
+        "checksum": "d972618e31b38b1d5d463950d298cecf371ef6fc605b6bb5efb5681b7e0e2c19",
+        "enemy_count": 2
+      },
+      "runtime_attribute_verification": {
+        "maxHp": true,
+        "attack": false,
+        "defense": false,
+        "speed": false
+      },
+      "checksum_validation": {
+        "format_and_matching_binary_presence": true,
+        "independent_replay_recomputed": false
+      },
+      "pass": true
+    },
+    {
+      "stage": "soulremoved",
+      "battle_id": "386130a4-5840-4acf-878f-b1da82cbb975",
+      "uid": "1793531576",
+      "tick_duration_ms": 100,
+      "snapshot_sources": {
+        "equipment": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-equipment.json",
+        "soul_jade": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/soulremoved-soul.json",
+        "talent": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-talent.json"
+      },
+      "inputs": {
+        "base_attributes": {
+          "maxHp": 1025,
+          "attack": 103,
+          "defense": 52,
+          "speed": 190
+        },
+        "equipment_flat": {
+          "maxHp": 201,
+          "attack": 45,
+          "defense": 24,
+          "speed": 26
+        },
+        "soul_jade_permille": {
+          "maxHpPermille": 0,
+          "attackPermille": 24,
+          "defensePermille": 24,
+          "speedPermille": 12
+        },
+        "talent_permille": {
+          "maxHpPermille": 8,
+          "attackPermille": 0,
+          "defensePermille": 0,
+          "speedPermille": 0
+        },
+        "combined_permille": {
+          "maxHpPermille": 8,
+          "attackPermille": 24,
+          "defensePermille": 24,
+          "speedPermille": 12
+        }
+      },
+      "hp_formula": "floor((1025 + 201) * 1008 / 1000)",
+      "expected_attributes_from_configuration_and_code": {
+        "maxHp": 1235,
+        "attack": 151,
+        "defense": 77,
+        "speed": 218
+      },
+      "observed_battle_fields": {
+        "starting_hp": 1235,
+        "starting_max_hp": 1235,
+        "finished_hp": 971,
+        "finished_max_hp": 1235,
+        "outcome": "BATTLE_OUTCOME_ATTACKER_WIN",
+        "checksum": "746da33e14ca11473db1f5f84064208f7d277c2d63019ef756b8e413d6b820f4",
+        "enemy_count": 3
+      },
+      "runtime_attribute_verification": {
+        "maxHp": true,
+        "attack": false,
+        "defense": false,
+        "speed": false
+      },
+      "checksum_validation": {
+        "format_and_matching_binary_presence": true,
+        "independent_replay_recomputed": false
+      },
+      "pass": true
+    },
+    {
+      "stage": "restarted",
+      "battle_id": "78aac09f-5d82-4696-8a45-15b76599d220",
+      "uid": "1793531576",
+      "tick_duration_ms": 100,
+      "snapshot_sources": {
+        "equipment": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/stats-gear-restore.json",
+        "soul_jade": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restored-soul.json",
+        "talent": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-talent.json",
+        "authoritative_attribute_interface": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-restored.json"
+      },
+      "inputs": {
+        "base_attributes": {
+          "maxHp": 1025,
+          "attack": 103,
+          "defense": 52,
+          "speed": 190
+        },
+        "equipment_flat": {
+          "maxHp": 201,
+          "attack": 45,
+          "defense": 24,
+          "speed": 26
+        },
+        "soul_jade_permille": {
+          "maxHpPermille": 12,
+          "attackPermille": 24,
+          "defensePermille": 24,
+          "speedPermille": 12
+        },
+        "talent_permille": {
+          "maxHpPermille": 8,
+          "attackPermille": 0,
+          "defensePermille": 0,
+          "speedPermille": 0
+        },
+        "combined_permille": {
+          "maxHpPermille": 20,
+          "attackPermille": 24,
+          "defensePermille": 24,
+          "speedPermille": 12
+        }
+      },
+      "hp_formula": "floor((1025 + 201) * 1020 / 1000)",
+      "expected_attributes_from_configuration_and_code": {
+        "maxHp": 1250,
+        "attack": 151,
+        "defense": 77,
+        "speed": 218
+      },
+      "observed_battle_fields": {
+        "starting_hp": 1250,
+        "starting_max_hp": 1250,
+        "finished_hp": 736,
+        "finished_max_hp": 1250,
+        "outcome": "BATTLE_OUTCOME_ATTACKER_WIN",
+        "checksum": "9579432f28dd5907fc255f082a0d9dd0baffb70925f1e1befb4d982d3880d623",
+        "enemy_count": 3
+      },
+      "runtime_attribute_verification": {
+        "maxHp": true,
+        "attack": false,
+        "defense": false,
+        "speed": false
+      },
+      "checksum_validation": {
+        "format_and_matching_binary_presence": true,
+        "independent_replay_recomputed": false
+      },
+      "pass": true,
+      "pre_battle_interface_attributes": {
+        "maxHp": 1250,
+        "attack": 151,
+        "defense": 77,
+        "speed": 218
+      },
+      "attribute_verification_scope": "All four were returned by the separate live attribute interface; only HP is present in created/finished battle messages."
+    }
+  ],
+  "evidence_limits": [
+    "Created/finished battle messages expose HP only. The first four stages retain derived attack/defense/speed expectations; separately captured GetRoleCombatStatsAck messages now provide actual live values for all four attributes.",
+    "Equipment/soul/talent snapshot inheritance across stages is explicit in snapshot_sources.",
+    "Checksums are recorded, format checked, and found in corresponding finished.bin; engine tick and full events are unavailable, so no independent replay checksum was recomputed.",
+    "Static screenshot review does not prove playback smoothness or animation timing."
+  ],
+  "talent_duplicate_live_check": {
+    "first_code": "OK",
+    "duplicate_code": "TALENT_ALREADY_LEARNED",
+    "duplicate_numeric_code": -4302,
+    "explicit_presence": true,
+    "revision": 2,
+    "spent_points": 1,
+    "available_points": 5,
+    "same_snapshot": true,
+    "source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/responses.log"
+  },
+  "restoration": {
+    "soul_jade_revision": 8,
+    "hp_permille": 12,
+    "source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restored-soul.json"
+  },
+  "client_synthetic_regression": {
+    "scope": "CLIENT_COMBAT_STATS_SYNTHETIC_REGRESSION_NOT_BACKEND_E2E",
+    "passed": 30,
+    "failed": 0,
+    "skipped": 0,
+    "backend_end_to_end": false,
+    "source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/client-checks.json"
+  },
+  "visual_evidence": {
+    "source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-battle.png",
+    "static_image_reviewed": true,
+    "observed": [
+      "Three illustrated combat units and health bars are visible.",
+      "Four skill icons and combat log lines are visible.",
+      "The captured battle timer is 00:07."
+    ],
+    "new_role_attribute_interface_verified": true,
+    "character_page": {
+      "source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/character-live.png",
+      "static_image_reviewed": true,
+      "observed_attributes": {
+        "maxHp": 1250,
+        "attack": 151,
+        "defense": 77,
+        "speed": 218
+      },
+      "observations": [
+        "All four labels and values are legible and do not overlap.",
+        "The page identifies these as current growth attributes effective in the next battle."
+      ]
+    },
+    "post_restart_result_page": {
+      "source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restarted-battle.png",
+      "static_image_reviewed": true,
+      "page_kind": "settlement_result_not_in_progress_battle",
+      "observations": [
+        "Victory result is visible.",
+        "One allied survivor and zero enemy survivors are displayed.",
+        "Challenge-again and return-to-lobby buttons are visible."
+      ]
+    }
+  },
+  "unit_test_coverage": {
+    "source": "gogs/battle/battle/internal/configcompiler/progression_test.go",
+    "tests": [
+      "TestGrowthAppliesAfterEquipmentExactlyOnce",
+      "TestCompiledBattleIgnoresLaterRequestAndConfigurationMutations"
+    ],
+    "execution_in_summary_task": "not_run"
+  },
+  "webgl_build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 33,
+    "seconds": 50.765170999999995,
+    "source": "g1Client/Library/BrowserPreview/combat-stats-build.json",
+    "meaning": "Compilation evidence only; not live backend or browser runtime verification."
+  },
+  "pending": {},
+  "assertions": [
+    {
+      "id": "base_role_1",
+      "pass": true,
+      "sources": [
+        "glconf/BattleRoleCfg.tsv"
+      ]
+    },
+    {
+      "id": "baseline_equipment_matches_tsv",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-equipment.json",
+        "glconf/BattleEquipCfg.tsv"
+      ]
+    },
+    {
+      "id": "equipped_equipment_matches_tsv",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-equipment.json",
+        "glconf/BattleEquipCfg.tsv"
+      ]
+    },
+    {
+      "id": "baseline_soul_equipped_affixes",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-soul.json"
+      ]
+    },
+    {
+      "id": "soulremoved_soul_equipped_affixes",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/soulremoved-soul.json"
+      ]
+    },
+    {
+      "id": "restored_soul_equipped_affixes",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restored-soul.json"
+      ]
+    },
+    {
+      "id": "talent_50_matches_tsv",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-talent.json",
+        "glconf/TalentNodeCfg.tsv"
+      ]
+    },
+    {
+      "id": "baseline_start_ack_ok",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-ack.json"
+      ]
+    },
+    {
+      "id": "baseline_identity",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-created.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-finished.json"
+      ]
+    },
+    {
+      "id": "baseline_hp_matches_formula",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-created.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-finished.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-equipment.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-soul.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-talent.json"
+      ]
+    },
+    {
+      "id": "baseline_won_and_survived",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-finished.json"
+      ]
+    },
+    {
+      "id": "baseline_checksum_format_and_binary_presence",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-finished.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-finished.bin"
+      ]
+    },
+    {
+      "id": "equipped_start_ack_ok",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-ack.json"
+      ]
+    },
+    {
+      "id": "equipped_identity",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-created.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-finished.json"
+      ]
+    },
+    {
+      "id": "equipped_hp_matches_formula",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-created.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-finished.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-equipment.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-soul.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-talent.json"
+      ]
+    },
+    {
+      "id": "equipped_won_and_survived",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-finished.json"
+      ]
+    },
+    {
+      "id": "equipped_checksum_format_and_binary_presence",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-finished.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-finished.bin"
+      ]
+    },
+    {
+      "id": "composite_start_ack_ok",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-ack.json"
+      ]
+    },
+    {
+      "id": "composite_identity",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-created.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-finished.json"
+      ]
+    },
+    {
+      "id": "composite_hp_matches_formula",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-created.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-finished.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-equipment.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-soul.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-talent.json"
+      ]
+    },
+    {
+      "id": "composite_won_and_survived",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-finished.json"
+      ]
+    },
+    {
+      "id": "composite_checksum_format_and_binary_presence",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-finished.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-finished.bin"
+      ]
+    },
+    {
+      "id": "soulremoved_start_ack_ok",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/soulremoved-ack.json"
+      ]
+    },
+    {
+      "id": "soulremoved_identity",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/soulremoved-created.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/soulremoved-finished.json"
+      ]
+    },
+    {
+      "id": "soulremoved_hp_matches_formula",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/soulremoved-created.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/soulremoved-finished.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-equipment.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/soulremoved-soul.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-talent.json"
+      ]
+    },
+    {
+      "id": "soulremoved_won_and_survived",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/soulremoved-finished.json"
+      ]
+    },
+    {
+      "id": "soulremoved_checksum_format_and_binary_presence",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/soulremoved-finished.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/soulremoved-finished.bin"
+      ]
+    },
+    {
+      "id": "talent_live_duplicate_code",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/talent-learn.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/talent-duplicate.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/responses.log"
+      ]
+    },
+    {
+      "id": "talent_duplicate_state_unchanged",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/talent-learn.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/talent-duplicate.json"
+      ]
+    },
+    {
+      "id": "talent_learn_one_point_node_50",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/talent-before.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/talent-learn.json"
+      ]
+    },
+    {
+      "id": "soul_restored_after_tests",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restored-soul.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-soul.json"
+      ]
+    },
+    {
+      "id": "client_synthetic_checks_pass",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/client-checks.json"
+      ]
+    },
+    {
+      "id": "webgl_build_succeeded",
+      "pass": true,
+      "sources": [
+        "g1Client/Library/BrowserPreview/combat-stats-build.json"
+      ]
+    },
+    {
+      "id": "live_equipment_change_success",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/stats-gear-change.json"
+      ]
+    },
+    {
+      "id": "live_equipment_restore_success",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/stats-gear-restore.json"
+      ]
+    },
+    {
+      "id": "live_stats_after_restart_explicit_success",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-after-restart.json"
+      ]
+    },
+    {
+      "id": "live_stats_after_restart_matches_snapshot",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-after-restart.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/live-stats.json"
+      ]
+    },
+    {
+      "id": "live_stats_after_restart_matches_formula",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-after-restart.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/stats-gear-restore.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-talent.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restored-soul.json",
+        "glconf/BattleRoleCfg.tsv"
+      ]
+    },
+    {
+      "id": "live_stats_gear03_explicit_success",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-gear03.json"
+      ]
+    },
+    {
+      "id": "live_stats_gear03_matches_snapshot",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-gear03.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/live-stats-gear03.json"
+      ]
+    },
+    {
+      "id": "live_stats_gear03_matches_formula",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-gear03.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/stats-gear-change.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-talent.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restored-soul.json",
+        "glconf/BattleRoleCfg.tsv"
+      ]
+    },
+    {
+      "id": "live_stats_restored_explicit_success",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-restored.json"
+      ]
+    },
+    {
+      "id": "live_stats_restored_matches_snapshot",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-restored.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/live-stats-restored.json"
+      ]
+    },
+    {
+      "id": "live_stats_restored_matches_formula",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-restored.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/stats-gear-restore.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-talent.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restored-soul.json",
+        "glconf/BattleRoleCfg.tsv"
+      ]
+    },
+    {
+      "id": "live_stats_relogin_explicit_success",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-relogin.json"
+      ]
+    },
+    {
+      "id": "live_stats_relogin_matches_snapshot",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-relogin.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/live-stats-relogin.json"
+      ]
+    },
+    {
+      "id": "live_stats_relogin_matches_formula",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-relogin.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/stats-gear-restore.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-talent.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restored-soul.json",
+        "glconf/BattleRoleCfg.tsv"
+      ]
+    },
+    {
+      "id": "live_stats_restored_and_relogin_equal",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/live-stats.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/live-stats-restored.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/live-stats-relogin.json"
+      ]
+    },
+    {
+      "id": "restarted_start_ack_ok",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restarted-ack.json"
+      ]
+    },
+    {
+      "id": "restarted_identity",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restarted-created.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restarted-finished.json"
+      ]
+    },
+    {
+      "id": "restarted_hp_matches_live_stats",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restarted-created.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restarted-finished.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/live-stats-restored.json"
+      ]
+    },
+    {
+      "id": "restarted_won_and_survived",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restarted-finished.json"
+      ]
+    },
+    {
+      "id": "restarted_checksum_format_and_binary_presence",
+      "pass": true,
+      "sources": [
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restarted-finished.json",
+        "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restarted-finished.bin"
+      ]
+    }
+  ],
+  "assertion_summary": {
+    "passed": 53,
+    "failed": 0,
+    "all_recorded_assertions_passed": true
+  },
+  "sources": [
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-ack.json",
+      "sha256": "c5fc6b83f31016ce4e2d00a202b5b668e0507629dbd12d6f122d6321901b9411"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-created.json",
+      "sha256": "c7c20f853fa577c37d1ff9dd050cff55eb5f4016249a1d0936be61ab04087c0a"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-equipment.json",
+      "sha256": "7e30981bf66f70f3eff6639064f0871bcdad2e933a91dac2c4a8220b66c7b521"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-finished.bin",
+      "sha256": "2d9e447e8670406b34c83d0e5a143f14725b0bc6b6d19623e91b72f157d17bd1"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-finished.json",
+      "sha256": "fea50cdb1b4532e790a2d0ae3cd3aa4f19bc4e9fc9f75baaaa67b65d2b98b34e"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-soul.json",
+      "sha256": "6a234031cc9c1dd89464d9d8680e96d6916d6902e3e87f054e038ce24d416533"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/baseline-talent.json",
+      "sha256": "f9ab061708da96c16444d7326243b964fa4c0849584c90033d343b5608b828a3"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/character-live.png",
+      "sha256": "a68033706f43ba93a3333b7263563b038d934f3795b1b6dca9dddb15f35fe38c"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/client-checks.json",
+      "sha256": "385ac2d2c5ca2f19d9bd8db770f74ccac70f066064c9a99604f2e6bfd080c3eb"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-ack.json",
+      "sha256": "c5fc6b83f31016ce4e2d00a202b5b668e0507629dbd12d6f122d6321901b9411"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-battle.png",
+      "sha256": "a55023001adedef260007a3887925ac4af2e973ca8a5a338a25f8c13345deb15"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-created.json",
+      "sha256": "8b3892cc0f1abefe7571e5af33f576dd11409bace5846661f4bc48c293ddc0ef"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-finished.bin",
+      "sha256": "15fe40ad2888d81b52bf9a6e7a96b7fdbbe8ed689b90a4c3a9d4e5f2a273ef1f"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-finished.json",
+      "sha256": "e131442e336fe90cadaa3ff93446dee3bb8e02d0f74ca5a174a0119cada154ed"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/composite-talent.json",
+      "sha256": "92d3c139ea45ec9488936aa530c08f279ed217b870d3ee41d8cee42ded8a3a44"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-ack.json",
+      "sha256": "c5fc6b83f31016ce4e2d00a202b5b668e0507629dbd12d6f122d6321901b9411"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-created.json",
+      "sha256": "6e6805865ca0ecd8e71f2d0de56b97d43eae50fdfca560c9639728222ddd17d3"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-equipment.json",
+      "sha256": "81302410ed3c8c71b5a093befc210eb07272c5f6f75d7772b9acfa2f7bb1f781"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-finished.bin",
+      "sha256": "9cb5e90575e58982736820c0940e20963ff5998bf97831dff3602e719ca89ee3"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/equipped-finished.json",
+      "sha256": "6b82ad753fc594306cc471ccd1ceca341a2e9ed5c66a3ba0ab44f0c93c40dc23"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/live-stats-gear03.json",
+      "sha256": "389f52ab1788729905e19e71b081dcc82d854dd2b200e4b2e2e92bf3d1415977"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/live-stats-relogin.json",
+      "sha256": "d9beb123a82d06cef436a2ba3426ec6bdbf4cf24c0c82991ef999a8061377849"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/live-stats-restored.json",
+      "sha256": "d9beb123a82d06cef436a2ba3426ec6bdbf4cf24c0c82991ef999a8061377849"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/live-stats.json",
+      "sha256": "d9beb123a82d06cef436a2ba3426ec6bdbf4cf24c0c82991ef999a8061377849"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restarted-ack.json",
+      "sha256": "c5fc6b83f31016ce4e2d00a202b5b668e0507629dbd12d6f122d6321901b9411"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restarted-battle.png",
+      "sha256": "7c480d003ddcfcdde30fd04c1b8efd0904086902f60f170eb776608198208f8f"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restarted-created.json",
+      "sha256": "c17813fa64d54c3c93994be3b2a702960e94b9a129667e125ed4de8142ab74e4"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restarted-finished.bin",
+      "sha256": "2d590a8e0e17e6733d7bb4fdbf023d3aaf34bf4522717b43c6bd46fb91c1bf15"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restarted-finished.json",
+      "sha256": "eb2173dfc8ca42bea140a7abca863a59c4ccfa30131db29217f55ef2a7739b5e"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/restored-soul.json",
+      "sha256": "61139cfa57a20be13f65f8c6fdb836cba379f996456501c3a3bdf64ddefb13d2"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/soulremoved-ack.json",
+      "sha256": "c5fc6b83f31016ce4e2d00a202b5b668e0507629dbd12d6f122d6321901b9411"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/soulremoved-created.json",
+      "sha256": "29839eb9b1005d9f0856cccc71daf655d24ff15b15bb83f15ac52a54c1d529bd"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/soulremoved-finished.bin",
+      "sha256": "95c507837aa693e8ec0f1afc739a1757f1a8433b047734792635311e34bb47da"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/soulremoved-finished.json",
+      "sha256": "651f7ae0a9520dd0ebb680afa5331b0e85cea4ee781073e91f413e0eb6e34080"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/soulremoved-soul.json",
+      "sha256": "f22c28e067a2378007fea5d62a3601793ae0539049266f3f7d6bf69f551e1e6d"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-after-restart.bin",
+      "sha256": "6e694b1a46081689b5fcca44425b2ce334f24ddfbe90d5aaf43d83a76dd0829f"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-after-restart.json",
+      "sha256": "25299b6adc130216fd75f9d54542e10f165a9aa14df3fb7c5393b4c52fafa971"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-gear03.bin",
+      "sha256": "d9eb2b037898157505f3cb488e7c8256e835a8ee5f20924682390403b9c89dea"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-gear03.json",
+      "sha256": "52702113f322e174be6f43267da640e607ef734d921f1055d2ce7c1c816afb46"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-relogin.bin",
+      "sha256": "30e3c634c50a22459ac66150d21dd08b883cf6c4acb255f06acfa12e92f3619c"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-relogin.json",
+      "sha256": "f748e266bc7b77528625f3c10b687ab896594b5c28c08b3e670508ebe967ae1f"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-restored.bin",
+      "sha256": "60c1955b25549799e25d54e4da31f8c17251933edc5d9d051f99caa45da64e2e"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-restored.json",
+      "sha256": "a59b785ffcd2584d7ee7c9b92059978ad9dcb1babad5d94db4f4b4fe61e98257"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/responses.log",
+      "sha256": "7a2f0e7d03480bf72ade3660721d00e5cdff1da4597a5982d7ad25955007627e",
+      "mutable": true,
+      "sha256_scope": "File version observed at report update; root task may append later responses."
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/stats-gear-change.json",
+      "sha256": "2c6ce7b7bc84dcc5cd02085ea7c382bbaf8a2d4c8a54b8f7ffbbe900049e7595"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/stats-gear-restore.json",
+      "sha256": "60f8215f2f3a7dfec40aca4a4bb356c81dfc01f0295fbf12c523de4f9cecb20f"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/talent-before.json",
+      "sha256": "c5ee4fa6761517f3f37c8675ad28315e842f9074291c7246e23cffd7738a09b2"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/talent-duplicate.json",
+      "sha256": "df2ddf4a2d20caa9b4168c77b538c8faa350db8643ba9fd8cece3c7b35fe4988"
+    },
+    {
+      "path": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/talent-learn.json",
+      "sha256": "f680a8e9952b8ff533bdfeed55bfe72b1d5556161bb67cc44a6c490fcf76b234"
+    },
+    {
+      "path": "g1Client/Library/BrowserPreview/combat-stats-build.json",
+      "sha256": "85ba694c186e0207377ceacd81d3d2e39ca32772e18d335a3ac576f2c70d45b8"
+    },
+    {
+      "path": "glconf/BattleEquipCfg.tsv",
+      "sha256": "74865a6cbe9521c6d298f3261fe751d514f40dbbdef05717b2a2dfd6507f6186"
+    },
+    {
+      "path": "glconf/BattleRoleCfg.tsv",
+      "sha256": "b66ab42f30dfd23c2b5bed80f82b434d7ed84164dad8fb3d7634c52c6392a547"
+    },
+    {
+      "path": "glconf/PlayerInitRoleCfg.tsv",
+      "sha256": "60ab8e6518d1a0d1602d95c91c000429474ac6244cc235185d111a5a2ea81f62"
+    },
+    {
+      "path": "glconf/TalentNodeCfg.tsv",
+      "sha256": "e3ff7a9ee614698acab52ca5a4d8571aab4a7258d434e4c9042a897f47e7f824"
+    },
+    {
+      "path": "gogs/battle/battle/internal/configcompiler/progression.go",
+      "sha256": "332cefda6ffb54f01f447ca808a54a6a14329dbbea7e73edb509522165d1d378"
+    },
+    {
+      "path": "gogs/battle/battle/internal/configcompiler/progression_test.go",
+      "sha256": "f1136cdec7a9cbfa3f0c190cf9762969bad80609c616a56207bf5076e5bd540a"
+    },
+    {
+      "path": "gogs/battle/battle/internal/engine/replay.go",
+      "sha256": "7710032505461d78bc71079073e77644ae3a1193071e451279c5c513e18caef8"
+    },
+    {
+      "path": "gogs/game/play/internal/player/growth/bonuses.go",
+      "sha256": "3b79eecfa93fa89d3f0827c4aba72a24ecfb322302e859344c28cc700568e461"
+    },
+    {
+      "path": "gogs/game/play/internal/player/loadout.go",
+      "sha256": "9bc7b732e773c19f57a08df064efed4e283ab8acbea2f8bef363a240b4cfb7c2"
+    },
+    {
+      "path": "protocol/cspb/comm/error.proto",
+      "sha256": "7aae224a1572288e7a8bb9cf4adc29140c508e0988628a069982142d9c52998a"
+    }
+  ],
+  "updated_at_utc": "2026-11-01T16:40:17.261767+00:00",
+  "live_role_combat_stats": {
+    "backend_end_to_end": true,
+    "cases": [
+      {
+        "case": "after_restart",
+        "request_id": "4902241857626662380",
+        "code": "OK",
+        "role_id": "1793531576",
+        "observed_interface_attributes": {
+          "maxHp": 1250,
+          "attack": 151,
+          "defense": 77,
+          "speed": 218
+        },
+        "expected_from_configuration_and_code": {
+          "maxHp": 1250,
+          "attack": 151,
+          "defense": 77,
+          "speed": 218
+        },
+        "equipment_flat": {
+          "maxHp": 201,
+          "attack": 45,
+          "defense": 24,
+          "speed": 26
+        },
+        "combined_permille": {
+          "maxHpPermille": 20,
+          "attackPermille": 24,
+          "defensePermille": 24,
+          "speedPermille": 12
+        },
+        "all_four_attributes_observed": true,
+        "ack_source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-after-restart.json",
+        "ack_binary_source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-after-restart.bin",
+        "client_snapshot_source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/live-stats.json",
+        "pass": true
+      },
+      {
+        "case": "gear03",
+        "request_id": "5164520945232344348",
+        "code": "OK",
+        "role_id": "1793531576",
+        "observed_interface_attributes": {
+          "maxHp": 1232,
+          "attack": 145,
+          "defense": 74,
+          "speed": 219
+        },
+        "expected_from_configuration_and_code": {
+          "maxHp": 1232,
+          "attack": 145,
+          "defense": 74,
+          "speed": 219
+        },
+        "equipment_flat": {
+          "maxHp": 183,
+          "attack": 39,
+          "defense": 21,
+          "speed": 27
+        },
+        "combined_permille": {
+          "maxHpPermille": 20,
+          "attackPermille": 24,
+          "defensePermille": 24,
+          "speedPermille": 12
+        },
+        "all_four_attributes_observed": true,
+        "ack_source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-gear03.json",
+        "ack_binary_source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-gear03.bin",
+        "client_snapshot_source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/live-stats-gear03.json",
+        "pass": true
+      },
+      {
+        "case": "restored",
+        "request_id": "4780026590469210935",
+        "code": "OK",
+        "role_id": "1793531576",
+        "observed_interface_attributes": {
+          "maxHp": 1250,
+          "attack": 151,
+          "defense": 77,
+          "speed": 218
+        },
+        "expected_from_configuration_and_code": {
+          "maxHp": 1250,
+          "attack": 151,
+          "defense": 77,
+          "speed": 218
+        },
+        "equipment_flat": {
+          "maxHp": 201,
+          "attack": 45,
+          "defense": 24,
+          "speed": 26
+        },
+        "combined_permille": {
+          "maxHpPermille": 20,
+          "attackPermille": 24,
+          "defensePermille": 24,
+          "speedPermille": 12
+        },
+        "all_four_attributes_observed": true,
+        "ack_source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-restored.json",
+        "ack_binary_source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-restored.bin",
+        "client_snapshot_source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/live-stats-restored.json",
+        "pass": true
+      },
+      {
+        "case": "relogin",
+        "request_id": "5678950617388320791",
+        "code": "OK",
+        "role_id": "1793531576",
+        "observed_interface_attributes": {
+          "maxHp": 1250,
+          "attack": 151,
+          "defense": 77,
+          "speed": 218
+        },
+        "expected_from_configuration_and_code": {
+          "maxHp": 1250,
+          "attack": 151,
+          "defense": 77,
+          "speed": 218
+        },
+        "equipment_flat": {
+          "maxHp": 201,
+          "attack": 45,
+          "defense": 24,
+          "speed": 26
+        },
+        "combined_permille": {
+          "maxHpPermille": 20,
+          "attackPermille": 24,
+          "defensePermille": 24,
+          "speedPermille": 12
+        },
+        "all_four_attributes_observed": true,
+        "ack_source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-relogin.json",
+        "ack_binary_source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/ErrCodeLive-20261101/combat-stats-relogin.bin",
+        "client_snapshot_source": "g1Client/ArtSource/QuietInkV3/LoadoutIntegration/Verification/BattleSystems-20261101/live-stats-relogin.json",
+        "pass": true
+      }
+    ],
+    "same_account_reconnect_preserved_attributes": true,
+    "sources_do_not_include_synthetic_values": true
+  },
+  "interaction_observations": {
+    "source_type": "root_operator_report",
+    "reported_by": "/root",
+    "equipment_refresh": [
+      "After equipment ACK the cached CombatStats.Data became null.",
+      "Closing the equipment view triggered an automatic GET.",
+      "The corresponding live ACK refreshed displayed values."
+    ],
+    "reconnect": [
+      "Home.OnRepair disconnected and completed a new ServerListAck/LoginAck sequence.",
+      "The relogin attribute ACK returned the restored values."
+    ],
+    "artifact_boundaries": "Intermediate null-cache state and UI actions were reported by the operator, not inferred solely from screenshots."
+  },
+  "validation_reported_by_root": {
+    "source_type": "root_operator_report",
+    "related_go_packages": "passed",
+    "four_service_build": "passed",
+    "full_go_suite": {
+      "status": "known_existing_failure",
+      "test": "TestHandleRequestRouting",
+      "location": "game/actv/internal/template/base/component_test.go:577",
+      "description": "Existing activity request routing cross-player ownership assertion failed."
+    },
+    "unity_console_error_count": 0,
+    "workspace_restored": {
+      "play_mode_exited": true,
+      "original_developer_account_restored": true,
+      "automatic_preview": true
+    }
+  }
+}

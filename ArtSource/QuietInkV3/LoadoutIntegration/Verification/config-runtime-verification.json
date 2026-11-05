@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-11-01T14:40:42.917978+00:00",
+  "scope": "Recorded runtime config-*.json evidence only",
+  "pass": true,
+  "group_count": 6,
+  "assertion_count": 27,
+  "passed_assertion_count": 27,
+  "failed_assertions": [],
+  "source_directory": "D:\\gosrc\\gotree\\g1Client\\ArtSource\\QuietInkV3\\LoadoutIntegration\\Verification",
+  "sources": [
+    {
+      "file": "config-battle-created.json",
+      "bytes": 439,
+      "sha256": "04b21f1e4c144023df5ad853bf066105b98cfcc0beb41a12711a79db153459d2"
+    },
+    {
+      "file": "config-battle-finished.json",
+      "bytes": 517,
+      "sha256": "ccf74341926e2ba3d9a6b0fb20ca16549ad8809894f2cb59381dcc0f96370f6b"
+    },
+    {
+      "file": "config-equipment-relogin.json",
+      "bytes": 3384,
+      "sha256": "923109adff1b35a5c558deb1507f79afcac943cf2ae37d9326e3b84fbf0646de"
+    },
+    {
+      "file": "config-fresh-duplicate-rejected.json",
+      "bytes": 3030,
+      "sha256": "130394f4419f4859df855e6efd2f79889bfe8532635784f3f6df6d888dbbe174"
+    },
+    {
+      "file": "config-fresh-equipment-changed.json",
+      "bytes": 3384,
+      "sha256": "81302410ed3c8c71b5a093befc210eb07272c5f6f75d7772b9acfa2f7bb1f781"
+    },
+    {
+      "file": "config-fresh-equipment-initial.json",
+      "bytes": 3384,
+      "sha256": "7e30981bf66f70f3eff6639064f0871bcdad2e933a91dac2c4a8220b66c7b521"
+    },
+    {
+      "file": "config-fresh-equipment-relogin.json",
+      "bytes": 3384,
+      "sha256": "81302410ed3c8c71b5a093befc210eb07272c5f6f75d7772b9acfa2f7bb1f781"
+    },
+    {
+      "file": "config-fresh-soul-equipped.json",
+      "bytes": 2977,
+      "sha256": "0c30da29a200edfe2060b64a484eef6ae6a047011c9d5f1128e095fdca375220"
+    },
+    {
+      "file": "config-fresh-soul-initial.json",
+      "bytes": 2956,
+      "sha256": "2bd028c69f790b2dbf7f16b3477505dad5e3c293cb6fbedac2a86325bc471a15"
+    },
+    {
+      "file": "config-fresh-soul-refined.json",
+      "bytes": 2956,
+      "sha256": "d42ff7c6d0d7c0911996e3b05a6b6144b3753ce4ad7826e404ad18e1b152d208"
+    },
+    {
+      "file": "config-fresh-soul-relogin.json",
+      "bytes": 2977,
+      "sha256": "0c30da29a200edfe2060b64a484eef6ae6a047011c9d5f1128e095fdca375220"
+    },
+    {
+      "file": "config-fresh-soul-upgraded.json",
+      "bytes": 2956,
+      "sha256": "8a6d979512eefddaab342b468463a6751558dbb3fd85644e08bebb1e5d1d7eb1"
+    },
+    {
+      "file": "config-fresh-stale-rejected.json",
+      "bytes": 3030,
+      "sha256": "84c7307b91a505831f6a947f28b4affece40147965144f4b95f0b5c423ad4da8"
+    },
+    {
+      "file": "config-soul-relogin.json",
+      "bytes": 3034,
+      "sha256": "567624c6a926e563b839b59416fdbec7de2fd5d22ef6b1a0d89a47e30956baa1"
+    },
+    {
+      "file": "config-talent-battle-ready.json",
+      "bytes": 17380,
+      "sha256": "c2f95bdb149926905e2d243aabb8f445eb1304ca33c24d46c55df13018043732"
+    },
+    {
+      "file": "config-talent-initial.json",
+      "bytes": 17339,
+      "sha256": "5489337e2da34d824ae89031330b20776040f3e41f3e5333bf102418f198e19a"
+    },
+    {
+      "file": "config-talent-learned.json",
+      "bytes": 17384,
+      "sha256": "10ff108cedd14d59589198eb50fc3e90ba75e058391e6c02c18de4df5a39ed8c"
+    },
+    {
+      "file": "config-talent-relogin.json",
+      "bytes": 17380,
+      "sha256": "c2f95bdb149926905e2d243aabb8f445eb1304ca33c24d46c55df13018043732"
+    },
+    {
+      "file": "config-talent-reset.json",
+      "bytes": 17339,
+      "sha256": "6c64b30933730fa7590e4fabbfc193ef9d15a2799ea077c97125f785237bb199"
+    }
+  ],
+  "groups": [
+    {
+      "id": "old_account_configured_stats",
+      "sources": [
+        "config-equipment-relogin.json",
+        "config-soul-relogin.json",
+        "config-talent-battle-ready.json"
+      ],
+      "pass": true,
+      "assertions": {
+        "account_ids_match": true,
+        "equipment_hp_201": true,
+        "soul_hp_permille_14": true,
+        "talent_node50_hp_permille_8": true
+      },
+      "observed": {
+        "role_id": "1793531575",
+        "equipment_hp": 201,
+        "soul_hp_permille": 14,
+        "talent_learned_ids": [
+          0,
+          24,
+          48,
+          50,
+          72
+        ],
+        "talent_hp_permille": 8
+      }
+    },
+    {
+      "id": "talent_learning_reset_and_relogin",
+      "sources": [
+        "config-talent-initial.json",
+        "config-talent-learned.json",
+        "config-talent-reset.json",
+        "config-talent-battle-ready.json",
+        "config-talent-relogin.json"
+      ],
+      "pass": true,
+      "assertions": {
+        "learn_1_4_cost_two": true,
+        "reset_refunds_to_six": true,
+        "learn_50_cost_one": true,
+        "relogin_entire_snapshot_unchanged": true
+      },
+      "observed": {
+        "initial_available": 6,
+        "after_learning": {
+          "ids": [
+            0,
+            1,
+            4,
+            24,
+            48,
+            72
+          ],
+          "spent": 2,
+          "available": 4
+        },
+        "after_reset": {
+          "ids": [
+            0,
+            24,
+            48,
+            72
+          ],
+          "available": 6
+        },
+        "after_node50_and_relogin": {
+          "ids": [
+            0,
+            24,
+            48,
+            50,
+            72
+          ],
+          "spent": 1,
+          "available": 5,
+          "revision": 5
+        }
+      }
+    },
+    {
+      "id": "battle_applies_equipment_soul_and_talent",
+      "sources": [
+        "config-equipment-relogin.json",
+        "config-soul-relogin.json",
+        "config-talent-battle-ready.json",
+        "config-battle-created.json",
+        "config-battle-finished.json"
+      ],
+      "pass": true,
+      "assertions": {
+        "calculated_max_hp_1252": true,
+        "created_initial_hp_and_max_hp_match": true,
+        "finished_max_hp_matches": true,
+        "same_battle_and_attacker_victory": true
+      },
+      "observed": {
+        "formula": "floor((1025 + 201) * (1000 + 14 + 8) / 1000)",
+        "base_hp": 1025,
+        "calculated_max_hp": 1252,
+        "created_hp": 1252,
+        "created_max_hp": 1252,
+        "finished_hp": 1197,
+        "finished_max_hp": 1252,
+        "battle_id": "1e6444fe-c191-4a38-8756-9daa95c57f2e",
+        "outcome": "BATTLE_OUTCOME_ATTACKER_WIN",
+        "checksum": "8ae4bd3f836d45cef603cddf9ea4ccef6fa52b25ae8d9087a6ba589f969bd938"
+      }
+    },
+    {
+      "id": "fresh_soul_growth_equipment_and_relogin",
+      "sources": [
+        "config-fresh-soul-initial.json",
+        "config-fresh-soul-upgraded.json",
+        "config-fresh-soul-refined.json",
+        "config-fresh-soul-equipped.json",
+        "config-fresh-soul-relogin.json"
+      ],
+      "pass": true,
+      "assertions": {
+        "account_ids_match": true,
+        "initial_10_items_6_slots_2000": true,
+        "upgrade_level2_cost20_balance1980": true,
+        "refine_cost45_balance1935": true,
+        "slot1_accepts_jade8": true,
+        "relogin_entire_snapshot_unchanged": true
+      },
+      "observed": {
+        "initial": {
+          "items": 10,
+          "slots": 6,
+          "essence": 2000
+        },
+        "upgraded": {
+          "level": 2,
+          "essence": 1980,
+          "revision": 2
+        },
+        "refined": {
+          "level": 2,
+          "affixes": [
+            {
+              "attribute": 3,
+              "permille": 14
+            }
+          ],
+          "essence": 1935,
+          "revision": 3
+        },
+        "relogin": {
+          "slot1_instance": "1793531576-jade-08",
+          "essence": 1935,
+          "revision": 4,
+          "jade1_level": 2,
+          "jade1_affixes": [
+            {
+              "attribute": 3,
+              "permille": 14
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "invalid_soul_requests_are_non_mutating",
+      "sources": [
+        "config-fresh-soul-refined.json",
+        "config-fresh-duplicate-rejected.json",
+        "config-fresh-stale-rejected.json"
+      ],
+      "pass": true,
+      "assertions": {
+        "duplicate_error_code": true,
+        "stale_error_code": true,
+        "duplicate_preserves_entire_snapshot": true,
+        "stale_preserves_entire_snapshot": true,
+        "both_keep_revision3_and_essence1935": true
+      },
+      "observed": {
+        "duplicate": {
+          "error": "DUPLICATE_JADE",
+          "request_id": "639291402018315642",
+          "revision": 3,
+          "essence": 1935
+        },
+        "stale": {
+          "error": "STALE_REVISION",
+          "request_id": "639291402248969270",
+          "revision": 3,
+          "essence": 1935
+        }
+      }
+    },
+    {
+      "id": "fresh_equipment_inventory_change_and_relogin",
+      "sources": [
+        "config-fresh-equipment-initial.json",
+        "config-fresh-equipment-changed.json",
+        "config-fresh-equipment-relogin.json"
+      ],
+      "pass": true,
+      "assertions": {
+        "account_ids_match": true,
+        "initial_12_items_hp183": true,
+        "change_3_to_9_hp201": true,
+        "relogin_entire_snapshot_unchanged": true
+      },
+      "observed": {
+        "initial": {
+          "count": 12,
+          "max_hp": 183,
+          "sum_equipped_hp": 183,
+          "equipped_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        "changed": {
+          "count": 12,
+          "max_hp": 201,
+          "sum_equipped_hp": 201,
+          "equipped_ids": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            9
+          ]
+        },
+        "relogin": {
+          "count": 12,
+          "max_hp": 201,
+          "sum_equipped_hp": 201,
+          "equipped_ids": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            9
+          ]
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Base role HP 1025 is supplied by the parent verification criterion; the parent additionally reports BattleRoleCfg.tsv physical line 10, ID 1. This task did not independently read configuration sources.",
+    "JSON integer strings are converted to integers; missing numeric and boolean fields use protobuf defaults.",
+    "Relogin equality verifies the supplied before and relogin snapshots. It does not independently prove a service process restart or database flush.",
+    "No assertions are made about Unity Console, visual screenshots, editor state or restored preferences, which are absent from these JSON sources."
+  ]
+}

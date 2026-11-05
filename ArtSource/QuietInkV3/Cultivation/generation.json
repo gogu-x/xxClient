@@ -1,0 +1,40 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "transparent_background": true,
+  "assets": [
+    {
+      "name": "meditation.png",
+      "source": "C:\\Users\\25348\\.codex\\generated_images\\01a196dd-43ae-7903-a324-311776b66b49\\exec-80f9e16f-a6a2-43b7-abd2-30255c5d5ac2.png",
+      "width": 1254,
+      "height": 1254,
+      "prompt": "Use case: stylized-concept. Asset type: production transparent cutout for a Chinese cultivation mobile game's portrait UI. Create one full-body handsome adult male immortal cultivator sitting cross-legged in calm meditation on a low carved stone lotus platform. Front three-quarter view, eyes gently closed, long black hair partially tied high, poised graceful posture, hands resting symmetrically in his lap. Traditional flowing ivory-white robes with rich jade-teal inner layers, subtle dark blue trim, very restrained antique gold details. Refined Chinese colored ink-and-watercolor illustration with clear elegant hand-drawn outlines and softly modeled fabric folds, consistent with a tasteful xianxia illustrated game. The artwork must feel warm and softly colorful, with teal and warm gold accents, not washed-out and not excessively ornate. Compact approximately square silhouette optimized to display in a 700x600 UI region. A few small floating teal spirit wisps and tiny golden motes around the lower body, not a large aura or opaque glow cloud. Full stone lotus platform and entire robe silhouette contained within the canvas with generous transparent padding; never crop hair, robes, hands, platform, or effects. No scenery, no UI, no words, no calligraphy, no icon frame, no text, no watermark, no border. Genuinely transparent RGBA background, clean alpha edges. High quality 1536x1536 illustration."
+    },
+    {
+      "name": "pills.png",
+      "source": "C:\\Users\\25348\\.codex\\generated_images\\01a196dd-43ae-7903-a324-311776b66b49\\exec-07ce72a4-9439-4f43-98a1-ebab9b929e3f.png",
+      "width": 2172,
+      "height": 724,
+      "prompt": "Use case: stylized-concept. Asset type: transparent production game inventory sprite atlas, exactly THREE separate small Chinese elixir medicine bottles, single horizontal row, 3 equal square cells on a 1536x512 canvas. Each object centered in its own 512x512 cell with at least 60px fully transparent padding on ALL four sides. No object or glow may cross a cell edge. All three have the same large visible bottle silhouette size, same baseline and visual weight, around 350px tall and 230px wide. Refined colored Chinese ink-and-watercolor illustration, readable elegant game icons at 96px, delicate restrained antique gold rimwork, tasteful rich colors, no excessive detail, no photorealism. Left: jade-green glazed round-shouldered porcelain elixir bottle with jade stopper, simple leaf-shaped gold motif, one tiny jade pill at its base. Center: deep indigo-blue glazed round-shouldered porcelain bottle with blue stopper and a small simple cloud motif, one tiny blue pill at its base. Right: warm cinnabar vermilion glazed round-shouldered porcelain bottle with red stopper and a small golden flame motif, one tiny amber pill at its base. All bottle motifs are purely decorative shapes, absolutely no writing, symbols resembling text, labels, numbers, captions, border, UI, platforms or cast shadow. Keep each bottle separate, equal-scale, identical orthographic front three-quarter angle. Genuine transparent RGBA background, no backdrop, no colored circles behind icons, clean alpha edges.",
+      "alphaBoundsTopLeft": [
+        [
+          221,
+          75,
+          398,
+          565
+        ],
+        [
+          897,
+          75,
+          400,
+          565
+        ],
+        [
+          1575,
+          75,
+          399,
+          565
+        ]
+      ]
+    }
+  ]
+}

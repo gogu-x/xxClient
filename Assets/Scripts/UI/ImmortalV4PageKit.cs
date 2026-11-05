@@ -31,9 +31,7 @@ namespace XiuXian.Core
             Art(design,background,0,0,941,1672);
             if(showHeader)
             {
-                Art(design,"Equipment/header_plate",18,24,430,126);
-                Text(design,"Title",title,145,45,270,75,44);
-                Button(design,"Back","",28,37,108,104,close,null,58);
+                QuietInkUI.Header(design,title,close);
             }
             return design;
         }

@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using XiuXian.Network;
 using Q = XiuXian.Core.QuietInkUI;
 
 namespace XiuXian.Core
@@ -16,6 +17,9 @@ namespace XiuXian.Core
         private GameObject page, selectionDialog;
         private Image hero;
         private TMP_Text roleName, roleTitle, confirmText;
+        private TMP_Text attributeState;
+        private Button refreshAttributesButton;
+        private readonly TMP_Text[] attributeValues = new TMP_Text[4];
         private readonly TMP_Text[] choices = new TMP_Text[2];
         private readonly Image[] choiceFrames = new Image[2];
         private int selected;
@@ -23,15 +27,78 @@ namespace XiuXian.Core
         private void Awake() { BuildPage(); }
         private void OnEnable()
         {
+            CombatStatsService.Changed -= RefreshAttributeDisplay;
+            CombatStatsService.Invalidated -= OnAttributesInvalidated;
+            CombatStatsService.Changed += RefreshAttributeDisplay;
+            CombatStatsService.Invalidated += OnAttributesInvalidated;
             if (previewStage != null) previewStage.SetActiveStage(false);
             if (previewImage != null) previewImage.gameObject.SetActive(false);
             if (placeholderInfoText != null) placeholderInfoText.gameObject.SetActive(false);
-            if (page == null || hero == null) BuildPage();
+            EnsurePageReferences();
             page.SetActive(true);
             selectionDialog.SetActive(false);
             Select(Mathf.Clamp(PlayerPrefs.GetInt(SelectedCharacterKey, 0), 0, 1));
+            ShowAttributes();
         }
-        private void OnDisable() { if (previewStage != null) previewStage.SetActiveStage(false); }
+        private void OnDisable()
+        {
+            CombatStatsService.Changed -= RefreshAttributeDisplay;
+            CombatStatsService.Invalidated -= OnAttributesInvalidated;
+            if (previewStage != null) previewStage.SetActiveStage(false);
+        }
+
+        public void HideAttributes() { if (page != null) page.SetActive(false); }
+
+        public void ShowAttributes()
+        {
+            if (!isActiveAndEnabled) return;
+            EnsurePageReferences();
+            page.SetActive(true);
+            RefreshAttributeDisplay();
+            RefreshAttributes();
+        }
+
+        private void RefreshAttributes()
+        {
+            if (Application.isPlaying && isActiveAndEnabled && page != null && page.activeInHierarchy)
+                CombatStatsService.RequestRefresh();
+        }
+
+        private void OnAttributesInvalidated() { RefreshAttributes(); }
+
+        private bool HasPageReferences()
+        {
+            if (page == null || hero == null || selectionDialog == null || roleName == null ||
+                roleTitle == null || confirmText == null || attributeState == null || refreshAttributesButton == null)
+                return false;
+            foreach (var value in attributeValues) if (value == null) return false;
+            for (int i = 0; i < choices.Length; i++)
+                if (choices[i] == null || choiceFrames[i] == null) return false;
+            return true;
+        }
+
+        private void EnsurePageReferences()
+        {
+            if (HasPageReferences()) return;
+            // Hot reload can retain page/hero while resetting readonly arrays of UI references.
+            bool wasVisible = page != null && page.activeSelf;
+            BuildPage();
+            page.SetActive(wasVisible);
+        }
+
+        private void RefreshAttributeDisplay()
+        {
+            var stats = CombatStatsService.Data;
+            long[] values = stats == null ? null : new[] { stats.MaxHp, stats.Attack, stats.Defense, stats.Speed };
+            for (int i = 0; i < attributeValues.Length; i++)
+            {
+                if (attributeValues[i] == null) continue;
+                attributeValues[i].text = values == null ? "—" : values[i].ToString("N0");
+                attributeValues[i].color = values == null ? Q.Muted : Q.Ink;
+            }
+            if (attributeState != null) attributeState.text = CombatStatsService.Status;
+            if (refreshAttributesButton != null) refreshAttributesButton.interactable = !CombatStatsService.IsPending;
+        }
 
         private void BuildPage()
         {
@@ -75,9 +142,11 @@ namespace XiuXian.Core
                 float y = 1162 + (i / 2) * 72;
                 Q.Icon(d, icons[i], x, y + 5, 32, 32);
                 Q.Text(d, "AttributeName" + i, attributes[i], x + 49, y, 160, 44, 28, Q.Ink, TextAlignmentOptions.Left);
-                Q.Text(d, "AttributeValue" + i, "—", x + 222, y, 140, 44, 29, Q.Muted, TextAlignmentOptions.Right);
+                attributeValues[i] = Q.Text(d, "AttributeValue" + i, "—", x + 222, y, 140, 44, 29, Q.Muted, TextAlignmentOptions.Right);
             }
-            Q.Text(d, "AttributeState", "属性与技能待同步", 355, 1093, 500, 38, 23, Q.Muted, TextAlignmentOptions.Right);
+            attributeState = Q.Text(d, "AttributeState", "角色属性待同步", 335, 1093, 400, 38, 21, Q.Muted, TextAlignmentOptions.Right);
+            refreshAttributesButton = Q.Button(d, "RefreshAttributes", "刷新", 750, 1090, 105, 44,
+                RefreshAttributes, "button_secondary", 23);
             Q.Button(d, "ViewEquipment", "查看装备", 80, 1370, 376, 83, OpenEquipment);
             Q.Button(d, "ViewTalents", "天赋", 485, 1370, 376, 83, OpenTalents, "button_secondary");
             BuildSelectionDialog();
@@ -115,6 +184,7 @@ namespace XiuXian.Core
 
         private void Select(int index)
         {
+            EnsurePageReferences();
             selected = index;
             hero.sprite = Q.Sprite(index == 0 ? "hero-character" : "hero-character-female");
             hero.color = hero.sprite != null ? Color.white : Color.clear;

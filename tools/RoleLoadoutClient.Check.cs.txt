@@ -1,0 +1,262 @@
+// Unity MCP execute_code method body, C# 6 compatible. Synthetic client-only regression data.
+// Does not refresh from the server or send upgrade/refine/talent write requests.
+// The duplicate-equip case calls only the client rejection path and asserts no request ID was allocated.
+if (!UnityEngine.Application.isPlaying)
+    return new { Scope = "CLIENT_SYNTHETIC_REGRESSION", Passed = 0, Failed = 0, Skipped = 1, Reason = "Unity must be in Play mode." };
+
+var results = new System.Collections.Generic.List<string>();
+int passed = 0;
+int failed = 0;
+int skipped = 0;
+System.Action<string, bool> check = (name, ok) =>
+{
+    results.Add((ok ? "PASS " : "FAIL ") + name);
+    if (ok) passed++; else failed++;
+};
+var flags = System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic;
+var staticFlags = System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic;
+var soulType = typeof(XiuXian.Network.SoulJadeService);
+var talentType = typeof(XiuXian.Network.TalentService);
+var soul = XiuXian.Network.SoulJadeService.Instance;
+var talent = (XiuXian.Network.TalentService)talentType.GetMethod("Ensure", staticFlags).Invoke(null, null);
+if (soul.IsBusy || XiuXian.Network.TalentService.IsPending)
+    return new { Scope = "CLIENT_SYNTHETIC_REGRESSION", Passed = 0, Failed = 0, Skipped = 1, Reason = "A real request is pending; no service state was changed. Retry after it completes." };
+
+var soulReceive = soulType.GetMethod("Receive", flags);
+var talentReceive = talentType.GetMethod("Receive", flags);
+var soulUpdate = soulType.GetMethod("Update", flags);
+var talentUpdate = talentType.GetMethod("Update", flags);
+var talentSynchronized = talentType.GetField("synchronized", staticFlags);
+bool connected = XiuXian.Network.NetworkManager.Instance.IsConnected;
+const string roleA = "__CLIENT_REGRESSION_TEST_ONLY__ROLE_A";
+const string roleB = "__CLIENT_REGRESSION_TEST_ONLY__ROLE_B";
+System.Action<ulong, string> armSoul = (id, ack) =>
+{
+    soulType.GetField("pendingId", flags).SetValue(soul, id);
+    soulType.GetField("pendingAck", flags).SetValue(soul, ack);
+    soulType.GetField("pendingMutation", flags).SetValue(soul, false);
+    soulType.GetField("deadline", flags).SetValue(soul, UnityEngine.Time.unscaledTime + 60f);
+};
+System.Action<ulong, string> armTalent = (id, ack) =>
+{
+    talentType.GetField("pendingId", flags).SetValue(talent, id);
+    talentType.GetField("pendingAck", flags).SetValue(talent, ack);
+    talentType.GetField("deadline", flags).SetValue(talent, UnityEngine.Time.unscaledTime + 60f);
+};
+System.Func<ulong, string, global::RoleSoulJadeData> soulSnapshot = (revision, role) =>
+{
+    var value = new global::RoleSoulJadeData { Revision = revision, RoleId = role, Essence = 2000 };
+    value.Items.Add(new global::SoulJadeItem
+    {
+        InstanceId = "__CLIENT_REGRESSION_TEST_ONLY__JADE_A", ConfigId = 1,
+        Name = "测试合成魂玉A", Rarity = "极品", IconKey = "soul_jade_00", Level = 1, MaxLevel = 20, UpgradeCost = 100, RefineCost = 50
+    });
+    value.Items.Add(new global::SoulJadeItem
+    {
+        InstanceId = "__CLIENT_REGRESSION_TEST_ONLY__JADE_B", ConfigId = 1,
+        Name = "测试合成魂玉B", Rarity = "极品", IconKey = "soul_jade_00", Level = 1, MaxLevel = 20, UpgradeCost = 100, RefineCost = 50
+    });
+    value.Slots.Add(new global::SoulJadeSlot { Slot = 17, InstanceId = "__CLIENT_REGRESSION_TEST_ONLY__JADE_A" });
+    value.Slots.Add(new global::SoulJadeSlot { Slot = 42, InstanceId = "" });
+    return value;
+};
+System.Func<ulong, string, global::RoleTalentData> talentSnapshot = (revision, role) =>
+{
+    var value = new global::RoleTalentData { Revision = revision, RoleId = role, EarnedPoints = 6, SpentPoints = 0, AvailablePoints = 6 };
+    value.LearnedNodeIds.Add(0);
+    value.Branches.Add(new global::TalentBranchDefinition { BranchId = 0, Name = "测试合成流派", IconKey = "talent" });
+    value.Nodes.Add(new global::TalentNodeDefinition { NodeId = 0, ParentId = -1, BranchId = 0, UiIndex = 0, IsRoot = true, PointCost = 0, IconKey = "talent", Name = "测试合成根节点", Effect = "仅用于客户端回归" });
+    value.Nodes.Add(new global::TalentNodeDefinition { NodeId = 1, ParentId = 0, BranchId = 0, UiIndex = 1, IsRoot = false, PointCost = 1, IconKey = "talent", Name = "测试合成子节点", Effect = "仅用于客户端回归" });
+    return value;
+};
+System.Action<ulong, string, global::RoleSoulJadeData, global::ErrCode> receiveSoul = (id, ack, value, code) =>
+    soulReceive.Invoke(soul, new object[] { ack, id, value, code, true, "TEST_ONLY_ACK_ACCEPTED" });
+System.Action<ulong, string, global::RoleTalentData, global::ErrCode> receiveTalent = (id, ack, value, code) =>
+    talentReceive.Invoke(talent, new object[] { id, ack, value, code, true, "TEST_ONLY_ACK_ACCEPTED" });
+System.Action<ulong, ulong> seedSoul = (id, revision) =>
+{
+    XiuXian.Network.SoulJadeService.ClearSession();
+    armSoul(id, "GetRoleSoulJadeAck");
+    receiveSoul(id, "GetRoleSoulJadeAck", soulSnapshot(revision, roleA), global::ErrCode.Ok);
+};
+System.Action<ulong, ulong> seedTalent = (id, revision) =>
+{
+    XiuXian.Network.TalentService.ClearSession();
+    armTalent(id, "GetRoleTalentAck");
+    receiveTalent(id, "GetRoleTalentAck", talentSnapshot(revision, roleA), global::ErrCode.Ok);
+};
+
+try
+{
+    XiuXian.Network.SoulJadeService.ClearSession();
+    XiuXian.Network.TalentService.ClearSession();
+
+    armSoul(1001, "GetRoleSoulJadeAck");
+    receiveSoul(9999, "GetRoleSoulJadeAck", soulSnapshot(10, roleA), global::ErrCode.Ok);
+    check("Soul jade: wrong request ID ignored; pending remains", soul.Data == null && soul.IsBusy && !soul.IsSynchronized);
+    receiveSoul(1001, "ChangeRoleSoulJadeAck", soulSnapshot(10, roleA), global::ErrCode.Ok);
+    check("Soul jade: wrong ACK type ignored; pending remains", soul.Data == null && soul.IsBusy && !soul.IsSynchronized);
+    receiveSoul(1001, "GetRoleSoulJadeAck", soulSnapshot(10, roleA), global::ErrCode.Ok);
+    check("Soul jade: matching ACK applies synthetic snapshot", soul.Data != null && soul.Data.RoleId == roleA && soul.Data.Revision == 10 && soul.IsSynchronized && !soul.IsBusy);
+    check("Soul jade: accepted snapshot write gate follows live connectivity", soul.CanMutate == connected);
+
+    armSoul(1002, "GetRoleSoulJadeAck");
+    XiuXian.Network.SoulJadeService.ClearSession();
+    receiveSoul(1002, "GetRoleSoulJadeAck", soulSnapshot(11, roleA), global::ErrCode.Ok);
+    check("Soul jade: late ACK after ClearSession ignored", soul.Data == null && !soul.IsBusy && !soul.IsSynchronized && !soul.CanMutate);
+
+    seedSoul(1003, 10);
+    armSoul(1004, "GetRoleSoulJadeAck");
+    receiveSoul(1004, "GetRoleSoulJadeAck", soulSnapshot(9, roleA), global::ErrCode.Ok);
+    check("Soul jade: revision rollback rejected and writes disabled", soul.Data != null && soul.Data.Revision == 10 && !soul.IsBusy && !soul.IsSynchronized && !soul.CanMutate);
+
+    seedSoul(1005, 10);
+    armSoul(1006, "GetRoleSoulJadeAck");
+    receiveSoul(1006, "GetRoleSoulJadeAck", soulSnapshot(11, roleB), global::ErrCode.Ok);
+    check("Soul jade: different role rejected and writes disabled", soul.Data != null && soul.Data.RoleId == roleA && soul.Data.Revision == 10 && !soul.IsSynchronized && !soul.CanMutate);
+
+    XiuXian.Network.SoulJadeService.ClearSession();
+    armSoul(1007, "GetRoleSoulJadeAck");
+    receiveSoul(1007, "GetRoleSoulJadeAck", soulSnapshot(10, ""), global::ErrCode.Ok);
+    check("Soul jade: empty role snapshot rejected", soul.Data == null && !soul.IsSynchronized && !soul.CanMutate);
+
+    seedSoul(1008, 10);
+    armSoul(1009, "GetRoleSoulJadeAck");
+    receiveSoul(1009, "GetRoleSoulJadeAck", null, global::ErrCode.LoadoutUnavailable);
+    check("Soul jade: error without snapshot disables writes and is localized", !soul.IsBusy && !soul.IsSynchronized && !soul.CanMutate && soul.Status == XiuXian.Network.LoadoutErrors.ToUserMessage(global::ErrCode.LoadoutUnavailable));
+
+    seedSoul(1010, 10);
+    armSoul(1011, "GetRoleSoulJadeAck");
+    soulType.GetField("deadline", flags).SetValue(soul, UnityEngine.Time.unscaledTime - 1f);
+    soulUpdate.Invoke(soul, null);
+    check("Soul jade: GET timeout clears pending and disables writes", !soul.IsBusy && !soul.IsSynchronized && !soul.CanMutate);
+    receiveSoul(1011, "GetRoleSoulJadeAck", soulSnapshot(11, roleA), global::ErrCode.Ok);
+    check("Soul jade: timed-out GET late ACK cannot restore writes", !soul.IsSynchronized && !soul.CanMutate && (soul.Data == null || soul.Data.Revision == 10));
+
+    if (connected && XiuXian.Network.NetworkManager.Instance.IsConnected)
+    {
+        seedSoul(1012, 10);
+        ulong beforeId = (ulong)soulType.GetField("nextRequestId", flags).GetValue(soul);
+        // Synthetic slots 17 and 42 also prove validation follows the directory rather than 1..6.
+        // A is already in socket 17; B has a different instance ID but the same config ID.
+        // Equip must reject before Send / NextId, so this test must not issue a write request.
+        bool accepted = soul.Equip(42, "__CLIENT_REGRESSION_TEST_ONLY__JADE_B");
+        ulong afterId = (ulong)soulType.GetField("nextRequestId", flags).GetValue(soul);
+        check("Soul jade: configured slot outside 1..6 reaches duplicate-config guard without request allocation", !accepted && !soul.IsBusy && beforeId == afterId && soul.LastErrorCode == global::ErrCode.DuplicateJade);
+    }
+    else
+    {
+        skipped++;
+        results.Add("SKIP Soul jade duplicate-config Equip path requires an already connected network; no connection or write was attempted.");
+    }
+
+    armTalent(2001, "GetRoleTalentAck");
+    receiveTalent(9999, "GetRoleTalentAck", talentSnapshot(10, roleA), global::ErrCode.Ok);
+    check("Talent: wrong request ID ignored; pending remains", XiuXian.Network.TalentService.Data == null && XiuXian.Network.TalentService.IsPending);
+    receiveTalent(2001, "LearnRoleTalentAck", talentSnapshot(10, roleA), global::ErrCode.Ok);
+    check("Talent: wrong ACK type ignored; pending remains", XiuXian.Network.TalentService.Data == null && XiuXian.Network.TalentService.IsPending);
+    receiveTalent(2001, "GetRoleTalentAck", talentSnapshot(10, roleA), global::ErrCode.Ok);
+    check("Talent: matching ACK applies synthetic snapshot", XiuXian.Network.TalentService.Data != null && XiuXian.Network.TalentService.Data.RoleId == roleA && XiuXian.Network.TalentService.Data.Revision == 10 && (bool)talentSynchronized.GetValue(null) && !XiuXian.Network.TalentService.IsPending);
+    check("Talent: accepted snapshot write gate follows live connectivity", XiuXian.Network.TalentService.CanWrite == connected);
+
+    armTalent(2002, "GetRoleTalentAck");
+    XiuXian.Network.TalentService.ClearSession();
+    receiveTalent(2002, "GetRoleTalentAck", talentSnapshot(11, roleA), global::ErrCode.Ok);
+    check("Talent: late ACK after ClearSession ignored", XiuXian.Network.TalentService.Data == null && !XiuXian.Network.TalentService.IsPending && !(bool)talentSynchronized.GetValue(null) && !XiuXian.Network.TalentService.CanWrite);
+
+    seedTalent(2003, 10);
+    armTalent(2004, "GetRoleTalentAck");
+    receiveTalent(2004, "GetRoleTalentAck", talentSnapshot(9, roleA), global::ErrCode.Ok);
+    check("Talent: revision rollback rejected and writes disabled", XiuXian.Network.TalentService.Data != null && XiuXian.Network.TalentService.Data.Revision == 10 && !XiuXian.Network.TalentService.IsPending && !(bool)talentSynchronized.GetValue(null) && !XiuXian.Network.TalentService.CanWrite);
+
+    seedTalent(2005, 10);
+    armTalent(2006, "GetRoleTalentAck");
+    receiveTalent(2006, "GetRoleTalentAck", talentSnapshot(11, roleB), global::ErrCode.Ok);
+    check("Talent: different role rejected and writes disabled", XiuXian.Network.TalentService.Data != null && XiuXian.Network.TalentService.Data.RoleId == roleA && XiuXian.Network.TalentService.Data.Revision == 10 && !(bool)talentSynchronized.GetValue(null) && !XiuXian.Network.TalentService.CanWrite);
+
+    XiuXian.Network.TalentService.ClearSession();
+    armTalent(2007, "GetRoleTalentAck");
+    receiveTalent(2007, "GetRoleTalentAck", talentSnapshot(10, ""), global::ErrCode.Ok);
+    check("Talent: empty role snapshot rejected", XiuXian.Network.TalentService.Data == null && !(bool)talentSynchronized.GetValue(null) && !XiuXian.Network.TalentService.CanWrite);
+
+    seedTalent(2008, 10);
+    armTalent(2009, "GetRoleTalentAck");
+    receiveTalent(2009, "GetRoleTalentAck", null, global::ErrCode.LoadoutUnavailable);
+    check("Talent: error without snapshot disables writes and is localized", !XiuXian.Network.TalentService.IsPending && !(bool)talentSynchronized.GetValue(null) && !XiuXian.Network.TalentService.CanWrite && XiuXian.Network.TalentService.Status == XiuXian.Network.LoadoutErrors.ToUserMessage(global::ErrCode.LoadoutUnavailable));
+
+    seedTalent(2010, 10);
+    armTalent(2011, "GetRoleTalentAck");
+    talentType.GetField("deadline", flags).SetValue(talent, UnityEngine.Time.unscaledTime - 1f);
+    talentUpdate.Invoke(talent, null);
+    check("Talent: GET timeout clears pending and disables writes", !XiuXian.Network.TalentService.IsPending && !(bool)talentSynchronized.GetValue(null) && !XiuXian.Network.TalentService.CanWrite);
+    receiveTalent(2011, "GetRoleTalentAck", talentSnapshot(11, roleA), global::ErrCode.Ok);
+    check("Talent: timed-out GET late ACK cannot restore writes", XiuXian.Network.TalentService.Data == null && !(bool)talentSynchronized.GetValue(null) && !XiuXian.Network.TalentService.CanWrite);
+
+    seedSoul(1013, 10);
+    armSoul(1014, "GetRoleSoulJadeAck");
+    soulType.GetMethod("OnGet", flags).Invoke(soul, new object[] { new global::GetRoleSoulJadeAck { RequestId = 1014, Data = soulSnapshot(11, roleA) } });
+    check("Soul jade: missing optional Code cannot apply snapshot or enable writes", soul.Data.Revision == 10 && !soul.IsSynchronized && !soul.CanMutate && soul.Status == XiuXian.Network.LoadoutErrors.MissingCodeMessage);
+    seedSoul(1015, 10);
+    armSoul(1016, "GetRoleSoulJadeAck");
+    receiveSoul(1016, "GetRoleSoulJadeAck", soulSnapshot(11, roleA), (global::ErrCode)1234567);
+    check("Soul jade: unknown enum cannot apply snapshot or enable writes", soul.Data.Revision == 10 && !soul.IsSynchronized && !soul.CanMutate && soul.Status == XiuXian.Network.LoadoutErrors.UnknownCodeMessage);
+    seedTalent(2013, 10);
+    armTalent(2014, "GetRoleTalentAck");
+    talentType.GetMethod("OnSnapshot", flags).Invoke(talent, new object[] { new global::GetRoleTalentAck { RequestId = 2014, Data = talentSnapshot(11, roleA) } });
+    check("Talent: missing optional Code cannot apply snapshot or enable writes", XiuXian.Network.TalentService.Data.Revision == 10 && !(bool)talentSynchronized.GetValue(null) && !XiuXian.Network.TalentService.CanWrite && XiuXian.Network.TalentService.Status == XiuXian.Network.LoadoutErrors.MissingCodeMessage);
+    seedTalent(2015, 10);
+    armTalent(2016, "GetRoleTalentAck");
+    receiveTalent(2016, "GetRoleTalentAck", talentSnapshot(11, roleA), (global::ErrCode)1234567);
+    check("Talent: unknown enum cannot apply snapshot or enable writes", XiuXian.Network.TalentService.Data.Revision == 10 && !(bool)talentSynchronized.GetValue(null) && !XiuXian.Network.TalentService.CanWrite && XiuXian.Network.TalentService.Status == XiuXian.Network.LoadoutErrors.UnknownCodeMessage);
+    bool everyCodeLocalized = true;
+    foreach (global::ErrCode defined in System.Enum.GetValues(typeof(global::ErrCode)))
+        everyCodeLocalized = everyCodeLocalized && XiuXian.Network.LoadoutErrors.IsKnown(defined)
+            && XiuXian.Network.LoadoutErrors.ToUserMessage(defined) != XiuXian.Network.LoadoutErrors.UnknownCodeMessage;
+    check("Every defined ErrCode has a local message", everyCodeLocalized);
+
+    XiuXian.Network.TalentService.ClearSession();
+    var configured = new global::RoleTalentData { Revision = 21, RoleId = roleA, EarnedPoints = 3, AvailablePoints = 1 };
+    configured.Branches.Add(new global::TalentBranchDefinition { BranchId = 7, Name = "测试配置流派", IconKey = "talent" });
+    configured.LearnedNodeIds.Add(1001);
+    configured.Nodes.Add(new global::TalentNodeDefinition { NodeId = 1001, ParentId = -1, BranchId = 7, UiIndex = 12, IsRoot = true, PointCost = 0, Name = "测试配置根", Effect = "测试根", IconKey = "talent" });
+    var paidNode = new global::TalentNodeDefinition { NodeId = 5001, ParentId = 1001, BranchId = 7, UiIndex = 90, PointCost = 3, Name = "测试配置子", Effect = "测试消耗三点", IconKey = "talent" };
+    configured.Nodes.Add(paidNode);
+    armTalent(2012, "GetRoleTalentAck");
+    receiveTalent(2012, "GetRoleTalentAck", configured, global::ErrCode.Ok);
+    check("Talent: node lookup accepts configured IDs outside 0..95", XiuXian.Network.TalentService.FindNode(5001) == paidNode);
+    check("Talent: branch/UI order resolves configuration names instead of branch*24", XiuXian.Core.RoleTalentPanel.ArtTalentName(0, 1) == "测试配置子" && XiuXian.Core.RoleTalentPanel.ArtTalentLit(0, 0));
+    if (connected && XiuXian.Network.NetworkManager.Instance.IsConnected)
+    {
+        var canLearn = typeof(XiuXian.Core.RoleTalentPanel).GetMethod("CanLearn", staticFlags);
+        check("Talent: configured cost 3 prevents learning with 1 point", !(bool)canLearn.Invoke(null, new object[] { paidNode }));
+        configured.AvailablePoints = 3;
+        check("Talent: configured cost 3 enables UI exactly when affordable; no write sent", (bool)canLearn.Invoke(null, new object[] { paidNode }) && !XiuXian.Network.TalentService.IsPending);
+    }
+    else
+    {
+        skipped++;
+        results.Add("SKIP Configured talent affordability UI gate requires an already connected network; no write was attempted.");
+    }
+}
+catch (System.Exception exception)
+{
+    failed++;
+    var actual = exception.InnerException ?? exception;
+    results.Add("FAIL Unexpected regression runner exception: " + actual.ToString());
+}
+finally
+{
+    XiuXian.Network.SoulJadeService.ClearSession();
+    XiuXian.Network.TalentService.ClearSession();
+    check("Cleanup: both services cleared; synthetic state cannot remain active", soul.Data == null && !soul.IsBusy && !soul.IsSynchronized && XiuXian.Network.TalentService.Data == null && !XiuXian.Network.TalentService.IsPending && !(bool)talentSynchronized.GetValue(null));
+}
+return new
+{
+    Scope = "CLIENT_SYNTHETIC_REGRESSION_NOT_BACKEND_E2E",
+    ConnectedAtStart = connected,
+    Passed = passed,
+    Failed = failed,
+    Skipped = skipped,
+    Assertions = results.ToArray(),
+    Note = "Synthetic snapshots were cleared in finally. Reopen the actual pages to read authoritative server state."
+};

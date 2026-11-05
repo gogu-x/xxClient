@@ -48,7 +48,7 @@ namespace XiuXian.Core
             _referenceDesign = Q.Rect(transform, "BattleInkPresentation", 0, 0, 941, 1672);
             _referenceDesign.anchorMin = _referenceDesign.anchorMax = _referenceDesign.pivot = new Vector2(.5f, .5f);
             _referenceDesign.anchoredPosition = Vector2.zero;
-            ReferenceControl(_referenceDesign, "ExitBattle", "‹", 24, 38, 88, 88, ReturnToLobby, 52);
+            Q.BackButton(_referenceDesign, "ExitBattle", 24, 24, ReturnToLobby);
             Q.Text(_referenceDesign, "StageTitle", "天道演武", 210, 45, 521, 78, 48);
             _roundText = Q.Text(_referenceDesign, "Timeline", "备战", 270, 128, 401, 46, 30);
             _environmentLabel = Q.Text(_referenceDesign, "Environment", "", 270, 178, 401, 36, 24, Q.Muted);

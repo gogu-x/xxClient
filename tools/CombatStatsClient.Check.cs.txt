@@ -1,0 +1,171 @@
+// Unity MCP execute_code method body, C# 6 compatible.
+// SYNTHETIC CLIENT REGRESSION ONLY: no requests are sent and no backend attributes are asserted.
+if (!UnityEngine.Application.isPlaying)
+    return new { Scope = "CLIENT_COMBAT_STATS_SYNTHETIC_REGRESSION", Passed = 0, Failed = 0, Skipped = 1, Reason = "Unity must be in Play mode." };
+if (XiuXian.Network.CombatStatsService.IsPending)
+    return new { Scope = "CLIENT_COMBAT_STATS_SYNTHETIC_REGRESSION", Passed = 0, Failed = 0, Skipped = 1, Reason = "A real combat-stat query is pending. Retry after it completes." };
+
+var results = new System.Collections.Generic.List<string>();
+int passed = 0, failed = 0, skipped = 0;
+System.Action<string, bool> check = (name, ok) =>
+{
+    results.Add((ok ? "PASS " : "FAIL ") + name);
+    if (ok) passed++; else failed++;
+};
+var flags = System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic;
+var staticFlags = System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic;
+var type = typeof(XiuXian.Network.CombatStatsService);
+var instanceField = type.GetField("instance", staticFlags);
+object before = instanceField.GetValue(null);
+XiuXian.Network.CombatStatsService.ClearSession();
+check("ClearSession does not create a service", object.ReferenceEquals(before, instanceField.GetValue(null)));
+object service = type.GetMethod("Ensure", staticFlags).Invoke(null, null);
+var receive = type.GetMethod("OnSnapshot", flags);
+var pending = type.GetField("pendingId", flags);
+var dataField = type.GetField("data", staticFlags);
+const string roleA = "__COMBAT_STATS_SYNTHETIC_TEST_ONLY__ROLE_A";
+const string roleB = "__COMBAT_STATS_SYNTHETIC_TEST_ONLY__ROLE_B";
+System.Action<ulong> arm = id =>
+{
+    dataField.SetValue(null, null);
+    pending.SetValue(service, id);
+    type.GetField("deadline", flags).SetValue(service, UnityEngine.Time.unscaledTime + 60f);
+};
+System.Func<string, global::RoleCombatStatsData> snapshot = role => new global::RoleCombatStatsData
+{
+    RoleId = role, MaxHp = 12345, Attack = 678, Defense = 90, Speed = 123
+};
+System.Action<ulong, global::RoleCombatStatsData, global::ErrCode> ack = (id, value, code) =>
+    receive.Invoke(service, new object[] { new global::GetRoleCombatStatsAck { RequestId = id, Data = value, Code = code } });
+System.Action<ulong> seed = id =>
+{
+    XiuXian.Network.CombatStatsService.ClearSession();
+    arm(id); ack(id, snapshot(roleA), global::ErrCode.Ok);
+};
+
+// Keep synthetic values off screen and suppress the visible-page invalidation refresh.
+var characters = UnityEngine.Object.FindObjectsByType<XiuXian.Core.CharacterPanel>(UnityEngine.FindObjectsInactive.Include, UnityEngine.FindObjectsSortMode.None);
+var characterPages = new System.Collections.Generic.List<UnityEngine.GameObject>();
+var pageStates = new System.Collections.Generic.List<bool>();
+foreach (var character in characters)
+{
+    var page = character.transform.Find(XiuXian.Core.CharacterPanel.PageRootName);
+    if (page == null) continue;
+    characterPages.Add(page.gameObject); pageStates.Add(page.gameObject.activeSelf);
+    character.HideAttributes();
+}
+int invalidations = 0;
+System.Action invalidated = () => invalidations++;
+XiuXian.Network.CombatStatsService.Invalidated += invalidated;
+try
+{
+    arm(1001);
+    ack(9999, snapshot(roleA), global::ErrCode.Ok);
+    check("Wrong request ID is ignored without completing the query", XiuXian.Network.CombatStatsService.Data == null && XiuXian.Network.CombatStatsService.IsPending);
+    ack(1001, snapshot(roleA), global::ErrCode.Ok);
+    var value = XiuXian.Network.CombatStatsService.Data;
+    check("Matching explicit OK accepts exact server values", value != null && value.RoleId == roleA && value.MaxHp == 12345 && value.Attack == 678 && value.Defense == 90 && value.Speed == 123 && !XiuXian.Network.CombatStatsService.IsPending);
+    var duplicate = snapshot(roleA); duplicate.Attack = 99999;
+    ack(1001, duplicate, global::ErrCode.Ok);
+    check("Duplicate completed ACK cannot replace accepted values", XiuXian.Network.CombatStatsService.Data.Attack == 678);
+
+    arm(1002);
+    bool sent = XiuXian.Network.CombatStatsService.RequestRefresh();
+    check("Repeated refresh while pending sends no additional query", !sent && (ulong)pending.GetValue(service) == 1002UL);
+    receive.Invoke(service, new object[] { new global::GetRoleCombatStatsAck { RequestId = 1002, Data = snapshot(roleA) } });
+    check("Missing optional Code rejects data and clears pending", XiuXian.Network.CombatStatsService.Data == null && !XiuXian.Network.CombatStatsService.IsPending && XiuXian.Network.CombatStatsService.Status == XiuXian.Network.LoadoutErrors.MissingCodeMessage);
+
+    arm(1003); ack(1003, snapshot(roleA), (global::ErrCode)1234567);
+    check("Unknown enum cannot display a successful snapshot", XiuXian.Network.CombatStatsService.Data == null && XiuXian.Network.CombatStatsService.Status == XiuXian.Network.LoadoutErrors.UnknownCodeMessage);
+    arm(1004); ack(1004, snapshot(roleA), global::ErrCode.ConfigUnavailable);
+    check("Error ACK never displays attached attribute values", XiuXian.Network.CombatStatsService.Data == null && XiuXian.Network.CombatStatsService.Status == XiuXian.Network.LoadoutErrors.ToUserMessage(global::ErrCode.ConfigUnavailable));
+    arm(1005); ack(1005, null, global::ErrCode.Ok);
+    check("OK with missing snapshot is rejected", XiuXian.Network.CombatStatsService.Data == null);
+    arm(1006); ack(1006, snapshot(""), global::ErrCode.Ok);
+    check("Snapshot without role identity is rejected", XiuXian.Network.CombatStatsService.Data == null);
+    arm(1007); ack(1007, snapshot(roleB), global::ErrCode.Ok);
+    check("Different role cannot replace this session's attributes", XiuXian.Network.CombatStatsService.Data == null);
+    arm(1008); ack(1008, snapshot(roleA), global::ErrCode.Ok);
+    check("A fresh matching-role snapshot recovers after rejection", XiuXian.Network.CombatStatsService.Data != null && XiuXian.Network.CombatStatsService.Data.RoleId == roleA);
+
+    // Seed and arm without clearing the cached object to prove invalidation removes both.
+    pending.SetValue(service, 1009UL);
+    int beforeInvalidation = invalidations;
+    XiuXian.Network.CombatStatsService.Invalidate();
+    check("Loadout invalidation removes cached values and in-flight request", XiuXian.Network.CombatStatsService.Data == null && !XiuXian.Network.CombatStatsService.IsPending);
+    check("Invalidation notifies once and hidden pages send no query", invalidations == beforeInvalidation + 1 && (ulong)pending.GetValue(service) == 0UL);
+    ack(1009, snapshot(roleA), global::ErrCode.Ok);
+    check("Pre-change late ACK cannot restore stale attributes", XiuXian.Network.CombatStatsService.Data == null);
+    arm(1010); ack(1010, snapshot(roleB), global::ErrCode.Ok);
+    check("Invalidation retains session identity protection", XiuXian.Network.CombatStatsService.Data == null);
+
+    arm(1011); XiuXian.Network.CombatStatsService.ClearSession(); ack(1011, snapshot(roleA), global::ErrCode.Ok);
+    check("ClearSession rejects late account responses", XiuXian.Network.CombatStatsService.Data == null && !XiuXian.Network.CombatStatsService.IsPending);
+    arm(1012); ack(1012, snapshot(roleB), global::ErrCode.Ok);
+    check("A new cleared session may accept the new role", XiuXian.Network.CombatStatsService.Data != null && XiuXian.Network.CombatStatsService.Data.RoleId == roleB);
+
+    seed(1013); pending.SetValue(service, 1014UL);
+    type.GetField("deadline", flags).SetValue(service, UnityEngine.Time.unscaledTime - 1f);
+    type.GetMethod("Update", flags).Invoke(service, null);
+    check("Timeout removes old display values and query state", XiuXian.Network.CombatStatsService.Data == null && !XiuXian.Network.CombatStatsService.IsPending);
+    ack(1014, snapshot(roleA), global::ErrCode.Ok);
+    check("Late timed-out ACK stays discarded", XiuXian.Network.CombatStatsService.Data == null);
+
+    seed(1015); pending.SetValue(service, 1016UL);
+    type.GetMethod("Disconnected", flags).Invoke(service, new object[] { "SYNTHETIC_TEST_ONLY" });
+    check("Disconnect removes old values and pending state", XiuXian.Network.CombatStatsService.Data == null && !XiuXian.Network.CombatStatsService.IsPending);
+    ack(1016, snapshot(roleA), global::ErrCode.Ok);
+    check("Late disconnected ACK is discarded", XiuXian.Network.CombatStatsService.Data == null);
+    seed(1017);
+    type.GetMethod("Failed", flags).Invoke(service, new object[] { "SYNTHETIC_TEST_ONLY" });
+    check("Communication error removes old values", XiuXian.Network.CombatStatsService.Data == null);
+
+    XiuXian.Core.CharacterPanel renderedCharacter = null;
+    foreach (var candidate in characters)
+    {
+        var candidateTexts = (TMPro.TMP_Text[])typeof(XiuXian.Core.CharacterPanel).GetField("attributeValues", flags).GetValue(candidate);
+        if (candidateTexts != null && candidateTexts.Length == 4 && candidateTexts[0] != null && candidateTexts[1] != null && candidateTexts[2] != null && candidateTexts[3] != null)
+        { renderedCharacter = candidate; break; }
+    }
+    if (renderedCharacter != null)
+    {
+        var character = renderedCharacter;
+        var characterType = typeof(XiuXian.Core.CharacterPanel);
+        var render = characterType.GetMethod("RefreshAttributeDisplay", flags);
+        var texts = (TMPro.TMP_Text[])characterType.GetField("attributeValues", flags).GetValue(character);
+        seed(1018); render.Invoke(character, null);
+        check("Character page renders all four server values without local additions", texts[0].text == 12345L.ToString("N0") && texts[1].text == 678L.ToString("N0") && texts[2].text == 90L.ToString("N0") && texts[3].text == 123L.ToString("N0"));
+        var state = (TMPro.TMP_Text)characterType.GetField("attributeState", flags).GetValue(character);
+        check("Character page identifies next-battle scope", state.text == "当前养成属性 · 下场战斗生效");
+        arm(1019); render.Invoke(character, null);
+        var button = (UnityEngine.UI.Button)characterType.GetField("refreshAttributesButton", flags).GetValue(character);
+        check("Pending query hides values and disables repeated refresh", !button.interactable && texts[0].text == "—" && texts[1].text == "—" && texts[2].text == "—" && texts[3].text == "—");
+        XiuXian.Network.CombatStatsService.ClearSession(); render.Invoke(character, null);
+        check("Session cleanup leaves placeholders and enables manual retry", button.interactable && texts[0].text == "—" && state.text == "角色属性待同步");
+
+        var oldPage = (UnityEngine.GameObject)characterType.GetField("page", flags).GetValue(character);
+        var choices = (TMPro.TMP_Text[])characterType.GetField("choices", flags).GetValue(character);
+        choices[0] = null; texts[0] = null;
+        check("Hot-reload partial references are detected even while page and hero survive", !(bool)characterType.GetMethod("HasPageReferences", flags).Invoke(character, null));
+        characterType.GetMethod("EnsurePageReferences", flags).Invoke(character, null);
+        characterType.GetMethod("Select", flags).Invoke(character, new object[] { 0 });
+        var newPage = (UnityEngine.GameObject)characterType.GetField("page", flags).GetValue(character);
+        for (int i = 0; i < characterPages.Count; i++) if (characterPages[i] == oldPage) characterPages[i] = newPage;
+        check("Hot-reload recovery rebuilds complete UI references without querying or showing synthetic values", (bool)characterType.GetMethod("HasPageReferences", flags).Invoke(character, null) && !newPage.activeSelf && !XiuXian.Network.CombatStatsService.IsPending);
+    }
+    else
+    {
+        skipped += 6;
+        results.Add("SKIP Six character rendering/reload assertions: no initialized CharacterPanel exists in this scene.");
+    }
+}
+finally
+{
+    XiuXian.Network.CombatStatsService.Invalidated -= invalidated;
+    XiuXian.Network.CombatStatsService.ClearSession();
+    // Restore visibility only; deliberately do not send a refresh from this synthetic script.
+    for (int i = 0; i < characterPages.Count; i++)
+        if (characterPages[i] != null) characterPages[i].SetActive(pageStates[i]);
+}
+check("Final cleanup removes all synthetic attribute state", XiuXian.Network.CombatStatsService.Data == null && !XiuXian.Network.CombatStatsService.IsPending);
+return new { Scope = "CLIENT_COMBAT_STATS_SYNTHETIC_REGRESSION_NOT_BACKEND_E2E", Passed = passed, Failed = failed, Skipped = skipped, Assertions = results.ToArray() };

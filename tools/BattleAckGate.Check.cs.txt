@@ -1,0 +1,110 @@
+// Replays a real BattleCreatedNtf already present in this Editor's log. No network requests are sent.
+// Method body for Unity MCP execute_code; all state changes are local and cleared in finally.
+if (!UnityEngine.Application.isPlaying) return new { Skipped = true, Reason = "Unity must be in Play mode." };
+if (XiuXian.Core.BattleView.HasResumableBattle) return new { Skipped = true, Reason = "An actual battle is active; finish/close it before the local replay check." };
+global::BattleCreatedNtf capture = null;
+string logPath = UnityEngine.Application.consoleLogPath;
+if (!System.IO.File.Exists(logPath)) return new { Skipped = true, Reason = "No Editor log is available for a real captured notification." };
+using (var stream = new System.IO.FileStream(logPath, System.IO.FileMode.Open, System.IO.FileAccess.Read, System.IO.FileShare.ReadWrite))
+{
+    stream.Seek(System.Math.Max(0, stream.Length - 8 * 1024 * 1024), System.IO.SeekOrigin.Begin);
+    using (var reader = new System.IO.StreamReader(stream, System.Text.Encoding.UTF8))
+    {
+        string[] lines = reader.ReadToEnd().Split('\n');
+        for (int i = lines.Length - 1; i >= 0; i--)
+        {
+            string line = lines[i];
+            if (line.IndexOf("[Proto] <= BattleCreatedNtf ", System.StringComparison.Ordinal) < 0) continue;
+            int start = line.IndexOf('{'), end = line.LastIndexOf('}');
+            if (start < 0 || end <= start) continue;
+            try
+            {
+                object parser = typeof(global::BattleCreatedNtf).GetProperty("Parser", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static).GetValue(null, null);
+                System.Reflection.MethodInfo parseJson = parser.GetType().GetMethod("ParseJson", new System.Type[] { typeof(string) });
+                capture = (global::BattleCreatedNtf)parseJson.Invoke(parser, new object[] { line.Substring(start, end - start + 1) });
+                if (!string.IsNullOrEmpty(capture.BattleId) && capture.Units.Count > 0) break;
+                capture = null;
+            }
+            catch (System.Exception) { capture = null; }
+        }
+    }
+}
+if (capture == null) return new { Skipped = true, Reason = "No real BattleCreatedNtf with units found in the latest 8 MiB of Editor log; run one real battle first." };
+var battle = UnityEngine.Object.FindFirstObjectByType<XiuXian.Core.BattleView>(UnityEngine.FindObjectsInactive.Include);
+if (battle == null) return new { Skipped = true, Reason = "No existing battle view; run one real battle first." };
+bool wasActive = battle.gameObject.activeSelf;
+var type = typeof(XiuXian.Core.BattleView);
+var flags = System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic;
+var results = new System.Collections.Generic.List<string>();
+int passed = 0, failed = 0;
+System.Action<string, bool> check = (name, ok) => { results.Add((ok ? "PASS " : "FAIL ") + name); if (ok) passed++; else failed++; };
+System.Action<string> invoke = name => type.GetMethod(name, flags).Invoke(battle, null);
+System.Func<string, bool> flag = name => (bool)type.GetField(name, flags).GetValue(battle);
+var queue = (System.Collections.Generic.Queue<System.Action>)type.GetField("_pendingBattleMessages", flags).GetValue(battle);
+System.Func<int> visualCount = () => ((System.Collections.IDictionary)type.GetField("_unitVisuals", flags).GetValue(battle)).Count;
+System.Action begin = () =>
+{
+    invoke("CloseBattleSession");
+    battle.gameObject.SetActive(true);
+    invoke("ClearUnitVisuals");
+    type.GetField("_hasBattleSession", flags).SetValue(battle, true);
+    invoke("BeginBattleResponseGate");
+};
+System.Action created = () => type.GetMethod("OnBattleCreated", flags).Invoke(battle, new object[] { capture.Clone() });
+System.Action<global::StartBattleAck> ack = value => type.GetMethod("OnStartBattleAck", flags).Invoke(battle, new object[] { value });
+try
+{
+    begin();
+    created();
+    check("Real captured Created before ACK is buffered; no units are presented", queue.Count == 1 && visualCount() == 0 && flag("_awaitingStartAck"));
+    ack(new global::StartBattleAck { BattleId = capture.BattleId });
+    check("Missing Code rejects queued capture", queue.Count == 0 && visualCount() == 0 && flag("_battleResponseRejected") && !flag("_startAckAccepted"));
+    created();
+    check("Late captured Created after rejection is discarded", queue.Count == 0 && visualCount() == 0 && !XiuXian.Core.BattleView.HasResumableBattle);
+
+    begin();
+    created();
+    ack(new global::StartBattleAck { Code = (global::ErrCode)1234567, BattleId = capture.BattleId });
+    check("Unknown ACK enum rejects the captured battle", queue.Count == 0 && visualCount() == 0 && flag("_battleResponseRejected"));
+
+    begin();
+    check("New battle clears prior rejection state", queue.Count == 0 && flag("_awaitingStartAck") && !flag("_battleResponseRejected"));
+    created();
+    ack(new global::StartBattleAck { Code = global::ErrCode.Ok, BattleId = capture.BattleId });
+    check("Explicit OK replays the actual captured Created exactly once", queue.Count == 0 && visualCount() == capture.Units.Count && flag("_startAckAccepted") && !flag("_awaitingStartAck"));
+    float interval = (float)type.GetField("_tickDurationSeconds", flags).GetValue(battle);
+    check("Captured tick duration is unchanged by ACK gating", System.Math.Abs(interval - (capture.TickDurationMs > 0 ? capture.TickDurationMs : 100) / 1000f) < .0001f);
+
+    begin();
+    created();
+    ack(new global::StartBattleAck { Code = global::ErrCode.BattleTimeout, BattleId = capture.BattleId });
+    created();
+    check("Failure enum rejects buffered and late real captures", queue.Count == 0 && visualCount() == 0 && flag("_battleResponseRejected"));
+
+    begin();
+    created();
+    var timer = (System.Collections.IEnumerator)type.GetMethod("WaitForBattleCreated", flags).Invoke(battle, null);
+    timer.MoveNext(); timer.MoveNext();
+    check("Local creation timeout clears the confirmation queue", queue.Count == 0 && flag("_battleResponseRejected"));
+
+    begin();
+    int limit = (int)type.GetField("PendingBattleMessageLimit", System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic).GetRawConstantValue();
+    System.Action noop = () => { };
+    for (int i = 0; i < limit; i++) queue.Enqueue(noop);
+    type.GetMethod("BufferUntilStartAck", flags).Invoke(battle, new object[] { noop });
+    check("Confirmation queue overflow fails closed and frees queued notifications", queue.Count == 0 && flag("_battleResponseRejected"));
+}
+catch (System.Exception error)
+{
+    failed++;
+    results.Add("FAIL " + (error.InnerException ?? error).ToString());
+}
+finally
+{
+    invoke("CloseBattleSession");
+    invoke("ClearUnitVisuals");
+    battle.gameObject.SetActive(wasActive);
+    check("Cleanup clears queue and local battle state", queue.Count == 0 && !flag("_awaitingStartAck") && !XiuXian.Core.BattleView.HasResumableBattle);
+}
+return new { Scope = "REAL_CAPTURE_LOCAL_ACK_GATE_REPLAY_NOT_BACKEND_E2E", CapturedBattleId = capture.BattleId,
+    CapturedUnits = capture.Units.Count, Passed = passed, Failed = failed, Assertions = results.ToArray() };

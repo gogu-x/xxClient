@@ -229,6 +229,7 @@ private void Awake()
 
         private void OnDisable()
         {
+            CloseBattleResponseGate();
             _hasBattleSession = false;
             _isBattleMinimized = false;
             _battleIsFinished = false;
@@ -330,6 +331,7 @@ private void Awake()
             // 创建请求和当前战斗尚未结束时，不能清空本地播放状态再次开战。
             if (!_canBeginBattle) return;
             _canBeginBattle = false;
+            BeginBattleResponseGate();
             _hasBattleSession = true;
             _battleIsFinished = false;
             SetScreenVisible(true);
@@ -384,31 +386,29 @@ private void Awake()
         {
             yield return new WaitForSecondsRealtime(12f);
             _battleCreateTimeout = null;
-            _canBeginBattle = true;
-            SetBattleStatus("等待战斗数据超时，请重试", "等待超时");
-            ShowBattleRecoveryControl(returnToLogin: false);
+            FailBattleResponse("等待战斗数据超时，请重试", "等待超时");
         }
         private void OnStartBattleAck(global::StartBattleAck ack)
         {
-            if (!string.IsNullOrEmpty(ack.Error))
+            if (!_awaitingStartAck) return;
+            if (!ack.HasCode || ack.Code != global::ErrCode.Ok)
             {
-                CancelBattleCreateTimeout();
-                Debug.LogError($"[BattleView] 创建战斗失败: {ack.Error}, battleId={ack.BattleId}");
-                _canBeginBattle = true;
-                bool timedOut = ack.Error.IndexOf("deadline exceeded", System.StringComparison.OrdinalIgnoreCase) >= 0;
-                SetBattleStatus(timedOut ? "战斗服务暂时无响应，请稍后重试" : "挑战创建失败，请重试",
+                Debug.LogWarning($"[BattleView] 创建战斗失败: hasCode={ack.HasCode}, code={ack.Code}, battleId={ack.BattleId}");
+                bool timedOut = ack.HasCode && ack.Code == global::ErrCode.BattleTimeout;
+                FailBattleResponse(LoadoutErrors.ResponseMessage(ack.HasCode, ack.Code),
                     timedOut ? "创建超时" : "创建失败");
-                ShowBattleRecoveryControl(returnToLogin: false);
-                ClearFailedBattleCreation();
                 return;
             }
             if (!string.IsNullOrEmpty(ack.BattleId))
             {
                 _battleId = ack.BattleId;
             }
+            AcceptBattleResponse();
         }
         private void OnBattleCreated(global::BattleCreatedNtf message)
         {
+            if (BufferUntilStartAck(() => OnBattleCreated(message))) return;
+            if (!string.IsNullOrEmpty(_battleId) && _battleId != message.BattleId) return;
             if (string.IsNullOrEmpty(message.BattleId))
             {
                 return;
@@ -448,6 +448,7 @@ private void Awake()
         }
         private void OnBattleAction(global::BattleActionNtf message)
         {
+            if (BufferUntilStartAck(() => OnBattleAction(message))) return;
             if (message.Event == null || string.IsNullOrEmpty(message.BattleId))
             {
                 return;
@@ -480,6 +481,7 @@ private void Awake()
 
         private void OnBattleFinished(global::BattleFinishedNtf message)
         {
+            if (BufferUntilStartAck(() => OnBattleFinished(message))) return;
             if (!string.IsNullOrEmpty(_battleId) && _battleId != message.BattleId)
             {
                 return;
@@ -621,6 +623,10 @@ private void Awake()
                     long damage = System.Math.Max(0L, battleEvent.HpBefore - battleEvent.HpAfter);
                     if (damage > 0) StartTracked(AnimateFloatingNumber(targetVisual, damage, false));
                     EnqueueHitReaction(targetVisual);
+                    if (battleEvent.EffectType == global::EffectType.IceBurst)
+                        StartTracked(AnimateChargedEffect(targetVisual, true));
+                    else if (battleEvent.EffectType == global::EffectType.Thunder)
+                        StartTracked(AnimateChargedEffect(targetVisual, false));
                     break;
                 }
                 case global::BattleEventType.Heal:
@@ -645,11 +651,11 @@ private void Awake()
                 }
                 case global::BattleEventType.ActionSkipped:
                     SetUnitStunned(EnsureUnitVisual(battleEvent.ActorId),
-                        string.Equals(battleEvent.Detail, "stun", System.StringComparison.OrdinalIgnoreCase));
+                        battleEvent.Reason == global::BattleEventReason.Stunned);
                     break;
                 case global::BattleEventType.ActionCancelled:
                 {
-                    if (battleEvent.Detail == "attacker_dead")
+                    if (battleEvent.Reason == global::BattleEventReason.ActorDead)
                     {
                         _cancelledActions.Add(battleEvent.Action);
                         UpdateHealth(battleEvent.ActorId, battleEvent.HpAfter, battleEvent.HpBefore);
@@ -658,7 +664,7 @@ private void Awake()
                     {
                         // target_dead 的 HP 属于目标；群攻中一个目标失效不取消其他目标。
                         _cancelledActionTargets.Add((battleEvent.Action, battleEvent.TargetId));
-                        if (battleEvent.Detail == "target_dead")
+                        if (battleEvent.Reason == global::BattleEventReason.TargetDead)
                             UpdateHealth(battleEvent.TargetId, battleEvent.HpAfter, battleEvent.HpBefore);
                     }
                     else

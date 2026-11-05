@@ -149,6 +149,7 @@ namespace XiuXian.Core
 
             StopStartupFlow();
 
+            ClearRoleSession();
             _serverListQueryFinished = false;
             _serverListQueryError = null;
             _needsRegistration = false;
@@ -356,6 +357,9 @@ namespace XiuXian.Core
             PlayerPrefs.Save();
             _account = account;
             _developerAccountDialog.SetActive(false);
+            // 切换账号时重建传输，旧账号在途的登录回包不能进入新会话。
+            StopStartupFlow();
+            NetworkManager.Instance.Disconnect();
             StartStartupFlow();
         }
 #endif
@@ -373,7 +377,7 @@ namespace XiuXian.Core
             bool hasNoRole = response.Code == global::ErrCode.Ok && response.Accounts.Count == 0;
             if (response.Code != global::ErrCode.Ok)
             {
-                CompleteServerListQuery($"角色列表查询失败：{response.Code}");
+                CompleteServerListQuery(LoadoutErrors.ToUserMessage(response.Code));
                 return;
             }
 
@@ -546,8 +550,8 @@ namespace XiuXian.Core
                 {
                     enterButton.interactable = true;
                 }
-                Debug.LogWarning($"[HomePanel] 创建角色失败: {ack.Msg}");
-                ShowMessage("创建角色失败", string.IsNullOrEmpty(ack.Msg) ? "服务器拒绝了注册请求，请稍后重试。" : ack.Msg);
+                Debug.LogWarning($"[HomePanel] 创建角色失败: code={ack.Code}");
+                ShowMessage("创建角色失败", LoadoutErrors.ToUserMessage(ack.Code));
                 return;
             }
 
@@ -585,16 +589,25 @@ namespace XiuXian.Core
 
             if (ack.Code == global::ErrCode.Ok)
             {
+                ClearRoleSession();
                 UIManager.Instance.Show(UIScreen.Main);
             }
             else
             {
-                Debug.LogWarning($"[HomePanel] 登录失败: {ack.Msg}");
-                ShowMessage("登录失败", string.IsNullOrEmpty(ack.Msg) ? "服务器拒绝了登录请求，请稍后重试。" : ack.Msg);
+                Debug.LogWarning($"[HomePanel] 登录失败: code={ack.Code}");
+                ShowMessage("登录失败", LoadoutErrors.ToUserMessage(ack.Code));
             }
         }
 
         private GameObject _moreDialog;
+
+        private static void ClearRoleSession()
+        {
+            RoleEquipmentPanel.ClearSession();
+            SoulJadeService.ClearSession();
+            TalentService.ClearSession();
+            CombatStatsService.ClearSession();
+        }
 
         private void ApplyLoginTheme()
         {
@@ -670,8 +683,7 @@ namespace XiuXian.Core
                 _developerAccountButton = LoginCelestialSkin.Button(d, "DeveloperAccount", "开发账号", 235, 930, 471, 78,
                     () => { _moreDialog.SetActive(false); OnDeveloperAccountClicked(); });
 #endif
-                LoginCelestialSkin.Button(d, "Close", "返回", 235, 1100, 471, 90,
-                    () => _moreDialog.SetActive(false), null);
+                Q.BackButton(d, "Close", 390, 1093, () => _moreDialog.SetActive(false));
             }
             _moreDialog.SetActive(true);
             _moreDialog.transform.SetAsLastSibling();
@@ -755,8 +767,8 @@ namespace XiuXian.Core
                     ServerId = checked((uint)server.ServerId)
                 });
             }, "button_primary", 40);
-            Q.Button(d, "Cancel", "返回登录", 265, 1300, 411, 70,
-                () => _registrationDialog.SetActive(false), null, 30);
+            Q.BackButton(d, "Cancel", 390, 1285,
+                () => _registrationDialog.SetActive(false));
             _registrationDialog.transform.SetAsLastSibling();
         }
 

@@ -76,9 +76,9 @@ namespace XiuXian.EditorTools
             int returns = 0;
             var design = ImmortalV4PageKit.Page(parent, "DefaultPageValidation", "角色", () => returns++, out var page);
             RequireText(page, "Title", "角色");
-            var header = design.Find("Equipment_header_plate");
-            Check(header != null && header.gameObject.activeInHierarchy &&
-                header.GetComponent<RawImage>()?.texture != null, "Default page must retain its visible header artwork.");
+            var backplate = design.Find("Back/QuietInkBackplate");
+            Check(backplate != null && backplate.gameObject.activeInHierarchy &&
+                backplate.GetComponent<QuietInkBackplate>() != null, "Default page must use the shared visible back button.");
             RequireButton(page, "Back", null).onClick.Invoke();
             Check(returns == 1, "Default page back callback must remain usable.");
         }

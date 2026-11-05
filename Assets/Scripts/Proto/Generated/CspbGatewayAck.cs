@@ -23,17 +23,17 @@ public static partial class CspbGatewayAckReflection {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
           "ChZjc3BiX2dhdGV3YXlfYWNrLnByb3RvGhVjc3BiX2NvbW1fZXJyb3IucHJv",
-          "dG8aGWNzcGJfZ2F0ZXdheV9zdHJ1Y3QucHJvdG8iLwoITG9naW5BY2sSFgoE",
-          "Y29kZRgBIAEoDjIILkVyckNvZGUSCwoDbXNnGAIgASgJIjIKC1JlZ2lzdGVy",
-          "QWNrEhYKBGNvZGUYASABKA4yCC5FcnJDb2RlEgsKA21zZxgCIAEoCSJJCg1T",
-          "ZXJ2ZXJMaXN0QWNrEhYKBGNvZGUYASABKA4yCC5FcnJDb2RlEiAKCGFjY291",
-          "bnRzGAIgAygLMg4uU2VydmVyQWNjb3VudEIrWilnaXRodWIuY29tL2dvZ3Ut",
-          "eC9nb2dzL3BiL2NzcGIvcGJfZ2F0ZXdheWIGcHJvdG8z"));
+          "dG8aGWNzcGJfZ2F0ZXdheV9zdHJ1Y3QucHJvdG8iIgoITG9naW5BY2sSFgoE",
+          "Y29kZRgBIAEoDjIILkVyckNvZGUiJQoLUmVnaXN0ZXJBY2sSFgoEY29kZRgB",
+          "IAEoDjIILkVyckNvZGUiSQoNU2VydmVyTGlzdEFjaxIWCgRjb2RlGAEgASgO",
+          "MgguRXJyQ29kZRIgCghhY2NvdW50cxgCIAMoCzIOLlNlcnZlckFjY291bnRC",
+          "K1opZ2l0aHViLmNvbS9nb2d1LXgvZ29ncy9wYi9jc3BiL3BiX2dhdGV3YXli",
+          "BnByb3RvMw=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::CspbCommErrorReflection.Descriptor, global::CspbGatewayStructReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-          new pbr::GeneratedClrTypeInfo(typeof(global::LoginAck), global::LoginAck.Parser, new[]{ "Code", "Msg" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::RegisterAck), global::RegisterAck.Parser, new[]{ "Code", "Msg" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::LoginAck), global::LoginAck.Parser, new[]{ "Code" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::RegisterAck), global::RegisterAck.Parser, new[]{ "Code" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::ServerListAck), global::ServerListAck.Parser, new[]{ "Code", "Accounts" }, null, null, null, null)
         }));
   }
@@ -77,7 +77,6 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public LoginAck(LoginAck other) : this() {
     code_ = other.code_;
-    msg_ = other.msg_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
@@ -99,18 +98,6 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
     }
   }
 
-  /// <summary>Field number for the "msg" field.</summary>
-  public const int MsgFieldNumber = 2;
-  private string msg_ = "";
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public string Msg {
-    get { return msg_; }
-    set {
-      msg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-    }
-  }
-
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override bool Equals(object other) {
@@ -127,7 +114,6 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
       return true;
     }
     if (Code != other.Code) return false;
-    if (Msg != other.Msg) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
@@ -136,7 +122,6 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
   public override int GetHashCode() {
     int hash = 1;
     if (Code != global::ErrCode.Ok) hash ^= Code.GetHashCode();
-    if (Msg.Length != 0) hash ^= Msg.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -159,10 +144,6 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
       output.WriteRawTag(8);
       output.WriteEnum((int) Code);
     }
-    if (Msg.Length != 0) {
-      output.WriteRawTag(18);
-      output.WriteString(Msg);
-    }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
     }
@@ -177,10 +158,6 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
       output.WriteRawTag(8);
       output.WriteEnum((int) Code);
     }
-    if (Msg.Length != 0) {
-      output.WriteRawTag(18);
-      output.WriteString(Msg);
-    }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
     }
@@ -193,9 +170,6 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
     int size = 0;
     if (Code != global::ErrCode.Ok) {
       size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
-    }
-    if (Msg.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeStringSize(Msg);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -211,9 +185,6 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
     }
     if (other.Code != global::ErrCode.Ok) {
       Code = other.Code;
-    }
-    if (other.Msg.Length != 0) {
-      Msg = other.Msg;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
@@ -238,10 +209,6 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
           Code = (global::ErrCode) input.ReadEnum();
           break;
         }
-        case 18: {
-          Msg = input.ReadString();
-          break;
-        }
       }
     }
   #endif
@@ -263,10 +230,6 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
           break;
         case 8: {
           Code = (global::ErrCode) input.ReadEnum();
-          break;
-        }
-        case 18: {
-          Msg = input.ReadString();
           break;
         }
       }
@@ -312,7 +275,6 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public RegisterAck(RegisterAck other) : this() {
     code_ = other.code_;
-    msg_ = other.msg_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
@@ -334,18 +296,6 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
     }
   }
 
-  /// <summary>Field number for the "msg" field.</summary>
-  public const int MsgFieldNumber = 2;
-  private string msg_ = "";
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public string Msg {
-    get { return msg_; }
-    set {
-      msg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-    }
-  }
-
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override bool Equals(object other) {
@@ -362,7 +312,6 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
       return true;
     }
     if (Code != other.Code) return false;
-    if (Msg != other.Msg) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
@@ -371,7 +320,6 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
   public override int GetHashCode() {
     int hash = 1;
     if (Code != global::ErrCode.Ok) hash ^= Code.GetHashCode();
-    if (Msg.Length != 0) hash ^= Msg.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -394,10 +342,6 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
       output.WriteRawTag(8);
       output.WriteEnum((int) Code);
     }
-    if (Msg.Length != 0) {
-      output.WriteRawTag(18);
-      output.WriteString(Msg);
-    }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
     }
@@ -412,10 +356,6 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
       output.WriteRawTag(8);
       output.WriteEnum((int) Code);
     }
-    if (Msg.Length != 0) {
-      output.WriteRawTag(18);
-      output.WriteString(Msg);
-    }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
     }
@@ -428,9 +368,6 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
     int size = 0;
     if (Code != global::ErrCode.Ok) {
       size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
-    }
-    if (Msg.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeStringSize(Msg);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -446,9 +383,6 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
     }
     if (other.Code != global::ErrCode.Ok) {
       Code = other.Code;
-    }
-    if (other.Msg.Length != 0) {
-      Msg = other.Msg;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
@@ -473,10 +407,6 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
           Code = (global::ErrCode) input.ReadEnum();
           break;
         }
-        case 18: {
-          Msg = input.ReadString();
-          break;
-        }
       }
     }
   #endif
@@ -498,10 +428,6 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
           break;
         case 8: {
           Code = (global::ErrCode) input.ReadEnum();
-          break;
-        }
-        case 18: {
-          Msg = input.ReadString();
           break;
         }
       }

@@ -95,8 +95,43 @@ namespace XiuXian.Core
             t.enableWordWrapping=false;t.enableAutoSizing=true;t.fontSizeMin=Mathf.Min(size,22);t.fontSizeMax=size;
             if(action!=null)b.onClick.AddListener(action);else b.interactable=false;return b;
         }
+        public static Button BackButton(Transform parent,string name,float x,float y,UnityAction action)
+        {
+            var button=Button(parent,name,"",x,y,160,104,action,null);
+            StyleBackButton(button);
+            return button;
+        }
+        public static void StyleBackButton(Button button)
+        {
+            if(button==null)return;
+            var rect=(RectTransform)button.transform;
+            rect.sizeDelta=new Vector2(160,104);
+            if(rect.Find("QuietInkBackplate")!=null)return;
+            var previousChildren=new List<Transform>();
+            foreach(Transform child in rect)previousChildren.Add(child);
+            foreach(var child in previousChildren)
+            {
+                child.gameObject.SetActive(false);
+                if(Application.isPlaying)Object.Destroy(child.gameObject);
+                else Object.DestroyImmediate(child.gameObject);
+            }
+            var hit=button.GetComponent<Image>()??button.gameObject.AddComponent<Image>();
+            hit.sprite=null;hit.color=Color.clear;hit.raycastTarget=true;
+            var plate=Rect(rect,"QuietInkBackplate",0,0,160,104).gameObject.AddComponent<QuietInkBackplate>();
+            plate.raycastTarget=false;
+            button.targetGraphic=plate;button.transition=Selectable.Transition.ColorTint;
+            var colors=button.colors;
+            colors.normalColor=Color.white;
+            colors.highlightedColor=new Color(1f,.99f,.94f);
+            colors.pressedColor=new Color(.81f,.9f,.84f);
+            colors.selectedColor=Color.white;
+            colors.disabledColor=new Color(.75f,.75f,.71f,.6f);
+            colors.fadeDuration=.08f;button.colors=colors;
+            var label=Text(rect,"Label","返回",57,14,86,76,30,Jade);
+            label.textWrappingMode=TextWrappingModes.NoWrap;
+        }
         public static void Header(Transform p,string title,UnityAction back)
-        { Button(p,"Back","‹",22,32,88,88,back,null,52);Text(p,"Title",title,180,35,581,88,44); }
+        { BackButton(p,"Back",24,24,back);Text(p,"Title",title,210,35,521,88,44); }
         public static Image Divider(Transform p,float x,float y,float w)
         {var im=Rect(p,"Divider",x,y,w,1.5f).gameObject.AddComponent<Image>();im.color=LineColor;im.raycastTarget=false;return im;}
         public static Button Tab(Transform p,string name,string label,float x,float y,float w,bool selected,UnityAction action)

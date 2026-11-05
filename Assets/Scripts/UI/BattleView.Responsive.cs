@@ -40,7 +40,7 @@ namespace XiuXian.Core
                 {
                     switch (rect.name)
                     {
-                        case "ExitBattle": r = new Rect(24, 24, 88, 88); break;
+                        case "ExitBattle": r = new Rect(24, 24, 160, 104); break;
                         case "StageTitle": r = new Rect(575, 24, 521, 66); break;
                         case "Timeline": r = new Rect(635, 80, 401, 44); break;
                         case "Environment": r = new Rect(635, 137, 401, 32); break;

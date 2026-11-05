@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace XiuXian.Network
@@ -19,7 +20,10 @@ namespace XiuXian.Network
         private const string PkgActivity = "github.com/gogu-x/gogs/pb/cspb/pb_activity";
         private const string PkgGuild = "github.com/gogu-x/gogs/pb/cspb/pb_guild";
         private const string PkgBattle = "github.com/gogu-x/gogs/pb/cspb/pb_battle";
+        private const string PkgCommon = "github.com/gogu-x/gogs/pb/cspb/pb_common";
         private const string PkgEquipment = "github.com/gogu-x/gogs/pb/cspb/pb_equipment";
+        private const string PkgSoulJade = "github.com/gogu-x/gogs/pb/cspb/pb_souljade";
+        private const string PkgTalent = "github.com/gogu-x/gogs/pb/cspb/pb_talent";
 
         // msgTypeName -> 完整 Go 包路径。新增 proto message 时需要在此登记，
         // 否则 Encode/Decode 时找不到对应的 msgID 映射。
@@ -65,11 +69,33 @@ namespace XiuXian.Network
             { "BattleActionNtf", PkgBattle },
             { "BattleFinishedNtf", PkgBattle },
 
+            // authoritative role combat stats
+            { "GetRoleCombatStatsReq", PkgCommon },
+            { "GetRoleCombatStatsAck", PkgCommon },
+
             // equipment
             { "GetRoleEquipmentReq", PkgEquipment },
             { "GetRoleEquipmentAck", PkgEquipment },
             { "ChangeRoleEquipmentReq", PkgEquipment },
             { "ChangeRoleEquipmentAck", PkgEquipment },
+
+            // 魂玉
+            { "GetRoleSoulJadeReq", PkgSoulJade },
+            { "GetRoleSoulJadeAck", PkgSoulJade },
+            { "ChangeRoleSoulJadeReq", PkgSoulJade },
+            { "ChangeRoleSoulJadeAck", PkgSoulJade },
+            { "UpgradeRoleSoulJadeReq", PkgSoulJade },
+            { "UpgradeRoleSoulJadeAck", PkgSoulJade },
+            { "RefineRoleSoulJadeReq", PkgSoulJade },
+            { "RefineRoleSoulJadeAck", PkgSoulJade },
+
+            // 天赋
+            { "GetRoleTalentReq", PkgTalent },
+            { "GetRoleTalentAck", PkgTalent },
+            { "LearnRoleTalentReq", PkgTalent },
+            { "LearnRoleTalentAck", PkgTalent },
+            { "ResetRoleTalentReq", PkgTalent },
+            { "ResetRoleTalentAck", PkgTalent },
         };
 
         private static readonly Dictionary<ushort, string> IdToMsgType = new();
@@ -82,6 +108,8 @@ namespace XiuXian.Network
                 var msgType = kv.Key;
                 var pkg = kv.Value;
                 var id = Fnv32a.HashUint16(pkg + "." + msgType);
+                if (IdToMsgType.TryGetValue(id, out var existing))
+                    throw new InvalidOperationException($"消息 ID 冲突：{existing} / {msgType} ({id})");
                 MsgTypeToId[msgType] = id;
                 IdToMsgType[id] = msgType;
             }

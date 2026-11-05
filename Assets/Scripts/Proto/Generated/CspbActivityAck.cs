@@ -23,21 +23,21 @@ public static partial class CspbActivityAckReflection {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
           "Chdjc3BiX2FjdGl2aXR5X2Fjay5wcm90bxoaY3NwYl9hY3Rpdml0eV9zdHJ1",
-          "Y3QucHJvdG8aFWNzcGJfY29tbV9lcnJvci5wcm90byI3ChJHZXRBY3Rpdml0",
-          "eUxpc3RBY2sSIQoKYWN0aXZpdGllcxgBIAMoCzINLkFjdGl2aXR5SW5mbyI2",
-          "Cg9Kb2luQWN0aXZpdHlBY2sSFgoEY29kZRgBIAEoDjIILkVyckNvZGUSCwoD",
-          "bXNnGAIgASgJIk0KDkdldFByb2dyZXNzQWNrEhYKBGNvZGUYASABKA4yCC5F",
-          "cnJDb2RlEiMKCHByb2dyZXNzGAIgASgLMhEuQWN0aXZpdHlQcm9ncmVzcyI1",
-          "Cg5DbGFpbVJld2FyZEFjaxIWCgRjb2RlGAEgASgOMgguRXJyQ29kZRILCgNt",
-          "c2cYAiABKAlCLFoqZ2l0aHViLmNvbS9nb2d1LXgvZ29ncy9wYi9jc3BiL3Bi",
-          "X2FjdGl2aXR5YgZwcm90bzM="));
+          "Y3QucHJvdG8aFWNzcGJfY29tbV9lcnJvci5wcm90byJdChJHZXRBY3Rpdml0",
+          "eUxpc3RBY2sSIQoKYWN0aXZpdGllcxgBIAMoCzINLkFjdGl2aXR5SW5mbxIb",
+          "CgRjb2RlGAIgASgOMgguRXJyQ29kZUgAiAEBQgcKBV9jb2RlIikKD0pvaW5B",
+          "Y3Rpdml0eUFjaxIWCgRjb2RlGAEgASgOMgguRXJyQ29kZSJNCg5HZXRQcm9n",
+          "cmVzc0FjaxIWCgRjb2RlGAEgASgOMgguRXJyQ29kZRIjCghwcm9ncmVzcxgC",
+          "IAEoCzIRLkFjdGl2aXR5UHJvZ3Jlc3MiKAoOQ2xhaW1SZXdhcmRBY2sSFgoE",
+          "Y29kZRgBIAEoDjIILkVyckNvZGVCLFoqZ2l0aHViLmNvbS9nb2d1LXgvZ29n",
+          "cy9wYi9jc3BiL3BiX2FjdGl2aXR5YgZwcm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::CspbActivityStructReflection.Descriptor, global::CspbCommErrorReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-          new pbr::GeneratedClrTypeInfo(typeof(global::GetActivityListAck), global::GetActivityListAck.Parser, new[]{ "Activities" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::JoinActivityAck), global::JoinActivityAck.Parser, new[]{ "Code", "Msg" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::GetActivityListAck), global::GetActivityListAck.Parser, new[]{ "Activities", "Code" }, new[]{ "Code" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::JoinActivityAck), global::JoinActivityAck.Parser, new[]{ "Code" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::GetProgressAck), global::GetProgressAck.Parser, new[]{ "Code", "Progress" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::ClaimRewardAck), global::ClaimRewardAck.Parser, new[]{ "Code", "Msg" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::ClaimRewardAck), global::ClaimRewardAck.Parser, new[]{ "Code" }, null, null, null, null)
         }));
   }
   #endregion
@@ -52,6 +52,7 @@ public sealed partial class GetActivityListAck : pb::IMessage<GetActivityListAck
 {
   private static readonly pb::MessageParser<GetActivityListAck> _parser = new pb::MessageParser<GetActivityListAck>(() => new GetActivityListAck());
   private pb::UnknownFieldSet _unknownFields;
+  private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pb::MessageParser<GetActivityListAck> Parser { get { return _parser; } }
@@ -79,7 +80,9 @@ public sealed partial class GetActivityListAck : pb::IMessage<GetActivityListAck
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public GetActivityListAck(GetActivityListAck other) : this() {
+    _hasBits0 = other._hasBits0;
     activities_ = other.activities_.Clone();
+    code_ = other.code_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
@@ -100,6 +103,33 @@ public sealed partial class GetActivityListAck : pb::IMessage<GetActivityListAck
     get { return activities_; }
   }
 
+  /// <summary>Field number for the "code" field.</summary>
+  public const int CodeFieldNumber = 2;
+  private readonly static global::ErrCode CodeDefaultValue = global::ErrCode.Ok;
+
+  private global::ErrCode code_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public global::ErrCode Code {
+    get { if ((_hasBits0 & 1) != 0) { return code_; } else { return CodeDefaultValue; } }
+    set {
+      _hasBits0 |= 1;
+      code_ = value;
+    }
+  }
+  /// <summary>Gets whether the "code" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public bool HasCode {
+    get { return (_hasBits0 & 1) != 0; }
+  }
+  /// <summary>Clears the value of the "code" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void ClearCode() {
+    _hasBits0 &= ~1;
+  }
+
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override bool Equals(object other) {
@@ -116,6 +146,7 @@ public sealed partial class GetActivityListAck : pb::IMessage<GetActivityListAck
       return true;
     }
     if(!activities_.Equals(other.activities_)) return false;
+    if (Code != other.Code) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
@@ -124,6 +155,7 @@ public sealed partial class GetActivityListAck : pb::IMessage<GetActivityListAck
   public override int GetHashCode() {
     int hash = 1;
     hash ^= activities_.GetHashCode();
+    if (HasCode) hash ^= Code.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -143,6 +175,10 @@ public sealed partial class GetActivityListAck : pb::IMessage<GetActivityListAck
     output.WriteRawMessage(this);
   #else
     activities_.WriteTo(output, _repeated_activities_codec);
+    if (HasCode) {
+      output.WriteRawTag(16);
+      output.WriteEnum((int) Code);
+    }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
     }
@@ -154,6 +190,10 @@ public sealed partial class GetActivityListAck : pb::IMessage<GetActivityListAck
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
     activities_.WriteTo(ref output, _repeated_activities_codec);
+    if (HasCode) {
+      output.WriteRawTag(16);
+      output.WriteEnum((int) Code);
+    }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
     }
@@ -165,6 +205,9 @@ public sealed partial class GetActivityListAck : pb::IMessage<GetActivityListAck
   public int CalculateSize() {
     int size = 0;
     size += activities_.CalculateSize(_repeated_activities_codec);
+    if (HasCode) {
+      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+    }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
     }
@@ -178,6 +221,9 @@ public sealed partial class GetActivityListAck : pb::IMessage<GetActivityListAck
       return;
     }
     activities_.Add(other.activities_);
+    if (other.HasCode) {
+      Code = other.Code;
+    }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
 
@@ -201,6 +247,10 @@ public sealed partial class GetActivityListAck : pb::IMessage<GetActivityListAck
           activities_.AddEntriesFrom(input, _repeated_activities_codec);
           break;
         }
+        case 16: {
+          Code = (global::ErrCode) input.ReadEnum();
+          break;
+        }
       }
     }
   #endif
@@ -222,6 +272,10 @@ public sealed partial class GetActivityListAck : pb::IMessage<GetActivityListAck
           break;
         case 10: {
           activities_.AddEntriesFrom(ref input, _repeated_activities_codec);
+          break;
+        }
+        case 16: {
+          Code = (global::ErrCode) input.ReadEnum();
           break;
         }
       }
@@ -267,7 +321,6 @@ public sealed partial class JoinActivityAck : pb::IMessage<JoinActivityAck>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public JoinActivityAck(JoinActivityAck other) : this() {
     code_ = other.code_;
-    msg_ = other.msg_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
@@ -289,18 +342,6 @@ public sealed partial class JoinActivityAck : pb::IMessage<JoinActivityAck>
     }
   }
 
-  /// <summary>Field number for the "msg" field.</summary>
-  public const int MsgFieldNumber = 2;
-  private string msg_ = "";
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public string Msg {
-    get { return msg_; }
-    set {
-      msg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-    }
-  }
-
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override bool Equals(object other) {
@@ -317,7 +358,6 @@ public sealed partial class JoinActivityAck : pb::IMessage<JoinActivityAck>
       return true;
     }
     if (Code != other.Code) return false;
-    if (Msg != other.Msg) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
@@ -326,7 +366,6 @@ public sealed partial class JoinActivityAck : pb::IMessage<JoinActivityAck>
   public override int GetHashCode() {
     int hash = 1;
     if (Code != global::ErrCode.Ok) hash ^= Code.GetHashCode();
-    if (Msg.Length != 0) hash ^= Msg.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -349,10 +388,6 @@ public sealed partial class JoinActivityAck : pb::IMessage<JoinActivityAck>
       output.WriteRawTag(8);
       output.WriteEnum((int) Code);
     }
-    if (Msg.Length != 0) {
-      output.WriteRawTag(18);
-      output.WriteString(Msg);
-    }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
     }
@@ -367,10 +402,6 @@ public sealed partial class JoinActivityAck : pb::IMessage<JoinActivityAck>
       output.WriteRawTag(8);
       output.WriteEnum((int) Code);
     }
-    if (Msg.Length != 0) {
-      output.WriteRawTag(18);
-      output.WriteString(Msg);
-    }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
     }
@@ -383,9 +414,6 @@ public sealed partial class JoinActivityAck : pb::IMessage<JoinActivityAck>
     int size = 0;
     if (Code != global::ErrCode.Ok) {
       size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
-    }
-    if (Msg.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeStringSize(Msg);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -401,9 +429,6 @@ public sealed partial class JoinActivityAck : pb::IMessage<JoinActivityAck>
     }
     if (other.Code != global::ErrCode.Ok) {
       Code = other.Code;
-    }
-    if (other.Msg.Length != 0) {
-      Msg = other.Msg;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
@@ -428,10 +453,6 @@ public sealed partial class JoinActivityAck : pb::IMessage<JoinActivityAck>
           Code = (global::ErrCode) input.ReadEnum();
           break;
         }
-        case 18: {
-          Msg = input.ReadString();
-          break;
-        }
       }
     }
   #endif
@@ -453,10 +474,6 @@ public sealed partial class JoinActivityAck : pb::IMessage<JoinActivityAck>
           break;
         case 8: {
           Code = (global::ErrCode) input.ReadEnum();
-          break;
-        }
-        case 18: {
-          Msg = input.ReadString();
           break;
         }
       }
@@ -746,7 +763,6 @@ public sealed partial class ClaimRewardAck : pb::IMessage<ClaimRewardAck>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public ClaimRewardAck(ClaimRewardAck other) : this() {
     code_ = other.code_;
-    msg_ = other.msg_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
@@ -768,18 +784,6 @@ public sealed partial class ClaimRewardAck : pb::IMessage<ClaimRewardAck>
     }
   }
 
-  /// <summary>Field number for the "msg" field.</summary>
-  public const int MsgFieldNumber = 2;
-  private string msg_ = "";
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public string Msg {
-    get { return msg_; }
-    set {
-      msg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-    }
-  }
-
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override bool Equals(object other) {
@@ -796,7 +800,6 @@ public sealed partial class ClaimRewardAck : pb::IMessage<ClaimRewardAck>
       return true;
     }
     if (Code != other.Code) return false;
-    if (Msg != other.Msg) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
@@ -805,7 +808,6 @@ public sealed partial class ClaimRewardAck : pb::IMessage<ClaimRewardAck>
   public override int GetHashCode() {
     int hash = 1;
     if (Code != global::ErrCode.Ok) hash ^= Code.GetHashCode();
-    if (Msg.Length != 0) hash ^= Msg.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -828,10 +830,6 @@ public sealed partial class ClaimRewardAck : pb::IMessage<ClaimRewardAck>
       output.WriteRawTag(8);
       output.WriteEnum((int) Code);
     }
-    if (Msg.Length != 0) {
-      output.WriteRawTag(18);
-      output.WriteString(Msg);
-    }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
     }
@@ -846,10 +844,6 @@ public sealed partial class ClaimRewardAck : pb::IMessage<ClaimRewardAck>
       output.WriteRawTag(8);
       output.WriteEnum((int) Code);
     }
-    if (Msg.Length != 0) {
-      output.WriteRawTag(18);
-      output.WriteString(Msg);
-    }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
     }
@@ -862,9 +856,6 @@ public sealed partial class ClaimRewardAck : pb::IMessage<ClaimRewardAck>
     int size = 0;
     if (Code != global::ErrCode.Ok) {
       size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
-    }
-    if (Msg.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeStringSize(Msg);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -880,9 +871,6 @@ public sealed partial class ClaimRewardAck : pb::IMessage<ClaimRewardAck>
     }
     if (other.Code != global::ErrCode.Ok) {
       Code = other.Code;
-    }
-    if (other.Msg.Length != 0) {
-      Msg = other.Msg;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
@@ -907,10 +895,6 @@ public sealed partial class ClaimRewardAck : pb::IMessage<ClaimRewardAck>
           Code = (global::ErrCode) input.ReadEnum();
           break;
         }
-        case 18: {
-          Msg = input.ReadString();
-          break;
-        }
       }
     }
   #endif
@@ -932,10 +916,6 @@ public sealed partial class ClaimRewardAck : pb::IMessage<ClaimRewardAck>
           break;
         case 8: {
           Code = (global::ErrCode) input.ReadEnum();
-          break;
-        }
-        case 18: {
-          Msg = input.ReadString();
           break;
         }
       }

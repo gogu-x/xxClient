@@ -5,13 +5,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using XiuXian.Network;
 using Q = XiuXian.Core.QuietInkUI;
 
 namespace XiuXian.Core
 {
     public sealed partial class RoleSoulJadePanel : MonoBehaviour
     {
-        private const string SaveKey = "RoleSoulJadeLoadoutV1";
         private const string ArtRoot = "UI/SoulJade/DesignElements/";
         private const string SoulJadeIconAtlas = "UI/QuietInkV3/SoulJade/icons";
         private static readonly Dictionary<string, Sprite> SoulJadeIcons = new Dictionary<string, Sprite>();
@@ -19,40 +19,11 @@ namespace XiuXian.Core
         private static readonly Color Jade = Q.Jade;
         private static readonly Color Ivory = Q.Ink;
         private static readonly Color Muted = Q.Muted;
-        private static readonly string[] SlotNames = { "近战", "远程", "防护", "生存", "技能", "奥义" };
 
-        private sealed class JadeDef
+        private static readonly string[] JadeIconAliases =
         {
-            public readonly string Name;
-            public readonly string Type;
-            public readonly string Rarity;
-            public readonly string Effect;
-            public readonly string Lore;
-            public readonly string Icon;
-
-            public JadeDef(string name, string type, string rarity, string effect, string lore, string icon)
-            {
-                Name = name;
-                Type = type;
-                Rarity = rarity;
-                Effect = effect;
-                Lore = lore;
-                Icon = icon;
-            }
-        }
-
-        private static readonly JadeDef[] Jades =
-        {
-            new JadeDef("烈阳·破阵", "近战", "神品", "近战伤害 +8%", "灼热灵息贯穿锋刃，近身交锋时更易撕开防线。", "21_Lieyang"),
-            new JadeDef("贯日·长弓", "远程", "神品", "远程伤害 +10%", "以灵力校准弓弦，令远距离压制更加稳定。", "22_Guanri"),
-            new JadeDef("玄武·磐石", "防护", "极品", "护甲上限 +12%", "厚重灵息护住周身，在混战中稳住阵脚。", "23_Xuanwu"),
-            new JadeDef("苍狼·疾步", "生存", "极品", "闪避距离 +9%", "身轻如风，闪避后短时间内提升移动速度。", "24_Canglang"),
-            new JadeDef("赤霄·无妄", "技能", "神品", "技能伤害 +9%", "引动赤色灵焰，让每次技能释放都更具威势。", "25_Chixiao"),
-            new JadeDef("伏龙·裂空", "奥义", "极品", "奥义伤害 +11%", "沉睡龙息破空而出，强化关键时刻的终结能力。", "26_Fulong"),
-            new JadeDef("寒雪·凝霜", "防护", "极品", "受击减伤 +8%", "凝霜成甲，抵御来袭锋芒。", "27_Hanxue"),
-            new JadeDef("青莲·回生", "生存", "极品", "治疗效果 +12%", "青莲灵息温养经脉，恢复生机。", "28_Qinglian"),
-            new JadeDef("紫霄·惊雷", "技能", "神品", "技能冷却 -6%", "紫电贯脉，灵力运转更为迅捷。", "29_Zixiao"),
-            new JadeDef("金乌·焚天", "奥义", "神品", "奥义充能 +10%", "金乌真火汇聚，积蓄焚天之势。", "30_Jinwu"),
+            "21_Lieyang", "22_Guanri", "23_Xuanwu", "24_Canglang", "25_Chixiao",
+            "26_Fulong", "27_Hanxue", "28_Qinglian", "29_Zixiao", "30_Jinwu"
         };
 
         [Serializable]
@@ -65,21 +36,26 @@ namespace XiuXian.Core
         [Serializable]
         private sealed class OwnedJade
         {
+            public string InstanceId;
+            public string Name;
+            public string Rarity;
+            public string IconKey;
+            public int ConfigId;
             public int JadeIndex;
             public int Level = 1;
+            public int MaxLevel;
+            public long UpgradeCost;
+            public long RefineCost;
             public List<JadeAffix> Affixes = new List<JadeAffix>();
         }
 
-        [Serializable]
-        private sealed class InventorySave
-        {
-            public List<OwnedJade> Items = new List<OwnedJade>();
-        }
-
-        private const string InventorySaveKey = "RoleSoulJadeInventoryV1";
-        private static readonly string[] AffixNames = { "近战伤害", "远程伤害", "技能伤害", "奥义伤害", "闪避距离", "护甲上限", "技能冷却", "治疗效果", "怒气获取", "伤害减免", "体力恢复", "暴击伤害" };
+        private static readonly string[] AffixNames = { "生命", "攻击", "防御", "速度", "冰爆", "天雷" };
+        private static string FormatAffix(JadeAffix affix) => affix.Key >= 4
+            ? AffixNames[affix.Key]
+            : AffixNames[affix.Key] + "  +" + affix.Value.ToString("0.#") + "%";
         private readonly List<OwnedJade> ownedJades = new List<OwnedJade>();
-        private readonly int[] equipped = { 0, 1, 2, 3, 4, 5 };
+        private readonly int[] equipped = { -1, -1, -1, -1, -1, -1 };
+        private readonly int[] visibleSlotIds = { -1, -1, -1, -1, -1, -1 };
         private readonly Button[] slotButtons = new Button[6];
         private readonly Image[] slotIcons = new Image[6];
         private readonly Outline[] slotOutlines = new Outline[6];
@@ -93,6 +69,12 @@ namespace XiuXian.Core
         private TMP_Text refineLabel;
         private Button upgradeButton;
         private Button refineButton;
+        private Button equipButton;
+        private Button removeButton;
+        private Button syncButton;
+        private TMP_Text serverStatusLabel;
+        private SoulJadeService soulService;
+        private bool serviceBound;
 
         private GameObject page;
         private GameObject toast;
@@ -102,24 +84,22 @@ namespace XiuXian.Core
         private TMP_Text detailLore;
         private TMP_Text equipLabel;
         private int slotSelected;
-        private int itemSelected;
+        private int itemSelected = -1;
         private Coroutine toastRoutine;
 
         private void Awake()
         {
-            LoadInventory();
-            Load();
             Build();
         }
 
         public void Open()
         {
             if (page == null) Build();
+            BindService();
             page.SetActive(true);
             page.transform.SetAsLastSibling();
-            RefreshSlots();
-            RefreshInventory();
-            RefreshDetail();
+            ApplyServerState();
+            soulService.Reload();
         }
 
         public void Close()
@@ -132,7 +112,11 @@ namespace XiuXian.Core
             toast = null;
         }
 
-        private void OnDisable() { Close(); }
+        private void OnDisable()
+        {
+            UnbindService();
+            Close();
+        }
 
         private void RefreshSlots()
         {
@@ -140,9 +124,11 @@ namespace XiuXian.Core
             {
                 int itemIndex = equipped[i];
                 Sprite sprite = itemIndex >= 0 && itemIndex < ownedJades.Count
-                    ? LoadIcon(Jades[ownedJades[itemIndex].JadeIndex].Icon) : null;
+                    ? OwnedIcon(ownedJades[itemIndex]) : null;
                 SetJadeIcon(slotIcons[i], sprite);
                 if (emptySlotLabels[i] != null) emptySlotLabels[i].gameObject.SetActive(sprite == null);
+                if (emptySlotLabels[i] != null) emptySlotLabels[i].text = visibleSlotIds[i] >= 0 ? "＋" : "未开放";
+                slotButtons[i].interactable = visibleSlotIds[i] >= 0;
                 slotOutlines[i].enabled = i == slotSelected;
                 slotOutlines[i].effectColor = i == slotSelected
                     ? new Color(Jade.r, Jade.g, Jade.b, 0.98f)
@@ -152,6 +138,7 @@ namespace XiuXian.Core
 
         private void RefreshInventory()
         {
+            while (inventoryScroll != null && itemButtons.Count < ownedJades.Count) AddInventoryCard(itemButtons.Count);
             if (ownedCountLabel != null) ownedCountLabel.text = "已拥有 " + ownedJades.Count + " 枚";
             for (int i=0;i<itemButtons.Count;i++)
             {
@@ -159,8 +146,7 @@ namespace XiuXian.Core
                 itemButtons[i].gameObject.SetActive(valid);
                 if (!valid) continue;
                 OwnedJade owned = ownedJades[i];
-                JadeDef definition = Jades[owned.JadeIndex];
-                SetJadeIcon(itemIcons[i], LoadIcon(definition.Icon));
+                SetJadeIcon(itemIcons[i], OwnedIcon(owned));
                 itemSelectionOutlines[i].enabled = i == itemSelected;
                 itemSelectionOutlines[i].effectColor = i == itemSelected
                     ? new Color(Jade.r, Jade.g, Jade.b, .9f) : new Color(Gold.r, Gold.g, Gold.b, 0f);
@@ -170,6 +156,10 @@ namespace XiuXian.Core
         private void RefreshDetail()
         {
             if (detailName == null) return;
+            bool ready = soulService != null && soulService.CanMutate;
+            if (serverStatusLabel != null) serverStatusLabel.text = soulService != null ? soulService.Status : "登录后同步魂玉";
+            if (syncButton != null) syncButton.interactable = soulService != null && !soulService.IsBusy;
+            if (removeButton != null) removeButton.interactable = ready && visibleSlotIds[slotSelected] >= 0 && equipped[slotSelected] >= 0;
             int index = itemSelected >= 0 ? itemSelected : equipped[slotSelected];
             if (index < 0 || index >= ownedJades.Count)
             {
@@ -180,22 +170,23 @@ namespace XiuXian.Core
                 upgradeLabel.text = "升级";
                 refineLabel.text = "洗练";
                 upgradeButton.interactable = refineButton.interactable = false;
+                if (equipButton != null) equipButton.interactable = false;
                 return;
             }
 
             OwnedJade owned = ownedJades[index];
-            JadeDef item = Jades[owned.JadeIndex];
-            detailName.text = item.Name;
-            detailRarity.text = item.Rarity + "  ·  Lv." + owned.Level + "  ·  词条 " + owned.Affixes.Count + "/4";
-            detailRarity.color = Rarity(item.Rarity);
+            detailName.text = owned.Name;
+            detailRarity.text = owned.Rarity + "  ·  Lv." + owned.Level + "  ·  词条 " + owned.Affixes.Count;
+            detailRarity.color = Rarity(owned.Rarity);
             var lines = new List<string>();
             for (int i=0;i<owned.Affixes.Count;i++)
             {
                 JadeAffix affix = owned.Affixes[i];
-                lines.Add(AffixNames[affix.Key] + "  +" + affix.Value.ToString("0.#") + "%");
+                lines.Add(FormatAffix(affix));
             }
             detailEffect.text = string.Join("\n", lines);
-            equipLabel.text = "装备";
+            equipLabel.text = equipped[slotSelected] == index ? "已镶嵌" : "镶嵌";
+            if (equipButton != null) equipButton.interactable = ready && visibleSlotIds[slotSelected] >= 0 && equipped[slotSelected] != index;
             upgradeLabel.text = "升级";
             refineLabel.text = "洗练";
             upgradeButton.interactable = true;
@@ -215,7 +206,6 @@ namespace XiuXian.Core
         {
             if (index < 0 || index >= ownedJades.Count) return;
             itemSelected = index;
-            slotSelected = Array.IndexOf(SlotNames, Jades[ownedJades[index].JadeIndex].Type);
             RefreshSlots();
             RefreshInventory();
             RefreshDetail();
@@ -223,11 +213,10 @@ namespace XiuXian.Core
 
         private void EquipSelected()
         {
-            if(itemSelected<0 || itemSelected>=ownedJades.Count){Toast("请先选择一枚魂玉");return;}
-            JadeDef item=Jades[ownedJades[itemSelected].JadeIndex];
-            if(item.Type!=SlotNames[slotSelected]){Toast("该魂玉与当前槽位不匹配");return;}
-            equipped[slotSelected]=itemSelected;
-            Save(); RefreshSlots(); RefreshDetail(); Toast("已装备「"+item.Name+"」");
+            OwnedJade selected = GetSelectedOwned();
+            if (selected == null) { Toast("请先选择一枚魂玉"); return; }
+            BindService();
+            if (!soulService.Equip(visibleSlotIds[slotSelected], selected.InstanceId)) Toast(soulService.Status);
         }
 
         private void ShowUpgradeView()
@@ -247,88 +236,11 @@ namespace XiuXian.Core
             return index>=0 && index<ownedJades.Count ? ownedJades[index] : null;
         }
 
-        public void AddOwnedJade(int jadeIndex)
-        {
-            if (jadeIndex < 0 || jadeIndex >= Jades.Length) return;
-            ownedJades.Add(CreateOwnedJade(jadeIndex));
-            if (inventoryScroll != null) AddInventoryCard(ownedJades.Count - 1);
-            SaveInventory();
-            RefreshInventory();
-        }
-
-        private static OwnedJade CreateOwnedJade(int jadeIndex)
-        {
-            var item = new OwnedJade { JadeIndex = jadeIndex, Level = 1, Affixes = new List<JadeAffix>() };
-            var keys = new List<int>();
-            for (int key = 0; key < AffixNames.Length; key++) keys.Add(key);
-            int count = UnityEngine.Random.Range(2, 4);
-            for (int i = 0; i < count; i++)
-            {
-                int pick = UnityEngine.Random.Range(0, keys.Count);
-                int key = keys[pick];
-                keys.RemoveAt(pick);
-                item.Affixes.Add(new JadeAffix { Key = key, Value = UnityEngine.Random.Range(4, 10) });
-            }
-            return item;
-        }
-        private void LoadInventory()
-        {
-            ownedJades.Clear();
-            string json = PlayerPrefs.GetString(InventorySaveKey, "");
-            bool hasSavedInventory = false;
-            if (!string.IsNullOrEmpty(json))
-            {
-                try
-                {
-                    InventorySave saved = JsonUtility.FromJson<InventorySave>(json);
-                    if (saved != null)
-                    {
-                        hasSavedInventory = true;
-                        if (saved.Items != null)
-                        {
-                            foreach (OwnedJade item in saved.Items)
-                            {
-                                if (item == null || item.JadeIndex < 0 || item.JadeIndex >= Jades.Length) continue;
-                                if (item.Affixes == null) item.Affixes = new List<JadeAffix>();
-                                item.Level = Mathf.Max(item.Level, 1);
-                                item.Affixes.RemoveAll(a => a == null || a.Key < 0 || a.Key >= AffixNames.Length);
-                                if (item.Affixes.Count > 4) item.Affixes.RemoveRange(4, item.Affixes.Count - 4);
-                                ownedJades.Add(item);
-                            }
-                        }
-                    }
-                }
-                catch (Exception)
-                {
-                    ownedJades.Clear();
-                    hasSavedInventory = false;
-                }
-            }
-
-            if (!hasSavedInventory)
-            {
-                // Local demo inventory until the player-inventory service is connected.
-                for (int i = 0; i < Jades.Length; i++) ownedJades.Add(CreateOwnedJade(i));
-                SaveInventory();
-            }
-        }
-        private void SaveInventory()
-        {
-            InventorySave saved=new InventorySave();
-            saved.Items=ownedJades;
-            PlayerPrefs.SetString(InventorySaveKey,JsonUtility.ToJson(saved));
-            PlayerPrefs.Save();
-        }
-
         private void RemoveSelected()
         {
-            equipped[slotSelected] = -1;
-            itemSelected = -1;
-            Save();
-            RefreshSlots();
-            RefreshInventory();
-            RefreshDetail();
-            Toast("已卸下「" + SlotNames[slotSelected] + "」魂玉");
+            if (equipped[slotSelected] < 0) return;
+            BindService();
+            if (!soulService.Equip(visibleSlotIds[slotSelected], string.Empty)) Toast(soulService.Status);
         }
 
         private void Toast(string message)
@@ -355,30 +267,6 @@ namespace XiuXian.Core
             toastRoutine = null;
         }
 
-        private void Load()
-        {
-            string data = PlayerPrefs.GetString(SaveKey, "");
-            if (string.IsNullOrEmpty(data)) return;
-            string[] values = data.Split(',');
-            if (values.Length != equipped.Length) return;
-            for (int i = 0; i < values.Length; i++)
-            {
-                if (!int.TryParse(values[i], out int value) || value < -1 || value >= ownedJades.Count)
-                {
-                    equipped[i] = ownedJades.FindIndex(j => Jades[j.JadeIndex].Type == SlotNames[i]);
-                    continue;
-                }
-                if (value >= 0 && Jades[ownedJades[value].JadeIndex].Type != SlotNames[i])
-                    value = ownedJades.FindIndex(j => Jades[j.JadeIndex].Type == SlotNames[i]);
-                equipped[i] = value;
-            }
-        }
-        private void Save()
-        {
-            PlayerPrefs.SetString(SaveKey,string.Join(",",equipped));
-            PlayerPrefs.Save();
-        }
-
         private static Color Rarity(string rarity)
         {
             return rarity == "神品" ? Q.Gold : rarity == "极品" ? Q.Blue : Q.Jade;
@@ -386,7 +274,7 @@ namespace XiuXian.Core
 
         private static Sprite LoadIcon(string name)
         {
-            int jadeIndex = Array.FindIndex(Jades, item => item.Icon == name);
+            int jadeIndex = Array.IndexOf(JadeIconAliases, name);
             if (jadeIndex >= 0)
             {
                 string spriteName = "soul_jade_" + jadeIndex.ToString("00");

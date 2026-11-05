@@ -55,6 +55,12 @@ namespace XiuXian.Core
             // The server still chooses the player's tower layer; no 24-level mapping is implied.
             panel.SetEntryAvailability(CurrentTrialEntrance, true, "当前试炼已开放");
             var design = transform.Find("RealmMapDesign");
+            var back = design == null ? null : design.Find("Back");
+            if (back != null)
+            {
+                ((RectTransform)back).anchoredPosition = new Vector2(24, -24);
+                QuietInkUI.StyleBackButton(back.GetComponent<UnityEngine.UI.Button>());
+            }
             var existing = design == null ? null : design.Find("CurrentTrial");
             if (existing != null)
             {

@@ -22,13 +22,14 @@ public static partial class CspbBattleAckReflection {
   static CspbBattleAckReflection() {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
-          "ChVjc3BiX2JhdHRsZV9hY2sucHJvdG8iMgoOU3RhcnRCYXR0bGVBY2sSEQoJ",
-          "YmF0dGxlX2lkGAEgASgJEg0KBWVycm9yGAIgASgJQipaKGdpdGh1Yi5jb20v",
-          "Z29ndS14L2dvZ3MvcGIvY3NwYi9wYl9iYXR0bGViBnByb3RvMw=="));
+          "ChVjc3BiX2JhdHRsZV9hY2sucHJvdG8aFWNzcGJfY29tbV9lcnJvci5wcm90",
+          "byJJCg5TdGFydEJhdHRsZUFjaxIRCgliYXR0bGVfaWQYASABKAkSGwoEY29k",
+          "ZRgDIAEoDjIILkVyckNvZGVIAIgBAUIHCgVfY29kZUIqWihnaXRodWIuY29t",
+          "L2dvZ3UteC9nb2dzL3BiL2NzcGIvcGJfYmF0dGxlYgZwcm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-        new pbr::FileDescriptor[] { },
+        new pbr::FileDescriptor[] { global::CspbCommErrorReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-          new pbr::GeneratedClrTypeInfo(typeof(global::StartBattleAck), global::StartBattleAck.Parser, new[]{ "BattleId", "Error" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::StartBattleAck), global::StartBattleAck.Parser, new[]{ "BattleId", "Code" }, new[]{ "Code" }, null, null, null)
         }));
   }
   #endregion
@@ -46,6 +47,7 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
 {
   private static readonly pb::MessageParser<StartBattleAck> _parser = new pb::MessageParser<StartBattleAck>(() => new StartBattleAck());
   private pb::UnknownFieldSet _unknownFields;
+  private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pb::MessageParser<StartBattleAck> Parser { get { return _parser; } }
@@ -73,8 +75,9 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public StartBattleAck(StartBattleAck other) : this() {
+    _hasBits0 = other._hasBits0;
     battleId_ = other.battleId_;
-    error_ = other.error_;
+    code_ = other.code_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
@@ -96,16 +99,31 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
     }
   }
 
-  /// <summary>Field number for the "error" field.</summary>
-  public const int ErrorFieldNumber = 2;
-  private string error_ = "";
+  /// <summary>Field number for the "code" field.</summary>
+  public const int CodeFieldNumber = 3;
+  private readonly static global::ErrCode CodeDefaultValue = global::ErrCode.Ok;
+
+  private global::ErrCode code_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public string Error {
-    get { return error_; }
+  public global::ErrCode Code {
+    get { if ((_hasBits0 & 1) != 0) { return code_; } else { return CodeDefaultValue; } }
     set {
-      error_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      _hasBits0 |= 1;
+      code_ = value;
     }
+  }
+  /// <summary>Gets whether the "code" field is set</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public bool HasCode {
+    get { return (_hasBits0 & 1) != 0; }
+  }
+  /// <summary>Clears the value of the "code" field</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void ClearCode() {
+    _hasBits0 &= ~1;
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -124,7 +142,7 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
       return true;
     }
     if (BattleId != other.BattleId) return false;
-    if (Error != other.Error) return false;
+    if (Code != other.Code) return false;
     return Equals(_unknownFields, other._unknownFields);
   }
 
@@ -133,7 +151,7 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
   public override int GetHashCode() {
     int hash = 1;
     if (BattleId.Length != 0) hash ^= BattleId.GetHashCode();
-    if (Error.Length != 0) hash ^= Error.GetHashCode();
+    if (HasCode) hash ^= Code.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -156,9 +174,9 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
       output.WriteRawTag(10);
       output.WriteString(BattleId);
     }
-    if (Error.Length != 0) {
-      output.WriteRawTag(18);
-      output.WriteString(Error);
+    if (HasCode) {
+      output.WriteRawTag(24);
+      output.WriteEnum((int) Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -174,9 +192,9 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
       output.WriteRawTag(10);
       output.WriteString(BattleId);
     }
-    if (Error.Length != 0) {
-      output.WriteRawTag(18);
-      output.WriteString(Error);
+    if (HasCode) {
+      output.WriteRawTag(24);
+      output.WriteEnum((int) Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -191,8 +209,8 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
     if (BattleId.Length != 0) {
       size += 1 + pb::CodedOutputStream.ComputeStringSize(BattleId);
     }
-    if (Error.Length != 0) {
-      size += 1 + pb::CodedOutputStream.ComputeStringSize(Error);
+    if (HasCode) {
+      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -209,8 +227,8 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
     if (other.BattleId.Length != 0) {
       BattleId = other.BattleId;
     }
-    if (other.Error.Length != 0) {
-      Error = other.Error;
+    if (other.HasCode) {
+      Code = other.Code;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
@@ -235,8 +253,8 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
           BattleId = input.ReadString();
           break;
         }
-        case 18: {
-          Error = input.ReadString();
+        case 24: {
+          Code = (global::ErrCode) input.ReadEnum();
           break;
         }
       }
@@ -262,8 +280,8 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
           BattleId = input.ReadString();
           break;
         }
-        case 18: {
-          Error = input.ReadString();
+        case 24: {
+          Code = (global::ErrCode) input.ReadEnum();
           break;
         }
       }

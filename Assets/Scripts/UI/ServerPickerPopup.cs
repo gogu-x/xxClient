@@ -80,8 +80,8 @@ namespace XiuXian.Core
             var d = Q.Design(transform, "ServerPickerQuietInkV2");
             design = d.gameObject;
             Q.Art(d, "bg-paper", 0, 0, 941, 1672);
-            closeButton = Q.Button(d, "Close", "‹", 22, 58, 90, 100, Hide, null, 52);
-            Q.Text(d, "Title", "选择服务器", 150, 70, 641, 108, 54);
+            closeButton = Q.BackButton(d, "Close", 24, 24, Hide);
+            Q.Text(d, "Title", "选择服务器", 200, 35, 541, 88, 48);
             Q.Art(d, "divider", 334, 181, 273, 15, true);
             Q.Divider(d, 42, 308, 857);
             Q.Tab(d, "Owned", "我的角色", 74, 232, 370, ownedOnly, () => SetFilter(true));

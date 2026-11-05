@@ -310,16 +310,11 @@ namespace XiuXian.Core
                 var button = HitTarget(ring.transform, "Socket_" + i, anchor, Vector2.zero,
                     new Vector2(108, 108), () => SelectSlot(index));
                 slotButtons[i] = button;
-                slotIcons[i] = Art(button.transform, "EquippedJade_" + i, Jades[i].Icon,
+                slotIcons[i] = Art(button.transform, "EquippedJade_" + i, JadeIconAliases[i],
                     new Vector2(.5f,.5f), Vector2.zero, new Vector2(89,89), new Vector2(.5f,.5f));
                 // Never outline individual alpha flecks in the source icon.
                 slotOutlines[i] = slotIcons[i].gameObject.AddComponent<Outline>();
                 slotOutlines[i].enabled = false;
-                float x = 553 + (anchor.x-.5f)*630 + (i%2==0 ? -77 : 77);
-                float y = 505 + (.5f-anchor.y)*630;
-                var label = T(design, "SocketLabel_"+i, string.Join("\n", SlotNames[i].ToCharArray()),
-                    26, x, y, 38, 74, Ivory);
-                label.lineSpacing = -6;
             }
         }
 
@@ -410,7 +405,7 @@ namespace XiuXian.Core
             icon.rectTransform.anchorMax = Vector2.one;
             icon.rectTransform.offsetMin = new Vector2(8, 8);
             icon.rectTransform.offsetMax = new Vector2(-8, -8);
-            SetJadeIcon(icon, LoadIcon(Jades[ownedJades[index].JadeIndex].Icon));
+            SetJadeIcon(icon, OwnedIcon(ownedJades[index]));
             itemIcons.Add(icon);
             RememberLayout(button.transform);
         }

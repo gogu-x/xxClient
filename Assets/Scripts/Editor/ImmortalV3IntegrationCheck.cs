@@ -37,11 +37,11 @@ namespace XiuXian.Editor
                 service.Login("ui_integration_fixture","test-only",false);Reply(new LoginAck{Code=ErrCode.Ok});Check(service.Authenticated,"Login failed");
                 var data=new RoleEquipmentData{RoleId="fixture",RoleLevel=30,MaxHp=1200,Attack=280,Defense=96,Speed=12};
                 for(int i=1;i<=6;i++)data.Items.Add(new EquipmentItem{InstanceId="fixture-"+i,ConfigId=100+i,Slot=(EquipSlot)i,Level=30,MaxHp=200,Attack=40,Defense=16,Equipped=true});
-                Reply(new GetRoleEquipmentAck{Data=data});Check(service.Equipment.Items.Count==6,"Equipment load");
+                Reply(new GetRoleEquipmentAck{Code=ErrCode.Ok,Data=data});Check(service.Equipment.Items.Count==6,"Equipment load");
                 service.Equip(data.Items[0],false);int before=socket.Sent.Count;service.Equip(data.Items[0],false);Check(socket.Sent.Count==before,"Duplicate mutation sent while pending");
-                Reply(new ChangeRoleEquipmentAck{Error="fixture rejection"});Check(!service.Busy&&service.Status=="fixture rejection","Error response");
-                service.Equip(data.Items[0],false);Reply(new ChangeRoleEquipmentAck{Data=data});Check(!service.Busy,"Equipment mutation completion");
-                service.LoadActivities();Reply(new GetActivityListAck{Activities={new ActivityInfo{Id=101,Name="云海问剑 · 测试数据"},new ActivityInfo{Id=102,Name="七日修行 · 测试数据"}}});Check(service.Activities.Count==2,"Activity list");
+                Reply(new ChangeRoleEquipmentAck{Code=ErrCode.InvalidEquipment});Check(!service.Busy&&service.Status==LoadoutErrors.ToUserMessage(ErrCode.InvalidEquipment),"Error response");
+                service.Equip(data.Items[0],false);Reply(new ChangeRoleEquipmentAck{Code=ErrCode.Ok,Data=data});Check(!service.Busy,"Equipment mutation completion");
+                service.LoadActivities();Reply(new GetActivityListAck{Code=ErrCode.Ok,Activities={new ActivityInfo{Id=101,Name="云海问剑 · 测试数据"},new ActivityInfo{Id=102,Name="七日修行 · 测试数据"}}});Check(service.Activities.Count==2,"Activity list");
                 service.JoinActivity(101);Reply(new JoinActivityAck{Code=ErrCode.Ok});Reply(new GetProgressAck{Code=ErrCode.Ok,Progress=new ActivityProgress{ActivityId=101,Progress=3,Target=3}});
                 service.Claim(101);Reply(new ClaimRewardAck{Code=ErrCode.Ok});Reply(new GetProgressAck{Code=ErrCode.Ok,Progress=new ActivityProgress{ActivityId=101,Progress=3,Target=3,Rewarded=true}});
                 before=socket.Sent.Count;service.Claim(101);Check(socket.Sent.Count==before,"Duplicate reward claim");
