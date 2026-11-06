@@ -34,9 +34,9 @@ namespace XiuXian.Core
             Bind("ServerListAck",ServerListAck.Parser,(ServerListAck a)=>{if(!Finish("ServerListAck"))return;Accounts.Clear();if(a.Code==ErrCode.Ok){Accounts.AddRange(a.Accounts);if(Accounts.Count>0)ServerId=Accounts[0].ServerId;}Set(a.Code==ErrCode.Ok?(Accounts.Count==0?"暂无角色，请选择区服创建角色":"角色区服已同步"):LoadoutErrors.ToUserMessage(a.Code));});
             Bind("LoginAck",LoginAck.Parser,(LoginAck a)=>{if(!Finish("LoginAck"))return;Authenticated=a.Code==ErrCode.Ok;_password=null;Set(Authenticated?"登录成功":LoadoutErrors.ToUserMessage(a.Code));});
             Bind("RegisterAck",RegisterAck.Parser,(RegisterAck a)=>{if(!Finish("RegisterAck"))return;if(a.Code==ErrCode.Ok)Send(new LoginReq{Account=Account,Password=_password??"",ServerId=ServerId},"LoginAck","正在登录…",false);else{_password=null;Set(LoadoutErrors.ToUserMessage(a.Code));}});
-            Bind("GetRoleEquipmentAck",GetRoleEquipmentAck.Parser,(GetRoleEquipmentAck a)=>{if(!Finish("GetRoleEquipmentAck"))return;ApplyEquipmentResponse(a.HasCode,a.Code,a.Data,"装备已同步");});
-            Bind("ChangeRoleEquipmentAck",ChangeRoleEquipmentAck.Parser,(ChangeRoleEquipmentAck a)=>{if(!Finish("ChangeRoleEquipmentAck"))return;ApplyEquipmentResponse(a.HasCode,a.Code,a.Data,"装备操作完成");});
-            Bind("GetActivityListAck",GetActivityListAck.Parser,(GetActivityListAck a)=>{if(!Finish("GetActivityListAck"))return;Activities.Clear();ActivitiesLoaded=a.HasCode&&a.Code==ErrCode.Ok;if(!ActivitiesLoaded){Set(LoadoutErrors.ResponseMessage(a.HasCode,a.Code));return;}Activities.AddRange(a.Activities);Set(Activities.Count==0?"当前无开放活动":"活动列表已同步");});
+            Bind("GetRoleEquipmentAck",GetRoleEquipmentAck.Parser,(GetRoleEquipmentAck a)=>{if(!Finish("GetRoleEquipmentAck"))return;ApplyEquipmentResponse(a.Code,a.Data,"装备已同步");});
+            Bind("ChangeRoleEquipmentAck",ChangeRoleEquipmentAck.Parser,(ChangeRoleEquipmentAck a)=>{if(!Finish("ChangeRoleEquipmentAck"))return;ApplyEquipmentResponse(a.Code,a.Data,"装备操作完成");});
+            Bind("GetActivityListAck",GetActivityListAck.Parser,(GetActivityListAck a)=>{if(!Finish("GetActivityListAck"))return;Activities.Clear();ActivitiesLoaded=a.Code==ErrCode.Ok;if(!ActivitiesLoaded){Set(LoadoutErrors.ToUserMessage(a.Code));return;}Activities.AddRange(a.Activities);Set(Activities.Count==0?"当前无开放活动":"活动列表已同步");});
             Bind("JoinActivityAck",JoinActivityAck.Parser,(JoinActivityAck a)=>{if(!Finish("JoinActivityAck"))return;Set(a.Code==ErrCode.Ok?"参与成功":LoadoutErrors.ToUserMessage(a.Code));if(a.Code==ErrCode.Ok)LoadProgress(_activityId);});
             Bind("GetProgressAck",GetProgressAck.Parser,(GetProgressAck a)=>{if(!Finish("GetProgressAck"))return;Progress=a.Code==ErrCode.Ok?a.Progress:null;Set(a.Code==ErrCode.Ok?"活动进度已同步":LoadoutErrors.ToUserMessage(a.Code));});
             Bind("ClaimRewardAck",ClaimRewardAck.Parser,(ClaimRewardAck a)=>{if(!Finish("ClaimRewardAck"))return;Set(a.Code==ErrCode.Ok?"奖励领取成功":LoadoutErrors.ToUserMessage(a.Code));if(a.Code==ErrCode.Ok)LoadProgress(_activityId);});
@@ -45,12 +45,12 @@ namespace XiuXian.Core
             Bind("JoinGuildAck",JoinGuildAck.Parser,(JoinGuildAck a)=>{if(!Finish("JoinGuildAck"))return;Set(a.Code==ErrCode.Ok?"加入成功":LoadoutErrors.ToUserMessage(a.Code));if(a.Code==ErrCode.Ok)LoadGuild(_guildId);});
             Bind("LeaveGuildAck",LeaveGuildAck.Parser,(LeaveGuildAck a)=>{if(!Finish("LeaveGuildAck"))return;if(a.Code==ErrCode.Ok)Guild=null;Set(a.Code==ErrCode.Ok?"已退出宗门":LoadoutErrors.ToUserMessage(a.Code));});
         }
-        private void ApplyEquipmentResponse(bool hasCode, ErrCode code, RoleEquipmentData data, string success)
+        private void ApplyEquipmentResponse(int code, RoleEquipmentData data, string success)
         {
-            if (!hasCode || code != ErrCode.Ok || data == null)
+            if (code != ErrCode.Ok || data == null)
             {
                 Equipment = null;
-                Set(!hasCode || code != ErrCode.Ok ? LoadoutErrors.ResponseMessage(hasCode, code) : "装备数据暂不可用");
+                Set(code != ErrCode.Ok ? LoadoutErrors.ToUserMessage(code) : "装备数据暂不可用");
                 return;
             }
             Equipment = data;

@@ -132,9 +132,9 @@ namespace XiuXian.Network
         {
             if (pendingId == 0 || ack.RequestId != pendingId) return;
             ClearPending(); data = null;
-            if (!ack.HasCode || ack.Code != ErrCode.Ok)
+            if (ack.Code != ErrCode.Ok)
             {
-                SetStatus(LoadoutErrors.ResponseMessage(ack.HasCode, ack.Code));
+                SetStatus(LoadoutErrors.ToUserMessage(ack.Code));
                 return;
             }
             var snapshot = ack.Data;

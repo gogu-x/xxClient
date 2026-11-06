@@ -1,0 +1,46 @@
+public static class ErrCode
+{
+    public const int Ok = 0;
+    public const int Unknown = -1;
+    public const int Param = -2;
+    public const int Unauthorized = -1001;
+    public const int LoginInProgress = -1002;
+    public const int ServerNotFound = -1003;
+    public const int UsernameExists = -2001;
+    public const int WrongPassword = -2002;
+    public const int Internal = -2003;
+    public const int AccountNotFound = -2004;
+    public const int GuildExists = -3001;
+    public const int GuildNotFound = -3002;
+    public const int AlreadyInGuild = -3003;
+    public const int NotInGuild = -3004;
+    public const int LoadoutUnavailable = -4001;
+    public const int ConfigUnavailable = -4002;
+    public const int StaleRevision = -4003;
+    public const int InvalidSlot = -4004;
+    public const int ItemNotOwned = -4005;
+    public const int InvalidItemState = -4006;
+    public const int EquipmentUnavailable = -4101;
+    public const int InvalidEquipment = -4102;
+    public const int DuplicateJade = -4201;
+    public const int MaxLevelReached = -4202;
+    public const int InsufficientEssence = -4203;
+    public const int AffixGenerationFailed = -4204;
+    public const int InvalidTalentNode = -4301;
+    public const int TalentAlreadyLearned = -4302;
+    public const int TalentPrerequisiteMissing = -4303;
+    public const int InsufficientTalentPoints = -4304;
+    public const int InvalidTalentBranch = -4305;
+    public const int BattleUnavailable = -5001;
+    public const int BattleTimeout = -5002;
+    public const int BattleCreateFailed = -5003;
+    public const int InvalidBattleRequest = -5004;
+    public const int BattleInProgress = -5005;
+    public const int ActivityUnavailable = -6001;
+    public const int ActivityNotFound = -6002;
+    public const int ActivityNotOpen = -6003;
+    public const int ActivityNotJoined = -6004;
+    public const int ActivityAlreadyJoined = -6005;
+    public const int ActivityRewardNotReady = -6006;
+    public const int ActivityRewardAlreadyClaimed = -6007;
+}

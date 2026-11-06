@@ -391,11 +391,11 @@ private void Awake()
         private void OnStartBattleAck(global::StartBattleAck ack)
         {
             if (!_awaitingStartAck) return;
-            if (!ack.HasCode || ack.Code != global::ErrCode.Ok)
+            if (ack.Code != global::ErrCode.Ok)
             {
-                Debug.LogWarning($"[BattleView] 创建战斗失败: hasCode={ack.HasCode}, code={ack.Code}, battleId={ack.BattleId}");
-                bool timedOut = ack.HasCode && ack.Code == global::ErrCode.BattleTimeout;
-                FailBattleResponse(LoadoutErrors.ResponseMessage(ack.HasCode, ack.Code),
+                Debug.LogWarning($"[BattleView] 创建战斗失败: code={ack.Code}, battleId={ack.BattleId}");
+                bool timedOut = ack.Code == global::ErrCode.BattleTimeout;
+                FailBattleResponse(LoadoutErrors.ToUserMessage(ack.Code),
                     timedOut ? "创建超时" : "创建失败");
                 return;
             }

@@ -162,19 +162,19 @@ namespace XiuXian.Network
             }
         }
 
-        private void OnSnapshot(GetRoleTalentAck ack) => Receive(ack.RequestId, "GetRoleTalentAck", ack.Data, ack.Code, ack.HasCode, "天赋已与服务器同步");
-        private void OnLearned(LearnRoleTalentAck ack) => Receive(ack.RequestId, "LearnRoleTalentAck", ack.Data, ack.Code, ack.HasCode, "修习成功 · 下场战斗生效");
-        private void OnReset(ResetRoleTalentAck ack) => Receive(ack.RequestId, "ResetRoleTalentAck", ack.Data, ack.Code, ack.HasCode, "天赋已重置 · 点数已返还");
+        private void OnSnapshot(GetRoleTalentAck ack) => Receive(ack.RequestId, "GetRoleTalentAck", ack.Data, ack.Code, "天赋已与服务器同步");
+        private void OnLearned(LearnRoleTalentAck ack) => Receive(ack.RequestId, "LearnRoleTalentAck", ack.Data, ack.Code, "修习成功 · 下场战斗生效");
+        private void OnReset(ResetRoleTalentAck ack) => Receive(ack.RequestId, "ResetRoleTalentAck", ack.Data, ack.Code, "天赋已重置 · 点数已返还");
 
-        private void Receive(ulong id, string response, RoleTalentData snapshot, ErrCode code, bool hasCode, string success)
+        private void Receive(ulong id, string response, RoleTalentData snapshot, int code, string success)
         {
             // 不接收切换账号前、超时后或其他操作的迟到回包。
             if (pendingId == 0 || id != pendingId || response != pendingAck) return;
             ClearPending();
             synchronized = false;
-            if (!hasCode || !LoadoutErrors.IsKnown(code))
+            if (!LoadoutErrors.IsKnown(code))
             {
-                SetStatus(LoadoutErrors.ResponseMessage(hasCode, code));
+                SetStatus(LoadoutErrors.ToUserMessage(code));
                 return;
             }
             if (snapshot == null)

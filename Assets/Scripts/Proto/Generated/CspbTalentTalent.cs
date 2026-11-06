@@ -23,35 +23,33 @@ public static partial class CspbTalentTalentReflection {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
           "Chhjc3BiX3RhbGVudF90YWxlbnQucHJvdG8aGGNzcGJfY29tbW9uX2dyb3d0",
-          "aC5wcm90bxoVY3NwYl9jb21tX2Vycm9yLnByb3RvItUBChRUYWxlbnROb2Rl",
-          "RGVmaW5pdGlvbhIPCgdub2RlX2lkGAEgASgFEhEKCXBhcmVudF9pZBgCIAEo",
-          "BRIMCgRuYW1lGAMgASgJEg4KBmVmZmVjdBgEIAEoCRIfCgdib251c2VzGAUg",
-          "ASgLMg4uR3Jvd3RoQm9udXNlcxIRCglicmFuY2hfaWQYBiABKAUSEAoIdWlf",
-          "aW5kZXgYByABKAUSEgoKcG9pbnRfY29zdBgIIAEoBRIPCgdpc19yb290GAkg",
-          "ASgIEhAKCGljb25fa2V5GAogASgJIksKFlRhbGVudEJyYW5jaERlZmluaXRp",
-          "b24SEQoJYnJhbmNoX2lkGAEgASgFEgwKBG5hbWUYAiABKAkSEAoIaWNvbl9r",
-          "ZXkYAyABKAkihgIKDlJvbGVUYWxlbnREYXRhEhAKCHJldmlzaW9uGAEgASgE",
-          "EhUKDWVhcm5lZF9wb2ludHMYAiABKAUSFAoMc3BlbnRfcG9pbnRzGAMgASgF",
-          "EhgKEGF2YWlsYWJsZV9wb2ludHMYBCABKAUSGAoQbGVhcm5lZF9ub2RlX2lk",
-          "cxgFIAMoBRIkCgVub2RlcxgGIAMoCzIVLlRhbGVudE5vZGVEZWZpbml0aW9u",
-          "Eh8KB2JvbnVzZXMYByABKAsyDi5Hcm93dGhCb251c2VzEg8KB3JvbGVfaWQY",
-          "CCABKAkSKQoIYnJhbmNoZXMYCSADKAsyFy5UYWxlbnRCcmFuY2hEZWZpbml0",
-          "aW9uIiYKEEdldFJvbGVUYWxlbnRSZXESEgoKcmVxdWVzdF9pZBgBIAEoBCJU",
-          "ChJMZWFyblJvbGVUYWxlbnRSZXESEgoKcmVxdWVzdF9pZBgBIAEoBBIZChFl",
-          "eHBlY3RlZF9yZXZpc2lvbhgCIAEoBBIPCgdub2RlX2lkGAMgASgFIlMKElJl",
-          "c2V0Um9sZVRhbGVudFJlcRISCgpyZXF1ZXN0X2lkGAEgASgEEhkKEWV4cGVj",
-          "dGVkX3JldmlzaW9uGAIgASgEEg4KBmJyYW5jaBgDIAEoBSJrChBHZXRSb2xl",
-          "VGFsZW50QWNrEhIKCnJlcXVlc3RfaWQYASABKAQSHQoEZGF0YRgCIAEoCzIP",
-          "LlJvbGVUYWxlbnREYXRhEhsKBGNvZGUYBCABKA4yCC5FcnJDb2RlSACIAQFC",
-          "BwoFX2NvZGUibQoSTGVhcm5Sb2xlVGFsZW50QWNrEhIKCnJlcXVlc3RfaWQY",
-          "ASABKAQSHQoEZGF0YRgCIAEoCzIPLlJvbGVUYWxlbnREYXRhEhsKBGNvZGUY",
-          "BCABKA4yCC5FcnJDb2RlSACIAQFCBwoFX2NvZGUibQoSUmVzZXRSb2xlVGFs",
-          "ZW50QWNrEhIKCnJlcXVlc3RfaWQYASABKAQSHQoEZGF0YRgCIAEoCzIPLlJv",
-          "bGVUYWxlbnREYXRhEhsKBGNvZGUYBCABKA4yCC5FcnJDb2RlSACIAQFCBwoF",
-          "X2NvZGVCKlooZ2l0aHViLmNvbS9nb2d1LXgvZ29ncy9wYi9jc3BiL3BiX3Rh",
-          "bGVudGIGcHJvdG8z"));
+          "aC5wcm90byLVAQoUVGFsZW50Tm9kZURlZmluaXRpb24SDwoHbm9kZV9pZBgB",
+          "IAEoBRIRCglwYXJlbnRfaWQYAiABKAUSDAoEbmFtZRgDIAEoCRIOCgZlZmZl",
+          "Y3QYBCABKAkSHwoHYm9udXNlcxgFIAEoCzIOLkdyb3d0aEJvbnVzZXMSEQoJ",
+          "YnJhbmNoX2lkGAYgASgFEhAKCHVpX2luZGV4GAcgASgFEhIKCnBvaW50X2Nv",
+          "c3QYCCABKAUSDwoHaXNfcm9vdBgJIAEoCBIQCghpY29uX2tleRgKIAEoCSJL",
+          "ChZUYWxlbnRCcmFuY2hEZWZpbml0aW9uEhEKCWJyYW5jaF9pZBgBIAEoBRIM",
+          "CgRuYW1lGAIgASgJEhAKCGljb25fa2V5GAMgASgJIoYCCg5Sb2xlVGFsZW50",
+          "RGF0YRIQCghyZXZpc2lvbhgBIAEoBBIVCg1lYXJuZWRfcG9pbnRzGAIgASgF",
+          "EhQKDHNwZW50X3BvaW50cxgDIAEoBRIYChBhdmFpbGFibGVfcG9pbnRzGAQg",
+          "ASgFEhgKEGxlYXJuZWRfbm9kZV9pZHMYBSADKAUSJAoFbm9kZXMYBiADKAsy",
+          "FS5UYWxlbnROb2RlRGVmaW5pdGlvbhIfCgdib251c2VzGAcgASgLMg4uR3Jv",
+          "d3RoQm9udXNlcxIPCgdyb2xlX2lkGAggASgJEikKCGJyYW5jaGVzGAkgAygL",
+          "MhcuVGFsZW50QnJhbmNoRGVmaW5pdGlvbiImChBHZXRSb2xlVGFsZW50UmVx",
+          "EhIKCnJlcXVlc3RfaWQYASABKAQiVAoSTGVhcm5Sb2xlVGFsZW50UmVxEhIK",
+          "CnJlcXVlc3RfaWQYASABKAQSGQoRZXhwZWN0ZWRfcmV2aXNpb24YAiABKAQS",
+          "DwoHbm9kZV9pZBgDIAEoBSJTChJSZXNldFJvbGVUYWxlbnRSZXESEgoKcmVx",
+          "dWVzdF9pZBgBIAEoBBIZChFleHBlY3RlZF9yZXZpc2lvbhgCIAEoBBIOCgZi",
+          "cmFuY2gYAyABKAUiUwoQR2V0Um9sZVRhbGVudEFjaxISCgpyZXF1ZXN0X2lk",
+          "GAEgASgEEh0KBGRhdGEYAiABKAsyDy5Sb2xlVGFsZW50RGF0YRIMCgRjb2Rl",
+          "GAQgASgFIlUKEkxlYXJuUm9sZVRhbGVudEFjaxISCgpyZXF1ZXN0X2lkGAEg",
+          "ASgEEh0KBGRhdGEYAiABKAsyDy5Sb2xlVGFsZW50RGF0YRIMCgRjb2RlGAQg",
+          "ASgFIlUKElJlc2V0Um9sZVRhbGVudEFjaxISCgpyZXF1ZXN0X2lkGAEgASgE",
+          "Eh0KBGRhdGEYAiABKAsyDy5Sb2xlVGFsZW50RGF0YRIMCgRjb2RlGAQgASgF",
+          "QipaKGdpdGh1Yi5jb20vZ29ndS14L2dvZ3MvcGIvY3NwYi9wYl90YWxlbnRi",
+          "BnByb3RvMw=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-        new pbr::FileDescriptor[] { global::CspbCommonGrowthReflection.Descriptor, global::CspbCommErrorReflection.Descriptor, },
+        new pbr::FileDescriptor[] { global::CspbCommonGrowthReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
           new pbr::GeneratedClrTypeInfo(typeof(global::TalentNodeDefinition), global::TalentNodeDefinition.Parser, new[]{ "NodeId", "ParentId", "Name", "Effect", "Bonuses", "BranchId", "UiIndex", "PointCost", "IsRoot", "IconKey" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::TalentBranchDefinition), global::TalentBranchDefinition.Parser, new[]{ "BranchId", "Name", "IconKey" }, null, null, null, null),
@@ -59,9 +57,9 @@ public static partial class CspbTalentTalentReflection {
           new pbr::GeneratedClrTypeInfo(typeof(global::GetRoleTalentReq), global::GetRoleTalentReq.Parser, new[]{ "RequestId" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::LearnRoleTalentReq), global::LearnRoleTalentReq.Parser, new[]{ "RequestId", "ExpectedRevision", "NodeId" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::ResetRoleTalentReq), global::ResetRoleTalentReq.Parser, new[]{ "RequestId", "ExpectedRevision", "Branch" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::GetRoleTalentAck), global::GetRoleTalentAck.Parser, new[]{ "RequestId", "Data", "Code" }, new[]{ "Code" }, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::LearnRoleTalentAck), global::LearnRoleTalentAck.Parser, new[]{ "RequestId", "Data", "Code" }, new[]{ "Code" }, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::ResetRoleTalentAck), global::ResetRoleTalentAck.Parser, new[]{ "RequestId", "Data", "Code" }, new[]{ "Code" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::GetRoleTalentAck), global::GetRoleTalentAck.Parser, new[]{ "RequestId", "Data", "Code" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::LearnRoleTalentAck), global::LearnRoleTalentAck.Parser, new[]{ "RequestId", "Data", "Code" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::ResetRoleTalentAck), global::ResetRoleTalentAck.Parser, new[]{ "RequestId", "Data", "Code" }, null, null, null, null)
         }));
   }
   #endregion
@@ -2105,7 +2103,6 @@ public sealed partial class GetRoleTalentAck : pb::IMessage<GetRoleTalentAck>
 {
   private static readonly pb::MessageParser<GetRoleTalentAck> _parser = new pb::MessageParser<GetRoleTalentAck>(() => new GetRoleTalentAck());
   private pb::UnknownFieldSet _unknownFields;
-  private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pb::MessageParser<GetRoleTalentAck> Parser { get { return _parser; } }
@@ -2133,7 +2130,6 @@ public sealed partial class GetRoleTalentAck : pb::IMessage<GetRoleTalentAck>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public GetRoleTalentAck(GetRoleTalentAck other) : this() {
-    _hasBits0 = other._hasBits0;
     requestId_ = other.requestId_;
     data_ = other.data_ != null ? other.data_.Clone() : null;
     code_ = other.code_;
@@ -2172,29 +2168,14 @@ public sealed partial class GetRoleTalentAck : pb::IMessage<GetRoleTalentAck>
 
   /// <summary>Field number for the "code" field.</summary>
   public const int CodeFieldNumber = 4;
-  private readonly static global::ErrCode CodeDefaultValue = global::ErrCode.Ok;
-
-  private global::ErrCode code_;
+  private int code_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public global::ErrCode Code {
-    get { if ((_hasBits0 & 1) != 0) { return code_; } else { return CodeDefaultValue; } }
+  public int Code {
+    get { return code_; }
     set {
-      _hasBits0 |= 1;
       code_ = value;
     }
-  }
-  /// <summary>Gets whether the "code" field is set</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public bool HasCode {
-    get { return (_hasBits0 & 1) != 0; }
-  }
-  /// <summary>Clears the value of the "code" field</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public void ClearCode() {
-    _hasBits0 &= ~1;
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2224,7 +2205,7 @@ public sealed partial class GetRoleTalentAck : pb::IMessage<GetRoleTalentAck>
     int hash = 1;
     if (RequestId != 0UL) hash ^= RequestId.GetHashCode();
     if (data_ != null) hash ^= Data.GetHashCode();
-    if (HasCode) hash ^= Code.GetHashCode();
+    if (Code != 0) hash ^= Code.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -2251,9 +2232,9 @@ public sealed partial class GetRoleTalentAck : pb::IMessage<GetRoleTalentAck>
       output.WriteRawTag(18);
       output.WriteMessage(Data);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -2273,9 +2254,9 @@ public sealed partial class GetRoleTalentAck : pb::IMessage<GetRoleTalentAck>
       output.WriteRawTag(18);
       output.WriteMessage(Data);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -2293,8 +2274,8 @@ public sealed partial class GetRoleTalentAck : pb::IMessage<GetRoleTalentAck>
     if (data_ != null) {
       size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
     }
-    if (HasCode) {
-      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+    if (Code != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -2317,7 +2298,7 @@ public sealed partial class GetRoleTalentAck : pb::IMessage<GetRoleTalentAck>
       }
       Data.MergeFrom(other.Data);
     }
-    if (other.HasCode) {
+    if (other.Code != 0) {
       Code = other.Code;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2351,7 +2332,7 @@ public sealed partial class GetRoleTalentAck : pb::IMessage<GetRoleTalentAck>
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -2385,7 +2366,7 @@ public sealed partial class GetRoleTalentAck : pb::IMessage<GetRoleTalentAck>
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -2403,7 +2384,6 @@ public sealed partial class LearnRoleTalentAck : pb::IMessage<LearnRoleTalentAck
 {
   private static readonly pb::MessageParser<LearnRoleTalentAck> _parser = new pb::MessageParser<LearnRoleTalentAck>(() => new LearnRoleTalentAck());
   private pb::UnknownFieldSet _unknownFields;
-  private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pb::MessageParser<LearnRoleTalentAck> Parser { get { return _parser; } }
@@ -2431,7 +2411,6 @@ public sealed partial class LearnRoleTalentAck : pb::IMessage<LearnRoleTalentAck
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public LearnRoleTalentAck(LearnRoleTalentAck other) : this() {
-    _hasBits0 = other._hasBits0;
     requestId_ = other.requestId_;
     data_ = other.data_ != null ? other.data_.Clone() : null;
     code_ = other.code_;
@@ -2470,29 +2449,14 @@ public sealed partial class LearnRoleTalentAck : pb::IMessage<LearnRoleTalentAck
 
   /// <summary>Field number for the "code" field.</summary>
   public const int CodeFieldNumber = 4;
-  private readonly static global::ErrCode CodeDefaultValue = global::ErrCode.Ok;
-
-  private global::ErrCode code_;
+  private int code_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public global::ErrCode Code {
-    get { if ((_hasBits0 & 1) != 0) { return code_; } else { return CodeDefaultValue; } }
+  public int Code {
+    get { return code_; }
     set {
-      _hasBits0 |= 1;
       code_ = value;
     }
-  }
-  /// <summary>Gets whether the "code" field is set</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public bool HasCode {
-    get { return (_hasBits0 & 1) != 0; }
-  }
-  /// <summary>Clears the value of the "code" field</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public void ClearCode() {
-    _hasBits0 &= ~1;
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2522,7 +2486,7 @@ public sealed partial class LearnRoleTalentAck : pb::IMessage<LearnRoleTalentAck
     int hash = 1;
     if (RequestId != 0UL) hash ^= RequestId.GetHashCode();
     if (data_ != null) hash ^= Data.GetHashCode();
-    if (HasCode) hash ^= Code.GetHashCode();
+    if (Code != 0) hash ^= Code.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -2549,9 +2513,9 @@ public sealed partial class LearnRoleTalentAck : pb::IMessage<LearnRoleTalentAck
       output.WriteRawTag(18);
       output.WriteMessage(Data);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -2571,9 +2535,9 @@ public sealed partial class LearnRoleTalentAck : pb::IMessage<LearnRoleTalentAck
       output.WriteRawTag(18);
       output.WriteMessage(Data);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -2591,8 +2555,8 @@ public sealed partial class LearnRoleTalentAck : pb::IMessage<LearnRoleTalentAck
     if (data_ != null) {
       size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
     }
-    if (HasCode) {
-      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+    if (Code != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -2615,7 +2579,7 @@ public sealed partial class LearnRoleTalentAck : pb::IMessage<LearnRoleTalentAck
       }
       Data.MergeFrom(other.Data);
     }
-    if (other.HasCode) {
+    if (other.Code != 0) {
       Code = other.Code;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2649,7 +2613,7 @@ public sealed partial class LearnRoleTalentAck : pb::IMessage<LearnRoleTalentAck
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -2683,7 +2647,7 @@ public sealed partial class LearnRoleTalentAck : pb::IMessage<LearnRoleTalentAck
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -2701,7 +2665,6 @@ public sealed partial class ResetRoleTalentAck : pb::IMessage<ResetRoleTalentAck
 {
   private static readonly pb::MessageParser<ResetRoleTalentAck> _parser = new pb::MessageParser<ResetRoleTalentAck>(() => new ResetRoleTalentAck());
   private pb::UnknownFieldSet _unknownFields;
-  private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pb::MessageParser<ResetRoleTalentAck> Parser { get { return _parser; } }
@@ -2729,7 +2692,6 @@ public sealed partial class ResetRoleTalentAck : pb::IMessage<ResetRoleTalentAck
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public ResetRoleTalentAck(ResetRoleTalentAck other) : this() {
-    _hasBits0 = other._hasBits0;
     requestId_ = other.requestId_;
     data_ = other.data_ != null ? other.data_.Clone() : null;
     code_ = other.code_;
@@ -2768,29 +2730,14 @@ public sealed partial class ResetRoleTalentAck : pb::IMessage<ResetRoleTalentAck
 
   /// <summary>Field number for the "code" field.</summary>
   public const int CodeFieldNumber = 4;
-  private readonly static global::ErrCode CodeDefaultValue = global::ErrCode.Ok;
-
-  private global::ErrCode code_;
+  private int code_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public global::ErrCode Code {
-    get { if ((_hasBits0 & 1) != 0) { return code_; } else { return CodeDefaultValue; } }
+  public int Code {
+    get { return code_; }
     set {
-      _hasBits0 |= 1;
       code_ = value;
     }
-  }
-  /// <summary>Gets whether the "code" field is set</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public bool HasCode {
-    get { return (_hasBits0 & 1) != 0; }
-  }
-  /// <summary>Clears the value of the "code" field</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public void ClearCode() {
-    _hasBits0 &= ~1;
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2820,7 +2767,7 @@ public sealed partial class ResetRoleTalentAck : pb::IMessage<ResetRoleTalentAck
     int hash = 1;
     if (RequestId != 0UL) hash ^= RequestId.GetHashCode();
     if (data_ != null) hash ^= Data.GetHashCode();
-    if (HasCode) hash ^= Code.GetHashCode();
+    if (Code != 0) hash ^= Code.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -2847,9 +2794,9 @@ public sealed partial class ResetRoleTalentAck : pb::IMessage<ResetRoleTalentAck
       output.WriteRawTag(18);
       output.WriteMessage(Data);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -2869,9 +2816,9 @@ public sealed partial class ResetRoleTalentAck : pb::IMessage<ResetRoleTalentAck
       output.WriteRawTag(18);
       output.WriteMessage(Data);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -2889,8 +2836,8 @@ public sealed partial class ResetRoleTalentAck : pb::IMessage<ResetRoleTalentAck
     if (data_ != null) {
       size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
     }
-    if (HasCode) {
-      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+    if (Code != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -2913,7 +2860,7 @@ public sealed partial class ResetRoleTalentAck : pb::IMessage<ResetRoleTalentAck
       }
       Data.MergeFrom(other.Data);
     }
-    if (other.HasCode) {
+    if (other.Code != 0) {
       Code = other.Code;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2947,7 +2894,7 @@ public sealed partial class ResetRoleTalentAck : pb::IMessage<ResetRoleTalentAck
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -2981,7 +2928,7 @@ public sealed partial class ResetRoleTalentAck : pb::IMessage<ResetRoleTalentAck
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }

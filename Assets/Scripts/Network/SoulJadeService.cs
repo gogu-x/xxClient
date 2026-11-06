@@ -33,7 +33,7 @@ namespace XiuXian.Network
         public bool IsSynchronized { get; private set; }
         public bool CanMutate => IsSynchronized && Data != null && !IsBusy && net != null && net.IsConnected;
         public string Status { get; private set; } = "登录后同步魂玉";
-        public ErrCode? LastErrorCode { get; private set; }
+        public int? LastErrorCode { get; private set; }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         private static void ResetStaticState() { instance = null; }
@@ -164,7 +164,7 @@ namespace XiuXian.Network
             return false;
         }
 
-        private bool Reject(ErrCode code)
+        private bool Reject(int code)
         {
             LastErrorCode = code;
             Status = LoadoutErrors.ToUserMessage(code);
@@ -189,22 +189,22 @@ namespace XiuXian.Network
             return true;
         }
 
-        private void OnGet(GetRoleSoulJadeAck ack) => Receive("GetRoleSoulJadeAck", ack.RequestId, ack.Data, ack.Code, ack.HasCode, "魂玉已与服务器同步");
-        private void OnChange(ChangeRoleSoulJadeAck ack) => Receive("ChangeRoleSoulJadeAck", ack.RequestId, ack.Data, ack.Code, ack.HasCode, "镶嵌已更新 · 下场战斗生效");
-        private void OnUpgrade(UpgradeRoleSoulJadeAck ack) => Receive("UpgradeRoleSoulJadeAck", ack.RequestId, ack.Data, ack.Code, ack.HasCode, "魂玉升级完成");
-        private void OnRefine(RefineRoleSoulJadeAck ack) => Receive("RefineRoleSoulJadeAck", ack.RequestId, ack.Data, ack.Code, ack.HasCode, "魂玉洗练完成");
+        private void OnGet(GetRoleSoulJadeAck ack) => Receive("GetRoleSoulJadeAck", ack.RequestId, ack.Data, ack.Code, "魂玉已与服务器同步");
+        private void OnChange(ChangeRoleSoulJadeAck ack) => Receive("ChangeRoleSoulJadeAck", ack.RequestId, ack.Data, ack.Code, "镶嵌已更新 · 下场战斗生效");
+        private void OnUpgrade(UpgradeRoleSoulJadeAck ack) => Receive("UpgradeRoleSoulJadeAck", ack.RequestId, ack.Data, ack.Code, "魂玉升级完成");
+        private void OnRefine(RefineRoleSoulJadeAck ack) => Receive("RefineRoleSoulJadeAck", ack.RequestId, ack.Data, ack.Code, "魂玉洗练完成");
 
-        private void Receive(string ack, ulong id, RoleSoulJadeData data, ErrCode code, bool hasCode, string success)
+        private void Receive(string ack, ulong id, RoleSoulJadeData data, int code, string success)
         {
             // 会话清理、超时以及后续请求之后到达的旧响应不能覆盖当前角色。
             if (id == 0 || id != pendingId || ack != pendingAck) return;
             bool mutation = pendingMutation;
             ClearPending();
-            LastErrorCode = hasCode && code != ErrCode.Ok ? code : (ErrCode?)null;
-            if (!hasCode || !LoadoutErrors.IsKnown(code))
+            LastErrorCode = code != ErrCode.Ok ? code : (int?)null;
+            if (!LoadoutErrors.IsKnown(code))
             {
                 IsSynchronized = false;
-                Status = LoadoutErrors.ResponseMessage(hasCode, code);
+                Status = LoadoutErrors.ToUserMessage(code);
                 Changed?.Invoke();
                 if (mutation) OperationCompleted?.Invoke(false, Status);
                 return;

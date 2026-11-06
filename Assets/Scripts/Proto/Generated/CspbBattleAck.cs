@@ -22,14 +22,13 @@ public static partial class CspbBattleAckReflection {
   static CspbBattleAckReflection() {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
-          "ChVjc3BiX2JhdHRsZV9hY2sucHJvdG8aFWNzcGJfY29tbV9lcnJvci5wcm90",
-          "byJJCg5TdGFydEJhdHRsZUFjaxIRCgliYXR0bGVfaWQYASABKAkSGwoEY29k",
-          "ZRgDIAEoDjIILkVyckNvZGVIAIgBAUIHCgVfY29kZUIqWihnaXRodWIuY29t",
-          "L2dvZ3UteC9nb2dzL3BiL2NzcGIvcGJfYmF0dGxlYgZwcm90bzM="));
+          "ChVjc3BiX2JhdHRsZV9hY2sucHJvdG8iMQoOU3RhcnRCYXR0bGVBY2sSEQoJ",
+          "YmF0dGxlX2lkGAEgASgJEgwKBGNvZGUYAyABKAVCKlooZ2l0aHViLmNvbS9n",
+          "b2d1LXgvZ29ncy9wYi9jc3BiL3BiX2JhdHRsZWIGcHJvdG8z"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-        new pbr::FileDescriptor[] { global::CspbCommErrorReflection.Descriptor, },
+        new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-          new pbr::GeneratedClrTypeInfo(typeof(global::StartBattleAck), global::StartBattleAck.Parser, new[]{ "BattleId", "Code" }, new[]{ "Code" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::StartBattleAck), global::StartBattleAck.Parser, new[]{ "BattleId", "Code" }, null, null, null, null)
         }));
   }
   #endregion
@@ -47,7 +46,6 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
 {
   private static readonly pb::MessageParser<StartBattleAck> _parser = new pb::MessageParser<StartBattleAck>(() => new StartBattleAck());
   private pb::UnknownFieldSet _unknownFields;
-  private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pb::MessageParser<StartBattleAck> Parser { get { return _parser; } }
@@ -75,7 +73,6 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public StartBattleAck(StartBattleAck other) : this() {
-    _hasBits0 = other._hasBits0;
     battleId_ = other.battleId_;
     code_ = other.code_;
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -101,29 +98,14 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
 
   /// <summary>Field number for the "code" field.</summary>
   public const int CodeFieldNumber = 3;
-  private readonly static global::ErrCode CodeDefaultValue = global::ErrCode.Ok;
-
-  private global::ErrCode code_;
+  private int code_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public global::ErrCode Code {
-    get { if ((_hasBits0 & 1) != 0) { return code_; } else { return CodeDefaultValue; } }
+  public int Code {
+    get { return code_; }
     set {
-      _hasBits0 |= 1;
       code_ = value;
     }
-  }
-  /// <summary>Gets whether the "code" field is set</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public bool HasCode {
-    get { return (_hasBits0 & 1) != 0; }
-  }
-  /// <summary>Clears the value of the "code" field</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public void ClearCode() {
-    _hasBits0 &= ~1;
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -151,7 +133,7 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
   public override int GetHashCode() {
     int hash = 1;
     if (BattleId.Length != 0) hash ^= BattleId.GetHashCode();
-    if (HasCode) hash ^= Code.GetHashCode();
+    if (Code != 0) hash ^= Code.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -174,9 +156,9 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
       output.WriteRawTag(10);
       output.WriteString(BattleId);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(24);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -192,9 +174,9 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
       output.WriteRawTag(10);
       output.WriteString(BattleId);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(24);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -209,8 +191,8 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
     if (BattleId.Length != 0) {
       size += 1 + pb::CodedOutputStream.ComputeStringSize(BattleId);
     }
-    if (HasCode) {
-      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+    if (Code != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -227,7 +209,7 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
     if (other.BattleId.Length != 0) {
       BattleId = other.BattleId;
     }
-    if (other.HasCode) {
+    if (other.Code != 0) {
       Code = other.Code;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -254,7 +236,7 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
           break;
         }
         case 24: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -281,7 +263,7 @@ public sealed partial class StartBattleAck : pb::IMessage<StartBattleAck>
           break;
         }
         case 24: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }

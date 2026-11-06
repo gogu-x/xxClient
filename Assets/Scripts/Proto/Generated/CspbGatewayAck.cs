@@ -22,15 +22,13 @@ public static partial class CspbGatewayAckReflection {
   static CspbGatewayAckReflection() {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
-          "ChZjc3BiX2dhdGV3YXlfYWNrLnByb3RvGhVjc3BiX2NvbW1fZXJyb3IucHJv",
-          "dG8aGWNzcGJfZ2F0ZXdheV9zdHJ1Y3QucHJvdG8iIgoITG9naW5BY2sSFgoE",
-          "Y29kZRgBIAEoDjIILkVyckNvZGUiJQoLUmVnaXN0ZXJBY2sSFgoEY29kZRgB",
-          "IAEoDjIILkVyckNvZGUiSQoNU2VydmVyTGlzdEFjaxIWCgRjb2RlGAEgASgO",
-          "MgguRXJyQ29kZRIgCghhY2NvdW50cxgCIAMoCzIOLlNlcnZlckFjY291bnRC",
-          "K1opZ2l0aHViLmNvbS9nb2d1LXgvZ29ncy9wYi9jc3BiL3BiX2dhdGV3YXli",
-          "BnByb3RvMw=="));
+          "ChZjc3BiX2dhdGV3YXlfYWNrLnByb3RvGhljc3BiX2dhdGV3YXlfc3RydWN0",
+          "LnByb3RvIhgKCExvZ2luQWNrEgwKBGNvZGUYASABKAUiGwoLUmVnaXN0ZXJB",
+          "Y2sSDAoEY29kZRgBIAEoBSI/Cg1TZXJ2ZXJMaXN0QWNrEgwKBGNvZGUYASAB",
+          "KAUSIAoIYWNjb3VudHMYAiADKAsyDi5TZXJ2ZXJBY2NvdW50QitaKWdpdGh1",
+          "Yi5jb20vZ29ndS14L2dvZ3MvcGIvY3NwYi9wYl9nYXRld2F5YgZwcm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-        new pbr::FileDescriptor[] { global::CspbCommErrorReflection.Descriptor, global::CspbGatewayStructReflection.Descriptor, },
+        new pbr::FileDescriptor[] { global::CspbGatewayStructReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
           new pbr::GeneratedClrTypeInfo(typeof(global::LoginAck), global::LoginAck.Parser, new[]{ "Code" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::RegisterAck), global::RegisterAck.Parser, new[]{ "Code" }, null, null, null, null),
@@ -88,10 +86,10 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
 
   /// <summary>Field number for the "code" field.</summary>
   public const int CodeFieldNumber = 1;
-  private global::ErrCode code_ = global::ErrCode.Ok;
+  private int code_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public global::ErrCode Code {
+  public int Code {
     get { return code_; }
     set {
       code_ = value;
@@ -121,7 +119,7 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override int GetHashCode() {
     int hash = 1;
-    if (Code != global::ErrCode.Ok) hash ^= Code.GetHashCode();
+    if (Code != 0) hash ^= Code.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -140,9 +138,9 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
   #else
-    if (Code != global::ErrCode.Ok) {
+    if (Code != 0) {
       output.WriteRawTag(8);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -154,9 +152,9 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-    if (Code != global::ErrCode.Ok) {
+    if (Code != 0) {
       output.WriteRawTag(8);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -168,8 +166,8 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public int CalculateSize() {
     int size = 0;
-    if (Code != global::ErrCode.Ok) {
-      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+    if (Code != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -183,7 +181,7 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
     if (other == null) {
       return;
     }
-    if (other.Code != global::ErrCode.Ok) {
+    if (other.Code != 0) {
       Code = other.Code;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -206,7 +204,7 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
           break;
         case 8: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -229,7 +227,7 @@ public sealed partial class LoginAck : pb::IMessage<LoginAck>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
           break;
         case 8: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -286,10 +284,10 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
 
   /// <summary>Field number for the "code" field.</summary>
   public const int CodeFieldNumber = 1;
-  private global::ErrCode code_ = global::ErrCode.Ok;
+  private int code_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public global::ErrCode Code {
+  public int Code {
     get { return code_; }
     set {
       code_ = value;
@@ -319,7 +317,7 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override int GetHashCode() {
     int hash = 1;
-    if (Code != global::ErrCode.Ok) hash ^= Code.GetHashCode();
+    if (Code != 0) hash ^= Code.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -338,9 +336,9 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
   #else
-    if (Code != global::ErrCode.Ok) {
+    if (Code != 0) {
       output.WriteRawTag(8);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -352,9 +350,9 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-    if (Code != global::ErrCode.Ok) {
+    if (Code != 0) {
       output.WriteRawTag(8);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -366,8 +364,8 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public int CalculateSize() {
     int size = 0;
-    if (Code != global::ErrCode.Ok) {
-      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+    if (Code != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -381,7 +379,7 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
     if (other == null) {
       return;
     }
-    if (other.Code != global::ErrCode.Ok) {
+    if (other.Code != 0) {
       Code = other.Code;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -404,7 +402,7 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
           break;
         case 8: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -427,7 +425,7 @@ public sealed partial class RegisterAck : pb::IMessage<RegisterAck>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
           break;
         case 8: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -485,10 +483,10 @@ public sealed partial class ServerListAck : pb::IMessage<ServerListAck>
 
   /// <summary>Field number for the "code" field.</summary>
   public const int CodeFieldNumber = 1;
-  private global::ErrCode code_ = global::ErrCode.Ok;
+  private int code_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public global::ErrCode Code {
+  public int Code {
     get { return code_; }
     set {
       code_ = value;
@@ -530,7 +528,7 @@ public sealed partial class ServerListAck : pb::IMessage<ServerListAck>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override int GetHashCode() {
     int hash = 1;
-    if (Code != global::ErrCode.Ok) hash ^= Code.GetHashCode();
+    if (Code != 0) hash ^= Code.GetHashCode();
     hash ^= accounts_.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
@@ -550,9 +548,9 @@ public sealed partial class ServerListAck : pb::IMessage<ServerListAck>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
   #else
-    if (Code != global::ErrCode.Ok) {
+    if (Code != 0) {
       output.WriteRawTag(8);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     accounts_.WriteTo(output, _repeated_accounts_codec);
     if (_unknownFields != null) {
@@ -565,9 +563,9 @@ public sealed partial class ServerListAck : pb::IMessage<ServerListAck>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-    if (Code != global::ErrCode.Ok) {
+    if (Code != 0) {
       output.WriteRawTag(8);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     accounts_.WriteTo(ref output, _repeated_accounts_codec);
     if (_unknownFields != null) {
@@ -580,8 +578,8 @@ public sealed partial class ServerListAck : pb::IMessage<ServerListAck>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public int CalculateSize() {
     int size = 0;
-    if (Code != global::ErrCode.Ok) {
-      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+    if (Code != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
     }
     size += accounts_.CalculateSize(_repeated_accounts_codec);
     if (_unknownFields != null) {
@@ -596,7 +594,7 @@ public sealed partial class ServerListAck : pb::IMessage<ServerListAck>
     if (other == null) {
       return;
     }
-    if (other.Code != global::ErrCode.Ok) {
+    if (other.Code != 0) {
       Code = other.Code;
     }
     accounts_.Add(other.accounts_);
@@ -620,7 +618,7 @@ public sealed partial class ServerListAck : pb::IMessage<ServerListAck>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
           break;
         case 8: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
         case 18: {
@@ -647,7 +645,7 @@ public sealed partial class ServerListAck : pb::IMessage<ServerListAck>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
           break;
         case 8: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
         case 18: {

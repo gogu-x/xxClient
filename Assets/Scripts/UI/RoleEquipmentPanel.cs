@@ -234,9 +234,9 @@ namespace XiuXian.Core
         private void OnLoadoutReceived(GetRoleEquipmentAck ack)
         {
             if (!CompleteRequest(ack.RequestId, false)) return;
-            if (!ack.HasCode || ack.Code != ErrCode.Ok || ack.Data == null)
+            if (ack.Code != ErrCode.Ok || ack.Data == null)
             {
-                ShowSyncFailure(!ack.HasCode || ack.Code != ErrCode.Ok ? LoadoutErrors.ResponseMessage(ack.HasCode, ack.Code) : "装备数据暂不可用");
+                ShowSyncFailure(ack.Code != ErrCode.Ok ? LoadoutErrors.ToUserMessage(ack.Code) : "装备数据暂不可用");
                 return;
             }
 
@@ -246,9 +246,9 @@ namespace XiuXian.Core
         private void OnChangeReceived(ChangeRoleEquipmentAck ack)
         {
             if (!CompleteRequest(ack.RequestId, true)) return;
-            if (!ack.HasCode || ack.Code != ErrCode.Ok || ack.Data == null)
+            if (ack.Code != ErrCode.Ok || ack.Data == null)
             {
-                ShowSyncFailure(!ack.HasCode || ack.Code != ErrCode.Ok ? LoadoutErrors.ResponseMessage(ack.HasCode, ack.Code) : "装备操作失败");
+                ShowSyncFailure(ack.Code != ErrCode.Ok ? LoadoutErrors.ToUserMessage(ack.Code) : "装备操作失败");
                 return;
             }
 

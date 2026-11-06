@@ -41,7 +41,7 @@ namespace XiuXian.Network
                     switch (tag)
                     {
                         case 8: // code = 1
-                            response.Code = (global::ErrCode)input.ReadEnum();
+                            response.Code = input.ReadInt32();
                             break;
                         case 26: // accounts = 3
                             response.Accounts.Add(DecodeServerAccount(input.ReadBytes()));
@@ -86,7 +86,7 @@ namespace XiuXian.Network
 
     public sealed class GatewayServerListResponse
     {
-        public global::ErrCode Code { get; internal set; } = global::ErrCode.Ok;
+        public int Code { get; internal set; } = global::ErrCode.Ok;
         public List<GatewayServerAccount> Accounts { get; } = new();
     }
 

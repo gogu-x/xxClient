@@ -23,39 +23,36 @@ public static partial class CspbSouljadeSouljadeReflection {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
           "Chxjc3BiX3NvdWxqYWRlX3NvdWxqYWRlLnByb3RvGhhjc3BiX2NvbW1vbl9n",
-          "cm93dGgucHJvdG8aFWNzcGJfY29tbV9lcnJvci5wcm90byI0Cg1Tb3VsSmFk",
-          "ZUFmZml4EhEKCWF0dHJpYnV0ZRgBIAEoBRIQCghwZXJtaWxsZRgCIAEoBSLU",
-          "AQoMU291bEphZGVJdGVtEhMKC2luc3RhbmNlX2lkGAEgASgJEhEKCWNvbmZp",
-          "Z19pZBgCIAEoBRIMCgRuYW1lGAMgASgJEg0KBWxldmVsGAQgASgFEhEKCW1h",
-          "eF9sZXZlbBgFIAEoBRIfCgdhZmZpeGVzGAYgAygLMg4uU291bEphZGVBZmZp",
-          "eBIUCgx1cGdyYWRlX2Nvc3QYByABKAMSEwoLcmVmaW5lX2Nvc3QYCCABKAMS",
-          "DgoGcmFyaXR5GAkgASgJEhAKCGljb25fa2V5GAogASgJIjEKDFNvdWxKYWRl",
-          "U2xvdBIMCgRzbG90GAEgASgFEhMKC2luc3RhbmNlX2lkGAIgASgJIqMBChBS",
-          "b2xlU291bEphZGVEYXRhEhAKCHJldmlzaW9uGAEgASgEEg8KB2Vzc2VuY2UY",
-          "AiABKAMSHAoFaXRlbXMYAyADKAsyDS5Tb3VsSmFkZUl0ZW0SHAoFc2xvdHMY",
-          "BCADKAsyDS5Tb3VsSmFkZVNsb3QSHwoHYm9udXNlcxgFIAEoCzIOLkdyb3d0",
-          "aEJvbnVzZXMSDwoHcm9sZV9pZBgGIAEoCSIoChJHZXRSb2xlU291bEphZGVS",
-          "ZXESEgoKcmVxdWVzdF9pZBgBIAEoBCJpChVDaGFuZ2VSb2xlU291bEphZGVS",
-          "ZXESEgoKcmVxdWVzdF9pZBgBIAEoBBIZChFleHBlY3RlZF9yZXZpc2lvbhgC",
-          "IAEoBBIMCgRzbG90GAMgASgFEhMKC2luc3RhbmNlX2lkGAQgASgJIlwKFlVw",
-          "Z3JhZGVSb2xlU291bEphZGVSZXESEgoKcmVxdWVzdF9pZBgBIAEoBBIZChFl",
-          "eHBlY3RlZF9yZXZpc2lvbhgCIAEoBBITCgtpbnN0YW5jZV9pZBgDIAEoCSJb",
-          "ChVSZWZpbmVSb2xlU291bEphZGVSZXESEgoKcmVxdWVzdF9pZBgBIAEoBBIZ",
-          "ChFleHBlY3RlZF9yZXZpc2lvbhgCIAEoBBITCgtpbnN0YW5jZV9pZBgDIAEo",
-          "CSJvChJHZXRSb2xlU291bEphZGVBY2sSEgoKcmVxdWVzdF9pZBgBIAEoBBIf",
-          "CgRkYXRhGAIgASgLMhEuUm9sZVNvdWxKYWRlRGF0YRIbCgRjb2RlGAQgASgO",
-          "MgguRXJyQ29kZUgAiAEBQgcKBV9jb2RlInIKFUNoYW5nZVJvbGVTb3VsSmFk",
-          "ZUFjaxISCgpyZXF1ZXN0X2lkGAEgASgEEh8KBGRhdGEYAiABKAsyES5Sb2xl",
-          "U291bEphZGVEYXRhEhsKBGNvZGUYBCABKA4yCC5FcnJDb2RlSACIAQFCBwoF",
-          "X2NvZGUicwoWVXBncmFkZVJvbGVTb3VsSmFkZUFjaxISCgpyZXF1ZXN0X2lk",
-          "GAEgASgEEh8KBGRhdGEYAiABKAsyES5Sb2xlU291bEphZGVEYXRhEhsKBGNv",
-          "ZGUYBCABKA4yCC5FcnJDb2RlSACIAQFCBwoFX2NvZGUicgoVUmVmaW5lUm9s",
-          "ZVNvdWxKYWRlQWNrEhIKCnJlcXVlc3RfaWQYASABKAQSHwoEZGF0YRgCIAEo",
-          "CzIRLlJvbGVTb3VsSmFkZURhdGESGwoEY29kZRgEIAEoDjIILkVyckNvZGVI",
-          "AIgBAUIHCgVfY29kZUIsWipnaXRodWIuY29tL2dvZ3UteC9nb2dzL3BiL2Nz",
-          "cGIvcGJfc291bGphZGViBnByb3RvMw=="));
+          "cm93dGgucHJvdG8iNAoNU291bEphZGVBZmZpeBIRCglhdHRyaWJ1dGUYASAB",
+          "KAUSEAoIcGVybWlsbGUYAiABKAUi1AEKDFNvdWxKYWRlSXRlbRITCgtpbnN0",
+          "YW5jZV9pZBgBIAEoCRIRCgljb25maWdfaWQYAiABKAUSDAoEbmFtZRgDIAEo",
+          "CRINCgVsZXZlbBgEIAEoBRIRCgltYXhfbGV2ZWwYBSABKAUSHwoHYWZmaXhl",
+          "cxgGIAMoCzIOLlNvdWxKYWRlQWZmaXgSFAoMdXBncmFkZV9jb3N0GAcgASgD",
+          "EhMKC3JlZmluZV9jb3N0GAggASgDEg4KBnJhcml0eRgJIAEoCRIQCghpY29u",
+          "X2tleRgKIAEoCSIxCgxTb3VsSmFkZVNsb3QSDAoEc2xvdBgBIAEoBRITCgtp",
+          "bnN0YW5jZV9pZBgCIAEoCSKjAQoQUm9sZVNvdWxKYWRlRGF0YRIQCghyZXZp",
+          "c2lvbhgBIAEoBBIPCgdlc3NlbmNlGAIgASgDEhwKBWl0ZW1zGAMgAygLMg0u",
+          "U291bEphZGVJdGVtEhwKBXNsb3RzGAQgAygLMg0uU291bEphZGVTbG90Eh8K",
+          "B2JvbnVzZXMYBSABKAsyDi5Hcm93dGhCb251c2VzEg8KB3JvbGVfaWQYBiAB",
+          "KAkiKAoSR2V0Um9sZVNvdWxKYWRlUmVxEhIKCnJlcXVlc3RfaWQYASABKAQi",
+          "aQoVQ2hhbmdlUm9sZVNvdWxKYWRlUmVxEhIKCnJlcXVlc3RfaWQYASABKAQS",
+          "GQoRZXhwZWN0ZWRfcmV2aXNpb24YAiABKAQSDAoEc2xvdBgDIAEoBRITCgtp",
+          "bnN0YW5jZV9pZBgEIAEoCSJcChZVcGdyYWRlUm9sZVNvdWxKYWRlUmVxEhIK",
+          "CnJlcXVlc3RfaWQYASABKAQSGQoRZXhwZWN0ZWRfcmV2aXNpb24YAiABKAQS",
+          "EwoLaW5zdGFuY2VfaWQYAyABKAkiWwoVUmVmaW5lUm9sZVNvdWxKYWRlUmVx",
+          "EhIKCnJlcXVlc3RfaWQYASABKAQSGQoRZXhwZWN0ZWRfcmV2aXNpb24YAiAB",
+          "KAQSEwoLaW5zdGFuY2VfaWQYAyABKAkiVwoSR2V0Um9sZVNvdWxKYWRlQWNr",
+          "EhIKCnJlcXVlc3RfaWQYASABKAQSHwoEZGF0YRgCIAEoCzIRLlJvbGVTb3Vs",
+          "SmFkZURhdGESDAoEY29kZRgEIAEoBSJaChVDaGFuZ2VSb2xlU291bEphZGVB",
+          "Y2sSEgoKcmVxdWVzdF9pZBgBIAEoBBIfCgRkYXRhGAIgASgLMhEuUm9sZVNv",
+          "dWxKYWRlRGF0YRIMCgRjb2RlGAQgASgFIlsKFlVwZ3JhZGVSb2xlU291bEph",
+          "ZGVBY2sSEgoKcmVxdWVzdF9pZBgBIAEoBBIfCgRkYXRhGAIgASgLMhEuUm9s",
+          "ZVNvdWxKYWRlRGF0YRIMCgRjb2RlGAQgASgFIloKFVJlZmluZVJvbGVTb3Vs",
+          "SmFkZUFjaxISCgpyZXF1ZXN0X2lkGAEgASgEEh8KBGRhdGEYAiABKAsyES5S",
+          "b2xlU291bEphZGVEYXRhEgwKBGNvZGUYBCABKAVCLFoqZ2l0aHViLmNvbS9n",
+          "b2d1LXgvZ29ncy9wYi9jc3BiL3BiX3NvdWxqYWRlYgZwcm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-        new pbr::FileDescriptor[] { global::CspbCommonGrowthReflection.Descriptor, global::CspbCommErrorReflection.Descriptor, },
+        new pbr::FileDescriptor[] { global::CspbCommonGrowthReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
           new pbr::GeneratedClrTypeInfo(typeof(global::SoulJadeAffix), global::SoulJadeAffix.Parser, new[]{ "Attribute", "Permille" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::SoulJadeItem), global::SoulJadeItem.Parser, new[]{ "InstanceId", "ConfigId", "Name", "Level", "MaxLevel", "Affixes", "UpgradeCost", "RefineCost", "Rarity", "IconKey" }, null, null, null, null),
@@ -65,10 +62,10 @@ public static partial class CspbSouljadeSouljadeReflection {
           new pbr::GeneratedClrTypeInfo(typeof(global::ChangeRoleSoulJadeReq), global::ChangeRoleSoulJadeReq.Parser, new[]{ "RequestId", "ExpectedRevision", "Slot", "InstanceId" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::UpgradeRoleSoulJadeReq), global::UpgradeRoleSoulJadeReq.Parser, new[]{ "RequestId", "ExpectedRevision", "InstanceId" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::RefineRoleSoulJadeReq), global::RefineRoleSoulJadeReq.Parser, new[]{ "RequestId", "ExpectedRevision", "InstanceId" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::GetRoleSoulJadeAck), global::GetRoleSoulJadeAck.Parser, new[]{ "RequestId", "Data", "Code" }, new[]{ "Code" }, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::ChangeRoleSoulJadeAck), global::ChangeRoleSoulJadeAck.Parser, new[]{ "RequestId", "Data", "Code" }, new[]{ "Code" }, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::UpgradeRoleSoulJadeAck), global::UpgradeRoleSoulJadeAck.Parser, new[]{ "RequestId", "Data", "Code" }, new[]{ "Code" }, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::RefineRoleSoulJadeAck), global::RefineRoleSoulJadeAck.Parser, new[]{ "RequestId", "Data", "Code" }, new[]{ "Code" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::GetRoleSoulJadeAck), global::GetRoleSoulJadeAck.Parser, new[]{ "RequestId", "Data", "Code" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::ChangeRoleSoulJadeAck), global::ChangeRoleSoulJadeAck.Parser, new[]{ "RequestId", "Data", "Code" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::UpgradeRoleSoulJadeAck), global::UpgradeRoleSoulJadeAck.Parser, new[]{ "RequestId", "Data", "Code" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::RefineRoleSoulJadeAck), global::RefineRoleSoulJadeAck.Parser, new[]{ "RequestId", "Data", "Code" }, null, null, null, null)
         }));
   }
   #endregion
@@ -2500,7 +2497,6 @@ public sealed partial class GetRoleSoulJadeAck : pb::IMessage<GetRoleSoulJadeAck
 {
   private static readonly pb::MessageParser<GetRoleSoulJadeAck> _parser = new pb::MessageParser<GetRoleSoulJadeAck>(() => new GetRoleSoulJadeAck());
   private pb::UnknownFieldSet _unknownFields;
-  private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pb::MessageParser<GetRoleSoulJadeAck> Parser { get { return _parser; } }
@@ -2528,7 +2524,6 @@ public sealed partial class GetRoleSoulJadeAck : pb::IMessage<GetRoleSoulJadeAck
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public GetRoleSoulJadeAck(GetRoleSoulJadeAck other) : this() {
-    _hasBits0 = other._hasBits0;
     requestId_ = other.requestId_;
     data_ = other.data_ != null ? other.data_.Clone() : null;
     code_ = other.code_;
@@ -2567,29 +2562,14 @@ public sealed partial class GetRoleSoulJadeAck : pb::IMessage<GetRoleSoulJadeAck
 
   /// <summary>Field number for the "code" field.</summary>
   public const int CodeFieldNumber = 4;
-  private readonly static global::ErrCode CodeDefaultValue = global::ErrCode.Ok;
-
-  private global::ErrCode code_;
+  private int code_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public global::ErrCode Code {
-    get { if ((_hasBits0 & 1) != 0) { return code_; } else { return CodeDefaultValue; } }
+  public int Code {
+    get { return code_; }
     set {
-      _hasBits0 |= 1;
       code_ = value;
     }
-  }
-  /// <summary>Gets whether the "code" field is set</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public bool HasCode {
-    get { return (_hasBits0 & 1) != 0; }
-  }
-  /// <summary>Clears the value of the "code" field</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public void ClearCode() {
-    _hasBits0 &= ~1;
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2619,7 +2599,7 @@ public sealed partial class GetRoleSoulJadeAck : pb::IMessage<GetRoleSoulJadeAck
     int hash = 1;
     if (RequestId != 0UL) hash ^= RequestId.GetHashCode();
     if (data_ != null) hash ^= Data.GetHashCode();
-    if (HasCode) hash ^= Code.GetHashCode();
+    if (Code != 0) hash ^= Code.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -2646,9 +2626,9 @@ public sealed partial class GetRoleSoulJadeAck : pb::IMessage<GetRoleSoulJadeAck
       output.WriteRawTag(18);
       output.WriteMessage(Data);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -2668,9 +2648,9 @@ public sealed partial class GetRoleSoulJadeAck : pb::IMessage<GetRoleSoulJadeAck
       output.WriteRawTag(18);
       output.WriteMessage(Data);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -2688,8 +2668,8 @@ public sealed partial class GetRoleSoulJadeAck : pb::IMessage<GetRoleSoulJadeAck
     if (data_ != null) {
       size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
     }
-    if (HasCode) {
-      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+    if (Code != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -2712,7 +2692,7 @@ public sealed partial class GetRoleSoulJadeAck : pb::IMessage<GetRoleSoulJadeAck
       }
       Data.MergeFrom(other.Data);
     }
-    if (other.HasCode) {
+    if (other.Code != 0) {
       Code = other.Code;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2746,7 +2726,7 @@ public sealed partial class GetRoleSoulJadeAck : pb::IMessage<GetRoleSoulJadeAck
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -2780,7 +2760,7 @@ public sealed partial class GetRoleSoulJadeAck : pb::IMessage<GetRoleSoulJadeAck
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -2798,7 +2778,6 @@ public sealed partial class ChangeRoleSoulJadeAck : pb::IMessage<ChangeRoleSoulJ
 {
   private static readonly pb::MessageParser<ChangeRoleSoulJadeAck> _parser = new pb::MessageParser<ChangeRoleSoulJadeAck>(() => new ChangeRoleSoulJadeAck());
   private pb::UnknownFieldSet _unknownFields;
-  private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pb::MessageParser<ChangeRoleSoulJadeAck> Parser { get { return _parser; } }
@@ -2826,7 +2805,6 @@ public sealed partial class ChangeRoleSoulJadeAck : pb::IMessage<ChangeRoleSoulJ
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public ChangeRoleSoulJadeAck(ChangeRoleSoulJadeAck other) : this() {
-    _hasBits0 = other._hasBits0;
     requestId_ = other.requestId_;
     data_ = other.data_ != null ? other.data_.Clone() : null;
     code_ = other.code_;
@@ -2865,29 +2843,14 @@ public sealed partial class ChangeRoleSoulJadeAck : pb::IMessage<ChangeRoleSoulJ
 
   /// <summary>Field number for the "code" field.</summary>
   public const int CodeFieldNumber = 4;
-  private readonly static global::ErrCode CodeDefaultValue = global::ErrCode.Ok;
-
-  private global::ErrCode code_;
+  private int code_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public global::ErrCode Code {
-    get { if ((_hasBits0 & 1) != 0) { return code_; } else { return CodeDefaultValue; } }
+  public int Code {
+    get { return code_; }
     set {
-      _hasBits0 |= 1;
       code_ = value;
     }
-  }
-  /// <summary>Gets whether the "code" field is set</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public bool HasCode {
-    get { return (_hasBits0 & 1) != 0; }
-  }
-  /// <summary>Clears the value of the "code" field</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public void ClearCode() {
-    _hasBits0 &= ~1;
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2917,7 +2880,7 @@ public sealed partial class ChangeRoleSoulJadeAck : pb::IMessage<ChangeRoleSoulJ
     int hash = 1;
     if (RequestId != 0UL) hash ^= RequestId.GetHashCode();
     if (data_ != null) hash ^= Data.GetHashCode();
-    if (HasCode) hash ^= Code.GetHashCode();
+    if (Code != 0) hash ^= Code.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -2944,9 +2907,9 @@ public sealed partial class ChangeRoleSoulJadeAck : pb::IMessage<ChangeRoleSoulJ
       output.WriteRawTag(18);
       output.WriteMessage(Data);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -2966,9 +2929,9 @@ public sealed partial class ChangeRoleSoulJadeAck : pb::IMessage<ChangeRoleSoulJ
       output.WriteRawTag(18);
       output.WriteMessage(Data);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -2986,8 +2949,8 @@ public sealed partial class ChangeRoleSoulJadeAck : pb::IMessage<ChangeRoleSoulJ
     if (data_ != null) {
       size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
     }
-    if (HasCode) {
-      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+    if (Code != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -3010,7 +2973,7 @@ public sealed partial class ChangeRoleSoulJadeAck : pb::IMessage<ChangeRoleSoulJ
       }
       Data.MergeFrom(other.Data);
     }
-    if (other.HasCode) {
+    if (other.Code != 0) {
       Code = other.Code;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3044,7 +3007,7 @@ public sealed partial class ChangeRoleSoulJadeAck : pb::IMessage<ChangeRoleSoulJ
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -3078,7 +3041,7 @@ public sealed partial class ChangeRoleSoulJadeAck : pb::IMessage<ChangeRoleSoulJ
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -3096,7 +3059,6 @@ public sealed partial class UpgradeRoleSoulJadeAck : pb::IMessage<UpgradeRoleSou
 {
   private static readonly pb::MessageParser<UpgradeRoleSoulJadeAck> _parser = new pb::MessageParser<UpgradeRoleSoulJadeAck>(() => new UpgradeRoleSoulJadeAck());
   private pb::UnknownFieldSet _unknownFields;
-  private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pb::MessageParser<UpgradeRoleSoulJadeAck> Parser { get { return _parser; } }
@@ -3124,7 +3086,6 @@ public sealed partial class UpgradeRoleSoulJadeAck : pb::IMessage<UpgradeRoleSou
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public UpgradeRoleSoulJadeAck(UpgradeRoleSoulJadeAck other) : this() {
-    _hasBits0 = other._hasBits0;
     requestId_ = other.requestId_;
     data_ = other.data_ != null ? other.data_.Clone() : null;
     code_ = other.code_;
@@ -3163,29 +3124,14 @@ public sealed partial class UpgradeRoleSoulJadeAck : pb::IMessage<UpgradeRoleSou
 
   /// <summary>Field number for the "code" field.</summary>
   public const int CodeFieldNumber = 4;
-  private readonly static global::ErrCode CodeDefaultValue = global::ErrCode.Ok;
-
-  private global::ErrCode code_;
+  private int code_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public global::ErrCode Code {
-    get { if ((_hasBits0 & 1) != 0) { return code_; } else { return CodeDefaultValue; } }
+  public int Code {
+    get { return code_; }
     set {
-      _hasBits0 |= 1;
       code_ = value;
     }
-  }
-  /// <summary>Gets whether the "code" field is set</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public bool HasCode {
-    get { return (_hasBits0 & 1) != 0; }
-  }
-  /// <summary>Clears the value of the "code" field</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public void ClearCode() {
-    _hasBits0 &= ~1;
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3215,7 +3161,7 @@ public sealed partial class UpgradeRoleSoulJadeAck : pb::IMessage<UpgradeRoleSou
     int hash = 1;
     if (RequestId != 0UL) hash ^= RequestId.GetHashCode();
     if (data_ != null) hash ^= Data.GetHashCode();
-    if (HasCode) hash ^= Code.GetHashCode();
+    if (Code != 0) hash ^= Code.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -3242,9 +3188,9 @@ public sealed partial class UpgradeRoleSoulJadeAck : pb::IMessage<UpgradeRoleSou
       output.WriteRawTag(18);
       output.WriteMessage(Data);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -3264,9 +3210,9 @@ public sealed partial class UpgradeRoleSoulJadeAck : pb::IMessage<UpgradeRoleSou
       output.WriteRawTag(18);
       output.WriteMessage(Data);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -3284,8 +3230,8 @@ public sealed partial class UpgradeRoleSoulJadeAck : pb::IMessage<UpgradeRoleSou
     if (data_ != null) {
       size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
     }
-    if (HasCode) {
-      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+    if (Code != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -3308,7 +3254,7 @@ public sealed partial class UpgradeRoleSoulJadeAck : pb::IMessage<UpgradeRoleSou
       }
       Data.MergeFrom(other.Data);
     }
-    if (other.HasCode) {
+    if (other.Code != 0) {
       Code = other.Code;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3342,7 +3288,7 @@ public sealed partial class UpgradeRoleSoulJadeAck : pb::IMessage<UpgradeRoleSou
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -3376,7 +3322,7 @@ public sealed partial class UpgradeRoleSoulJadeAck : pb::IMessage<UpgradeRoleSou
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -3394,7 +3340,6 @@ public sealed partial class RefineRoleSoulJadeAck : pb::IMessage<RefineRoleSoulJ
 {
   private static readonly pb::MessageParser<RefineRoleSoulJadeAck> _parser = new pb::MessageParser<RefineRoleSoulJadeAck>(() => new RefineRoleSoulJadeAck());
   private pb::UnknownFieldSet _unknownFields;
-  private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pb::MessageParser<RefineRoleSoulJadeAck> Parser { get { return _parser; } }
@@ -3422,7 +3367,6 @@ public sealed partial class RefineRoleSoulJadeAck : pb::IMessage<RefineRoleSoulJ
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public RefineRoleSoulJadeAck(RefineRoleSoulJadeAck other) : this() {
-    _hasBits0 = other._hasBits0;
     requestId_ = other.requestId_;
     data_ = other.data_ != null ? other.data_.Clone() : null;
     code_ = other.code_;
@@ -3461,29 +3405,14 @@ public sealed partial class RefineRoleSoulJadeAck : pb::IMessage<RefineRoleSoulJ
 
   /// <summary>Field number for the "code" field.</summary>
   public const int CodeFieldNumber = 4;
-  private readonly static global::ErrCode CodeDefaultValue = global::ErrCode.Ok;
-
-  private global::ErrCode code_;
+  private int code_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public global::ErrCode Code {
-    get { if ((_hasBits0 & 1) != 0) { return code_; } else { return CodeDefaultValue; } }
+  public int Code {
+    get { return code_; }
     set {
-      _hasBits0 |= 1;
       code_ = value;
     }
-  }
-  /// <summary>Gets whether the "code" field is set</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public bool HasCode {
-    get { return (_hasBits0 & 1) != 0; }
-  }
-  /// <summary>Clears the value of the "code" field</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public void ClearCode() {
-    _hasBits0 &= ~1;
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3513,7 +3442,7 @@ public sealed partial class RefineRoleSoulJadeAck : pb::IMessage<RefineRoleSoulJ
     int hash = 1;
     if (RequestId != 0UL) hash ^= RequestId.GetHashCode();
     if (data_ != null) hash ^= Data.GetHashCode();
-    if (HasCode) hash ^= Code.GetHashCode();
+    if (Code != 0) hash ^= Code.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -3540,9 +3469,9 @@ public sealed partial class RefineRoleSoulJadeAck : pb::IMessage<RefineRoleSoulJ
       output.WriteRawTag(18);
       output.WriteMessage(Data);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -3562,9 +3491,9 @@ public sealed partial class RefineRoleSoulJadeAck : pb::IMessage<RefineRoleSoulJ
       output.WriteRawTag(18);
       output.WriteMessage(Data);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -3582,8 +3511,8 @@ public sealed partial class RefineRoleSoulJadeAck : pb::IMessage<RefineRoleSoulJ
     if (data_ != null) {
       size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
     }
-    if (HasCode) {
-      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+    if (Code != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -3606,7 +3535,7 @@ public sealed partial class RefineRoleSoulJadeAck : pb::IMessage<RefineRoleSoulJ
       }
       Data.MergeFrom(other.Data);
     }
-    if (other.HasCode) {
+    if (other.Code != 0) {
       Code = other.Code;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3640,7 +3569,7 @@ public sealed partial class RefineRoleSoulJadeAck : pb::IMessage<RefineRoleSoulJ
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -3674,7 +3603,7 @@ public sealed partial class RefineRoleSoulJadeAck : pb::IMessage<RefineRoleSoulJ
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }

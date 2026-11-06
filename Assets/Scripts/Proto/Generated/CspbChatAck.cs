@@ -22,12 +22,11 @@ public static partial class CspbChatAckReflection {
   static CspbChatAckReflection() {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
-          "ChNjc3BiX2NoYXRfYWNrLnByb3RvGhVjc3BiX2NvbW1fZXJyb3IucHJvdG8i",
-          "MwoHQ2hhdEFjaxIZCgdlcnJDb2RlGAEgASgOMgguRXJyQ29kZRINCgVzdGF0",
-          "ZRgCIAEoBUIoWiZnaXRodWIuY29tL2dvZ3UteC9nb2dzL3BiL2NzcGIvcGJf",
-          "Y2hhdGIGcHJvdG8z"));
+          "ChNjc3BiX2NoYXRfYWNrLnByb3RvIikKB0NoYXRBY2sSDwoHZXJyQ29kZRgB",
+          "IAEoBRINCgVzdGF0ZRgCIAEoBUIoWiZnaXRodWIuY29tL2dvZ3UteC9nb2dz",
+          "L3BiL2NzcGIvcGJfY2hhdGIGcHJvdG8z"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-        new pbr::FileDescriptor[] { global::CspbCommErrorReflection.Descriptor, },
+        new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
           new pbr::GeneratedClrTypeInfo(typeof(global::ChatAck), global::ChatAck.Parser, new[]{ "ErrCode", "State" }, null, null, null, null)
         }));
@@ -84,10 +83,10 @@ public sealed partial class ChatAck : pb::IMessage<ChatAck>
 
   /// <summary>Field number for the "errCode" field.</summary>
   public const int ErrCodeFieldNumber = 1;
-  private global::ErrCode errCode_ = global::ErrCode.Ok;
+  private int errCode_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public global::ErrCode ErrCode {
+  public int ErrCode {
     get { return errCode_; }
     set {
       errCode_ = value;
@@ -130,7 +129,7 @@ public sealed partial class ChatAck : pb::IMessage<ChatAck>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override int GetHashCode() {
     int hash = 1;
-    if (ErrCode != global::ErrCode.Ok) hash ^= ErrCode.GetHashCode();
+    if (ErrCode != 0) hash ^= ErrCode.GetHashCode();
     if (State != 0) hash ^= State.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
@@ -150,9 +149,9 @@ public sealed partial class ChatAck : pb::IMessage<ChatAck>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
   #else
-    if (ErrCode != global::ErrCode.Ok) {
+    if (ErrCode != 0) {
       output.WriteRawTag(8);
-      output.WriteEnum((int) ErrCode);
+      output.WriteInt32(ErrCode);
     }
     if (State != 0) {
       output.WriteRawTag(16);
@@ -168,9 +167,9 @@ public sealed partial class ChatAck : pb::IMessage<ChatAck>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-    if (ErrCode != global::ErrCode.Ok) {
+    if (ErrCode != 0) {
       output.WriteRawTag(8);
-      output.WriteEnum((int) ErrCode);
+      output.WriteInt32(ErrCode);
     }
     if (State != 0) {
       output.WriteRawTag(16);
@@ -186,8 +185,8 @@ public sealed partial class ChatAck : pb::IMessage<ChatAck>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public int CalculateSize() {
     int size = 0;
-    if (ErrCode != global::ErrCode.Ok) {
-      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ErrCode);
+    if (ErrCode != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(ErrCode);
     }
     if (State != 0) {
       size += 1 + pb::CodedOutputStream.ComputeInt32Size(State);
@@ -204,7 +203,7 @@ public sealed partial class ChatAck : pb::IMessage<ChatAck>
     if (other == null) {
       return;
     }
-    if (other.ErrCode != global::ErrCode.Ok) {
+    if (other.ErrCode != 0) {
       ErrCode = other.ErrCode;
     }
     if (other.State != 0) {
@@ -230,7 +229,7 @@ public sealed partial class ChatAck : pb::IMessage<ChatAck>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
           break;
         case 8: {
-          ErrCode = (global::ErrCode) input.ReadEnum();
+          ErrCode = input.ReadInt32();
           break;
         }
         case 16: {
@@ -257,7 +256,7 @@ public sealed partial class ChatAck : pb::IMessage<ChatAck>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
           break;
         case 8: {
-          ErrCode = (global::ErrCode) input.ReadEnum();
+          ErrCode = input.ReadInt32();
           break;
         }
         case 16: {

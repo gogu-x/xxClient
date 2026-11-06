@@ -6,14 +6,61 @@ namespace XiuXian.Network
     /// <summary>Localizes the shared protocol enum. Server responses never supply UI error text.</summary>
     public static class LoadoutErrors
     {
-        public const string MissingCodeMessage = "服务器响应版本不兼容，请更新服务后重试";
         public const string UnknownCodeMessage = "操作未完成，请刷新后重试";
 
-        public static bool IsKnown(ErrCode code) => Enum.IsDefined(typeof(ErrCode), code);
-        public static string ResponseMessage(bool hasCode, ErrCode code) =>
-            hasCode ? ToUserMessage(code) : MissingCodeMessage;
+        public static bool IsKnown(int code)
+        {
+            switch (code)
+            {
+                case ErrCode.Ok:
+                case ErrCode.Unknown:
+                case ErrCode.Param:
+                case ErrCode.Unauthorized:
+                case ErrCode.LoginInProgress:
+                case ErrCode.ServerNotFound:
+                case ErrCode.UsernameExists:
+                case ErrCode.WrongPassword:
+                case ErrCode.Internal:
+                case ErrCode.AccountNotFound:
+                case ErrCode.GuildExists:
+                case ErrCode.GuildNotFound:
+                case ErrCode.AlreadyInGuild:
+                case ErrCode.NotInGuild:
+                case ErrCode.LoadoutUnavailable:
+                case ErrCode.ConfigUnavailable:
+                case ErrCode.StaleRevision:
+                case ErrCode.InvalidSlot:
+                case ErrCode.ItemNotOwned:
+                case ErrCode.InvalidItemState:
+                case ErrCode.EquipmentUnavailable:
+                case ErrCode.InvalidEquipment:
+                case ErrCode.DuplicateJade:
+                case ErrCode.MaxLevelReached:
+                case ErrCode.InsufficientEssence:
+                case ErrCode.AffixGenerationFailed:
+                case ErrCode.InvalidTalentNode:
+                case ErrCode.TalentAlreadyLearned:
+                case ErrCode.TalentPrerequisiteMissing:
+                case ErrCode.InsufficientTalentPoints:
+                case ErrCode.InvalidTalentBranch:
+                case ErrCode.BattleUnavailable:
+                case ErrCode.BattleTimeout:
+                case ErrCode.BattleCreateFailed:
+                case ErrCode.InvalidBattleRequest:
+                case ErrCode.BattleInProgress:
+                case ErrCode.ActivityUnavailable:
+                case ErrCode.ActivityNotFound:
+                case ErrCode.ActivityNotOpen:
+                case ErrCode.ActivityNotJoined:
+                case ErrCode.ActivityAlreadyJoined:
+                case ErrCode.ActivityRewardNotReady:
+                case ErrCode.ActivityRewardAlreadyClaimed:
+                    return true;
+                default: return false;
+            }
+        }
 
-        public static string ToUserMessage(ErrCode code)
+        public static string ToUserMessage(int code)
         {
             switch (code)
             {

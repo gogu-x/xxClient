@@ -22,12 +22,11 @@ public static partial class CspbAuthAckReflection {
   static CspbAuthAckReflection() {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
-          "ChNjc3BiX2F1dGhfYWNrLnByb3RvGhVjc3BiX2NvbW1fZXJyb3IucHJvdG8i",
-          "MwoMTG9naW5HYW1lQWNrEhYKBGNvZGUYASABKA4yCC5FcnJDb2RlEgsKA3Vp",
-          "ZBgCIAEoBEIoWiZnaXRodWIuY29tL2dvZ3UteC9nb2dzL3BiL2NzcGIvcGJf",
-          "YXV0aGIGcHJvdG8z"));
+          "ChNjc3BiX2F1dGhfYWNrLnByb3RvIikKDExvZ2luR2FtZUFjaxIMCgRjb2Rl",
+          "GAEgASgFEgsKA3VpZBgCIAEoBEIoWiZnaXRodWIuY29tL2dvZ3UteC9nb2dz",
+          "L3BiL2NzcGIvcGJfYXV0aGIGcHJvdG8z"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-        new pbr::FileDescriptor[] { global::CspbCommErrorReflection.Descriptor, },
+        new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
           new pbr::GeneratedClrTypeInfo(typeof(global::LoginGameAck), global::LoginGameAck.Parser, new[]{ "Code", "Uid" }, null, null, null, null)
         }));
@@ -84,10 +83,10 @@ public sealed partial class LoginGameAck : pb::IMessage<LoginGameAck>
 
   /// <summary>Field number for the "code" field.</summary>
   public const int CodeFieldNumber = 1;
-  private global::ErrCode code_ = global::ErrCode.Ok;
+  private int code_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public global::ErrCode Code {
+  public int Code {
     get { return code_; }
     set {
       code_ = value;
@@ -130,7 +129,7 @@ public sealed partial class LoginGameAck : pb::IMessage<LoginGameAck>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override int GetHashCode() {
     int hash = 1;
-    if (Code != global::ErrCode.Ok) hash ^= Code.GetHashCode();
+    if (Code != 0) hash ^= Code.GetHashCode();
     if (Uid != 0UL) hash ^= Uid.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
@@ -150,9 +149,9 @@ public sealed partial class LoginGameAck : pb::IMessage<LoginGameAck>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
   #else
-    if (Code != global::ErrCode.Ok) {
+    if (Code != 0) {
       output.WriteRawTag(8);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (Uid != 0UL) {
       output.WriteRawTag(16);
@@ -168,9 +167,9 @@ public sealed partial class LoginGameAck : pb::IMessage<LoginGameAck>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-    if (Code != global::ErrCode.Ok) {
+    if (Code != 0) {
       output.WriteRawTag(8);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (Uid != 0UL) {
       output.WriteRawTag(16);
@@ -186,8 +185,8 @@ public sealed partial class LoginGameAck : pb::IMessage<LoginGameAck>
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public int CalculateSize() {
     int size = 0;
-    if (Code != global::ErrCode.Ok) {
-      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+    if (Code != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
     }
     if (Uid != 0UL) {
       size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Uid);
@@ -204,7 +203,7 @@ public sealed partial class LoginGameAck : pb::IMessage<LoginGameAck>
     if (other == null) {
       return;
     }
-    if (other.Code != global::ErrCode.Ok) {
+    if (other.Code != 0) {
       Code = other.Code;
     }
     if (other.Uid != 0UL) {
@@ -230,7 +229,7 @@ public sealed partial class LoginGameAck : pb::IMessage<LoginGameAck>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
           break;
         case 8: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
         case 16: {
@@ -257,7 +256,7 @@ public sealed partial class LoginGameAck : pb::IMessage<LoginGameAck>
           _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
           break;
         case 8: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
         case 16: {

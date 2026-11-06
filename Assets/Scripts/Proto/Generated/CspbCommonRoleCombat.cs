@@ -22,21 +22,20 @@ public static partial class CspbCommonRoleCombatReflection {
   static CspbCommonRoleCombatReflection() {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
-          "Ch1jc3BiX2NvbW1vbl9yb2xlX2NvbWJhdC5wcm90bxoVY3NwYl9jb21tX2Vy",
-          "cm9yLnByb3RvImYKE1JvbGVDb21iYXRTdGF0c0RhdGESDwoHcm9sZV9pZBgB",
-          "IAEoCRIOCgZtYXhfaHAYAiABKAMSDgoGYXR0YWNrGAMgASgDEg8KB2RlZmVu",
-          "c2UYBCABKAMSDQoFc3BlZWQYBSABKAMiKwoVR2V0Um9sZUNvbWJhdFN0YXRz",
-          "UmVxEhIKCnJlcXVlc3RfaWQYASABKAQidQoVR2V0Um9sZUNvbWJhdFN0YXRz",
-          "QWNrEhIKCnJlcXVlc3RfaWQYASABKAQSIgoEZGF0YRgCIAEoCzIULlJvbGVD",
-          "b21iYXRTdGF0c0RhdGESGwoEY29kZRgDIAEoDjIILkVyckNvZGVIAIgBAUIH",
-          "CgVfY29kZUIqWihnaXRodWIuY29tL2dvZ3UteC9nb2dzL3BiL2NzcGIvcGJf",
-          "Y29tbW9uYgZwcm90bzM="));
+          "Ch1jc3BiX2NvbW1vbl9yb2xlX2NvbWJhdC5wcm90byJmChNSb2xlQ29tYmF0",
+          "U3RhdHNEYXRhEg8KB3JvbGVfaWQYASABKAkSDgoGbWF4X2hwGAIgASgDEg4K",
+          "BmF0dGFjaxgDIAEoAxIPCgdkZWZlbnNlGAQgASgDEg0KBXNwZWVkGAUgASgD",
+          "IisKFUdldFJvbGVDb21iYXRTdGF0c1JlcRISCgpyZXF1ZXN0X2lkGAEgASgE",
+          "Il0KFUdldFJvbGVDb21iYXRTdGF0c0FjaxISCgpyZXF1ZXN0X2lkGAEgASgE",
+          "EiIKBGRhdGEYAiABKAsyFC5Sb2xlQ29tYmF0U3RhdHNEYXRhEgwKBGNvZGUY",
+          "AyABKAVCKlooZ2l0aHViLmNvbS9nb2d1LXgvZ29ncy9wYi9jc3BiL3BiX2Nv",
+          "bW1vbmIGcHJvdG8z"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-        new pbr::FileDescriptor[] { global::CspbCommErrorReflection.Descriptor, },
+        new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
           new pbr::GeneratedClrTypeInfo(typeof(global::RoleCombatStatsData), global::RoleCombatStatsData.Parser, new[]{ "RoleId", "MaxHp", "Attack", "Defense", "Speed" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::GetRoleCombatStatsReq), global::GetRoleCombatStatsReq.Parser, new[]{ "RequestId" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::GetRoleCombatStatsAck), global::GetRoleCombatStatsAck.Parser, new[]{ "RequestId", "Data", "Code" }, new[]{ "Code" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::GetRoleCombatStatsAck), global::GetRoleCombatStatsAck.Parser, new[]{ "RequestId", "Data", "Code" }, null, null, null, null)
         }));
   }
   #endregion
@@ -604,7 +603,6 @@ public sealed partial class GetRoleCombatStatsAck : pb::IMessage<GetRoleCombatSt
 {
   private static readonly pb::MessageParser<GetRoleCombatStatsAck> _parser = new pb::MessageParser<GetRoleCombatStatsAck>(() => new GetRoleCombatStatsAck());
   private pb::UnknownFieldSet _unknownFields;
-  private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pb::MessageParser<GetRoleCombatStatsAck> Parser { get { return _parser; } }
@@ -632,7 +630,6 @@ public sealed partial class GetRoleCombatStatsAck : pb::IMessage<GetRoleCombatSt
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public GetRoleCombatStatsAck(GetRoleCombatStatsAck other) : this() {
-    _hasBits0 = other._hasBits0;
     requestId_ = other.requestId_;
     data_ = other.data_ != null ? other.data_.Clone() : null;
     code_ = other.code_;
@@ -671,29 +668,14 @@ public sealed partial class GetRoleCombatStatsAck : pb::IMessage<GetRoleCombatSt
 
   /// <summary>Field number for the "code" field.</summary>
   public const int CodeFieldNumber = 3;
-  private readonly static global::ErrCode CodeDefaultValue = global::ErrCode.Ok;
-
-  private global::ErrCode code_;
+  private int code_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public global::ErrCode Code {
-    get { if ((_hasBits0 & 1) != 0) { return code_; } else { return CodeDefaultValue; } }
+  public int Code {
+    get { return code_; }
     set {
-      _hasBits0 |= 1;
       code_ = value;
     }
-  }
-  /// <summary>Gets whether the "code" field is set</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public bool HasCode {
-    get { return (_hasBits0 & 1) != 0; }
-  }
-  /// <summary>Clears the value of the "code" field</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public void ClearCode() {
-    _hasBits0 &= ~1;
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -723,7 +705,7 @@ public sealed partial class GetRoleCombatStatsAck : pb::IMessage<GetRoleCombatSt
     int hash = 1;
     if (RequestId != 0UL) hash ^= RequestId.GetHashCode();
     if (data_ != null) hash ^= Data.GetHashCode();
-    if (HasCode) hash ^= Code.GetHashCode();
+    if (Code != 0) hash ^= Code.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -750,9 +732,9 @@ public sealed partial class GetRoleCombatStatsAck : pb::IMessage<GetRoleCombatSt
       output.WriteRawTag(18);
       output.WriteMessage(Data);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(24);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -772,9 +754,9 @@ public sealed partial class GetRoleCombatStatsAck : pb::IMessage<GetRoleCombatSt
       output.WriteRawTag(18);
       output.WriteMessage(Data);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(24);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -792,8 +774,8 @@ public sealed partial class GetRoleCombatStatsAck : pb::IMessage<GetRoleCombatSt
     if (data_ != null) {
       size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
     }
-    if (HasCode) {
-      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+    if (Code != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -816,7 +798,7 @@ public sealed partial class GetRoleCombatStatsAck : pb::IMessage<GetRoleCombatSt
       }
       Data.MergeFrom(other.Data);
     }
-    if (other.HasCode) {
+    if (other.Code != 0) {
       Code = other.Code;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -850,7 +832,7 @@ public sealed partial class GetRoleCombatStatsAck : pb::IMessage<GetRoleCombatSt
           break;
         }
         case 24: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -884,7 +866,7 @@ public sealed partial class GetRoleCombatStatsAck : pb::IMessage<GetRoleCombatSt
           break;
         }
         case 24: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }

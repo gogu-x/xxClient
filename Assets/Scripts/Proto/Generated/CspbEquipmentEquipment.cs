@@ -22,43 +22,41 @@ public static partial class CspbEquipmentEquipmentReflection {
   static CspbEquipmentEquipmentReflection() {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
-          "Ch5jc3BiX2VxdWlwbWVudF9lcXVpcG1lbnQucHJvdG8aFWNzcGJfY29tbV9l",
-          "cnJvci5wcm90byKAAgoNRXF1aXBtZW50SXRlbRITCgtpbnN0YW5jZV9pZBgB",
-          "IAEoCRIRCgljb25maWdfaWQYAiABKAUSGAoEc2xvdBgDIAEoDjIKLkVxdWlw",
-          "U2xvdBINCgVsZXZlbBgEIAEoBRIUCgxyZWZpbmVfbGV2ZWwYBSABKAUSEAoI",
-          "ZXF1aXBwZWQYBiABKAgSDgoGbWF4X2hwGAcgASgDEg4KBmF0dGFjaxgIIAEo",
-          "AxIPCgdkZWZlbnNlGAkgASgDEg0KBXNwZWVkGAogASgDEhQKDGRpc3BsYXlf",
-          "bmFtZRgLIAEoCRIOCgZyYXJpdHkYDCABKAkSEAoIaWNvbl9rZXkYDSABKAki",
-          "UwoXRXF1aXBtZW50U2xvdERlZmluaXRpb24SGAoEc2xvdBgBIAEoDjIKLkVx",
-          "dWlwU2xvdBIMCgRuYW1lGAIgASgJEhAKCGljb25fa2V5GAMgASgJIsABChFS",
-          "b2xlRXF1aXBtZW50RGF0YRIPCgdyb2xlX2lkGAEgASgJEhIKCnJvbGVfbGV2",
-          "ZWwYAiABKAUSDgoGbWF4X2hwGAMgASgDEg4KBmF0dGFjaxgEIAEoAxIPCgdk",
-          "ZWZlbnNlGAUgASgDEg0KBXNwZWVkGAYgASgDEh0KBWl0ZW1zGAcgAygLMg4u",
-          "RXF1aXBtZW50SXRlbRInCgVzbG90cxgIIAMoCzIYLkVxdWlwbWVudFNsb3RE",
-          "ZWZpbml0aW9uIikKE0dldFJvbGVFcXVpcG1lbnRSZXESEgoKcmVxdWVzdF9p",
-          "ZBgBIAEoBCJxChNHZXRSb2xlRXF1aXBtZW50QWNrEiAKBGRhdGEYASABKAsy",
-          "Ei5Sb2xlRXF1aXBtZW50RGF0YRISCgpyZXF1ZXN0X2lkGAMgASgEEhsKBGNv",
-          "ZGUYBCABKA4yCC5FcnJDb2RlSACIAQFCBwoFX2NvZGUiXAoWQ2hhbmdlUm9s",
-          "ZUVxdWlwbWVudFJlcRIYCgRzbG90GAEgASgOMgouRXF1aXBTbG90EhQKDGVx",
-          "dWlwbWVudF9pZBgCIAEoCRISCgpyZXF1ZXN0X2lkGAMgASgEInQKFkNoYW5n",
-          "ZVJvbGVFcXVpcG1lbnRBY2sSIAoEZGF0YRgBIAEoCzISLlJvbGVFcXVpcG1l",
-          "bnREYXRhEhIKCnJlcXVlc3RfaWQYAyABKAQSGwoEY29kZRgEIAEoDjIILkVy",
-          "ckNvZGVIAIgBAUIHCgVfY29kZSqoAQoJRXF1aXBTbG90EhoKFkVRVUlQX1NM",
-          "T1RfVU5TUEVDSUZJRUQQABIVChFFUVVJUF9TTE9UX1dFQVBPThABEhMKD0VR",
-          "VUlQX1NMT1RfSEVBRBACEhMKD0VRVUlQX1NMT1RfQk9EWRADEhMKD0VRVUlQ",
-          "X1NMT1RfSEFORBAEEhQKEEVRVUlQX1NMT1RfV0FJU1QQBRITCg9FUVVJUF9T",
-          "TE9UX0ZPT1QQBkItWitnaXRodWIuY29tL2dvZ3UteC9nb2dzL3BiL2NzcGIv",
-          "cGJfZXF1aXBtZW50YgZwcm90bzM="));
+          "Ch5jc3BiX2VxdWlwbWVudF9lcXVpcG1lbnQucHJvdG8igAIKDUVxdWlwbWVu",
+          "dEl0ZW0SEwoLaW5zdGFuY2VfaWQYASABKAkSEQoJY29uZmlnX2lkGAIgASgF",
+          "EhgKBHNsb3QYAyABKA4yCi5FcXVpcFNsb3QSDQoFbGV2ZWwYBCABKAUSFAoM",
+          "cmVmaW5lX2xldmVsGAUgASgFEhAKCGVxdWlwcGVkGAYgASgIEg4KBm1heF9o",
+          "cBgHIAEoAxIOCgZhdHRhY2sYCCABKAMSDwoHZGVmZW5zZRgJIAEoAxINCgVz",
+          "cGVlZBgKIAEoAxIUCgxkaXNwbGF5X25hbWUYCyABKAkSDgoGcmFyaXR5GAwg",
+          "ASgJEhAKCGljb25fa2V5GA0gASgJIlMKF0VxdWlwbWVudFNsb3REZWZpbml0",
+          "aW9uEhgKBHNsb3QYASABKA4yCi5FcXVpcFNsb3QSDAoEbmFtZRgCIAEoCRIQ",
+          "CghpY29uX2tleRgDIAEoCSLAAQoRUm9sZUVxdWlwbWVudERhdGESDwoHcm9s",
+          "ZV9pZBgBIAEoCRISCgpyb2xlX2xldmVsGAIgASgFEg4KBm1heF9ocBgDIAEo",
+          "AxIOCgZhdHRhY2sYBCABKAMSDwoHZGVmZW5zZRgFIAEoAxINCgVzcGVlZBgG",
+          "IAEoAxIdCgVpdGVtcxgHIAMoCzIOLkVxdWlwbWVudEl0ZW0SJwoFc2xvdHMY",
+          "CCADKAsyGC5FcXVpcG1lbnRTbG90RGVmaW5pdGlvbiIpChNHZXRSb2xlRXF1",
+          "aXBtZW50UmVxEhIKCnJlcXVlc3RfaWQYASABKAQiWQoTR2V0Um9sZUVxdWlw",
+          "bWVudEFjaxIgCgRkYXRhGAEgASgLMhIuUm9sZUVxdWlwbWVudERhdGESEgoK",
+          "cmVxdWVzdF9pZBgDIAEoBBIMCgRjb2RlGAQgASgFIlwKFkNoYW5nZVJvbGVF",
+          "cXVpcG1lbnRSZXESGAoEc2xvdBgBIAEoDjIKLkVxdWlwU2xvdBIUCgxlcXVp",
+          "cG1lbnRfaWQYAiABKAkSEgoKcmVxdWVzdF9pZBgDIAEoBCJcChZDaGFuZ2VS",
+          "b2xlRXF1aXBtZW50QWNrEiAKBGRhdGEYASABKAsyEi5Sb2xlRXF1aXBtZW50",
+          "RGF0YRISCgpyZXF1ZXN0X2lkGAMgASgEEgwKBGNvZGUYBCABKAUqqAEKCUVx",
+          "dWlwU2xvdBIaChZFUVVJUF9TTE9UX1VOU1BFQ0lGSUVEEAASFQoRRVFVSVBf",
+          "U0xPVF9XRUFQT04QARITCg9FUVVJUF9TTE9UX0hFQUQQAhITCg9FUVVJUF9T",
+          "TE9UX0JPRFkQAxITCg9FUVVJUF9TTE9UX0hBTkQQBBIUChBFUVVJUF9TTE9U",
+          "X1dBSVNUEAUSEwoPRVFVSVBfU0xPVF9GT09UEAZCLVorZ2l0aHViLmNvbS9n",
+          "b2d1LXgvZ29ncy9wYi9jc3BiL3BiX2VxdWlwbWVudGIGcHJvdG8z"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-        new pbr::FileDescriptor[] { global::CspbCommErrorReflection.Descriptor, },
+        new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EquipSlot), }, null, new pbr::GeneratedClrTypeInfo[] {
           new pbr::GeneratedClrTypeInfo(typeof(global::EquipmentItem), global::EquipmentItem.Parser, new[]{ "InstanceId", "ConfigId", "Slot", "Level", "RefineLevel", "Equipped", "MaxHp", "Attack", "Defense", "Speed", "DisplayName", "Rarity", "IconKey" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::EquipmentSlotDefinition), global::EquipmentSlotDefinition.Parser, new[]{ "Slot", "Name", "IconKey" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::RoleEquipmentData), global::RoleEquipmentData.Parser, new[]{ "RoleId", "RoleLevel", "MaxHp", "Attack", "Defense", "Speed", "Items", "Slots" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::GetRoleEquipmentReq), global::GetRoleEquipmentReq.Parser, new[]{ "RequestId" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::GetRoleEquipmentAck), global::GetRoleEquipmentAck.Parser, new[]{ "Data", "RequestId", "Code" }, new[]{ "Code" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::GetRoleEquipmentAck), global::GetRoleEquipmentAck.Parser, new[]{ "Data", "RequestId", "Code" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::ChangeRoleEquipmentReq), global::ChangeRoleEquipmentReq.Parser, new[]{ "Slot", "EquipmentId", "RequestId" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::ChangeRoleEquipmentAck), global::ChangeRoleEquipmentAck.Parser, new[]{ "Data", "RequestId", "Code" }, new[]{ "Code" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::ChangeRoleEquipmentAck), global::ChangeRoleEquipmentAck.Parser, new[]{ "Data", "RequestId", "Code" }, null, null, null, null)
         }));
   }
   #endregion
@@ -1639,7 +1637,6 @@ public sealed partial class GetRoleEquipmentAck : pb::IMessage<GetRoleEquipmentA
 {
   private static readonly pb::MessageParser<GetRoleEquipmentAck> _parser = new pb::MessageParser<GetRoleEquipmentAck>(() => new GetRoleEquipmentAck());
   private pb::UnknownFieldSet _unknownFields;
-  private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pb::MessageParser<GetRoleEquipmentAck> Parser { get { return _parser; } }
@@ -1667,7 +1664,6 @@ public sealed partial class GetRoleEquipmentAck : pb::IMessage<GetRoleEquipmentA
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public GetRoleEquipmentAck(GetRoleEquipmentAck other) : this() {
-    _hasBits0 = other._hasBits0;
     data_ = other.data_ != null ? other.data_.Clone() : null;
     requestId_ = other.requestId_;
     code_ = other.code_;
@@ -1706,29 +1702,14 @@ public sealed partial class GetRoleEquipmentAck : pb::IMessage<GetRoleEquipmentA
 
   /// <summary>Field number for the "code" field.</summary>
   public const int CodeFieldNumber = 4;
-  private readonly static global::ErrCode CodeDefaultValue = global::ErrCode.Ok;
-
-  private global::ErrCode code_;
+  private int code_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public global::ErrCode Code {
-    get { if ((_hasBits0 & 1) != 0) { return code_; } else { return CodeDefaultValue; } }
+  public int Code {
+    get { return code_; }
     set {
-      _hasBits0 |= 1;
       code_ = value;
     }
-  }
-  /// <summary>Gets whether the "code" field is set</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public bool HasCode {
-    get { return (_hasBits0 & 1) != 0; }
-  }
-  /// <summary>Clears the value of the "code" field</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public void ClearCode() {
-    _hasBits0 &= ~1;
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1758,7 +1739,7 @@ public sealed partial class GetRoleEquipmentAck : pb::IMessage<GetRoleEquipmentA
     int hash = 1;
     if (data_ != null) hash ^= Data.GetHashCode();
     if (RequestId != 0UL) hash ^= RequestId.GetHashCode();
-    if (HasCode) hash ^= Code.GetHashCode();
+    if (Code != 0) hash ^= Code.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -1785,9 +1766,9 @@ public sealed partial class GetRoleEquipmentAck : pb::IMessage<GetRoleEquipmentA
       output.WriteRawTag(24);
       output.WriteUInt64(RequestId);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -1807,9 +1788,9 @@ public sealed partial class GetRoleEquipmentAck : pb::IMessage<GetRoleEquipmentA
       output.WriteRawTag(24);
       output.WriteUInt64(RequestId);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -1827,8 +1808,8 @@ public sealed partial class GetRoleEquipmentAck : pb::IMessage<GetRoleEquipmentA
     if (RequestId != 0UL) {
       size += 1 + pb::CodedOutputStream.ComputeUInt64Size(RequestId);
     }
-    if (HasCode) {
-      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+    if (Code != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -1851,7 +1832,7 @@ public sealed partial class GetRoleEquipmentAck : pb::IMessage<GetRoleEquipmentA
     if (other.RequestId != 0UL) {
       RequestId = other.RequestId;
     }
-    if (other.HasCode) {
+    if (other.Code != 0) {
       Code = other.Code;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1885,7 +1866,7 @@ public sealed partial class GetRoleEquipmentAck : pb::IMessage<GetRoleEquipmentA
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -1919,7 +1900,7 @@ public sealed partial class GetRoleEquipmentAck : pb::IMessage<GetRoleEquipmentA
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -2212,7 +2193,6 @@ public sealed partial class ChangeRoleEquipmentAck : pb::IMessage<ChangeRoleEqui
 {
   private static readonly pb::MessageParser<ChangeRoleEquipmentAck> _parser = new pb::MessageParser<ChangeRoleEquipmentAck>(() => new ChangeRoleEquipmentAck());
   private pb::UnknownFieldSet _unknownFields;
-  private int _hasBits0;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pb::MessageParser<ChangeRoleEquipmentAck> Parser { get { return _parser; } }
@@ -2240,7 +2220,6 @@ public sealed partial class ChangeRoleEquipmentAck : pb::IMessage<ChangeRoleEqui
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public ChangeRoleEquipmentAck(ChangeRoleEquipmentAck other) : this() {
-    _hasBits0 = other._hasBits0;
     data_ = other.data_ != null ? other.data_.Clone() : null;
     requestId_ = other.requestId_;
     code_ = other.code_;
@@ -2279,29 +2258,14 @@ public sealed partial class ChangeRoleEquipmentAck : pb::IMessage<ChangeRoleEqui
 
   /// <summary>Field number for the "code" field.</summary>
   public const int CodeFieldNumber = 4;
-  private readonly static global::ErrCode CodeDefaultValue = global::ErrCode.Ok;
-
-  private global::ErrCode code_;
+  private int code_;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public global::ErrCode Code {
-    get { if ((_hasBits0 & 1) != 0) { return code_; } else { return CodeDefaultValue; } }
+  public int Code {
+    get { return code_; }
     set {
-      _hasBits0 |= 1;
       code_ = value;
     }
-  }
-  /// <summary>Gets whether the "code" field is set</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public bool HasCode {
-    get { return (_hasBits0 & 1) != 0; }
-  }
-  /// <summary>Clears the value of the "code" field</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public void ClearCode() {
-    _hasBits0 &= ~1;
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2331,7 +2295,7 @@ public sealed partial class ChangeRoleEquipmentAck : pb::IMessage<ChangeRoleEqui
     int hash = 1;
     if (data_ != null) hash ^= Data.GetHashCode();
     if (RequestId != 0UL) hash ^= RequestId.GetHashCode();
-    if (HasCode) hash ^= Code.GetHashCode();
+    if (Code != 0) hash ^= Code.GetHashCode();
     if (_unknownFields != null) {
       hash ^= _unknownFields.GetHashCode();
     }
@@ -2358,9 +2322,9 @@ public sealed partial class ChangeRoleEquipmentAck : pb::IMessage<ChangeRoleEqui
       output.WriteRawTag(24);
       output.WriteUInt64(RequestId);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(output);
@@ -2380,9 +2344,9 @@ public sealed partial class ChangeRoleEquipmentAck : pb::IMessage<ChangeRoleEqui
       output.WriteRawTag(24);
       output.WriteUInt64(RequestId);
     }
-    if (HasCode) {
+    if (Code != 0) {
       output.WriteRawTag(32);
-      output.WriteEnum((int) Code);
+      output.WriteInt32(Code);
     }
     if (_unknownFields != null) {
       _unknownFields.WriteTo(ref output);
@@ -2400,8 +2364,8 @@ public sealed partial class ChangeRoleEquipmentAck : pb::IMessage<ChangeRoleEqui
     if (RequestId != 0UL) {
       size += 1 + pb::CodedOutputStream.ComputeUInt64Size(RequestId);
     }
-    if (HasCode) {
-      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Code);
+    if (Code != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeInt32Size(Code);
     }
     if (_unknownFields != null) {
       size += _unknownFields.CalculateSize();
@@ -2424,7 +2388,7 @@ public sealed partial class ChangeRoleEquipmentAck : pb::IMessage<ChangeRoleEqui
     if (other.RequestId != 0UL) {
       RequestId = other.RequestId;
     }
-    if (other.HasCode) {
+    if (other.Code != 0) {
       Code = other.Code;
     }
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2458,7 +2422,7 @@ public sealed partial class ChangeRoleEquipmentAck : pb::IMessage<ChangeRoleEqui
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
@@ -2492,7 +2456,7 @@ public sealed partial class ChangeRoleEquipmentAck : pb::IMessage<ChangeRoleEqui
           break;
         }
         case 32: {
-          Code = (global::ErrCode) input.ReadEnum();
+          Code = input.ReadInt32();
           break;
         }
       }
